@@ -11,6 +11,7 @@
     <link type="text/css" rel="stylesheet" href="css/style.css"/>
     <script src="java/planche.js"></script>
     <script src="java/modale.js"></script>
+    <script src="java/verif.js"></script>
 </head>
 
 <body>
@@ -35,22 +36,22 @@
                         <label for="mailC">Mail</label>
                         <input type="text" id="mailC" name="mailC" required="required">
                         <label for="mdpC">Mot De Passe</label>
-                        <input type="text" id="mdpC" name="mdpC" required="required">
+                        <input type="password" id="mdpC" name="mdpC" required="required">
                         <input type="submit" value="OK !" id="submitC" name="submit" style="cursor:pointer"/>
                     </form>
                 </div>
                 <div id="inscrip">
                     <form action="php/register.php" method="post">
                         <label for="prenomI">Prénom</label>
-                        <input type="text" id="prenomI" name="prenomI" required="required">
+                        <input type="text" id="prenomI" name="prenomI" required="required" size="30" pattern="[a-zA-Z '-]{2,}" title="Cette zone ne doit contenir  que les caractères alphabétiques,l'espace, l'apostrophe ou le tiret.">
                         <label for="nomI">Nom</label>
-                        <input type="text" id="nomI" name="nomI" required="required">
+                        <input type="text" id="nomI" name="nomI" required="required" size="30" pattern="[a-zA-Z '-]{2,}" title="Cette zone ne doit contenir  que les caractères alphabétiques,l'espace, l'apostrophe ou le tiret.">
                         <label for="mailI">Mail</label>
                         <input type="email" id="mailI" name="mailI" required="required">
                         <label for="mdpI">Mot De Passe</label>
-                        <input type="password" id="mdpI" name="mdpI" required="required">
-                        <label for="mdpIc">Cofirmer</label>
-                        <input type="password" id="mdpIc" name="mdpIc" required="required">
+                        <input type="password" id="mdpI" name="mdpI" required="required" minlength="5">
+                        <label for="mdpIc">Confirmer</label>
+                        <input type="password" id="mdpIc" name="mdpIc" required="required" minlength="5">
                         <label for="dateI">Date de naissance</label>
                         <input type="date" id="dateI" name="dateI" required="required" value="">
                         <input type="checkbox" id="CGU" name="CGU" value="1">

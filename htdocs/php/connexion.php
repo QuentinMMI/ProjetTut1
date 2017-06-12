@@ -17,12 +17,12 @@
                 $_SESSION['Mail'] = $userinfo['AdresseMail'];
                 $_SESSION['Date'] = $userinfo['DateNaissance'];
                 
-                header("Location: ../profil.php");
+                header("Location: ../index.php");
       } else {
-         header("Location: ../profil.php#mauvaismotdepasse");
+         header("Location: ../index.php#mauvaismotdepasse");
       }
    } else {
-      header("Location: ../profil.php#pasrempli");
+      header("Location: ../index.php#pasrempli");
    }
 }
 ?>

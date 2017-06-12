@@ -1,4 +1,4 @@
-﻿<?php
+<?php
    header   ("Content-type: text/html; charset=UTF-8");
 ?>
 <!DOCTYPE html>
@@ -11,46 +11,46 @@
     <link type="text/css" rel="stylesheet" href="css/style.css"/>
     <script src="java/planche.js"></script>
     <script src="java/modale.js"></script>
+    <script src="java/verif.js"></script>
 </head>
-
-<body class = fondJaune>
+<body>
 <header>
       <a href="index.php"><img id="logoAile" alt="Aile avec le logo dedans" src="images/imgLogoOmbre.png"></a>        
         <nav>
-            <a class="policeNav" href="index.php">ACCUEIL</a>
-            <a class="policeNav ongletSelect"  href="reglement.php">REGLEMENT</a>
+            <a class="policeNav ongletSelect" href="index.php">ACCUEIL</a>
+            <a class="policeNav"  href="reglement.php">REGLEMENT</a>
             <a class="policeNav" href="publication.php">PUBLICATIONS</a>
             <a class="policeNav" href="aPropos.php">A PROPOS</a>
             <a class="policeNav" id="participer" href="participer.php">PARTICIPER</a>
             <a class="policeNav" id="btnCo" style="cursor:pointer">Se connecter</a>
         </nav>
-        <div id="Modal" class="modal">
+         <div id="Modal" class="modal">
             <div class="modal-content">
                 <div id="divClose">
                 <a id="close" style="cursor:pointer">fermer</a>
                 </div>
                 <div id="connexion">
                     <h1>ConnExiON</h1>
-                    <form action="" method="get">
+                    <form action="php/connexion.php" method="post">
                         <label for="mailC">Mail</label>
                         <input type="text" id="mailC" name="mailC" required="required">
                         <label for="mdpC">Mot De Passe</label>
-                        <input type="text" id="mdpC" name="mdpC" required="required">
+                        <input type="password" id="mdpC" name="mdpC" required="required">
                         <input type="submit" value="OK !" id="submitC" name="submit" style="cursor:pointer"/>
                     </form>
                 </div>
                 <div id="inscrip">
-                    <form action="" method="get">
+                    <form action="php/register.php" method="post">
                         <label for="prenomI">Prénom</label>
-                        <input type="text" id="prenomI" name="prenomI" required="required">
+                        <input type="text" id="prenomI" name="prenomI" required="required" size="30" pattern="[a-zA-Z '-]{2,}" title="Cette zone ne doit contenir  que les caractères alphabétiques,l'espace, l'apostrophe ou le tiret.">
                         <label for="nomI">Nom</label>
-                        <input type="text" id="nomI" name="nomI" required="required">
+                        <input type="text" id="nomI" name="nomI" required="required" size="30" pattern="[a-zA-Z '-]{2,}" title="Cette zone ne doit contenir  que les caractères alphabétiques,l'espace, l'apostrophe ou le tiret.">
                         <label for="mailI">Mail</label>
                         <input type="email" id="mailI" name="mailI" required="required">
                         <label for="mdpI">Mot De Passe</label>
-                        <input type="password" id="mdpI" name="mdpI" required="required">
-                        <label for="mdpIc">Cofirmer</label>
-                        <input type="password" id="mdpIc" name="mdpIc" required="required">
+                        <input type="password" id="mdpI" name="mdpI" required="required" minlength="5">
+                        <label for="mdpIc">Confirmer</label>
+                        <input type="password" id="mdpIc" name="mdpIc" required="required" minlength="5">
                         <label for="dateI">Date de naissance</label>
                         <input type="date" id="dateI" name="dateI" required="required" value="">
                         <input type="checkbox" id="CGU" name="CGU" value="1">
@@ -61,10 +61,7 @@
                 </div>
             </div>
         </div>
-    </header>
-    
-    
-    
+</header>
 <main class="fondJaune" id="fondReglement">
     <h1 class="titreReglement"> Les Regles Du Concours</h1>
     <p id="texteLibreDroit">Vous avez 16 ans ou plus, votre production est libre de droit commercial et doit être réalisée à partir de documents vous appartenant ou étant libres de droits. </p>
