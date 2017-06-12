@@ -36,7 +36,7 @@
                         <label for="mailC">Mail</label>
                         <input type="text" id="mailC" name="mailC" required="required">
                         <label for="mdpC">Mot De Passe</label>
-                        <input type="text" id="mdpC" name="mdpC" required="required">
+                        <input type="password" id="mdpC" name="mdpC" required="required">
                         <input type="submit" value="OK !" id="submitC" name="submit" style="cursor:pointer"/>
                     </form>
                 </div>
