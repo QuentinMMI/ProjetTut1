@@ -1,4 +1,4 @@
-﻿<?php
+<?php
    header   ("Content-type: text/html; charset=UTF-8");
 ?>
 <!DOCTYPE html>
@@ -70,15 +70,16 @@
                 <div>
                     <h2 id="slogan">Concourez, Voyagez, Revez</h2>
                     <div class="lesTextes">
-                        <p class="textIndex">Gagne un voyage en Bulgarie et une GoPro Hero 5 pour filmer tes plus beaux moments !</p>
-                        <p class="textIndex">En realisant une musique, une vidéo ou une affiche avant le 23 Juin 2017</p>
-                        
+                        <p id="texteIndex1">Gagne un voyage en Bulgarie et une GoPro Hero 5 pour filmer tes plus beaux moments !</p>
+                        <img id="avion" src="images/imgAvion.png" alt="image d'un avion en dessin">
+                        <p id="texteIndex2">En realisant une musique, une vidéo ou une affiche avant le 23 Juin 2017</p>
+                        <img id="gopro" src="images/imgGoproDessin.png" alt="dessin d'une go pro">
                     </div>
                     <p id="texteBilgre">Ta production doit présenter <strong>la Bulgarie</strong>. Pour en savoir plus, c'est par ici : <a href="reglement.php">Règlement</a></p>
                 </div>
                 
-                <div id="deuxiemeDiv">
-                    <img src="images/imgPhotoAccueil.png" alt="images de la Bugarie">
+                <div>
+                    <img id="imgAccueil" src="images/imgPhotoAccueil.png" alt="images de la Bugarie">
                     <p class="texteImg">Consultez notre dossier </br>sur la Bulgarie </br>pour en savoir plus</p>
                     
                     <img id="carte" src="images/imgMap.png" alt="Carte plaçant la Bulgarie par rapport à la France">
