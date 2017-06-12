@@ -450,7 +450,7 @@ a:hover{
 .accueilTitre{
     position : absolute;
     top:30%;
-    left:-9%;
+    left:-8%;
     transform-origin:top-left;
     transform: rotateZ(-90deg);
 }
@@ -701,7 +701,44 @@ footer>a {
 /*----------------Les Modifs de Thomas le génie--------------------------*/
 #slogan{
     color:white;
+    border: solid white 3px;
+    font-size:50px;
+    width:50vw;
 }
+#texteIndex1{
+    background-color: white;
+    color:#f95053;
+    font-size: 3vh;
+    width: 25vw;
+}
+#avion{
+    width:20%;
+    position: absolute;
+    top:20%;
+    left: 30%;
+}
+#texteIndex2{
+    background-color: white;
+    color:#f95053;
+    font-size: 3vh;
+    width: 30vw;
+    position: absolute;
+    left:20%;
+}
+#gopro{
+    width: 10%;
+    position: absolute;
+    left: 5%;
+}
+#texteBilgre{
+    background-color: white;
+    color:#f95053;
+    font-size: 5vh;
+    width: 50vw;
+    position: absolute;
+    top:70%;
+}
+
 /*---------------A PROPOS------------*/
 
 #aPropos{
@@ -743,14 +780,11 @@ footer>a {
     right : -70px;
 }
 
-#Lequipe{
-    margin : auto;
-    display : flex;
-    align-items: baseline;
-    width : 50%;
-    position : absolute;
-    bottom : 0;
-    left : 25vw;
+#imgAccueil{
+    height: 20%;
+    position: absolute;
+    top:1%;
+    right:30%;
 }
 
 .photoEquipe:nth-child(odd){
