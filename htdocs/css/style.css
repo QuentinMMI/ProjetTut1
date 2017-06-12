@@ -726,7 +726,7 @@ footer>a {
 
 
 #divAPropos{
-    width:45%;
+    width:65%;
     margin : auto;
     color:white;
     border : solid 3px white;
@@ -734,26 +734,25 @@ footer>a {
     padding : 5px;
     position: absolute;
     position : relative;
-    height : 50;
 }
 
 #Lequipe{
     margin : auto;
     display : flex;
     align-items: baseline;
-    width : 70%;
+    width : 50%;
     position : absolute;
     bottom : 0;
-    left : 20%;
+    left : 25vw;
 }
 
 .photoEquipe:nth-child(odd){
-    width : 11%;
-    height : 8%;
+    width : 5vw;
+    height : 20vw;
 }
 .photoEquipe:nth-child(even){
-    width : 20vw;
-    height : 25vw;
+    width : 15vw;
+    height : 20vw;
     
 }
 
