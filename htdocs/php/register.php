@@ -4,6 +4,8 @@
 
     if(isset($_POST['submit']))
     {
+        if (!empty($_POST['prenomI']) AND !empty($_POST['nomI']) AND !empty($_POST['mailI']) AND !empty($_POST['mdpI']) AND !empty($_POST['mdpIc']) AND !empty($_POST['dateI']) AND !empty($_POST['CGU']))
+        {   
             $prenom = htmlspecialchars($_POST['prenomI']);
             $nom = htmlspecialchars($_POST['nomI']);
             $adresse = htmlspecialchars($_POST['mailI']);
@@ -11,9 +13,6 @@
             $mdpC = sha1($_POST['mdpIc']);
             $age = htmlspecialchars($_POST['dateI']);
             $CGU = htmlspecialchars($_POST['CGU']);
-        
-        if (!empty($_POST['prenom']) AND !empty($_POST['nom']) AND !empty($_POST['adresse']) AND !empty($_POST['mdp']) AND !empty($_POST['mdpC']) AND !empty($_POST['date']) AND !empty($_POST['CGU']))
-        {
             $mailconfirm = strlen($adresse);
             if($mailconfirm <= 255){
                 if(filter_var($adresse, FILTER_VALIDATE_EMAIL)){
@@ -32,32 +31,32 @@
                                     $resultatAge= 2017 - $date;
                                     if($resultatAge >= 15)
                                     {
-                                        header('Location: accueil.php#gg');
+                                        header('Location: ../index.php#gg');
                                         $insertmbr = $bdd->prepare("INSERT INTO UTILISATEUR(PrenomUser,NomUser,MotDePasse,AdresseMail,DateNaissance) VALUES(?,?,?,?,?)");
                                         $insertmbr->execute(array($prenom,$nom,$mdp,$adresse,$age));
                                     }else{
-                                        header('Location: accueil.php#limiteDage');
+                                        header('Location: ../index.php#limiteDage');
                                     }
                                 }else{
-                                    header('Location: accueil.php#nonCGU');
+                                    header('Location: ../index.php#nonCGU');
                                 }
                             }else{
-                                header('Location: accueil.php#mdpTropCourt');
+                                header('Location: ../index.php#mdpTropCourt');
                             }
                         }else{
-                            header('Location: accueil.php#mdpPasIdentique');
+                            header('Location: ../index.php#mdpPasIdentique');
                         }
                     }else{
-                        header('Location: accueil.php#mailExistant');
+                        header('Location: ../index.php#mailExistant');
                     }
                 }else{
-                    header('Location: accueil.php#mailIncorrecte');
+                    header('Location: ../index.php#mailIncorrecte');
                 }
             }else{
-                header('Location: accueil.php#mailTroplong');
+                header('Location: ../index.php#mailTroplong');
             }
         }else{
-            header('Location: accueil.php#pasRempli');
+            header('Location: ../index.php#pasRempli');
         }
     }else{
           

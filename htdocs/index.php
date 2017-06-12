@@ -1,4 +1,4 @@
-﻿<?php
+<?php
    header   ("Content-type: text/html; charset=UTF-8");
 ?>
 <!DOCTYPE html>
@@ -31,7 +31,7 @@
                 </div>
                 <div id="connexion">
                     <h1>ConnExiON</h1>
-                    <form action="" method="get">
+                    <form action="php/connexion.php" method="post">
                         <label for="mailC">Mail</label>
                         <input type="text" id="mailC" name="mailC" required="required">
                         <label for="mdpC">Mot De Passe</label>
@@ -40,7 +40,7 @@
                     </form>
                 </div>
                 <div id="inscrip">
-                    <form action="" method="get">
+                    <form action="php/register.php" method="post">
                         <label for="prenomI">Prénom</label>
                         <input type="text" id="prenomI" name="prenomI" required="required">
                         <label for="nomI">Nom</label>
