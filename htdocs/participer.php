@@ -23,7 +23,19 @@
             <a class="policeNav" href="publication.php">PUBLICATIONS</a>
             <a class="policeNav" href="aPropos.php">A PROPOS</a>
             <a class="policeNav ongletSelect" id="participer" href="participer.php">PARTICIPER</a>
-            <a class="policeNav" id="btnCo" style="cursor:pointer">Se connecter</a>
+            <?php
+              if(isset($_SESSION['id']))
+              {
+              ?>
+            <a class="policeNav" id="btnCo" style="cursor:pointer">Bonjour !</a>
+            <?php
+              }else
+              {
+              ?>
+           <a class="policeNav" id="btnCo" style="cursor:pointer">Se connecter</a>
+            <?php
+              }
+              ?>
         </nav>
          <div id="Modal" class="modal">
             <div class="modal-content">
