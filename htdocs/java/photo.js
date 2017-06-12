@@ -9,7 +9,7 @@ for (var unPortrait of lesPortraits){
 }
 
 function reinitialiserTexte (evt) {
-    document.getElementById("textPropos").innerHTML="<div id='textPropos'><h2>notre equipe</h2><p>Bienvenue chez Defi Hawk. Cette page est consacrée à notre équipe qui, depuis déjà plusieurs éditions, se charge de vous fournir la meilleure expérience que vous gagniez ou non ! Vous souhaitez savoir qui vous parle sur les réseaux sociaux? Qui redesign le site? Vous êtes au bon endroit!</p></div>" ;
+    document.getElementById("textPropos").innerHTML="<div id='textPropos'><h2>notre equipe</h2><p>Bienvenue chez Defi Hawk. Cette page est consacrée à notre équipe qui, depuis déjà plusieurs éditions, se charge de vous fournir la meilleure expérience que vous gagniez ou non ! Vous souhaitez savoir qui vous parle sur les réseaux sociaux? Qui redesign le site? Vous êtes au bon endroit!</p><p>Passe ta souris sur nos phot pour connaître notre rôle.</p></div>" ;
 }
 
 function changerTexte (evt) {
