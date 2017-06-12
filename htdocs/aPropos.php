@@ -106,8 +106,20 @@
         </div>
         <div id="planche3" class="planche planche3">
             <h1 id="contact">Contact</h1>
+            <div id="onglets3" class="ongletsPub">
+                <p>Une question ? N'hesite pas à nous contacter ...</p>
+                <form method="post" action="" id="contact">
+                    <label for="nomEnvoyeur">Nom</label>
+                    <input type="text" id="nomEnvoyeur" name="nomEnvoyeur" placeholder="Nom" required>
+                    <label for="mailEnvoyeur">Adresse e-mail</label>
+                    <input id="mailEnvoyeur" name="mailEnvoyeur" type="email" placeholder="E-mail" required>
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" rows="10" cols="50" placeholder="Message" required></textarea>
+
+                </form>
             </div>
         </div>
+        
 </main>
     
     <!--------------------------------------------------- FOOTER -------------------------------------------------------------->
