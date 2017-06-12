@@ -13,12 +13,15 @@ function changer (evt){
     if (this.id == "planche3"){
         this.style.left="7%";
         document.getElementById("planche2").style.left="4%";
+        window.alert("planche3");
     }else if(this.id == "planche2"){
         this.style.left="4%";
         document.getElementById("planche3").style.left="95%";
+        window.alert("planche2");
     }else{
         document.getElementById("planche2").style.left="90%";
         document.getElementById("planche3").style.left="95%";
+        window.alert("planche1");
     }
 }
 

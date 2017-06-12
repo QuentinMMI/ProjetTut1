@@ -10,8 +10,8 @@
     <title>DEFI HAWK</title>
     <meta name="description" content="Un site concours, tentez de gagner un voyage grace à une production audiovisuelle ! Defi Hawk">
     <link type="text/css" rel="stylesheet" href="css/style.css"/>
-    <script src="java/planche.js"></script>
-    <script src="java/modale.js"></script>
+    <script type="text/javascript" src="java/planche.js"></script>
+    <script type="text/javascript" src="java/modale.js"></script>
     <script type="text/javascript" src="java/photo.js"></script>
 </head>
 
@@ -73,17 +73,18 @@
                 <div id="textPropos">
                     <h2>notre equipe</h2>
                     <p>Bienvenue chez Defi Hawk. Cette page est consacrée à notre équipe qui, depuis déjà plusieurs éditions, se charge de vous fournir la meilleure expérience que vous gagniez ou non ! Vous souhaitez savoir qui vous parle sur les réseaux sociaux? Qui redesign le site? Vous êtes au bon endroit!</p>
-                    <p>Passe ta souris sur nos phot pour connaître notre rôle.</p>
+                    <p>Passe ta souris sur nos photos pour connaître notre rôle.</p>
                 </div>
             </div>
             
             <div id="Lequipe">
-                <img id="imgThomas1" class="photoEquipe" src="/images/imgTho1.png" alt="image de Thomas">
-                <img id="imgFlorian1" class="photoEquipe" src="/images/imgFlo1.png" alt="image de Florian">
-                <img id="imgThomas2" class="photoEquipe" src="/images/imgTho2.png" alt="image de Quentin">
-                <img id="imgFlorian2" class="photoEquipe" src="/images/imgFlo2.png" alt="image de Hugo">
-                <img id="imgThomas3" class="photoEquipe" src="/images/imgTho3.png" alt="image de Joanne">
+                <img id="imgThomas1" class="photoEquipe" src="images/imgTho1.png" alt="image de Thomas">
+                <img id="imgFlorian1" class="photoEquipe" src="images/imgFlo1.png" alt="image de Florian">
+                <img id="imgThomas2" class="photoEquipe" src="images/imgTho2.png" alt="image de Quentin">
+                <img id="imgFlorian2" class="photoEquipe" src="images/imgFlo2.png" alt="image de Hugo">
+                <img id="imgThomas3" class="photoEquipe" src="images/imgTho3.png" alt="image de Joanne">
             </div>
+        </div>
         
         <div id="planche2" class="planche planche2">
             <h1 id ="FAQ">faq</h1>
