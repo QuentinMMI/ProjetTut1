@@ -726,7 +726,7 @@ footer>a {
 
 
 #divAPropos{
-    width:65%;
+    width:50vw;
     margin : auto;
     color:white;
     border : solid 3px white;
@@ -734,6 +734,13 @@ footer>a {
     padding : 5px;
     position: absolute;
     position : relative;
+}
+#divAPropos::after{
+    content : url(../images/imgFlecheAccueil.png);
+    transform : rotateY(180deg) rotate(45deg);
+    position: absolute;
+    bottom :-58px;
+    right : -70px;
 }
 
 #Lequipe{
