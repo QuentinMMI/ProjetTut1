@@ -18,7 +18,7 @@
 <header>
       <a href="index.php"><img id="logoAile" alt="Aile avec le logo dedans" src="images/imgLogoOmbre.png"></a>        
         <nav>
-            <a class="policeNav ongletSelect" href="index.php">ACCUEIL</a>
+            <a class="policeNav" href="index.php">ACCUEIL</a>
             <a class="policeNav"  href="reglement.php">REGLEMENT</a>
             <a class="policeNav" href="publication.php">PUBLICATIONS</a>
             <a class="policeNav" href="aPropos.php">A PROPOS</a>
