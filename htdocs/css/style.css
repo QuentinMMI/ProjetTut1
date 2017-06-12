@@ -595,87 +595,6 @@ footer>a {
 }
 
 
-/*-------A propos-------*/
-.textEntreprise {
-    margin:0%;
-    display: block;
-    text-align : justify;
-    font-size:25px;
-    text-indent:10%;
-    padding-left:2%;
-    padding-right:2%;
-}
-
-.imgETtext{
-    display: flex;
-    padding-top: 5%;
-    font-size:20px;
-    max-width:100%;
-    padding-left:2vw; 
-    padding-right:2vw;
-
-}
-
-.textFlorian,.textHugo,.textQuentin,.textJoanne,.textThomas{
-    display:flex;
-    position:relative;
-    width:70%;
-    bottom: 13%;
-    font-size:1.5vw;
-    margin: 0%;
-    /*display: block;*/
-    text-align : justify;
-    text-indent:10%;
-}
-
-.textFlorian,.textQuentin,.textThomas{
-    left:13%;
-}
-
-.textHugo,.textJoanne{
-    left:10%;
-}
-
-.imgAPropos {
-    margin:0;
-    display: flex;
-    width : 25%;
-    height : 25%;
-}
-
-.titreDeux {
-    display:flex;
-    position:relative;
-    font-size:2vw;
-    bottom:10%;
-}
-
-.hugoTitre{
-    
-    display:flex;
-    position:relative;
-    left:46%;
-    font-size:2vw;
-    bottom:10%;
-}
-
-.joanneTitre{
-    display:flex;
-    position:relative;
-    left:33%;
-    font-size:2vw;
-    bottom:10%;
-}
-
-
-/*----Mentions Légales-------*/
-#mentionsLegales{
-    text-align: justify;
-    padding : 0 100px;
-} 
-.infoLegal {
-    text-align: center;
-}
 
 /*------Index--------
 #pageAccueil>.planche1>div{
@@ -812,12 +731,30 @@ footer>a {
     color:white;
     border : solid 3px white;
     text-align:justify;
+    padding : 5px;
+    position: absolute;
+    position : relative;
+    height : 50;
 }
 
 #Lequipe{
     margin : auto;
     display : flex;
-    width : 50%;
+    align-items: baseline;
+    width : 70%;
+    position : absolute;
+    bottom : 0;
+    left : 20%;
+}
+
+.photoEquipe:nth-child(odd){
+    width : 11%;
+    height : 8%;
+}
+.photoEquipe:nth-child(even){
+    width : 20vw;
+    height : 25vw;
+    
 }
 
 /*---------PARTICIPER----------*/

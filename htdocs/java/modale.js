@@ -2,9 +2,9 @@ var btn ;
 var divFond;
 var span;
 var fermer;
-document.addEventListener("DOMContentLoaded",commencer);
+document.addEventListener("DOMContentLoaded",initModal);
 
-function commencer (evt){
+function initModal (evt){
     divFond = document.getElementById("Modal");
     btn = document.getElementById("btnCo");
     span = document.getElementById("close");

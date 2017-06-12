@@ -1,6 +1,6 @@
-document.addEventListener("DOMContentLoaded",commencer);
+document.addEventListener("DOMContentLoaded",initialiser);
 
-function commencer (evt){
+function initialiser (evt){
     var lesdiv=document.getElementsByClassName("planche");
     for (var unediv of lesdiv){
         unediv.addEventListener("click",changer);
