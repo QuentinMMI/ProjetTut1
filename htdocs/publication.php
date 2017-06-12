@@ -1,4 +1,4 @@
-﻿<html>  
+<html>  
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -35,7 +35,7 @@
                     </form>
                 </div>
                 <div id="inscrip">
-                    <form action="" method="get">
+                    <form action="php/register.php" method="post">
                         <label for="prenomI">Prénom</label>
                         <input type="text" id="prenomI" name="prenomI" required="required">
                         <label for="nomI">Nom</label>
