@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*------Fonts------*/
 
 @font-face {
@@ -415,15 +416,53 @@ td img{
     width:70%;
 }
 
-/*---------Bulgarie--------------*/
-
-#bulgarie {
-    color: white;
-    font-size: 5vw;
-    transform-origin: top-left;
-    transform: skewX(7deg) translateX(-49%) translateY(280%) rotateZ(-83deg);
+/*--------------Bulgarie---------------*/
+#texteGeo{
+    color:white;
+    border: solid 3px white;
+    text-align: justify;
+    width: 50%;
+    position: absolute;
+    top: -20vh;
+    left: 33vw;
 }
-
+#geographie{
+    position: absolute;
+    top:-25vh;
+    left: 33vw;
+}
+#tourisme{
+    position: absolute;
+    top: 0;
+    left: 33vw;
+}
+#texteTourisme{
+    color:white;
+    border: solid white 3px;
+    text-align: justify;
+    width: 28%;
+    position: absolute;
+    top: 5vh;
+    left: 33vw;
+}
+#imgBulg1{
+    width: 25%;
+    position: absolute;
+    top: -25vh;
+    left: 5vw;
+}
+#bateau{
+    width: 20%;
+    position: absolute;
+    right: 15vw;
+    bottom: -57vh;
+}
+#imgBulg2{
+    width: 30%;
+    position: absolute;
+    left: 33vw;
+    bottom: -57vh;
+}
 
 /*----------Reglement------------*/
 
