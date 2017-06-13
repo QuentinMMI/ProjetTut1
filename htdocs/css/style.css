@@ -417,6 +417,14 @@ td img{
 }
 
 /*--------------Bulgarie---------------*/
+
+#bulgarie {
+    color: white;
+    font-size: 5vw;
+    transform-origin: top-left;
+    transform: skewX(7deg) translateX(-49%) translateY(280%) rotateZ(-83deg);
+}
+
 #texteGeo{
     color:white;
     border: solid 3px white;
