@@ -93,6 +93,14 @@
                     </div>
                     <p id="texteBilgre">Ta production doit présenter <strong>la Bulgarie</strong>. Pour en savoir plus, c'est par ici : <a href="reglement.php">Règlement</a></p>
                 </div>
+                <div>
+                    <img id=imgAccueil src=imagesimgAccueil.png alt=images de la Bugarie>
+                    <p> id=texteDossier strongCONSULTEZ NOTRE DOSSIERbrSUR LA BULGARIE brPOUR EN SAVOIR PLUSstrong</p>
+                    
+                    <img id=carte src=imagesimgMap.png alt=Carte plaçant la Bulgarie par rapport à la France>
+                </div>
+            </div>
+        </div>
 <!----------------------------------------------------------- LOTS ------------------------------->
             <div id="planche2" class="planche planche2 parentTitrePage">
                 <h1 id="hLots">LoTS</h1>
