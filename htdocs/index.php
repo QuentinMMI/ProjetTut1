@@ -95,7 +95,7 @@
                 
                 <div>
                     <img id="imgAccueil" src="images/imgAccueil.png" alt="images de la Bugarie">
-                    <p id="texteDossier"> <strong>CONSULTEZ NOTRE DOSSIER</br>SUR LA BULGARIE </br>POUR EN SAVOIR PLUS</strong></p>
+                    <p id="texteDossier"> CONSULTEZ NOTRE DOSSIER</br>SUR LA BULGARIE </br>POUR EN SAVOIR PLUS</p>
                     
                     <img id="carte" src="images/imgMap.png" alt="Carte plaçant la Bulgarie par rapport à la France">
                 </div>
