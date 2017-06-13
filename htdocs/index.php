@@ -104,21 +104,34 @@
         <div id="planche2" class="planche planche2 parentTitrePage">
             <h1 id="hLots">LoTS</h1>
             <div class="divHaut">
-                <div class="divImgLots"> <img src="images/imgBulgarie3.png"></div>
+                <div class="divImgLots"> 
+                    <img src="images/imgBulgarie3.png"></div>
                 <h2 class="titrePage">Tentez de gagner :</h2>
-                <div class="divImgLots"> <img src="images/imgBulgarie5.png"></div>
+                <div class="divImgLots">
+                    <img src="images/imgBulgarie5.png"></div>
             </div> 
-            <div class="divBas"><img src="images/imgBulgarie4.png"></img></div>
+            <div class="divBas">
+                <img src="images/imgBulgarie4.png"></div>
         </div>
 <!----------------------------------------------------------- LA BULGARIE ------------------------->
         <div id="planche3" class="planche planche3">
             <h1 id="bulgarie">La bulGaRIE</h1>
-           
-           <p class="descriptionBulgarie">La Bulgarie est un pays situé au Nord de la Grèce et de la Turquie. Il est bordé par la mer Noire. <br><br>
-           Sa capitale, Sofia est également sa plus grande ville avec 1.4 million d’habitants (⅕ de la population totale de la Bulgarie). Le pays a un IDH élevé (0.777).<br>
-Sa langue principale est le bulgare (c’est d’ailleurs le seul pays où elle est langue principale, même si d’autres pays parlent le bulgare).<br><br>Chaque année, la Bulgarie accueille 8.9 millions de touristes, principalement des pays Européens frontaliers, pour sa culture et son vin.
-</p>
-        </div>
+            <div>
+                <img id="imgBulg1" src="images/imgBulg.png" alt="Image de fond pour la page Bulagarie">
+                <div>
+                <h2 id="geographie">Geographie</h2>
+                <p id="texteGeo">La Bulgarie est un pays situé au Nord de la Grèce et de la Turquie. Elle est bordée par la mer Noire. Sa capitale, Sofia est également sa plus grande ville avec 1.4 million d’habitants (⅕ de la population totale de la Bulgarie). Le pays a un IDH élevé (0.777).
+                Sa langue principale est le bulgare (c’est d’ailleurs le seul pays où elle est langue principale, même si d’autres pays parlent le bulgare).</p>
+                </div>
+                <h2 id="tourisme">Tourisme</h2>
+                <p id="texteTourisme">Chaque année, la Bulgarie accueille 8.9 millions de touristes, principalement des pays Européens frontaliers, pour sa culture et son vin.
+                </p>
+                <div>
+                <img id="imgBulg2" src="images/imgBulg2.png" alt="Photo de la bulgarie">
+                <img id="bateau" src="images/imgBateau.png" alt="Dessin d'infographie d'un bateau">
+                </div>
+            </div>
+</div>
 </main>
  
     <!--------------------------------------------------- FOOTER -------------------------------------------------------------->
