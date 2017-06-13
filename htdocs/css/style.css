@@ -990,3 +990,9 @@ footer>a {
 #div3Publier {
     background-color: #00b3df;
 }
+
+/*----interface inscription---*/
+
+.modal-content2{
+    display: none
+}
