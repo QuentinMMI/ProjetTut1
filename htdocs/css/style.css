@@ -496,7 +496,7 @@ td {
     left: 0px;
     background-color: #FF7477;
     transition: left 1s cubic-bezier(.43, .57, .35, 1.04);
-    padding-left: 5vw;
+    padding-left: 6vw;
 }
 
 .planche2 {
