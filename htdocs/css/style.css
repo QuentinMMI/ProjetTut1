@@ -790,6 +790,7 @@ footer>a {
     font-size: 5vw;
     transform-origin: top-left;
     transform: skewX(7deg) translateX(-49%) translateY(280%) rotateZ(-83deg);
+    position:absolute;
 }
 
 #divAPropos{
