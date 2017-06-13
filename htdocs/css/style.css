@@ -890,10 +890,10 @@ footer>a {
     width:50vw;
 }
 #texteIndex1{
-    background-color: white;
-    color:#f95053;
+    color:white;
     font-size: 3vh;
     width: 25vw;
+    border:solid 3px white;
 }
 #avion{
     width:20%;
@@ -902,12 +902,12 @@ footer>a {
     left: 35%;
 }
 #texteIndex2{
-    background-color: white;
-    color:#f95053;
+    color:white;
     font-size: 3vh;
     width: 30vw;
     position: absolute;
     left:20%;
+     border: 3px white solid;
 }
 #gopro{
     width: 10%;
@@ -915,12 +915,12 @@ footer>a {
     left: 5%;
 }
 #texteBilgre{
-    background-color: white;
-    color:#f95053;
+    color:white;
     font-size: 5vh;
     width: 50vw;
     position: absolute;
     top:70%;
+    border: 3px white solid;
 }
 
 #imgAccueil{
