@@ -344,10 +344,19 @@ a:hover {
     margin-left: 20px;
 }
 
+.divImgLots {
+    max-width: 500px;
+    max-height: auto;
+}
+
 td {
     height: 300px;
     vertical-align: bottom;
     padding: 5px;
+}
+
+.divHaut>h2 {
+    margin-left: 20px;
 }
 
 #podium {
@@ -367,19 +376,19 @@ td {
 
 #podium0 {
     /* or */
-    height: 220px;
+    height: 270px;
     background: #00B3DF;
 }
 
 #podium1 {
     /* argent */
-    height: 180px;
+    height: 240px;
     background: #FFFFFF;
 }
 
 #podium2 {
     /* bronze */
-    height: 150px;
+    height: 210px;
     background: #F95053;
 }
 
@@ -397,6 +406,19 @@ td {
     font-family: "WalterTurnCoat";
     font-size: 17px;
 }
+
+.imgDivBas img {
+    width: 50%;
+}
+
+td>img {
+    width: 70%;
+}
+
+td {
+    top: 600px;
+}
+
 
 /*---------Bulgarie--------------*/
 
@@ -873,45 +895,52 @@ footer>a {
 
 
 /*----------------Les Modifs de Thomas le génie--------------------------*/
-#slogan{
-    color:white;
+
+#slogan {
+    color: white;
     border: solid white 3px;
-    font-size:50px;
-    width:50vw;
+    font-size: 50px;
+    width: 50vw;
 }
-#texteIndex1{
+
+#texteIndex1 {
     background-color: white;
-    color:#f95053;
+    color: #f95053;
     font-size: 3vh;
     width: 25vw;
 }
-#avion{
-    width:20%;
+
+#avion {
+    width: 20%;
     position: absolute;
-    top:20%;
+    top: 20%;
     left: 30%;
 }
-#texteIndex2{
+
+#texteIndex2 {
     background-color: white;
-    color:#f95053;
+    color: #f95053;
     font-size: 3vh;
     width: 30vw;
     position: absolute;
-    left:20%;
+    left: 20%;
 }
-#gopro{
+
+#gopro {
     width: 10%;
     position: absolute;
     left: 5%;
 }
-#texteBilgre{
+
+#texteBilgre {
     background-color: white;
-    color:#f95053;
+    color: #f95053;
     font-size: 5vh;
     width: 50vw;
     position: absolute;
-    top:70%;
+    top: 70%;
 }
+
 
 /*---------------A PROPOS------------*/
 
@@ -936,44 +965,46 @@ footer>a {
     transform: skewX(7deg) translateX(-49%) translateY(280%) rotateZ(-83deg);
 }
 
-
-
-#divAPropos{
-    width:50vw;
-    margin : auto;
-    color:white;
-    border : solid 3px white;
-    text-align:justify;
-    padding : 5px;
+#divAPropos {
+    width: 50vw;
+    margin: auto;
+    color: white;
+    border: solid 3px white;
+    text-align: justify;
+    padding: 5px;
     position: absolute;
-    position : relative;
-}
-#divAPropos::after{
-    content : url(../images/imgFlecheAccueil.png);
-    transform : rotateY(180deg) rotate(45deg);
-    position: absolute;
-    bottom :-58px;
-    right : -70px;
+    position: relative;
 }
 
-#imgAccueil{
+#divAPropos::after {
+    content: url(../images/imgFlecheAccueil.png);
+    transform: rotateY(180deg) rotate(45deg);
+    position: absolute;
+    bottom: -58px;
+    right: -70px;
+}
+
+#imgAccueil {
     height: 20%;
     position: absolute;
-    top:1%;
-    right:30%;
+    top: 1%;
+    right: 30%;
 }
 
-.photoEquipe:nth-child(odd){
-    width : 5vw;
-    height : 20vw;
+.photoEquipe:nth-child(odd) {
+    width: 5vw;
+    height: 20vw;
 }
-.photoEquipe:nth-child(even){
-    width : 15vw;
-    height : 20vw;
-    
+
+.photoEquipe:nth-child(even) {
+    width: 15vw;
+    height: 20vw;
 }
+
+
 /*----------------COntact-------------*/
-    
+
+
 /*---------PARTICIPER----------*/
 
 #mainPublier {
