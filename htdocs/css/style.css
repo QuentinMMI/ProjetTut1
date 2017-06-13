@@ -721,6 +721,7 @@ footer>a {
     font-size:5vw;
     transform-origin:top-left;
     transform: skewX(7deg) translateX(-49%) translateY(280%) rotateZ(-83deg);
+    position: absolute;
 }
 
 
@@ -763,7 +764,53 @@ footer>a {
     
 }
 /*----------------COntact-------------*/
+#ContenuContact{
+    margin: auto;
+}
+
+#FormContact{
+    /*display: flex;
+    flex-direction: column;*/
+    max-width: 50vw;
+    margin: auto;
     
+}
+
+#FormContact>label{
+    display : none;
+}
+#FormContact>input::-webkit-input-placeholder, #message::-webkit-input-placeholder{
+    color:white;
+    font-family: KayakSansRegular;
+    font-size: 20px;
+}
+
+#FormContact>input, #message{
+    background-color: #00B3DF;
+    border : solid white 3px;
+    color: white;
+    display: block;
+}
+#FormContact>input:last-child{
+    font-family: KayakSansRegular;
+    font-size: 20px;
+}
+#FormContact>input:last-child:hover{
+    background-color: #05657E;
+    font-family: KayakSansRegular;
+    font-size: 20px;
+}
+
+
+#question{
+    width: 50vw;
+    border : solid white 5px;
+    color: white;
+    font-family: Leixo;
+    font-size : 25px;
+    margin: auto;
+}
+
 /*---------PARTICIPER----------*/
 
 

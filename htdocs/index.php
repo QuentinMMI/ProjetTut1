@@ -1,4 +1,4 @@
-﻿<?php
+<?php
    header   ("Content-type: text/html; charset=UTF-8");
 ?>
 <!DOCTYPE html>
@@ -93,7 +93,7 @@
                 <h2 class="titrePage">Tentez de gagner :</h2>
                 <div class="divImgLots"> <img src="images/imgBulgarie5.png"></div>
             </div> 
-            <div class="divBas"><img src="images/imgBulgarie4.png"></img></div>
+            <div class="divBas"><img src="images/imgBulgarie4.png"></div>
         </div>
 <!----------------------------------------------------------- LA BULGARIE ------------------------->
         <div id="planche3" class="planche planche3">
@@ -104,7 +104,6 @@
 Sa langue principale est le bulgare (c’est d’ailleurs le seul pays où elle est langue principale, même si d’autres pays parlent le bulgare).<br><br>Chaque année, la Bulgarie accueille 8.9 millions de touristes, principalement des pays Européens frontaliers, pour sa culture et son vin.
 </p>
         </div>
-</main>
 
 
 </main>
