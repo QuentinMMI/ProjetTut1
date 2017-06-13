@@ -765,14 +765,11 @@ footer>a {
 }
 /*----------------COntact-------------*/
 #ContenuContact{
-    margin: auto;
+    margin-left: 10%;
 }
 
 #FormContact{
-    /*display: flex;
-    flex-direction: column;*/
     max-width: 50vw;
-    margin: auto;
     
 }
 
@@ -790,6 +787,8 @@ footer>a {
     border : solid white 3px;
     color: white;
     display: block;
+    margin-top: 5%;
+    padding : 5px;
 }
 #FormContact>input:last-child{
     font-family: KayakSansRegular;
@@ -803,14 +802,34 @@ footer>a {
 
 
 #question{
-    width: 50vw;
+    width: 40vw;
     border : solid white 5px;
     color: white;
     font-family: Leixo;
     font-size : 25px;
-    margin: auto;
+    
 }
 
+#question::after{
+    content: url(../images/imgFlecheAccueil.png);
+    position: absolute;
+    transform: rotateY(180deg) rotate(-90deg);
+    top: 18%;
+    left: 35%;
+}
+
+#question::before{
+    content: "";
+    background-image: url(../images/imgContact.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position : absolute;
+    top : 0;
+    right : -25%;
+    width : 75%;
+    height: 75%;
+}
+ 
 /*---------PARTICIPER----------*/
 
 

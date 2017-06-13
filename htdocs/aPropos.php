@@ -105,7 +105,7 @@
                     <label for="mailEnvoyeur">Adresse e-mail</label>
                     <input id="mailEnvoyeur" name="mailEnvoyeur" type="email" placeholder="E-mail" required>
                     <label for="message">Message</label>
-                    <textarea name="message" id="message" rows="10" cols="50" placeholder="Message" required></textarea>
+                    <textarea name="message" id="message" rows="10" cols="60" placeholder="Message" required></textarea>
 
                    <input type="submit" value="Envoyer" style="cursor:pointer">
 
