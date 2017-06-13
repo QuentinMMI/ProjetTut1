@@ -117,22 +117,22 @@
                         <table id="ladder">
                             <tr>
                                 <td>
+                                    <img src="images/imgLots1.png" alt="Un appareil photo Canon EoS 80D + une GoPro Hero5 et une wonderbox">
                                     <div id="podium1">
-                                        <img src="images/imgLots1.png" alt="Un appareil photo Canon EoS 80D + une GoPro Hero5 et une wonderbox">
                                         <p>2</p>
                                         <p>Un appareil photo Canon EoS 80D + une GoPro Hero5 et une wonderbox</p>
                                     </div>
                                 </td>
                                 <td>
+                                    <img src="images/imgLots2.png" alt="une GoPro Hero5 et un voyage en bulgarie">
                                     <div id="podium0">
-                                        <img src="images/imgLots2.png" alt="une GoPro Hero5 et un voyage en bulgarie">
                                         <p>1</p>
                                         <p>une GoPro Hero5 et un voyage en bulgarie</p>
                                     </div>
                                 </td>
                                 <td>
+                                    <img src="images/imgLots3.png" alt="Une GoPro Hero5 et une wonderbox">
                                     <div id="podium2">
-                                        <img src="images/imgLots3.png" alt="Une GoPro Hero5 et une wonderbox">
                                         <p>3</p>
                                         <p>Une GoPro Hero5 et une wonderbox</p>
                                     </div>
