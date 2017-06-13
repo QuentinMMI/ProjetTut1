@@ -24,6 +24,6 @@ function changerTexte (evt) {
     }else if (idPortrait == "imgFlorian2"){
         textPortrait.innerHTML="<div id='textPropos'><h2>Florian Uguen</h2><p>Salut toi, je m’appelle Florian et je dirige le projet Défi Hawk, enfin dans les faits, c’est plutôt parce qu’il en fallait un, à côté de l’aspect administratif je suis infographiste et je travaille en étroite collaboration avec Quentin et Joanne.</p></div>";
     }else{
-        textPortrait.innerHTML="<div id='textPropos'><h2>Quentin Lecharpentier</h2><p>Salut toi, je m’appelle Florian et je dirige le projet Défi Hawk, enfin dans les faits, c’est plutôt parce qu’il en fallait un, à côté de l’aspect administratif je suis infographiste et je travaille en étroite collaboration avec Quentin et Joanne.</br>Je sais faire la cuisine aussi …</p></div>";
+        textPortrait.innerHTML="<div id='textPropos'><h2>Quentin Lecharpentier</h2><p>À mon tour de me présenter, moi je m’occupe plus du côté design et ambiance du site (même si tout le monde s’en occupe) je gère aussi l’aspect codage du site, donc si il y a un problème c’est de ma faute :) .. au fait moi c’est Quentin et j’ai 19 ans .</p><p>Je sais faire la cuisine aussi …</p></div>";
     }
 }
