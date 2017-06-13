@@ -16,12 +16,14 @@
                 $_SESSION['Nom'] = $userinfo['NomUser'];
                 $_SESSION['Mail'] = $userinfo['AdresseMail'];
                 $_SESSION['Date'] = $userinfo['DateNaissance'];
-                
+                echo("ok c'est bon !");
                 header("Location: ../index.php");
       } else {
+         echo("ok c'est bon !");
          header("Location: ../index.php#mauvaismotdepasse");
       }
    } else {
+      echo("ok c'est bon !");
       header("Location: ../index.php#pasrempli");
    }
 }
