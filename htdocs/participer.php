@@ -1,5 +1,6 @@
 <?php
-   header   ("Content-type: text/html; charset=UTF-8");
+session_start();
+    header   ("Content-type: text/html; charset=UTF-8");
 ?>
 <!DOCTYPE html>
 <html>  
@@ -49,7 +50,7 @@
                         <input type="text" id="mailC" name="mailC" required="required">
                         <label for="mdpC">Mot De Passe</label>
                         <input type="password" id="mdpC" name="mdpC" required="required">
-                        <input type="submit" value="OK !" id="submitC" name="submit" style="cursor:pointer"/>
+                        <input type="submit" value="OK !" id="submitC" name="submitC" style="cursor:pointer"/>
                     </form>
                 </div>
                 <div id="inscrip">
