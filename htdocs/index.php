@@ -30,17 +30,22 @@
               if(isset($_SESSION['id']))
               {
               ?>
-            <a class="policeNav" id="btnCo" style="cursor:pointer">Bonjour !</a>
+            <a class="policeNav" id="connect1" style="cursor:pointer">Bonjour !</a>
+            </nav>
+            <div id="Modal2" class="modal2">
+                <div id="sortir">
+                </div>
+                <div class="modal-content2">
+                    <p>cc</p>
+                </div>
+            </div>
             <?php
               }else
               {
               ?>
-           <a class="policeNav" id="btnCo" style="cursor:pointer">Se connecter</a>
-            <?php
-              }
-              ?>
-        </nav>
-         <div id="Modal" class="modal">
+            <a class="policeNav" id="btnCo" style="cursor:pointer">Se connecter</a>
+            </nav>
+            <div id="Modal" class="modal">
             <div class="modal-content">
                 <div id="divClose">
                 <a id="close" style="cursor:pointer">fermer</a>
@@ -77,6 +82,10 @@
                 </div>
             </div>
         </div>
+            <?php
+              }
+              ?>
+        
 </header>
 <!------------------------------------------------------------ ACCUEIL ----------------------------------------->
 <main id="pageAccueil">
