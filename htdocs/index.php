@@ -10,7 +10,7 @@
     <title>DEFI HAWK</title>
     <meta name="description" content="Un site concours, tentez de gagner un voyage grace à une production audiovisuelle ! Defi Hawk">
     <link type="text/css" rel="stylesheet" href="css/style.css"/>
-    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="shortcut icon" href="images/favicon.ico">
     <script src="java/planche.js"></script>
     <script src="java/modale.js"></script>
     <script src="java/verif.js"></script>
