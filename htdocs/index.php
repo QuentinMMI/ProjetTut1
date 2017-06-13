@@ -92,8 +92,8 @@
                 </div>
                 
                 <div>
-                    <img id="imgAccueil" src="images/imgPhotoAccueil.png" alt="images de la Bugarie">
-                    <p class="texteImg">Consultez notre dossier </br>sur la Bulgarie </br>pour en savoir plus</p>
+                    <img id="imgAccueil" src="images/imgAccueil.png" alt="images de la Bugarie">
+                    <p id="texteDossier"> <strong>CONSULTEZ NOTRE DOSSIER</br>SUR LA BULGARIE </br>POUR EN SAVOIR PLUS</strong></p>
                     
                     <img id="carte" src="images/imgMap.png" alt="Carte plaçant la Bulgarie par rapport à la France">
                 </div>
@@ -119,10 +119,7 @@ Sa langue principale est le bulgare (c’est d’ailleurs le seul pays où elle 
 </p>
         </div>
 </main>
-
-
-</main>
-    
+ 
     <!--------------------------------------------------- FOOTER -------------------------------------------------------------->
     
    <footer>

@@ -525,7 +525,7 @@ td {
 .accueilTitre {
     position: absolute;
     top: 30%;
-    left: -9%;
+    left: -8%;
     transform-origin: top-left;
     transform: rotateZ(-90deg);
 }
@@ -877,7 +877,7 @@ footer>a {
     color:white;
     border: solid white 3px;
     font-size:50px;
-    width:50vw;
+    width:50vw;</strong>
 }
 #texteIndex1{
     background-color: white;
@@ -889,7 +889,7 @@ footer>a {
     width:20%;
     position: absolute;
     top:20%;
-    left: 30%;
+    left: 35%;
 }
 #texteIndex2{
     background-color: white;
@@ -911,6 +911,26 @@ footer>a {
     width: 50vw;
     position: absolute;
     top:70%;
+}
+
+#imgAccueil{
+    width: 28%;
+    position: absolute;
+    top:1%;
+    right:13%;
+}
+#texteDossier{
+    position: absolute;
+    right:30%;
+    top:45%;
+    
+}
+
+#carte{
+    width: 20%;
+    position: absolute;
+    bottom:1%;
+    right:20%;
 }
 
 /*---------------A PROPOS------------*/
@@ -954,13 +974,6 @@ footer>a {
     position: absolute;
     bottom :-58px;
     right : -70px;
-}
-
-#imgAccueil{
-    height: 20%;
-    position: absolute;
-    top:1%;
-    right:30%;
 }
 
 .photoEquipe:nth-child(odd){
