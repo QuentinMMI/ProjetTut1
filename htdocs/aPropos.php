@@ -99,7 +99,7 @@
             <h1 id="contact">Contact</h1>
             <div id="ContenuContact">
                 <p id="question">Une question ? N'hesite pas a nous contacter ...</p>
-                <form method="post" action="" id="FormContact">
+                <form method="post" action="evoiMail.php" id="FormContact">
                     <label for="nomEnvoyeur">Nom</label>
                     <input type="text" id="nomEnvoyeur" name="nomEnvoyeur" placeholder="Nom" required>
                     <label for="mailEnvoyeur">Adresse e-mail</label>
