@@ -36,7 +36,37 @@
                 <div id="sortir">
                 </div>
                 <div class="modal-content2">
-                    <p>cc</p>
+                    <h1>Mon compte</h1>
+                    <div id="principI">
+                        <p><?php echo($_SESSION['Nom']." ".$_SESSION['Prenom']) ?></p>
+                        <img id="photoIdentite" src="images/imgPhotoVierge.png" alt="photo de profil">
+                    </div>
+                    <div id="contentI">
+                        <h2>Nom</h2>
+                        <div>
+                            <p><?php echo($_SESSION['Nom']) ?></p>
+                        </div>
+                        <h2>Prenom</h2>
+                        <div>
+                            <p><?php echo($_SESSION['Prenom']) ?></p>
+                        </div>
+                        <h2>Age</h2>
+                        <div>
+                            <p><?php echo($_SESSION['Date']) ?></p>
+                        </div>
+                        <h2>Adresse</h2>
+                        <div>
+                            <p><?php echo($_SESSION['Mail']) ?></p>
+                        </div>
+                        <h2>Mot de passe</h2>
+                        <div>
+                            <p>xXxXxXxXx</p>
+                        </div>
+                    </div>
+                    <div id="boutonsI">
+                        <a id="deconnecter" href="php/deconnexion.php">Déconnexion</a>
+                        <a id="deconnecter" href="">Modifier</a>
+                    </div>
                 </div>
             </div>
             <?php
