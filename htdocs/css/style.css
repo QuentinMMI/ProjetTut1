@@ -285,7 +285,7 @@ a:hover {
     color: white;
     font-size: 4.5vw;
     transform-origin: top-left;
-    transform: skewX(7deg) translateX(-49.5%) translateY(350%) rotateZ(-83deg);
+    transform: skewX(7deg) translateX(-49.5%) translateY(280%) rotateZ(-83deg);
     margin-bottom: 0;
 }
 
@@ -372,6 +372,7 @@ td {
 #podium1,
 #podium2 {
     width: 150px;
+    z-index: -10;
 }
 
 #podium0 {
@@ -421,7 +422,7 @@ td img{
     color: white;
     font-size: 5vw;
     transform-origin: top-left;
-    transform: skewX(7deg) translateX(-49%) translateY(280%) rotateZ(-83deg);
+    transform: skewX(7deg) translateX(-49%) translateY(222%) rotateZ(-83deg);
 }
 
 #texteGeo{
@@ -429,43 +430,48 @@ td img{
     border: solid 3px white;
     text-align: justify;
     width: 50%;
+    font-size: 2.5vh;
     position: absolute;
-    top: -20vh;
+    top: -24vh;
     left: 33vw;
+    padding: 7px;
 }
 #geographie{
     position: absolute;
-    top:-25vh;
+    top:-28vh;
     left: 33vw;
 }
 #tourisme{
     position: absolute;
-    top: 0;
+    top: -6vh;
     left: 33vw;
 }
 #texteTourisme{
     color:white;
     border: solid white 3px;
     text-align: justify;
-    width: 28%;
+    width: 30%;
+    font-size: 2.5vh;
     position: absolute;
-    top: 5vh;
+    top: -2vh;
     left: 33vw;
+    padding: 7px;
 }
 #imgBulg1{
     width: 25%;
     position: absolute;
-    top: -25vh;
+    top: -30vh;
     left: 5vw;
 }
 #bateau{
     width: 20%;
     position: absolute;
-    right: 15vw;
+    right: 10vw;
     bottom: -57vh;
+    z-index: -10;
 }
 #imgBulg2{
-    width: 30%;
+    width: 40%;
     position: absolute;
     left: 33vw;
     bottom: -57vh;
@@ -899,6 +905,7 @@ footer>a {
     position: absolute;
     top:20%;
     left: 35%;
+    z-index: -2;
 }
 #texteIndex2{
     color:white;
@@ -906,12 +913,12 @@ footer>a {
     width: 30vw;
     position: absolute;
     left:20%;
-     border: 3px white solid;
+    border: 3px white solid;
 }
 #gopro{
     width: 10%;
     position: absolute;
-    left: 5%;
+    left: 6%;
 }
 #texteBilgre{
     color:white;
@@ -929,16 +936,20 @@ footer>a {
     right:13%;
 }
 #texteDossier{
+    width:20%;
+    font-size: 2.5vh;
     position: absolute;
     right:30%;
-    top:45%;
+    top:50%;
+    font-family: WalterTurnCoat;
+    
     
 }
 
 #carte{
     width: 20%;
     position: absolute;
-    bottom:1%;
+    bottom:0%;
     right:20%;
 }
 
@@ -982,8 +993,9 @@ footer>a {
 
 
 #question{
+    padding: 5px;
     width: 40vw;
-    border : solid white 5px;
+    border : solid white 4px;
     color: white;
     font-family: Leixo;
     font-size : 25px;
