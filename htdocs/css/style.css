@@ -1025,30 +1025,16 @@ footer>a {
 /*---------PARTICIPER----------*/
 
 #mainPublier {
-    display: flex;
-    width: 100%;
-    height: 75%;
-}
-
-.divPubliser {
-    height: 100%;
-    width: 33.333%;
-    transform-origin: bottom-left;
-    transform: skewX(-7deg);
-}
-
-#div1Publier {
     background-color: #ff7477;
 }
-
-#div2Publier {
-    background-color: #ffd73a;
+#publications{
+    color: white;
+    font-size: 3.5vw;
+    position: absolute;
+    top: 30%;
+    left: -8%;
+    transform: rotateZ(-90deg) translateX(-10%) translateY(-100%);
 }
-
-#div3Publier {
-    background-color: #00b3df;
-}
-
 /*----interface inscription---*/
 
 .modal2 {
