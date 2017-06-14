@@ -13,7 +13,7 @@
     <link type="text/css" rel="stylesheet" href="css/style.css"/>
     <link rel="shortcut icon" href="images/favicon.ico">
     <script src="java/planche.js"></script>
-    <script src="java/modale.js"></script>
+    <script src="<?php if(isset($_SESSION['id'])){ ?>java/modale2.js<?php }else{ ?>java/modale.js<?php } ?>"></script>
     <script src="java/verif.js"></script>
 </head>
 
@@ -126,14 +126,14 @@
                         <table id="ladder">
                             <tr>
                                 <td>
-                                    <img src="images/imgLots1.png" alt="Un appareil photo Canon EoS 80D + une GoPro Hero5 et une wonderbox">
+                                    <img src="images/imgLots2.png" alt="Un appareil photo Canon EoS 80D + une GoPro Hero5 et une wonderbox">
                                     <div id="podium1">
                                         <p>2</p>
                                         <p>Un appareil photo Canon EoS 80D + une GoPro Hero5 et une wonderbox</p>
                                     </div>
                                 </td>
                                 <td>
-                                    <img src="images/imgLots2.png" alt="une GoPro Hero5 et un voyage en bulgarie">
+                                    <img src="images/imgLots1.png" alt="une GoPro Hero5 et un voyage en bulgarie">
                                     <div id="podium0">
                                         <p>1</p>
                                         <p>une GoPro Hero5 et un voyage en bulgarie</p>

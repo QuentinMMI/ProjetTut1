@@ -1044,25 +1044,34 @@ footer>a {
     position: fixed;
     z-index: 4;
     left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
+    top: -100%;
+    width: 100vw;
+    height: 90vh;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.7);
+    transition: top 0.5s cubic-bezier(.43, .57, .35, 1.04);
 }
 
 .modal2.affiche {
     display: block
 }
 
-.modal-content {
-    border: 4px #FFD73A solid;
+#sortir{
+    position:absolute;
+    width: 80%;
+    height: 100%;
+    top:0;
+    left:0;
+}
+
+.modal-content2 {
+    border: 3px white solid;
     display: inline-flex;
     position: absolute;
-    background: #ff7477;
     margin: auto;
-    top: 20%;
-    left: 0;
-    width: 30vw;
-    height: 80vh;
+    top: 0px;
+    right: 0px;
+    width: 20%;
+    height: 91%;
+    background-color: #ff7477 ;
+    min-width: 300px;
 }
