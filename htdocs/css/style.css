@@ -1122,3 +1122,15 @@ contentI{
     margin-top: 10px;
     margin-bottom: 2%;
 }
+
+#deconnecter,#modifier{
+    font-family: "KayakSansBold";
+    font-size: 15px;
+    border: 4px #FFD73A solid;
+    border-radius: 5px;
+    width: 85px;
+    height: 35px;
+    color: #00b3df;
+    margin-top: 5%;
+}
+
