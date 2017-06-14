@@ -16,7 +16,7 @@ function changerTexte (evt) {
     var textPortrait = document.getElementById("divAPropos");
     var idPortrait = this.id ;
     if (idPortrait == "imgThomas1"){
-        textPortrait.innerHTML="<div id='textPropos'><h2>Thomas Furiet</h2><p>Bonjour, je me présente je m’appelle Thomas Furiet j’ai 18 ans et je suis scripte sur le site. Je vais me charger de toute la rédaction possible et inimaginable, vérifier l’orthographe de mes collègues, je me charge également de la communication du site. </p></div>";
+        textPortrait.innerHTML="<div id='textPropos'><h2>Thomas Furiet</h2><p>Bonjour, je me présente je m’appelle Thomas Furiet j’ai 19 ans et je suis scripte et chargé de communication sur le site. Je vais me charger de toute la rédaction possible et inimaginable, vérifier l’orthographe de mes collègues. Ensuite je vais faire vivre Défi Hawk via les réseaux sociaux.</p></div>";
     }else if(idPortrait =="imgFlorian1"){
         textPortrait.innerHTML="<div id='textPropos'><h2>Hugo Fesselier</h2><p>Moi c’est Hugo et j’ai également 18 ans. Je suis développeur back-end. C’est moi qui gère l’arrière du site avec la base de donnée et l'interaction entre les pages.</p></div>";
     }else if (idPortrait == "imgThomas2"){
