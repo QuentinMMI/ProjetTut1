@@ -1203,6 +1203,9 @@ fieldset a:hover{
 #Admin{
     display: flex;  
 }
+#navAdmin{
+   width: 50%;
+}
 
 #navAdmin>ul{
     background-color: #FFD73A;

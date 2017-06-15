@@ -43,12 +43,12 @@ session_start();
                 </ul>
             </li>
         </ul>
-    </nav>
+    </nav
     
     <div>
         <h1>Bonjour administrateur</h1>
         <div id="renduBDD">
-            <h2>Vos derniere modification</h2>
+            <h2>Les utilisateur</h2>
             <?php
             //connexion a la BDD
             require ("php/param.inc.php");
@@ -58,24 +58,25 @@ session_start();
             $pdo->query("SET CHARACTER SET 'utf8'");
             
             //requet sql
-            $sql = "SELECT NomUser FROM UTILISATEUR";
+            $sql = "SELECT NomUser, PrenomUser FROM UTILISATEUR ORDER BY NomUser";
             
             $statement = $pdo->query($sql);
             
             //traitement des données
             
-            $nom = $statement->fetch(PDO::NUM);
+            $nom = $statement->fetch(PDO::FETCH_ASSOC);  
             
             //debut de la boucle
             
-            while($nom != false){
+            while ($nom != false){
             ?>
             
-            <p>nom : <?php echo ($nom)  ; ?></p>
+            <p>Nom : <?php echo mb_strtoupper(($nom["NomUser"]))." ". ($nom["PrenomUser"]) ; ?></p>
             
             <?php
+            $nom = $statement->fetch(PDO::FETCH_ASSOC);
             //fin de la boucle
-            $nom = $statement->fetch(PDO::NUM);
+            
             }
             
             //fermeure BDD
@@ -89,3 +90,5 @@ session_start();
 <footer>
     <?php require("php/footer.php"); ?>
 </footer>
+</body>
+</html>
