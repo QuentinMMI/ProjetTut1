@@ -1212,6 +1212,7 @@ fieldset a:hover{
     font-family: leixo;
     text-align: left;
     padding-top: 10vh;
+    list-style: none;
 }
 
 #navAdmin span{
@@ -1242,4 +1243,12 @@ fieldset a:hover{
 
 #navAdmin li:hover{
     text-decoration: underline;
+}
+#Admin p{
+    text-align: left;
+    padding-left: 5px;
+}
+
+#renduBDD{
+    border: solid white 5px;
 }

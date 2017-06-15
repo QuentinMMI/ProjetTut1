@@ -30,12 +30,12 @@ session_start();
                     <li style="cursor:pointer">Modifier le prenom</li>
                     <li style="cursor:pointer">Modifierl'age</li>
                     <li style="cursor:pointer">Modifier le mot de passe</li>
-                    <li style="cursor:pointer">modifier le photo de profil</li>
+                    <li style="cursor:pointer">Modifier le photo de profil</li>
                 </ul>
             </li>
             
             <li>
-                <span style="cursor:pointer">Supprimer un utilisateur</span>
+                <span style="cursor:pointer">Supprimer une production</span>
                 <ul class="sousMenu">
                     <li style="cursor:pointer">Voir/supprimer une musique</li>
                     <li style="cursor:pointer">Voir/supprimer une video</li>
@@ -45,7 +45,44 @@ session_start();
         </ul>
     </nav>
     
-    <h1>Bonjour administrateur</h1>
+    <div>
+        <h1>Bonjour administrateur</h1>
+        <div id="renduBDD">
+            <h2>Vos derniere modification</h2>
+            <?php
+            //connexion a la BDD
+            require ("php/param.inc.php");
+            $pdo=new PDO("mysql:host=".MYHOST.";dbname=".MYDB, MYUSER, MYPASS) ;
+
+            $pdo->query("SET NAMES utf8");
+            $pdo->query("SET CHARACTER SET 'utf8'");
+            
+            //requet sql
+            $sql = "SELECT NomUser FROM UTILISATEUR";
+            
+            $statement = $pdo->query($sql);
+            
+            //traitement des données
+            
+            $nom = $statement->fetch(PDO::NUM);
+            
+            //debut de la boucle
+            
+            while($nom != false){
+            ?>
+            
+            <p>nom : <?php echo ($nom)  ; ?></p>
+            
+            <?php
+            //fin de la boucle
+            $nom = $statement->fetch(PDO::NUM);
+            }
+            
+            //fermeure BDD
+            $pdo=null;
+            ?>
+        </div>
+    </div>
     
 </main>
     
