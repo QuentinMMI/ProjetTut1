@@ -13,12 +13,13 @@ function initModal (evt){
     btn.addEventListener("click",arriver);
     var pop = document.querySelectorAll(".popUp");
     for (var unPop of pop){
-        unPop.addEventListener('click', afficherPop);
+        unPop.addEventListener('click', arriver);
     }
 }
 
 function arriver (evt){
     divFond.style.display = "block";
+    evt.preventDefault();
     window.setTimeout(apparition,300);
 }
 
@@ -29,10 +30,4 @@ function partir (evt){
 
 function apparition (evt){
     fermer.style.left="-80px";
-}
-
-function afficherPop (evt){
-    var popUp = document.querySelector(this.getAttribute("href"));
-    popUp.style.display = "block";
-    evt.preventDefault();
 }
