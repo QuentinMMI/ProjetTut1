@@ -1163,76 +1163,42 @@ footer>a {
 /*---------PARTICIPER----------*/
 
     #mainParticiper{
- 
     background-color: #ff7477;
- 
 }
- 
 #lesIcones{
- 
     justify-content: space-around;
- 
     display: flex;
- 
     flex-direction: row
- 
 }
-
-	
 	#publications{
- 
     color: white;
- 
 	font-size: 3.5vh;
- 
 }
- 
 .divAffiche{
- 
     display: flex;
- 
     flex-direction: column;
- 
     align-items: center;
  
 }
- 
 .depot{
- 
     padding-top: 25px;
- 
     padding-bottom: 25px;
- 
     padding-left: 10px;
- 
     padding-right: 10px;
- 
-    border: solid 2px white;
- 
+    border: dashed 4px white;
     background-color: rgba(123, 58, 60, 0.58);
- 
     width: 130%;
- 
 }
- 
 .modifier{
- 
     padding:10px;
  
 }
- 
 #textPubli{
- 
     text-align: justify;
- 
     color: white;
- 
     padding-left: 250px;
- 
     padding-right: 250px;
- 
 }
- 
 /*----interface inscription---*/
 
 .modal2 {
