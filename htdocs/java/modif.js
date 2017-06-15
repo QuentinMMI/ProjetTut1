@@ -26,5 +26,17 @@ function changer (evt){
 
 
 function retour (evt){
-    
+    document.getElementById("valider").style.display="none";
+    document.getElementById("annuler").style.display="none";
+    document.getElementById("modifier").style.display="flex";
+    document.getElementById("deconnecter").style.display="flex";
+    document.getElementById("ageF").setAttribute('type','hidden');
+    var lesTex = document.querySelectorAll("#nomF, #prenomF, #adresseF, #mdpF");
+    for (var uneTex of lesTex){
+        uneTex.setAttribute('type','hidden');
+    }
+    var lesP = document.querySelectorAll("#contentI p");
+    for (var uneP of lesP){
+        uneP.style.display="block";
+    }
 }

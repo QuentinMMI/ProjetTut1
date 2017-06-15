@@ -1284,44 +1284,45 @@ footer>a {
     margin-top: -1%;
 }
 
-#deconnecter,#modifier,#boutonsI #valider{
+.inter1{
     font-family: "KayakSansBold";
     font-size: 15px;
     border: 4px #FFD73A solid;
     border-radius: 5px;
-    width: 85px;
-    height: 35px;
     color: black;
-    position: relative;
-    top: 20Px;
+    position: absolute;
+}
+
+#deconnecter{
+    width: 82px;
+    height: 21px;
+    top: calc(500px + 5%);
+    left: 19%;
+}
+
+#modifier{
+    width: 52px;
+    height: 17px;
+    top: calc(500px + 5%);
+    right: 22%;
+}
+
+.inter2{
+    display: none;
+  
 }
 
 #boutonsI #valider{
-    display: none;
-    font-family: "KayakSansBold";
-    font-size: 15px;
-    border: 4px #FFD73A solid;
-    border-radius: 5px;
     width: 60px;
-    height: 30px;
-    color: black;
-    position: relative;
-    top: -4px;
-    left: 40%;
+    height: 25px;
+    top: calc(500px + 5%);
+    right: 29%;
 }
-
     
 #annuler{
-    display: none;
-    font-family: "KayakSansBold";
-    font-size: 15px;
-    border: 4px #FFD73A solid;
-    border-radius: 5px;
     width: 50px;
     height: 20px;
-    color: black;
-    position: relative;
-    top: 20px;
+    top: calc(500px + 5%);
     left: 20%;
 }
 

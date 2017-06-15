@@ -20,7 +20,7 @@
                         <p><?php echo($_SESSION['Nom']." ".$_SESSION['Prenom']) ?></p>
                         <img id="photoIdentite" src="images/imgPhotoVierge.png" alt="photo de profil">
                     </div>
-                    <form id="contentI" action="" method="post">
+                    <form id="contentI" action="php/modifs.php" method="post">
                         <label for="nomF">Nom</label>
                         <p><?php echo($_SESSION['Nom']) ?></p>
                         <input type="hidden" id="nomF" name="nomF" value="<?php echo($_SESSION['Nom']) ?>" required="required"/>
@@ -37,10 +37,10 @@
                         <p>••••••••</p>
                         <input type="hidden" id="mdpF" name="mdpF" value=""/>
                         <div id="boutonsI">
-                            <a id="deconnecter" href="php/deconnexion.php">Déconnexion</a>
-                            <span style="cursor:pointer" id="modifier">Modifier</span>
-                            <span style="cursor:pointer" id="annuler">Annuler</span>
-                            <input type="submit" value="valider" id="valider" name="valider" style="cursor:pointer"/>
+                            <a id="deconnecter" class="inter1" href="php/deconnexion.php">Déconnexion</a>
+                            <span style="cursor:pointer" class="inter1" id="modifier">Modifier</span>
+                            <span style="cursor:pointer" class="inter2 inter1" id="annuler">Annuler</span>
+                            <input type="submit" value="valider" id="valider" name="valider" style="cursor:pointer" class="inter2 inter1" />
                         </div>
                     </form>
                 </div>
