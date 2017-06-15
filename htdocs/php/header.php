@@ -26,20 +26,21 @@
                         <input type="hidden" id="nomF" name="nomF" value="<?php echo($_SESSION['Nom']) ?>" required="required"/>
                         <label for="prenomF">Prenom</label>
                         <p><?php echo($_SESSION['Prenom']) ?></p>
-                        <input type="hidden" id="prenomF" name="prenomF" value="<?php echo($_SESSION['Prenom']) ?> required="required""/>
+                        <input type="hidden" id="prenomF" name="prenomF" value="<?php echo($_SESSION['Prenom']) ?>" required="required"/>
                         <label for="ageF">Age</label>
                         <p><?php echo($_SESSION['Date']) ?></p>
-                        <input type="hidden" id="ageF" name="ageF" value="<?php echo($_SESSION['Date']) ?> required="required""/>
+                        <input type="hidden" id="ageF" name="ageF" value="<?php echo($_SESSION['Date']) ?>" required="required"/>
                         <label for="adresseF">Adresse</label>
                         <p><?php echo($_SESSION['Mail']) ?></p>
-                        <input type="hidden" id="adresseF" name="adresseF" value="<?php echo($_SESSION['Mail']) ?> required="required""/>
+                        <input type="hidden" id="adresseF" name="adresseF" value="<?php echo($_SESSION['Mail']) ?>" required="required"/>
                         <label for="mdpF">Mot de passe</label>
                         <p>••••••••</p>
-                        <input type="hidden" id="mdpF" name="mdpF" value="" required="required"/>
+                        <input type="hidden" id="mdpF" name="mdpF" value=""/>
                         <div id="boutonsI">
                             <a id="deconnecter" href="php/deconnexion.php">Déconnexion</a>
-                            <a id="modifier" href="">Modifier</a>
-                            <input type="hidden" value="valider" id="valider" name="valider" style="cursor:pointer"/>
+                            <span style="cursor:pointer" id="modifier">Modifier</span>
+                            <span style="cursor:pointer" id="annuler">Annuler</span>
+                            <input type="submit" value="valider" id="valider" name="valider" style="cursor:pointer"/>
                         </div>
                     </form>
                 </div>

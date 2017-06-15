@@ -1284,7 +1284,7 @@ footer>a {
     margin-top: -1%;
 }
 
-#deconnecter,#modifier,#valider{
+#deconnecter,#modifier,#boutonsI #valider{
     font-family: "KayakSansBold";
     font-size: 15px;
     border: 4px #FFD73A solid;
@@ -1295,6 +1295,37 @@ footer>a {
     position: relative;
     top: 20Px;
 }
+
+#boutonsI #valider{
+    display: none;
+    font-family: "KayakSansBold";
+    font-size: 15px;
+    border: 4px #FFD73A solid;
+    border-radius: 5px;
+    width: 60px;
+    height: 30px;
+    color: black;
+    position: relative;
+    top: -4px;
+    left: 40%;
+}
+
+    
+#annuler{
+    display: none;
+    font-family: "KayakSansBold";
+    font-size: 15px;
+    border: 4px #FFD73A solid;
+    border-radius: 5px;
+    width: 50px;
+    height: 20px;
+    color: black;
+    position: relative;
+    top: 20px;
+    left: 20%;
+}
+
+
 
 /*------------------------FAQ--------------------------*/
 fieldset{
