@@ -21,26 +21,16 @@
                         <img id="photoIdentite" src="images/imgPhotoVierge.png" alt="photo de profil">
                     </div>
                     <div id="contentI">
-                        <h2>Nom</h2>
-                        <div>
-                            <p><?php echo($_SESSION['Nom']) ?></p>
-                        </div>
-                        <h2>Prenom</h2>
-                        <div>
-                            <p><?php echo($_SESSION['Prenom']) ?></p>
-                        </div>
-                        <h2>Age</h2>
-                        <div>
-                            <p><?php echo($_SESSION['Date']) ?></p>
-                        </div>
-                        <h2>Adresse</h2>
-                        <div>
-                            <p><?php echo($_SESSION['Mail']) ?></p>
-                        </div>
-                        <h2>Mot de passe</h2>
-                        <div>
-                            <p>xXxXxXxXx</p>
-                        </div>
+                        <label for="nomF">Nom</label>
+                        <input type="text" id="nomF" name="nomF" value="<?php echo($_SESSION['Nom']) ?>"/>
+                        <label for="prenomF">Prenom</label>
+                        <input type="text" id="prenomF" name="prenomF" value="<?php echo($_SESSION['Prenom']) ?>"/>
+                        <label for="ageF">Age</label>
+                        <input type="date" id="ageF" name="ageF" value="<?php echo($_SESSION['Date']) ?>"/>
+                        <label for="adresseF">Adresse</label>
+                        <input type="mail" id="adresseF" name="adresseF" value="<?php echo($_SESSION['Mail']) ?>"/>
+                        <label for="mdpF">Mot de passe</label>
+                        <input type="password" id="mdpF" name="mdpF" value=""/>
                     </div>
                     <div id="boutonsI">
                         <a id="deconnecter" href="php/deconnexion.php">Déconnexion</a>
