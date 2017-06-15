@@ -32,18 +32,18 @@ session_start();
                 </div>  
                 <div class="divAffiche">  
                     <img class="modifier" src="images/imgModifier.png" alt="image modifier">  
-                    <img class="depot" src="images/imgIconeSon.png" alt="image de l'affiche">  
+                    <img class="depot" src="images/imgIconeSon.png" alt="image du son">  
                     <img class="modifier" src="images/imgPoubelle.png" alt="image poubelle">  
                 </div>  
                 <div class="divAffiche">  
                     <img class="modifier" src="images/imgModifier.png" alt="image modifier">  
-                    <img class="depot" src="images/imgIconeVideo.png" alt="image de l'affiche">  
+                    <img class="depot" src="images/imgIconeVideo.png" alt="image de la vidéo">  
                     <img class="modifier" src="images/imgPoubelle.png" alt="image poubelle">  
                 </div>  
             </div> 
         </div> 
   
-    </main> >
+    </main>
     <footer>
         <?php require("php/footer.php"); ?>
     </footer>
