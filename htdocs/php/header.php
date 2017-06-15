@@ -15,7 +15,7 @@
                 <div id="sortir">
                 </div>
                 <div class="modal-content2">
-                    <h1>Bienvenu !</h1>
+                    <h1>Bienvenue !</h1>
                     <div id="principI">
                         <p><?php echo($_SESSION['Nom']." ".$_SESSION['Prenom']) ?></p>
                         <img id="photoIdentite" src="images/imgPhotoVierge.png" alt="photo de profil">

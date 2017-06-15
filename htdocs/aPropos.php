@@ -57,6 +57,8 @@
                 <form method="post" action="php/envoiMail.php" id="FormContact">
                     <label for="nomEnvoyeur">Nom et prénom</label>
                     <input type="text" id="nomEnvoyeur" name="nomEnvoyeur" placeholder="Nom" required>
+                    <label for="objet">objet</label>
+                    <input id="objet" name="objet" type="text" placeholder="Objet" required>
                     <label for="mailEnvoyeur">Adresse e-mail</label>
                     <input id="mailEnvoyeur" name="mailEnvoyeur" type="email" placeholder="E-mail" required>
                     <label for="message">Message</label>
