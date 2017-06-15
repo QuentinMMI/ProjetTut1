@@ -1361,12 +1361,15 @@ fieldset a:hover{
 #Admin{
     display: flex;  
 }
+#navAdmin{
+   width: 25%;
+}
 
 #navAdmin>ul{
     background-color: #FFD73A;
     border: solid white 3px;
     height: 100%;
-    width: 25%;
+    width: 100%;
     font-family: leixo;
     text-align: left;
     padding-top: 10vh;
@@ -1388,7 +1391,7 @@ fieldset a:hover{
     text-decoration: none;
     position: absolute;
     top:0;
-    right: -125%;
+    right: 0;
 }
 
 #navAdmin>ul>li:hover .sousMenu{
