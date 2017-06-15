@@ -479,123 +479,118 @@ td img{
 
 /*----------Reglement------------*/
 
- 
-.titreReglement { 
-    position: absolute; 
-    bottom: 4%; 
-    width: 70vh; 
-    left: 1%; 
-    margin: 0; 
-    transform: rotate(-90deg); 
-    transform-origin: top left; 
-    color: white; 
-} 
- 
-#fondReglement { 
-    height: 100%; 
-} 
- 
-#texteLibreDroit { 
-    text-align: center; 
-    color: white; 
-    border: 3px solid white; 
-    font-size: 1.5vw; 
-    padding: 1vw; 
-    margin-left: 10%; 
-    margin-right: 5%; 
-} 
- 
-.fondJaune { 
-    background-color: #f95053; 
-} 
-        
+.titreReglement {
+    position: absolute;
+    bottom: 4%;
+    width: 70vh;
+    left: 1%;
+    margin: 0;
+    transform: rotate(-90deg);
+    transform-origin: top left;
+    color: white;
+}
 
-#afficheRegle { 
-    background-image: url(../images/imgFondJaune.png); 
-    background-repeat: no-repeat; 
-    background-size: 100% 100%; 
-    width: 274px ; 
-    height: 200px; 
-    position: absolute; 
-    display: flex; 
-    flex-direction: column; 
-    padding: 0 5px 0 10px; 
-    text-align: right; 
-    top: 25vh; 
-    right: 5%; 
-} 
- 
-#sonRegle { 
-    background-image: url(../images/imgFondBleu.png); 
-    background-repeat: no-repeat; 
-    background-size: 100% 100%; 
-    position: absolute; 
-    padding: 0 20px 0 5px; 
-    width: 420px; 
-    height: 260px; 
-    bottom: 8vh; 
-    left: 35vw; 
+#fondReglement {
+    height: 100%;
+}
 
-} 
-        
+#texteLibreDroit {
+    text-align: center;
+    color: white;
+    border: 3px solid white;
+    font-size: 1.5vw;
+    padding: 1vw;
+    margin-left: 10%;
+    margin-right: 5%;
+}
 
-#videoRegle { 
-    background-image: url(../images/imgFondRouge.png); 
-    background-repeat: no-repeat; 
-    background-size: 100% 100%; 
-    text-align: left; 
-    display: flex; 
-    flex-direction: column; 
-    justify-content: space-between; 
-    position: absolute; 
-    padding: 0 10px; 
-    top: 25%; 
-    left: 10%; 
-    height: 60vh; 
-} 
- 
-#videoRegle>h2, #afficheRegle>h2 { 
-    text-align: center; 
-} 
-#videoRegle>:last-child{ 
-    width : 70%; 
+.fondJaune {
+    background-color: #f95053;
+}
 
-} 
-        
-        
-        
-#videoRegle::before{ 
-    content: ""; 
-    background-image: url(../images/imgPasseport.png); 
-    background-repeat: no-repeat; 
-    background-size: contain; 
-    position: absolute; 
-    height: 45%; 
-    width: 45%; 
-    right: -25vw; 
-} 
- 
-#ilNeVousReste::after{ 
-    content: ""; 
-    position: absolute; 
-    background-image: url(../images/imgLivre.png); 
-    background-repeat: no-repeat; 
-    background-size: contain; 
-    width : 200%; 
-    height: 100%; 
-    bottom: -100%; 
-    right: 0; 
-} 
-        
-        
-#ilNeVousReste { 
-    font-family: "WalterTurnCoat"; 
-    text-transform: capitalize; 
-    position : absolute; 
-    right: 5%; 
-    top: calc(25vh + 200px); 
-    width : 200px; 
-} 
+
+#afficheRegle {
+    background-image: url(../images/imgFondJaune.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 274px ;
+    height: 200px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding: 0 5px 0 10px;
+    text-align: right;
+    top: 25vh;
+    right: 5%;
+}
+
+#sonRegle {
+    background-image: url(../images/imgFondBleu.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    padding: 0 20px 0 5px;
+    width: 420px;
+    height: 260px;
+    bottom: 8vh;
+    left: 35vw;
+}
+
+#videoRegle {
+    background-image: url(../images/imgFondRouge.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    padding: 0 10px;
+    top: 25%;
+    left: 10%;
+    height: 60vh;
+}
+
+#videoRegle>h2, #afficheRegle>h2 {
+    text-align: center;
+}
+#videoRegle>:last-child{
+    width : 70%;
+}
+
+#videoRegle::before{
+    content: "";
+    background-image: url(../images/imgPasseport.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    height: 45%;
+    width: 45%;
+    right: -25vw;
+}
+
+#ilNeVousReste::after{
+    content: "";
+    position: absolute;
+    background-image: url(../images/imgLivre.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width : 200%;
+    height: 100%;
+    bottom: -100%;
+    right: 0;
+}
+
+
+#ilNeVousReste {
+    font-family: "WalterTurnCoat";
+    text-transform: capitalize;
+    position : absolute;
+    right: 5%;
+    top: calc(25vh + 200px);
+    width : 200px;
+}
+
 
 /*------Publication-------*/
 
@@ -895,12 +890,6 @@ footer>a {
     transform: skewX(7deg) translateX(-53%) translateY(220%) rotateZ(-83deg);
 }
 
-#FAQ {
-    color: white;
-    font-size: 5vw;
-    transform-origin: top-left;
-    transform: skewX(7deg) translateX(-49%) translateY(220%) rotateZ(-83deg);
-}
 
 #contact {
     color: white;
@@ -1183,3 +1172,31 @@ contentI{
     top: 20Px;
 }
 
+/*------------------------FAQ--------------------------*/
+fieldset{
+    display: inline-block;
+    width : 75vw;
+    border: white solid 5px;
+    margin: 0 7vw 8px 0;
+    text-align: left;
+}
+fieldset>legend{
+    font-family: leixo;
+}
+
+fieldset>p{
+    font-size: 15px;
+}
+
+fieldset a:hover{
+    color: #FF7477;
+}
+
+#FAQ{
+    padding-top: 3px;
+    position: absolute;
+    color :white;
+    font-size:5vw;
+    transform-origin:top-left;
+    transform: skewX(7deg) translateX(-49%) translateY(220%) rotateZ(-83deg);
+}

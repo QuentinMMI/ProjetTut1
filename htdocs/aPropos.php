@@ -43,9 +43,26 @@
         
         <div id="planche2" class="planche planche2">
             <h1 id ="FAQ">faq</h1>
-            <div id="onglets2" class="ongletsPub">
-                
-            </div>
+            <fieldset> 
+                <legend>Comment participer?</legend> 
+                <p>Pour participer c'est très simple il que vous créiez un compte en cliquant sur <a href="#Modal" class="popUp">Se connecter</a>.</p> 
+                <p>Une fois que vous êtes inscrits, vous pouvez poster une réalisation par catégorie (image, son, vidéo) en cliquant sur le bouton <a href="participer.php">Participer</a> dans le menu en haut.</p> 
+                <p>De cette manière, vous pourrez upload votre document. Il sera soumis à un vote de la part d'un jury qui laissera un panel de personnes choisir quelles réalisations méritent de gagner les prix !</p> 
+            </fieldset> 
+            <fieldset> 
+                <legend>Quel age pour participer ?</legend> 
+                <p>Une des conditions pour participer c'est d'avoir plus de 16 ans. Et oui, si vous avec moins de 16 ans, il faudra attendre quelques années avant de pouvoir participer.</p> 
+                <p>Pour les participants mineurs il faudra fournir une autorisation parentale.</p> 
+                <p>Vous pouvez en télécharger une <a href="Doc/AutorisationPaentale.pdf" target="_blank">ici</a>.</p> 
+            </fieldset> 
+            <fieldset> 
+                <legend>Comment savoir si on a gagne ?</legend> 
+                <p>Pour savoir si on a gagné, c'est très simple, un email sera envoyé au gagnant, le 14 novembre. Le 15 novembre il y'aura une annonce publique sur les réseaux sociaux et sur le site pour annoncer les gagnants</p> 
+            </fieldset>
+            <fieldset> 
+                <legend>Et qu'est-ce-qu'on gagne ?</legend> 
+                <p>Je vous invite à consulter la page <a href="index.php">Accueil</a> et à sélectionner l'onglet Lot.</p> 
+            </fieldset> 
         </div>
     
     
