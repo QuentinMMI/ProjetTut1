@@ -20,32 +20,28 @@
                         <p><?php echo($_SESSION['Nom']." ".$_SESSION['Prenom']) ?></p>
                         <img id="photoIdentite" src="images/imgPhotoVierge.png" alt="photo de profil">
                     </div>
-                    <div id="contentI">
-                        <h2>Nom</h2>
-                        <div>
-                            <p><?php echo($_SESSION['Nom']) ?></p>
+                    <form id="contentI" action="" method="post">
+                        <label for="nomF">Nom</label>
+                        <p><?php echo($_SESSION['Nom']) ?></p>
+                        <input type="hidden" id="nomF" name="nomF" value="<?php echo($_SESSION['Nom']) ?>" required="required"/>
+                        <label for="prenomF">Prenom</label>
+                        <p><?php echo($_SESSION['Prenom']) ?></p>
+                        <input type="hidden" id="prenomF" name="prenomF" value="<?php echo($_SESSION['Prenom']) ?> required="required""/>
+                        <label for="ageF">Age</label>
+                        <p><?php echo($_SESSION['Date']) ?></p>
+                        <input type="hidden" id="ageF" name="ageF" value="<?php echo($_SESSION['Date']) ?> required="required""/>
+                        <label for="adresseF">Adresse</label>
+                        <p><?php echo($_SESSION['Mail']) ?></p>
+                        <input type="hidden" id="adresseF" name="adresseF" value="<?php echo($_SESSION['Mail']) ?> required="required""/>
+                        <label for="mdpF">Mot de passe</label>
+                        <p>••••••••</p>
+                        <input type="hidden" id="mdpF" name="mdpF" value="" required="required"/>
+                        <div id="boutonsI">
+                            <a id="deconnecter" href="php/deconnexion.php">Déconnexion</a>
+                            <a id="modifier" href="">Modifier</a>
+                            <input type="hidden" value="valider" id="valider" name="valider" style="cursor:pointer"/>
                         </div>
-                        <h2>Prenom</h2>
-                        <div>
-                            <p><?php echo($_SESSION['Prenom']) ?></p>
-                        </div>
-                        <h2>Age</h2>
-                        <div>
-                            <p><?php echo($_SESSION['Date']) ?></p>
-                        </div>
-                        <h2>Adresse</h2>
-                        <div>
-                            <p><?php echo($_SESSION['Mail']) ?></p>
-                        </div>
-                        <h2>Mot de passe</h2>
-                        <div>
-                            <p>xXxXxXxXx</p>
-                        </div>
-                    </div>
-                    <div id="boutonsI">
-                        <a id="deconnecter" href="php/deconnexion.php">Déconnexion</a>
-                        <a id="modifier" href="">Modifier</a>
-                    </div>
+                    </form>
                 </div>
             </div>
             <?php

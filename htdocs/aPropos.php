@@ -73,7 +73,7 @@
                 <p id="question">Une question ? N'hesite pas a nous contacter ...</p>
                 <form method="post" action="php/envoiMail.php" id="FormContact">
                     <label for="nomEnvoyeur">Nom et prénom</label>
-                    <input type="text" id="nomEnvoyeur" name="nomEnvoyeur" placeholder="Nom" required>
+                    <input type="text" id="nomEnvoyeur" name="nomEnvoyeur" placeholder="Nom et prénom" required>
                     <label for="objet">objet</label>
                     <input id="objet" name="objet" type="text" placeholder="Objet" required>
                     <label for="mailEnvoyeur">Adresse e-mail</label>
