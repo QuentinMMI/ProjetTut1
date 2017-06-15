@@ -1,4 +1,23 @@
 <?php
+    if(isset($_POST["Envoyer"])){
+        
+    
+        $from = $_POST["mailEnvoyeur"];
+
+        $to="defi.hawk@gmail.com";
+
+        $sujet=$_POST["objet"];
+        
+
+        $header = "De : ".$from. "\r\n";
+        $headers .='Content-Type: text/plain; charset="iso-8859-1"'."\r\n";
+        $headers .='Content-Transfer-Encoding: 7bit'."\r\n";
+        
+        $message= "Nom et prenom: \"". $_POST['nomEnvoyeur'] ."\"\r\n";
+        $message=$_POST["message"];
+        $message=$_POST["message"];
+        
+    }
 /* CONFIG */
 
 $destinataire = 'defi.hawk@gmail.com';
