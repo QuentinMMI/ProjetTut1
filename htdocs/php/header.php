@@ -20,22 +20,28 @@
                         <p><?php echo($_SESSION['Nom']." ".$_SESSION['Prenom']) ?></p>
                         <img id="photoIdentite" src="images/imgPhotoVierge.png" alt="photo de profil">
                     </div>
-                    <div id="contentI">
+                    <form id="contentI" action="" method="post">
                         <label for="nomF">Nom</label>
-                        <input type="text" id="nomF" name="nomF" value="<?php echo($_SESSION['Nom']) ?>"/>
+                        <p><?php echo($_SESSION['Nom']) ?></p>
+                        <input type="hidden" id="nomF" name="nomF" value="<?php echo($_SESSION['Nom']) ?>" required="required"/>
                         <label for="prenomF">Prenom</label>
-                        <input type="text" id="prenomF" name="prenomF" value="<?php echo($_SESSION['Prenom']) ?>"/>
+                        <p><?php echo($_SESSION['Prenom']) ?></p>
+                        <input type="hidden" id="prenomF" name="prenomF" value="<?php echo($_SESSION['Prenom']) ?> required="required""/>
                         <label for="ageF">Age</label>
-                        <input type="date" id="ageF" name="ageF" value="<?php echo($_SESSION['Date']) ?>"/>
+                        <p><?php echo($_SESSION['Date']) ?></p>
+                        <input type="hidden" id="ageF" name="ageF" value="<?php echo($_SESSION['Date']) ?> required="required""/>
                         <label for="adresseF">Adresse</label>
-                        <input type="mail" id="adresseF" name="adresseF" value="<?php echo($_SESSION['Mail']) ?>"/>
+                        <p><?php echo($_SESSION['Mail']) ?></p>
+                        <input type="hidden" id="adresseF" name="adresseF" value="<?php echo($_SESSION['Mail']) ?> required="required""/>
                         <label for="mdpF">Mot de passe</label>
-                        <input type="password" id="mdpF" name="mdpF" value=""/>
-                    </div>
-                    <div id="boutonsI">
-                        <a id="deconnecter" href="php/deconnexion.php">Déconnexion</a>
-                        <a id="modifier" href="">Modifier</a>
-                    </div>
+                        <p>••••••••</p>
+                        <input type="hidden" id="mdpF" name="mdpF" value="" required="required"/>
+                        <div id="boutonsI">
+                            <a id="deconnecter" href="php/deconnexion.php">Déconnexion</a>
+                            <a id="modifier" href="">Modifier</a>
+                            <input type="hidden" value="valider" id="valider" name="valider" style="cursor:pointer"/>
+                        </div>
+                    </form>
                 </div>
             </div>
             <?php
