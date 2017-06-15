@@ -561,8 +561,8 @@ td img{
     background-repeat: no-repeat;
     background-size: contain;
     position: absolute;
-    height: 45%;
-    width: 45%;
+    height: calc(80vh - 260px);
+    width: calc(29vw - 260px);
     right: -25vw;
 }
 
