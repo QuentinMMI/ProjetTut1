@@ -1358,3 +1358,49 @@ fieldset a:hover{
     transform-origin:top-left;
     transform: skewX(7deg) translateX(-49%) translateY(220%) rotateZ(-83deg);
 }
+
+
+/*-------------------------ADMINISTRATION---------------------------*/
+#Admin{
+    display: flex;  
+}
+
+#navAdmin>ul{
+    background-color: #FFD73A;
+    border: solid white 3px;
+    height: 100%;
+    width: 25%;
+    font-family: leixo;
+    text-align: left;
+    padding-top: 10vh;
+}
+
+#navAdmin span{
+    font-size: 25px;
+}
+#navAdmin>ul>li{
+    position:relative;
+    margin-bottom: 10vh;
+}
+
+.sousMenu{
+    display: none;
+    background-color: #FFD73A;
+    border: solid white 3px;
+    text-decoration: none;
+    position: absolute;
+    top:0;
+    right: -125%;
+}
+
+#navAdmin>ul>li:hover .sousMenu{
+    display: block;
+    
+}
+.sousMenu li:hover{
+    text-decoration: none
+}
+
+#navAdmin li:hover{
+    text-decoration: underline;
+}
