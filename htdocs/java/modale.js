@@ -11,6 +11,10 @@ function initModal (evt){
     fermer=document.getElementById("divClose");
     span.addEventListener("click",partir);
     btn.addEventListener("click",arriver);
+    var pop = document.querySelectorAll(".popUp");
+    for (var unPop of pop){
+        unPop.addEventListener('click', afficherPop);
+    }
 }
 
 function arriver (evt){
@@ -25,4 +29,10 @@ function partir (evt){
 
 function apparition (evt){
     fermer.style.left="-80px";
+}
+
+function afficherPop (evt){
+    var popUp = document.querySelector(this.getAttribute("href"));
+    popUp.style.display = "block";
+    evt.preventDefault();
 }
