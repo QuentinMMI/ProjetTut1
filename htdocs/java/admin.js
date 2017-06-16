@@ -21,6 +21,22 @@
         this.style.fontFamily = "KayakSansBold";
         userActif=this;
         
+        var xhr = new XMLHttpRequest();
+
+            // On souhaite juste récupérer le contenu du fichier, la méthode GET suffit amplement :
+            xhr.open('GET', 'signalerOeuvre.php?idUser=' + idUser + '');
+
+            xhr.addEventListener('readystatechange', function() { // On gère ici une requête asynchrone
+
+              if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) { // Si le fichier est chargé sans erreur
+                var chaineEnvoyer = xhr.responseText;
+
+                profil.innerHTML = chaineEnvoyer; // Et on affiche !
+              }
+
+            });
+
+            xhr.send(null); // La requête est prête, on envoie tout !
     }
 
 }());
