@@ -9,7 +9,7 @@
     
     $profil= $verif->fetch(PDO::FETCH_ASSOC);
     
-    $codeHTML = "<h2>".UPPER($profil['NomUser']." ".$profil['PrenomUser']."</h2>" ;
+    $codeHTML = "<h2>".UPPER($profil['NomUser'])." ".($profil['PrenomUser'])."</h2>" ;
 	
     echo($codeHTML);
 
