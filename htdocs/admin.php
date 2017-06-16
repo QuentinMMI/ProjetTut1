@@ -10,7 +10,7 @@ session_start();
     <meta name="administration" content="administration des production et des utilisateurs du Défi Hawk.">
     <link type="text/css" rel="stylesheet" href="css/style.css"/>
     <script src="<?php if(isset($_SESSION['id'])){ ?>java/modale2.js<?php }else{ ?>java/modale.js<?php } ?>"></script>
-    <sript src="java/admin.js" type="text/javascript"></sript>
+    <script src="java/admin.js" type="text/javascript"></script>
 </head>
 <body>
 <header>
