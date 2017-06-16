@@ -1203,50 +1203,22 @@ fieldset a:hover{
 #Admin{
     display: flex;  
 }
-#navAdmin{
-   width: 25%;
-}
 
-#navAdmin>ul{
+#choixAdmin{
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
     background-color: #FFD73A;
-    border: solid white 3px;
-    height: 100%;
-    width: 100%;
     font-family: leixo;
-    text-align: left;
-    padding-top: 10vh;
-    list-style: none;
-}
-
-#navAdmin span{
     font-size: 25px;
+    height: 100%;
+    width : 15%;
 }
-#navAdmin>ul>li{
-    position:relative;
-    margin-bottom: 10vh;
-}
-
-.sousMenu{
-    display: none;
-    background-color: #FFD73A;
-    border: solid white 3px;
-    text-decoration: none;
-    position: absolute;
-    top:0;
-    right: 0;
+#choixAdmin>span:hover{
+    text-decoration: overline;
 }
 
-#navAdmin>ul>li:hover .sousMenu{
-    display: block;
-    
-}
-.sousMenu li:hover{
-    text-decoration: none
-}
 
-#navAdmin li:hover{
-    text-decoration: underline;
-}
 #Admin p{
     text-align: left;
     padding-left: 5px;
