@@ -660,7 +660,7 @@ td img{
     top: 30%;
     left: -4%;
     transform-origin: top-left;
-    transform: skewX(7deg) rotateZ(-90deg);
+    transform: skewX(7deg) rotateZ(-84deg);
 }
 
 .hVideo {
@@ -668,7 +668,7 @@ td img{
     top: 30%;
     left: -6%;
     transform-origin: top-left;
-    transform: skewX(7deg) rotateZ(-90deg);
+    transform: skewX(7deg) rotateZ(-84deg);
 }
 
 .ongletsPub {
@@ -786,11 +786,13 @@ td img{
 }
 
 #cont2 {
-    margin-left: 10%;
+    background-color: #DDB56F;
+    margin-left: -5%;
 }
 
 #contenu3 {
-    margin-left: 10%;
+    background-color: #005DB3;
+    margin-left: -5%;
 }
 
 

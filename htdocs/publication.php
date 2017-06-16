@@ -25,15 +25,6 @@ session_start();
             <h1 class="hAffiche hPub">affiCHES</h1>
             <div id="onglets" class="ongletsPub">
                 <button type="button" data-numero="0"></button>
-                <button type="button" data-numero="1"></button>
-                <button type="button" data-numero="2"></button>
-                <button type="button" data-numero="3"></button>
-                <button type="button" data-numero="4"></button>
-                <button type="button" data-numero="5"></button>
-                <button type="button" data-numero="6"></button>
-                <button type="button" data-numero="7"></button>
-                <button type="button" data-numero="8"></button>
-                <button type="button" data-numero="9"></button>
             </div>
             <div class="contenuP" id="contenu1">
                 <?php
@@ -59,64 +50,58 @@ session_start();
         </div>
         <div id="planche2" class="planche planche2">
             <h1 class="hSon hPub">Sons</h1>
-            <div id="modalVoteSon">
-                <!--IL FAUT DU PHP ET DU JS BORDEL DE COUILLE-->
-                <img src="" alt="">
-                <div>
-                    <h2></h2>
-                    <p></p>
-                    <img src="./images/imgpoceblo.png" alt="">
-                    <img src="./images/imgpoceblogri.png" alt="">
-                    <img src="./images/imgpocerouj.png" alt="">
-                    <img src="./images/imgpoceroujgri.png" alt="">
-                </div>
-            </div>
             <div id="onglets2" class="ongletsPub">
                 <button type="button" data-numero="0"></button>
-                <button type="button" data-numero="1"></button>
-                <button type="button" data-numero="2"></button>
-                <button type="button" data-numero="3"></button>
-                <button type="button" data-numero="4"></button>
-                <button type="button" data-numero="5"></button>
-                <button type="button" data-numero="6"></button>
-                <button type="button" data-numero="7"></button>
-                <button type="button" data-numero="8"></button>
-                <button type="button" data-numero="9"></button>
             </div>
             <div class="contenuP" id="cont2">
-
+                <?php
+                    
+                  $pdo = new PDO("mysql:host=".MYHOST.";dbname=".MYDB, MYUSER, MYPASS);
+		          $pdo->query("SET NAMES utf8");
+		          $pdo->query("SET CHARACTER SET 'utf8'");
+                  $sql="SELECT TitreSon, AccesSon, DescriptionSon, IdSon, DatePublication FROM SON ";
+                  $statement = $pdo->prepare($sql);
+		          $statement->execute();
+                  $ligne = $statement->fetch(PDO::FETCH_ASSOC);
+		          while($ligne != false){
+                ?>
+                <div>
+                    <img src="travaux/<?php echo $ligne['AccesSon'] ?>.png">
+                </div>
+                <?php
+                      	$ligne = $statement->fetch(PDO::FETCH_ASSOC);
+		              }
+                    $pdo=null;
+                ?>    
             </div>
         </div>
         <div id="planche3" class="planche planche3">
-            <h1 class="hVideo hPub">viDEos</h1>
-            <!--IL FAUT DU PHP ET DU JS BORDEL DE COUILLE-->
-            <img src="" alt="">
-            <div>
-                <h2></h2>
-                <p></p>
-                <img src="./images/imgpoceblo.png" alt="">
-                <img src="./images/imgpoceblogri.png" alt="">
-                <img src="./images/imgpocerouj.png" alt="">
-                <img src="./images/imgpoceroujgri.png" alt="">
-            </div>
+            <h1 class="hVideo hPub">Video</h1>
             <div id="onglets3" class="ongletsPub">
                 <button type="button" data-numero="0"></button>
-                <button type="button" data-numero="1"></button>
-                <button type="button" data-numero="2"></button>
-                <button type="button" data-numero="3"></button>
-                <button type="button" data-numero="4"></button>
-                <button type="button" data-numero="5"></button>
-                <button type="button" data-numero="6"></button>
-                <button type="button" data-numero="7"></button>
-                <button type="button" data-numero="8"></button>
-                <button type="button" data-numero="9"></button>
             </div>
             <div class="contenuP" id="contenu3">
-
+                    <?php
+                    
+                  $pdo = new PDO("mysql:host=".MYHOST.";dbname=".MYDB, MYUSER, MYPASS);
+		          $pdo->query("SET NAMES utf8");
+		          $pdo->query("SET CHARACTER SET 'utf8'");
+                  $sql="SELECT TitreVideo, AccesVideo, DescriptionVideo, IdVideo, DatePublication FROM VIDEO ";
+                  $statement = $pdo->prepare($sql);
+		          $statement->execute();
+                  $ligne = $statement->fetch(PDO::FETCH_ASSOC);
+		          while($ligne != false){
+                ?>
+                <div>
+                    <img src="travaux/<?php echo $ligne['AccesVideo'] ?>.png">
+                </div>
+                <?php
+                      	$ligne = $statement->fetch(PDO::FETCH_ASSOC);
+		              }
+                    $pdo=null;
+                ?>
             </div>
         </div>
-
-
     </main>
 
     <footer>
