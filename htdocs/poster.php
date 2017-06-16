@@ -13,6 +13,7 @@
     <script type="text/javascript" src="java/photo.js"></script>
     <script type="text/javascript" src="java/planche.js"></script>
     <script src="java/verif.js"></script>
+    <script src="java/modif.js"></script>
 </head>
 
 <body>
