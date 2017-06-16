@@ -771,12 +771,15 @@ td img{
     margin-top: 2%;
     display: inline-flex;
     flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .contenuP div{
-    height:50%;
-    width:100%;
+    height: 33%;
+    width: 20.5%;
 }
+
 
 .contenuP img{
     height: 100%;

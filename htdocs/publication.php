@@ -1,6 +1,7 @@
 <?php
 session_start();
     header   ("Content-type: text/html; charset=UTF-8");
+    require("php/param.inc.php");
 ?>
 <html>  
 <head>
@@ -35,42 +36,25 @@ session_start();
                 <button type="button" data-numero="9"></button>
             </div>
             <div class="contenuP" id="contenu1">
+                <?php
+                    
+                  $pdo = new PDO("mysql:host=".MYHOST.";dbname=".MYDB, MYUSER, MYPASS);
+		          $pdo->query("SET NAMES utf8");
+		          $pdo->query("SET CHARACTER SET 'utf8'");
+                  $sql="SELECT TitrePhoto, AccesPhoto, DescriptionPhoto, IdPhoto, DatePublication FROM PHOTO ";
+                  $statement = $pdo->prepare($sql);
+		          $statement->execute();
+                  $ligne = $statement->fetch(PDO::FETCH_ASSOC);
+		          while($ligne != false){
+                ?>
                 <div>
-                    <img src="images/imgIconeAffiche.png">
+                    <img src="travaux/<?php echo $ligne['AccesPhoto'] ?>.png">
                 </div>
-                <div>
-                    <img src="images/imgIconeAffiche.png">
-                </div>
-                <div>
-                    <img src="images/imgIconeAffiche.png">
-                </div>
-                <div>
-                    <img src="images/imgIconeAffiche.png">
-                </div>
-                <div>
-                    <img src="images/imgIconeAffiche.png">
-                </div>
-                <div>
-                    <img src="images/imgIconeAffiche.png">
-                </div>
-                <div>
-                    <img src="images/imgIconeAffiche.png">
-                </div>
-                <div>
-                    <img src="images/imgIconeAffiche.png">
-                </div>
-                <div>
-                    <img src="images/imgIconeAffiche.png">
-                </div>
-                <div>
-                    <img src="images/imgIconeAffiche.png">
-                </div>
-                <div>
-                    <img src="images/imgIconeAffiche.png">
-                </div>
-                <div>
-                    <img src="images/imgIconeAffiche.png">
-                </div>
+                <?php
+                      	$ligne = $statement->fetch(PDO::FETCH_ASSOC);
+		              }
+                    $pdo=null;
+                ?>
             </div>
         </div>
         <div id="planche2" class="planche planche2">
