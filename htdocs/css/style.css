@@ -1411,7 +1411,17 @@ fieldset a:hover{
     width: 50%;
 }
 
+#boucleAdmin{
+    display: flex;
+}
+.boucleAdmin{
+    display: block;
+}
 
+#lesDonnees{
+    display: flex;
+    width: 70vw;
+}
 
 
 /*-----------Poster Affiche-----------*/
@@ -1419,16 +1429,6 @@ fieldset a:hover{
     display: flex;
     flex-direction: column;
     align-items: center;
-#boucleAdmin{
-    display: flex;
-.boucleAdmin{
-    display: block;
->>>>>>> Admin2
 }
 
-#lesDonnees{
-    display: flex;
-    width: 70vw;
-    width:70vw;
-}
 
