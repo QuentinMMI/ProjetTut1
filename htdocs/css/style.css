@@ -643,6 +643,8 @@ td img{
 }
 
 
+
+
 /*Permet de tourner le titre de la page*/
 
 .accueilTitre {
@@ -765,8 +767,20 @@ td img{
     background: #AF3D41;
     height: 90%;
     width: 75%;
-    margin-left: 7%;
+    margin-left: -15%;
     margin-top: 2%;
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+.contenuP div{
+    height:50%;
+    width:100%;
+}
+
+.contenuP img{
+    height: 100%;
+    width:100%;
 }
 
 #cont2 {

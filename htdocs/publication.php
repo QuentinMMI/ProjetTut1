@@ -22,19 +22,6 @@ session_start();
     <main>
         <div id="planche1" class="planche planche1">
             <h1 class="hAffiche hPub">affiCHES</h1>
-            <div id="modalVoteImg">
-                <!--IL FAUT DU PHP ET DU JS BORDEL DE COUILLE-->
-
-                <img src="" alt="">
-                <div>
-                    <h2></h2>
-                    <p></p>
-                    <img src="./images/imgpoceblo.png" alt="">
-                    <img src="./images/imgpoceblogri.png" alt="">
-                    <img src="./images/imgpocerouj.png" alt="">
-                    <img src="./images/imgpoceroujgri.png" alt="">
-                </div>
-            </div>
             <div id="onglets" class="ongletsPub">
                 <button type="button" data-numero="0"></button>
                 <button type="button" data-numero="1"></button>
@@ -48,7 +35,42 @@ session_start();
                 <button type="button" data-numero="9"></button>
             </div>
             <div class="contenuP" id="contenu1">
-
+                <div>
+                    <img src="images/imgIconeAffiche.png">
+                </div>
+                <div>
+                    <img src="images/imgIconeAffiche.png">
+                </div>
+                <div>
+                    <img src="images/imgIconeAffiche.png">
+                </div>
+                <div>
+                    <img src="images/imgIconeAffiche.png">
+                </div>
+                <div>
+                    <img src="images/imgIconeAffiche.png">
+                </div>
+                <div>
+                    <img src="images/imgIconeAffiche.png">
+                </div>
+                <div>
+                    <img src="images/imgIconeAffiche.png">
+                </div>
+                <div>
+                    <img src="images/imgIconeAffiche.png">
+                </div>
+                <div>
+                    <img src="images/imgIconeAffiche.png">
+                </div>
+                <div>
+                    <img src="images/imgIconeAffiche.png">
+                </div>
+                <div>
+                    <img src="images/imgIconeAffiche.png">
+                </div>
+                <div>
+                    <img src="images/imgIconeAffiche.png">
+                </div>
             </div>
         </div>
         <div id="planche2" class="planche planche2">
