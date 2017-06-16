@@ -1,3 +1,5 @@
+
+(function (){
 var btn ;
 var divFond;
 var span;
@@ -33,3 +35,4 @@ function disparition (evt){
     btn.removeEventListener("click",partir);
     btn.addEventListener("click",arriver)
 }
+    })()

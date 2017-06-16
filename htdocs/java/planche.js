@@ -1,3 +1,4 @@
+(function(){
 document.addEventListener("DOMContentLoaded",initialiser);
 
 function initialiser (evt){
@@ -25,7 +26,6 @@ function changer (evt){
 
 function animation (evt){
     var left = this.style.left;
-    
     left = parseInt(left) - 3 +"%";
     this.style.left = left ; 
 }
@@ -37,3 +37,4 @@ function animation2 (evt){
     this.style.left = left ; 
 
 }
+})()

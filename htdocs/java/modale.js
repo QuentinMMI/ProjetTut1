@@ -1,3 +1,4 @@
+(function (){
 var btn ;
 var divFond;
 var span;
@@ -97,3 +98,4 @@ function partir (evt){
 function apparition (evt){
     fermer.style.left="-80px";
 }
+})()   

@@ -1,5 +1,6 @@
-document.addEventListener("DOMContentLoaded",commencer);
 
+(function(){
+document.addEventListener("DOMContentLoaded",commencer);
 function commencer (evt){
     var modifier = document.getElementById("modifier");
     modifier.addEventListener("click",changer);
@@ -40,3 +41,4 @@ function retour (evt){
         uneP.style.display="block";
     }
 }
+})()

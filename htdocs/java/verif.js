@@ -1,3 +1,4 @@
+(function(){
 document.addEventListener("DOMContentLoaded", initialiser);
 
   function initialiser(evt) {
@@ -21,3 +22,4 @@ document.addEventListener("DOMContentLoaded", initialiser);
            }
       }
    }
+})()

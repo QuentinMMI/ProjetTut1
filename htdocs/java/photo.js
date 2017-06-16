@@ -1,3 +1,4 @@
+(function(){
 document.addEventListener("DOMContentLoaded",commencer);
     
 function commencer(evt){
@@ -27,3 +28,4 @@ function changerTexte (evt) {
         textPortrait.innerHTML="<div id='textPropos'><h2>Quentin Lecharpentier</h2><p>À mon tour de me présenter, moi je m’occupe plus du côté design et ambiance du site (même si tout le monde s’en occupe) je gère aussi l’aspect codage du site, donc si il y a un problème c’est de ma faute :) .. au fait moi c’est Quentin et j’ai 19 ans .</p><p>Je sais faire la cuisine aussi …</p></div>";
     }
 }
+})()
