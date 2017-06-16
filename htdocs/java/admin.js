@@ -20,7 +20,7 @@
         var profil = document.getElementById("profilUser");
         this.style.fontFamily = "KayakSansBold";
         userActif=this;
-        var implementationPhp = "<?php $sql = 'SELECT NomUser, PrenomUser, AdresseMail, DateNaissance FROM UTILISATEUR ORDER BY NomUser WHERE IdUser = "+idUser+"'; $statement = $pdo->query($sql); $profil = $statement->fetch(PDO::FETCH_ASSOC); echo ($profil[NomUser]) ; ?>";
+        var implementationPhp = "<?php $sql = 'SELECT NomUser, PrenomUser, AdresseMail, DateNaissance FROM UTILISATEUR ORDER BY NomUser WHERE IdUser = "+idUser+"'; $statement = $pdo->query($sql); $profil = $statement->fetch(PDO::FETCH_ASSOC); echo ($profil['NomUser']) ; ?>";
         window.alert(implementationPhp);
         profil.innerHTML = implementationPhp;
     }
