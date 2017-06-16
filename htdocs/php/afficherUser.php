@@ -5,12 +5,12 @@
     
 
     $verif = $bdd -> prepare("SELECT NomUser, PrenomUser, DateNaissance, AdresseMail FROM UTILISATEUR WHERE IdUser = :User");
-    $verif->execute(array(":User" => $_GET['idOeuvre']));
+    $verif->execute(array(":User" => $_GET['idUser']));
     
     $profil= $verif->fetch(PDO::FETCH_ASSOC);
-
     
+    $codeHTML = "<h2>".UPPER($profil['NomUser']." ".$profil['PrenomUser'];
 	
-    echo($signalement->nbSignalementOeuvre);
+    echo($codeHTML);
 
 ?>
