@@ -10,6 +10,7 @@ session_start();
     <meta name="administration" content="administration des production et des utilisateurs du Défi Hawk.">
     <link type="text/css" rel="stylesheet" href="css/style.css"/>
     <script src="<?php if(isset($_SESSION['id'])){ ?>java/modale2.js<?php }else{ ?>java/modale.js<?php } ?>"></script>
+    <sript src="java/admin.js" type="text/javascript"></sript>
 </head>
 <body>
 <header>
@@ -17,71 +18,59 @@ session_start();
 </header>
 
 <main id="Admin" class="fondJaune">
-    <nav id="navAdmin">
-        <ul>
-            <li>
-                <span style="cursor:pointer">Supprimer un utilisateur</span>
-            </li>
-
-            <li>
-                <span style="cursor:pointer">Modifier le profil d'un utilisateur</span>
-                <ul class="sousMenu">
-                    <li style="cursor:pointer">Modifier le nom</li>
-                    <li style="cursor:pointer">Modifier le prenom</li>
-                    <li style="cursor:pointer">Modifierl'age</li>
-                    <li style="cursor:pointer">Modifier le mot de passe</li>
-                    <li style="cursor:pointer">Modifier le photo de profil</li>
-                </ul>
-            </li>
-            
-            <li>
-                <span style="cursor:pointer">Supprimer une production</span>
-                <ul class="sousMenu">
-                    <li style="cursor:pointer">Voir/supprimer une musique</li>
-                    <li style="cursor:pointer">Voir/supprimer une video</li>
-                    <li style="cursor:pointer">Voir/supprimer une affiche</li>
-                </ul>
-            </li>
-        </ul>
-    </nav
+    <div id="choixAdmin">
+        <span style="cursor:pointer">Modifier le profil d'un utilisateur</span>
+        <span style="cursor:pointer">Modifier/supprimer une production</span>
+    </div>
+    
     
     <div>
         <h1>Bonjour administrateur</h1>
-        <div id="renduBDD">
-            <h2>Les utilisateur</h2>
-            <?php
-            //connexion a la BDD
-            require ("php/param.inc.php");
-            $pdo=new PDO("mysql:host=".MYHOST.";dbname=".MYDB, MYUSER, MYPASS) ;
+        <div id="lesDonnees">
+            <div class="renduBDD">
+                <h2>Les utilisateur</h2>
+                <?php
+                //connexion a la BDD
+                require ("php/param.inc.php");
+                $pdo=new PDO("mysql:host=".MYHOST.";dbname=".MYDB, MYUSER, MYPASS) ;
 
-            $pdo->query("SET NAMES utf8");
-            $pdo->query("SET CHARACTER SET 'utf8'");
-            
-            //requet sql
-            $sql = "SELECT NomUser, PrenomUser FROM UTILISATEUR ORDER BY NomUser";
-            
-            $statement = $pdo->query($sql);
-            
-            //traitement des données
-            
-            $nom = $statement->fetch(PDO::FETCH_ASSOC);  
-            
-            //debut de la boucle
-            
-            while ($nom != false){
-            ?>
-            
-            <p>Nom : <?php echo mb_strtoupper(($nom["NomUser"]))." ". ($nom["PrenomUser"]) ; ?></p>
-            
-            <?php
-            $nom = $statement->fetch(PDO::FETCH_ASSOC);
-            //fin de la boucle
-            
-            }
-            
-            //fermeure BDD
-            $pdo=null;
-            ?>
+                $pdo->query("SET NAMES utf8");
+                $pdo->query("SET CHARACTER SET 'utf8'");
+
+                //requet sql
+                $sql = "SELECT NomUser, PrenomUser, IdUser FROM UTILISATEUR ORDER BY NomUser";
+
+                $statement = $pdo->query($sql);
+
+                //traitement des données
+
+                $nom = $statement->fetch(PDO::FETCH_ASSOC);  
+
+                //debut de la boucle
+
+                while ($nom != false){
+                ?>
+                <div class="boucleAdmin">
+                    <p data-User= "<?php echo(($nom["IdUser"])) ; ?>" style="cursor:pointer"><?php echo mb_strtoupper(($nom["NomUser"]))." ". ($nom["PrenomUser"]) ; ?></p>
+                    <img src="images/imgPoubelle.png" alt="image poubelle" title="Supprimer ce profil" >
+                </div>
+
+                <?php
+                $nom = $statement->fetch(PDO::FETCH_ASSOC);
+                //fin de la boucle
+
+                }
+
+                //fermeure BDD
+                $pdo=null;
+                ?>
+            </div>
+
+            <div class="renduBDD" id="profilUser">
+                <h2>Profil</h2>
+                <p>Selectionnez un utilisateur.</p>
+
+            </div>
         </div>
     </div>
     
