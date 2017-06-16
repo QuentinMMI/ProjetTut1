@@ -13,13 +13,13 @@
     }
 
     function selectionUser(evt){
-        if(userActif != null){
-            userActif.style.fontFamily = "KayakSansLight";
+        if (userActif != null){
+                userActif.style.fontFamily = "KayakSansLight";
         }
         var idUser = this.dataset.user;
         var profil = document.getElementById("profilUser");
         this.style.fontFamily = "KayakSansBold";
-        userActif = this;
+        userActif=this;
     }
 
 }());
