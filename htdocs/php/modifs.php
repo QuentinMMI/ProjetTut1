@@ -36,7 +36,7 @@
         $req=$req." WHERE IdUser = :id;";
         $tab[':id']=$id;
         $requetadmin=$bdd->prepare($req);
-        $requetadmin->execute($tab);
+        $requetadmin->execute($tab[]);
     }else{
         header('Location: index.php');
     }
