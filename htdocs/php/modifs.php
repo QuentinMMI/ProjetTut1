@@ -2,42 +2,43 @@
     session_start();
     require("param.inc.php") ;
     $bdd =new PDO("mysql:host=".MYHOST.";dbname=".MYDB, MYUSER, MYPASS) ;
-
+    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     if(isset($_POST['valider']))
     {
-        $nom = addslashes($_POST["nomF"]);
-        $prenom = addslashes($_POST["prenomF"]);
-        $age = addslashes($_POST["ageF"]);
-        $mail = addslashes($_POST["adresseF"]);
-        $id=addslashes($_SESSION["id"]);
+        $nom = $_POST["nomF"];
+        $prenom = $_POST["prenomF"];
+        $age = $_POST["ageF"];
+        $mail = $_POST["adresseF"];
+        $id=$_SESSION["id"];
         $req="UPDATE UTILISATEUR SET ";
-        $tab[]="";
-        if($_POST['nomF']!=$_SESSION['Nom']){
-            $req=$req."Nom = :nom, ";
+        $tab=array();
+            $req=$req."NomUser=:nom, ";
             $tab[':nom']=$nom;
-        };
-        if($_POST['prenomF']!=$_SESSION['Prenom']){
-            $req=$req."Prenom = :prenom, ";
+            $req=$req."PrenomUser=:prenom, ";
             $tab[':prenom']=$prenom;
-        };
-        if($_POST['ageF']!=$_SESSION['Date']){
-            $req=$req."Date = :date, ";
-            $tab[':date']=$age;
-        };
-        if($_POST['adresseF']!=$_SESSION['Mail']){
-            $req=$req."Mail = :mail, ";
+            $req=$req."DateNaissance=:age, ";
+            $tab[':age']=$age;
+            $req=$req."AdresseMail=:mail ";
             $tab[':mail']=$mail;
-        };
-        $taille=strlen($req)-2;
-        $verif=substr($req,$taille,1);
-        if($verif==","){
-            $req=substr($req,0,$taille);
-        };
-        $req=$req." WHERE IdUser = :id;";
+        $req=$req." WHERE IdUser=:id;";
         $tab[':id']=$id;
-        $requetadmin=$bdd->prepare($req);
-        $requetadmin->execute($tab[]);
-    }else{
-        header('Location: index.php');
+        try{
+         $requetadmin=$bdd->prepare($req);
+         $requetadmin->execute($tab); 
+         $requser = $bdd->prepare("SELECT * FROM UTILISATEUR WHERE IdUser = ?");
+            $requser->execute(array($id));
+                $userinfo = $requser->fetch();
+                $_SESSION['id'] = $userinfo['IdUser'];
+                $_SESSION['Prenom'] = $userinfo['PrenomUser'];
+                $_SESSION['Nom'] = $userinfo['NomUser'];
+                $_SESSION['Mail'] = $userinfo['AdresseMail'];
+                $_SESSION['Date'] = $userinfo['DateNaissance'];
+        }
+        catch(PDOException $e)
+        {
+            echo "erreur sql: ".$e->getMessage();
+        }
+        
     }
+    header('Location: ../index.php');
       ?>
