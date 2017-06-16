@@ -1373,6 +1373,11 @@ fieldset a:hover{
     height: 100%;
     width : 25%;
 }
+
+#choixAdmin>span{
+    margin-top: 10vh;
+}
+
 #choixAdmin>span:hover{
     text-decoration: underline;
 }
@@ -1383,8 +1388,13 @@ fieldset a:hover{
     padding-left: 5px;
 }
 
+.boucleAdmin p:hover{
+    font-family: KayakSansBold;
+}
+
 .renduBDD{
     border: solid white 5px;
+    width: 50%;
 }
 
 
@@ -1397,6 +1407,9 @@ fieldset a:hover{
     align-items: center;
 #boucleAdmin{
     display: flex;
+.boucleAdmin{
+    display: block;
+>>>>>>> Admin2
 }
 
 #lesDonnees{
