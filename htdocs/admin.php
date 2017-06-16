@@ -60,18 +60,17 @@ session_start();
                 //fin de la boucle
 
                 }
+
+                //fermeure BDD
+                $pdo=null;
                 ?>
             </div>
 
             <div class="renduBDD" id="profilUser">
                 <h2>Profil</h2>
                 <p>Selectionnez un utilisateur.</p>
-                
+
             </div>
-            <?php
-            //fermeure BDD
-                $pdo=null;
-            ?>
         </div>
     </div>
     
