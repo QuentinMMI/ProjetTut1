@@ -39,7 +39,7 @@ session_start();
 		          while($ligne != false){
                 ?>
                 <div>
-                    <img src="travaux/<?php echo $ligne['AccesPhoto'] ?>.png">
+                    <a href="afficher.php?id=<?php echo $ligne['IdPhoto'] ?>&type=photo"><img src="travaux/<?php echo $ligne['AccesPhoto'] ?>.png"></a>
                 </div>
                 <?php
                       	$ligne = $statement->fetch(PDO::FETCH_ASSOC);
@@ -66,7 +66,7 @@ session_start();
 		          while($ligne != false){
                 ?>
                 <div>
-                    <img src="travaux/<?php echo $ligne['AccesSon'] ?>.png">
+                    <a href="afficher.php?id=<?php echo $ligne['IdSon'] ?>&type=son"><img src="travaux/<?php echo $ligne['AccesSon'] ?>.png"></a>
                 </div>
                 <?php
                       	$ligne = $statement->fetch(PDO::FETCH_ASSOC);
@@ -93,7 +93,7 @@ session_start();
 		          while($ligne != false){
                 ?>
                 <div>
-                    <img src="travaux/<?php echo $ligne['AccesVideo'] ?>.png">
+                    <a href="afficher.php?id=<?php echo $ligne['IdVideo'] ?>&type=video"><img src="travaux/<?php echo $ligne['AccesVideo'] ?>.png"></a>
                 </div>
                 <?php
                       	$ligne = $statement->fetch(PDO::FETCH_ASSOC);
