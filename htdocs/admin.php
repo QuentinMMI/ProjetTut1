@@ -25,7 +25,7 @@ session_start();
         
         <div>
             <span style="cursor:pointer">Modifier/supprimer une production</span>
-            <div>
+            <div id="sousMenu">
                 <span>Modifier un son</span>
                 <span>Modifier une video</span>
                 <span>Modifier une affiche</span>
