@@ -19,8 +19,18 @@ session_start();
 
 <main id="Admin" class="fondJaune">
     <div id="choixAdmin">
-        <span style="cursor:pointer">Modifier le profil d'un utilisateur</span>
-        <span style="cursor:pointer">Modifier/supprimer une production</span>
+        <div>
+            <span style="cursor:pointer">Modifier le profil d'un utilisateur</span>
+        </div>
+        
+        <div>
+            <span style="cursor:pointer">Modifier/supprimer une production</span>
+            <div id="sousMenu">
+                <span>Modifier un son</span>
+                <span>Modifier une video</span>
+                <span>Modifier une affiche</span>
+            </div>
+        </div>
     </div>
     
     
@@ -28,7 +38,7 @@ session_start();
         <h1>Bonjour administrateur</h1>
         <div id="lesDonnees">
             <div class="renduBDD">
-                <h2>Les utilisateur</h2>
+                <h2>Les utilisateurs</h2>
                 <?php
                 //connexion a la BDD
                 require ("php/param.inc.php");
