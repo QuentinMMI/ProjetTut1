@@ -70,6 +70,12 @@
                 for (var unUser of lesUser){
                         unUser.addEventListener("click", selectionUser);
                 }
+                var lesOeuvres = document.querySelectorAll(".oeuvre");
+                for (var uneOeuvre of lesOeuvres){
+                    uneOeuvre.addEventListener("click", afficherDetailOeuvre);
+                }
+                
+                userActif = null;
               
             });
 
@@ -77,5 +83,33 @@
         
        
     }
+    
+function afficherDetailOeuvre (evt){
+    var id = this.firstChild.dataset.IdOeuvre; //fist child vérifie si ce n'est pas le 1er enfant et ne prend pas le premier ? /!\ a deboguer
+    window.alert(id);
+    var zoneModif = document.getElementById("zonePecision");
+    var type= this.dataset.type;
+    if (userActif != null){
+            userActif.style.fontFamily = "KayakSansLight";
+    }
+    this.style.fontFamily = 'KayakSansBold';
+    userActif = this;
+    
+    //evoie de la requète ajax
+    var xhr = new XMLHttpRequest();
+
+    // On souhaite juste récupérer le contenu du fichier, la méthode GET suffit amplement :
+    xhr.open('GET', 'https://projets.iut-laval.univ-lemans.fr/16mmi1pj03/php/AJAX-php/afficherOeuvre.php?type=' + type + '?idOevre=' + id +'');
+
+    xhr.addEventListener('load', function() { // On gère ici une requête asynchrone
+
+              
+            var chaineEnvoyer = xhr.responseText;
+            zoneModif.innerHTML = chaineEnvoyer; // Et on affiche !
+
+            });
+
+            xhr.send(null); // La requête est prête, on envoie tout !
+}
 
 }());
