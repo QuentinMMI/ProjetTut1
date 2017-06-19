@@ -1448,6 +1448,10 @@ fieldset a:hover{
     display: flex;
 }
 
+#divChoixAdmin img{
+    max-height: 100px;
+}
+
 /*-----------Poster Affiche-----------*/
 #formulairePoster{
     display: flex;

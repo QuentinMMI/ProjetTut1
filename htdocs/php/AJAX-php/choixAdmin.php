@@ -33,7 +33,7 @@
         $codeHTML = "<h2>Les sons</h2>";
         
         //requet sql
-        $sql = "SELECT IdSon, TitreSon , DatePublication, AccesSon FROM VIDEO ORDER BY DatePublication";
+        $sql = "SELECT IdSon, TitreSon , DatePublication, AccesSon FROM SON ORDER BY DatePublication";
 
         $statement = $pdo->query($sql);
 
@@ -45,7 +45,7 @@
         while ($son != false){
             $codeHTML = $codeHTML."<div class='boucleAdmin'><img src='travaux/".$son['AccesSon'].".png'  data-IdSon='".$son['IdSon']."'><p>Titre : ".$son['TitreSon']."</div>";
             
-            $video = $statement->fetch(PDO::FETCH_ASSOC);
+            $son = $statement->fetch(PDO::FETCH_ASSOC);
         }
    
     
