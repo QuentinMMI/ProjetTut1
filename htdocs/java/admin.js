@@ -6,7 +6,7 @@
     var userActif ; //permet de récupérer rapidement le profil affiché
     
     function initaliser (evt){
-        var lesUser = document.querySelectorAll(".boucleAdmin>p");
+        var lesUser = document.querySelectorAll(".user");
         var choix = document.querySelectorAll(".typeAafficher");
         for (var unUser of lesUser){
             unUser.addEventListener("click", selectionUser);
@@ -58,7 +58,7 @@
                 zoneRendu.innerHTML = chaineEnvoyer; // Et on affiche !
                  
                 //remise en place des écouteurs
-                var lesUser = document.querySelectorAll(".boucleAdmin>p");
+                var lesUser = document.querySelectorAll(".user");
                 for (var unUser of lesUser){
                         unUser.addEventListener("click", selectionUser);
                 }

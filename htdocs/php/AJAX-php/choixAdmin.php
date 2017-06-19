@@ -23,7 +23,7 @@
         //debut de la boucle
 
         while ($nom != false){
-            $codeHTML = $codeHTML."<div class='boucleAdmin'><p data-User='".$nom["IdUser"]."' style='cursor:pointer'>".mb_strtoupper($nom["NomUser"])." ".$nom["PrenomUser"]."</p><img src='images/imgPoubelle.png' alt='image poubelle' title='Supprimer ce profil' ></div>";
+            $codeHTML = $codeHTML."<div class='boucleAdmin'><p data-User='".$nom["IdUser"]."' class='user'style='cursor:pointer'>".mb_strtoupper($nom["NomUser"])." ".$nom["PrenomUser"]."</p><img src='images/imgPoubelle.png' alt='image poubelle' title='Supprimer ce profil' ></div>";
             
             $nom = $statement->fetch(PDO::FETCH_ASSOC);
         }
@@ -51,7 +51,7 @@
         
         //debut de la boucle
              while ($photo != false){
-            $codeHTML = $codeHTML."<div class='boucleAdmin'><img src='../../travaux/".$photo['AccesPhoto'].".png'  data-Idphoto='".$photo['IdPhoto']."'><p>Titre : ".$photo['TitrePhoto']."</div>";
+            $codeHTML = $codeHTML."<div class='boucleAdmin'><img src='https://projets.iut-laval.univ-lemans.fr/16mmi1pj03/travaux/".$photo['AccesPhoto'].".png'  data-Idphoto='".$photo['IdPhoto']."'><p>Titre : ".$photo['TitrePhoto']."</div>";
             
             $photo = $statement->fetch(PDO::FETCH_ASSOC);
         }

@@ -61,7 +61,7 @@ session_start();
                 while ($nom != false){
                 ?>
                 <div class="boucleAdmin">
-                    <p data-User= "<?php echo(($nom["IdUser"])) ; ?>" style="cursor:pointer"><?php echo(mb_strtoupper($nom["NomUser"]))." ". ($nom["PrenomUser"]) ; ?></p>
+                    <p data-User= "<?php echo(($nom["IdUser"])) ; ?>" class="user" style="cursor:pointer"><?php echo(mb_strtoupper($nom["NomUser"]))." ". ($nom["PrenomUser"]) ; ?></p>
                     <img src="images/imgPoubelle.png" alt="image poubelle" title="Supprimer ce profil" >
                 </div>
 
