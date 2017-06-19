@@ -43,7 +43,7 @@
         
         //debut de la boucle
         while ($son != false){
-            $codeHTML = $codeHTML."<div class='boucleAdmin'><img src='travaux/".$son['AccesSon'].".png'  data-IdSon='".$son['IdSon']."'><p>Titre : ".$son['TitreSon']."</div>";
+            $codeHTML = $codeHTML."<div class='boucleAdmin' style='cursor:pointer' data-type='son' class='oeuvre'><img src='travaux/".$son['AccesSon'].".png'  data-IdOeuvre='".$son['IdSon']."'><p>Titre : ".$son['TitreSon']."</div>";
             
             $son = $statement->fetch(PDO::FETCH_ASSOC);
         }
@@ -63,7 +63,7 @@
         
         //debut de la boucle
              while ($video != false){
-            $codeHTML = $codeHTML."<div class='boucleAdmin'><img src='travaux/".$video['AccesVideo'].".png'  data-IdVideo='".$video['IdVideo']."'><p>Titre : ".$video['TitreVideo']."</div>";
+            $codeHTML = $codeHTML."<div class='boucleAdmin' style='cursor:pointer' data-type='video' class='oeuvre'><img src='travaux/".$video['AccesVideo'].".png'  data-IdOeuvre='".$video['IdVideo']."'><p>Titre : ".$video['TitreVideo']."</div>";
             
             $video = $statement->fetch(PDO::FETCH_ASSOC);
         }
@@ -83,7 +83,7 @@
         
         //debut de la boucle
              while ($photo != false){
-            $codeHTML = $codeHTML."<div class='boucleAdmin'><img src='travaux/".$photo['AccesPhoto'].".png'  data-Idphoto='".$photo['IdPhoto']."'><p>Titre : ".$photo['TitrePhoto']."</div>";
+            $codeHTML = $codeHTML."<div class='boucleAdmin' style='cursor:pointer' data-type='photo' class='oeuvre'><img src='travaux/".$photo['AccesPhoto'].".png'  data-IdOeuvre='".$photo['IdPhoto']."'><p>Titre : ".$photo['TitrePhoto']."</div>";
             
             $photo = $statement->fetch(PDO::FETCH_ASSOC);
         }
