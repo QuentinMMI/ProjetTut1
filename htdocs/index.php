@@ -13,7 +13,6 @@
     <link rel="shortcut icon" href="images/favicon.ico">
     <script src="java/planche.js"></script>
     <script src="<?php if(isset($_SESSION['id'])){ ?>java/modale2.js<?php }else{ ?>java/modale.js<?php } ?>"></script>
-    <script src="java/verif.js"></script>
     <script src="java/modif.js"></script>
 </head>
 
@@ -104,6 +103,7 @@
                 </div> 
             </div> 
 </div>
+    <script src="java/verif.js"></script>
 </main>
  
     <!--------------------------------------------------- FOOTER -------------------------------------------------------------->
