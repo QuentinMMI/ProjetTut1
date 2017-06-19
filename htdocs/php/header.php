@@ -79,8 +79,8 @@
                         <label for="mdpIc">Confirmer</label>
                         <input type="password" id="mdpIc" name="mdpIc" required="required" minlength="5">
                         <label for="dateI">Date de naissance</label>
-                        <input type="date" id="dateI" name="dateI" required="required" value="">
-                        <input type="checkbox" id="CGU" name="CGU" value="1">
+                        <input type="date" id="dateI" name="dateI" required="required" value="" placeholder="aaaa/mm/jj">
+                        <input type="checkbox" id="CGU" name="CGU" value="1" required="required">
                         <label for="CGU">Accepter les <a href="mentionsLegales.php">CGU</a></label>
                         <input type="submit" value="Valider" id="submit" name="submit" style="cursor:pointer"/>
                     </form>

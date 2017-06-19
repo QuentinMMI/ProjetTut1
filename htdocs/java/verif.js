@@ -6,10 +6,11 @@ document.addEventListener("DOMContentLoaded", initialiser);
       var mdp2 = document.getElementById("mdpIc");
       var date = document.getElementById("dateI");
       var mail = document.getElementById("mailI");
-      //L'événement change est généré lorsqu'on quitte la zone et que le contenu a évolué entre notre entrée dans le champ et la sortie.
+      var date = document.getElementById("dateI");
       mdp1.addEventListener("change", verifier);
       mdp2.addEventListener("change", verifier);
       mail.addEventListener("change",verifier2);
+      date.addEventListener("change",verifier3);
    }
 
    function verifier(evt) {
@@ -37,6 +38,15 @@ document.addEventListener("DOMContentLoaded", initialiser);
         var mail = document.getElementById("mailI");
         if(valeurphp=="false"){
             mail.setCustomValidity("Ce mail existe déjà ...");
+        }
+    }
+    
+    function verifier3 (evt){
+        this.setCustomValidity("");
+        var value = parseInt(this.value);
+        var verif = 2017 - value;
+        if(verif<16){
+            this.setCustomValidity("l'age requis est de 16 ans minimum.");
         }
     }
     

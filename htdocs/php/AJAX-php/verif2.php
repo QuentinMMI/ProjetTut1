@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require("param.inc.php");
+    require("../param.inc.php");
     $mail = $_POST["mail"];
     $bdd =new PDO("mysql:host=".MYHOST.";dbname=".MYDB, MYUSER, MYPASS) ;
     $reqmail = $bdd->prepare("SELECT * FROM UTILISATEUR WHERE AdresseMail = ?");
