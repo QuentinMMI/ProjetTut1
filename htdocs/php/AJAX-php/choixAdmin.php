@@ -35,6 +35,22 @@
     
     }else if($_GET['type'] == 'video'){ //on va afficher les vidéos
         $codeHTML = "<h2> Les videos</h2>";
+        
+            //requet sql
+        $sql = "SELECT IdVideo, TitreVideo, DatePublication, AccesVideo FROM VIDEO ORDER BY DatePublication";
+
+        $statement = $pdo->query($sql);
+
+        //traitement des données
+
+        $video = $statement->fetch(PDO::FETCH_ASSOC);  
+        
+        //debut de la boucle
+             while ($photo != false){
+            $codeHTML = $codeHTML."<div class='boucleAdmin'><img src='travaux/".$video['AccesVideo'].".png'  data-IdVideo='".$video['IdVideo']."'><p>Titre : ".$video['TitreVideo']."</div>";
+            
+            $photo = $statement->fetch(PDO::FETCH_ASSOC);
+        }
     
     
     }else{ //on va afficher les affiches
@@ -51,7 +67,7 @@
         
         //debut de la boucle
              while ($photo != false){
-            $codeHTML = $codeHTML."<div class='boucleAdmin'><img src='https://projets.iut-laval.univ-lemans.fr/16mmi1pj03/travaux/".$photo['AccesPhoto'].".png'  data-Idphoto='".$photo['IdPhoto']."'><p>Titre : ".$photo['TitrePhoto']."</div>";
+            $codeHTML = $codeHTML."<div class='boucleAdmin'><img src='travaux/".$photo['AccesPhoto'].".png'  data-Idphoto='".$photo['IdPhoto']."'><p>Titre : ".$photo['TitrePhoto']."</div>";
             
             $photo = $statement->fetch(PDO::FETCH_ASSOC);
         }
