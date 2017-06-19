@@ -22,7 +22,7 @@
                 userActif.style.fontFamily = "KayakSansLight";
         }
         var idUser = this.dataset.user;
-        var profil = document.getElementById("profilUser");
+        var profil = document.getElementById("zonePecision");
         this.style.fontFamily = "KayakSansBold";
         userActif=this;
         
@@ -48,9 +48,9 @@
         var zonePecision = document.getElementById("zonePecision");
         
         if (type == 'user'){
-            zonePecision.innerHTML("<h2>Profil</h2><p>Selectionnez un utilisateur.</p>")
+            zonePecision.innerHTML = "<h2>Profil</h2><p>Selectionnez un utilisateur.</p>";
         } else {
-            zonePecision.innerHTML("<h2>Precision sur l'oeuvre</h2><p>Selectionnez une oeuvre.</p>")
+            zonePecision.innerHTML = "<h2>Precision sur l'oeuvre</h2><p>Selectionnez une oeuvre.</p>";
             
         }
         
