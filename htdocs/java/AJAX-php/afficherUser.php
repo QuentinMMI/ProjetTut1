@@ -1,6 +1,6 @@
 <?php 
     session_start();
-    require("param.inc.php") ;
+    require("../../php/param.inc.php") ;
     $bdd=new PDO("mysql:host=".MYHOST.";dbname=".MYDB, MYUSER, MYPASS) ;
     
 
