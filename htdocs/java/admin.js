@@ -6,7 +6,7 @@
     var userActif ; //permet de récupérer rapidement le profil affiché
     
     function initaliser (evt){
-        var lesUser = document.querySelectorAll(".boucleAdmin>p");
+        var lesUser = document.querySelectorAll(".user");
         var choix = document.querySelectorAll(".typeAafficher");
         for (var unUser of lesUser){
             unUser.addEventListener("click", selectionUser);
@@ -22,7 +22,7 @@
                 userActif.style.fontFamily = "KayakSansLight";
         }
         var idUser = this.dataset.user;
-        var profil = document.getElementById("profilUser");
+        var profil = document.getElementById("zonePecision");
         this.style.fontFamily = "KayakSansBold";
         userActif=this;
         
@@ -31,12 +31,11 @@
             // On souhaite juste récupérer le contenu du fichier, la méthode GET suffit amplement :
             xhr.open('GET', 'https://projets.iut-laval.univ-lemans.fr/16mmi1pj03/php/AJAX-php/afficherUser.php?idUser=' + idUser + '');
 
-            xhr.addEventListener('readystatechange', function() { // On gère ici une requête asynchrone
+            xhr.addEventListener('load', function() { // On gère ici une requête asynchrone
 
-              if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) { // Si le fichier est chargé sans erreur
+              
                 var chaineEnvoyer = xhr.responseText;
                 profil.innerHTML = chaineEnvoyer; // Et on affiche !
-              }
 
             });
 
@@ -46,6 +45,14 @@
     function choisirMenu (evt) {
         var type= this.dataset.type;
         var zoneRendu = document.getElementById("divChoixAdmin");
+        var zonePecision = document.getElementById("zonePecision");
+        
+        if (type == 'user'){
+            zonePecision.innerHTML = "<h2>Profil</h2><p>Selectionnez un utilisateur.</p>";
+        } else {
+            zonePecision.innerHTML = "<h2>Precision sur l'oeuvre</h2><p>Selectionnez une oeuvre.</p>";
+            
+        }
         
         //evoie de la requete AJAX
          var xhr = new XMLHttpRequest();
@@ -59,7 +66,7 @@
                 zoneRendu.innerHTML = chaineEnvoyer; // Et on affiche !
                  
                 //remise en place des écouteurs
-                var lesUser = document.querySelectorAll(".boucleAdmin>p");
+                var lesUser = document.querySelectorAll(".user");
                 for (var unUser of lesUser){
                         unUser.addEventListener("click", selectionUser);
                 }
