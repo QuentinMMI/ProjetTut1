@@ -63,6 +63,12 @@
             });
 
             xhr.send(null); // La requête est prête, on envoie tout !
+        
+        //remise en place des écouteurs
+        var lesUser = document.querySelectorAll(".boucleAdmin>p");
+        for (var unUser of lesUser){
+            unUser.addEventListener("click", selectionUser);
+        }
     }
 
 }());

@@ -24,6 +24,8 @@
 
         while ($nom != false){
             $codeHTML = $codeHTML."<div class='boucleAdmin'><p data-User='".$nom["IdUser"]."' style='cursor:pointer'>".mb_strtoupper($nom["NomUser"])." ".$nom["PrenomUser"]."</p><img src='images/imgPoubelle.png' alt='image poubelle' title='Supprimer ce profil' ></div>";
+            
+            $nom = $statement->fetch(PDO::FETCH_ASSOC);
         }
     
     
