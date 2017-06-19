@@ -1444,7 +1444,9 @@ fieldset a:hover{
 #sousMenu>span:hover{
     text-decoration: underline;
 }
-
+#divChoixAdmin>div{
+    display: flex;
+}
 
 /*-----------Poster Affiche-----------*/
 #formulairePoster{

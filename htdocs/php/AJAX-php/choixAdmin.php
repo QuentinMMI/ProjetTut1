@@ -39,6 +39,22 @@
     
     }else{ //on va afficher les affiches
          $codeHTML = "<h2> Les affiches</h2>";
+       
+            //requet sql
+        $sql = "SELECT IdPhoto, TitrePhoto, DatePublication, AccesPhoto FROM PHOTO ORDER BY DatePublication";
+
+        $statement = $pdo->query($sql);
+
+        //traitement des données
+
+        $photo = $statement->fetch(PDO::FETCH_ASSOC);  
+        
+        //debut de la boucle
+             while ($photo != false){
+            $codeHTML = $codeHTML."<div class='boucleAdmin'><img src='../../travaux/".$photo['AccesPhoto'].".png'  data-Idphoto='".$photo['IdPhoto']."'><p>Titre : ".$photo['TitrePhoto']."</div>";
+            
+            $photo = $statement->fetch(PDO::FETCH_ASSOC);
+        }
     }
     
         
