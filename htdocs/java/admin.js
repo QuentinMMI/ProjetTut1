@@ -53,16 +53,22 @@
             // On souhaite juste récupérer le contenu du fichier, la méthode GET suffit amplement :
             xhr.open('GET', 'https://projets.iut-laval.univ-lemans.fr/16mmi1pj03/php/AJAX-php/choixAdmin.php?type=' + type + '');
 
-            xhr.addEventListener('readystatechange', function() { // On gère ici une requête asynchrone
+            xhr.addEventListener('load', function() { // On gère ici une requête asynchrone
 
-              if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) { // Si le fichier est chargé sans erreur
                 var chaineEnvoyer = xhr.responseText;
                 zoneRendu.innerHTML = chaineEnvoyer; // Et on affiche !
-              }
-
+                 
+                //remise en place des écouteurs
+                var lesUser = document.querySelectorAll(".boucleAdmin>p");
+                for (var unUser of lesUser){
+                        unUser.addEventListener("click", selectionUser);
+                }
+              
             });
 
             xhr.send(null); // La requête est prête, on envoie tout !
+        
+       
     }
 
 }());
