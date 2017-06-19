@@ -643,6 +643,8 @@ td img{
 }
 
 
+
+
 /*Permet de tourner le titre de la page*/
 
 .accueilTitre {
@@ -658,7 +660,7 @@ td img{
     top: 30%;
     left: -4%;
     transform-origin: top-left;
-    transform: skewX(7deg) rotateZ(-90deg);
+    transform: skewX(7deg) rotateZ(-84deg);
 }
 
 .hVideo {
@@ -666,7 +668,7 @@ td img{
     top: 30%;
     left: -6%;
     transform-origin: top-left;
-    transform: skewX(7deg) rotateZ(-90deg);
+    transform: skewX(7deg) rotateZ(-84deg);
 }
 
 .ongletsPub {
@@ -765,16 +767,32 @@ td img{
     background: #AF3D41;
     height: 90%;
     width: 75%;
-    margin-left: 7%;
+    margin-left: -15%;
     margin-top: 2%;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contenuP div{
+    height: 33%;
+}
+
+
+.contenuP img{
+    height: 100%;
+    width:100%;
 }
 
 #cont2 {
-    margin-left: 10%;
+    background-color: #DDB56F;
+    margin-left: -5%;
 }
 
 #contenu3 {
-    margin-left: 10%;
+    background-color: #005DB3;
+    margin-left: -5%;
 }
 
 
@@ -924,9 +942,10 @@ footer>a {
     
 }
 
-/*----Mentions Légales-------*/
+/*----Mentions LÃ©gales----*/
 
 #mentionsLegales {
+    margin-top: 5%;
     text-align: justify;
     padding: 0 100px;
 }
@@ -935,7 +954,96 @@ footer>a {
     text-align: center;
 }
 
-/*----------------Les Modifs de Thomas le génie--------------------------*/
+#patateOsel {
+    position: fixed;
+    width: 100%;
+    margin-left: 50%;
+    margin-right: 50%;
+    margin-bottom: 0;
+}
+
+#patateOfruit {
+    position: fixed;
+    width: 100%;
+    margin-left: 36.5%;
+    margin-right: 63.5%;
+    margin-bottom: 0;
+}
+
+.menu {
+    margin-left: 38%;
+    padding: 0;
+    margin-top: 0;
+    font-family: "KayakSansLight";
+}
+
+.menu .title {
+    display: inline-block;
+    float: left;
+    position: relative;
+    padding: 1%;
+    transition: 0.5s;
+    background-color: #05657E;
+    text-align: left;
+}
+
+.menu .title a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 100%;
+}
+
+.menu .title a:hover {
+    color: #FFD73A;
+}
+
+.menu .sousMenu {
+    display: block;
+    position: absolute;
+    visibility: hidden;
+    height: 0;
+    top: 100%;
+    left: 0;
+    transform: scaleY(0);
+    transform-origin: 50% 0;
+    transition: transform 1s ease;
+    background-color: #05657E;
+    border: 1px solid #05657E;
+    border-radius: 0 0 5px 5px;
+}
+
+.menu .title:hover .sousMenu {
+    visibility: visible;
+    height: auto;
+    transform: scaleY(1);
+}
+
+.menu .sousMenu li {
+    padding: 0;
+    display: inline-block;
+    color: black;
+    float: left;
+    width: 150px;
+    margin-left: -35px;
+    padding: 2%;
+    transition: 0.0s;
+}
+
+.menu .sousMenu li a {
+    text-transform: none;
+    color: #fff;
+    /*padding: 0 0 0 5px;*/
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.menu .sousMenu li:hover {
+    background-color: #00B3DF;
+    border-left: 3px solid #FFD73A;
+}
+
+/*----------------Les Modifs de Thomas le gÃ©nie--------------------------*/
 #slogan{
     color:white;
     border: solid white 3px;
@@ -1026,7 +1134,7 @@ footer>a {
     border : solid white 3px;
     color: white;
     display: block;
-    margin-top: 5%;
+    margin-top: 2%;
     padding : 5px;
 }
 #FormContact>input:last-child{
@@ -1072,16 +1180,42 @@ footer>a {
 
 /*---------PARTICIPER----------*/
 
-#mainPublier {
+#mainParticiper{
     background-color: #ff7477;
+}
+#lesIcones{
+    justify-content: space-around;
+    display: flex;
+    flex-direction: row
 }
 #publications{
     color: white;
-    font-size: 3.5vw;
-    position: absolute;
-    top: 30%;
-    left: -8%;
-    transform: rotateZ(-90deg) translateX(-10%) translateY(-100%);
+	font-size: 3.5vh;
+}
+.divAffiche{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ 
+}
+.depot{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: dashed 4px white;
+    background-color: rgba(123, 58, 60, 0.58);
+    width: 130%;
+}
+.modifier{
+    padding:10px;
+ 
+}
+#textPubli{
+    text-align: justify;
+    color: white;
+    padding-left: 250px;
+    padding-right: 250px;
 }
 /*----interface inscription---*/
 
@@ -1133,41 +1267,84 @@ footer>a {
     height: 12%;
 }
 
-contentI{
+#principI p{
+    font-size:100%;
+    font-family: "KayakSansBold";
+}
+
+#contentI{
+    display:flex;
+    flex-direction:column;
     justify-content: center;
 }
 
-#contentI div{
-    border-left: 3px white solid;
-    border-bottom: 3px white solid;
-    width: 60%;
-    margin-left: 13%;
-}
-
-#contentI h2{
+#contentI label{
+    flex-direction:column;
+    font-family:  "Leixo";
     text-align: left;
-    margin:3%;
+    margin:2%;
     margin-left: 10%;
     font-size: 130%;
 }
 
-#contentI p{
-    font-size: 120%;
-    margin-top: 10px;
-    margin-bottom: 2%;
+#contentI input,#contentI p{
+    background-color:#ff7477;
+    font-size: 115%;
+    margin-left:10%;
+    font-family: "KayakSansBold";
+    border: 0px;
+    border-left: 3px white solid;
+    border-bottom: 3px white solid;
+    text-align: center;
+    padding-bottom:1%;
+    width:75%;
+    margin-bottom: 1%;
+    margin-top: -1%;
 }
 
-#deconnecter,#modifier{
+.inter1{
     font-family: "KayakSansBold";
     font-size: 15px;
     border: 4px #FFD73A solid;
     border-radius: 5px;
-    width: 85px;
-    height: 35px;
-    color: #00b3df;
-    position: relative;
-    top: 20Px;
+    color: black;
+    position: absolute;
 }
+
+#deconnecter{
+    width: 82px;
+    height: 21px;
+    top: calc(500px + 5%);
+    left: 19%;
+}
+
+#modifier{
+    width: 52px;
+    height: 17px;
+    top: calc(500px + 5%);
+    right: 22%;
+}
+
+.inter2{
+    display: none;
+  
+}
+
+#boutonsI #valider{
+    width: 60px;
+    height: 25px;
+    top: calc(500px + 5%);
+    right: 29%;
+}
+    
+#annuler{
+    width: 50px;
+    height: 20px;
+    top: calc(500px + 5%);
+    left: 20%;
+}
+
+
 
 /*------------------------FAQ--------------------------*/
 fieldset{
@@ -1256,3 +1433,14 @@ fieldset a:hover{
 #choixAdmin>div:last-child>span:hover>#sousMenu{
     display: block;
 }
+
+
+
+/*-----------Poster Affiche-----------*/
+#formulairePoster{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
