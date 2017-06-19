@@ -45,6 +45,14 @@
     function choisirMenu (evt) {
         var type= this.dataset.type;
         var zoneRendu = document.getElementById("divChoixAdmin");
+        var zonePecision = document.getElementById("zonePecision");
+        
+        if (type == 'user'){
+            zonePecision.innerHTML("<h2>Profil</h2><p>Selectionnez un utilisateur.")
+        } else {
+            zonePecision.innerHTML("<h2>Precision sur l'oeuvre</h2><p>Selectionnez une oeuvre.")
+            
+        }
         
         //evoie de la requete AJAX
          var xhr = new XMLHttpRequest();

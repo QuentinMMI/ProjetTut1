@@ -76,7 +76,7 @@ session_start();
                 ?>
             </div>
 
-            <div class="renduBDD" id="profilUser">
+            <div class="renduBDD" id="zonePecision">
                 <h2>Profil</h2>
                 <p>Selectionnez un utilisateur.</p>
 
