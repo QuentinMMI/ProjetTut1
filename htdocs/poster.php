@@ -21,24 +21,22 @@
 </header>
 <main> 
 
-    <div id="coucou">
-            <h1>Poster votre affiche</h1>
-            <div id="formulairePoster">
-                <form method="post">
+    <div>
+            <h1 id="coucou">Poster votre <?php echo $_GET['type'];  ?></h1>
+                <form id="formulairePoster" method="post">
                     <label for="nomEnvoyeur">Nom et prénom</label>
-                    <input type="text" name="nomEnvoyeur" placeholder="Nom et prénom" required>
-                    <label for="objet">objet</label>
-                    <input name="objet" type="text" placeholder="Objet" required>
+                    <input class="inputPost" type="text" name="nomEnvoyeur" placeholder="Nom et prénom" required> 
                     <label for="mailEnvoyeur">Adresse e-mail</label>
-                    <input name="mailEnvoyeur" type="email" placeholder="E-mail" required>
-                    <label for="message">Message</label>
-                    <textarea name="message" rows="10" cols="50" placeholder="Description" required></textarea>
-                   <input type="submit" value="Envoyer" style="cursor:pointer">
-
+                    <input class="inputPost" name="mailEnvoyeur" type="email" placeholder="E-mail" required>
+                    <input class="inputPost" type="file" name="icone" id="icone">
+                    <label class="inputPost" for="message">Description de votre travail</label>
+                    <textarea name="description" rows="10" cols="50" placeholder="Description" required></textarea>
+                    <input class="inputPost" type="submit" value="Envoyer" style="cursor:pointer">
                 </form>
-            </div>
     </div>
-        
+<?php 
+     require("php/depotImage.php");
+?>
 </main>
     
    <footer id="footer">

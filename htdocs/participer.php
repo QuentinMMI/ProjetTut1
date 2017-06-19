@@ -27,17 +27,17 @@ session_start();
             <div id="lesIcones">  
                 <div class="divAffiche">  
                     <img class="modifier" src="images/imgModifier.png" alt="image modifier">  
-                    <img class="depot" src="images/imgIconeAffiche.png" alt="image de l'affiche">  
+                    <a href="poster.php?type=affiche" ><img class="depot" src="images/imgIconeAffiche.png" alt="image de l'affiche"></a>
                     <img class="modifier" src="images/imgPoubelle.png" alt="image poubelle">  
                 </div>  
                 <div class="divAffiche">  
                     <img class="modifier" src="images/imgModifier.png" alt="image modifier">  
-                    <img class="depot" src="images/imgIconeSon.png" alt="image du son">  
+                    <a href="poster.php?type=son"><img class="depot" src="images/imgIconeSon.png" alt="image du son"></a>  
                     <img class="modifier" src="images/imgPoubelle.png" alt="image poubelle">  
                 </div>  
                 <div class="divAffiche">  
                     <img class="modifier" src="images/imgModifier.png" alt="image modifier">  
-                    <img class="depot" src="images/imgIconeVideo.png" alt="image de la vidéo">  
+                    <a href="poster.php?type=video"><img class="depot" src="images/imgIconeVideo.png" alt="image de la vidéo"></a>
                     <img class="modifier" src="images/imgPoubelle.png" alt="image poubelle">  
                 </div>  
             </div> 
