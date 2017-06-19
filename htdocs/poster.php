@@ -29,16 +29,17 @@
         <h1>Poster votre <?php echo $_GET['type'];  ?></h1>
         <form class="formulairePoster" enctype="multipart/form-data" action="poster.php?type=affiche#cBon" method="post">
             <label for="titreOeuvre">Titre</label>
-            <input class="inputPost" type="text" name="titre" placeholder="Titre de l'oeuvre" required></input>
+            <input class="inputPost" type="text" name="titre" placeholder="Titre de l'oeuvre" required>
             <label for="droit">Libre de droit</label>
-            <input id ="droit" name="droit" type="radio" value="1"></input>
-            <input class="inputPost" type="file" name="affiche" id="icone"></input>
+            <input id ="droit" name="droit" type="radio" value="1">
+            <input class="inputPost" type="file" name="affiche" id="icone">
             <label class="inputPost" for="message">Description de votre travail</label>
             <textarea name="description" rows="10" cols="50" placeholder="Description" required></textarea>
-            <input class="inputPost" type="submit" value="Envoyer" style="cursor:pointer" name="validerAffiche"></input>
+            <input class="inputPost" type="submit" value="Envoyer" style="cursor:pointer" name="validerAffiche">
         </form>
     </div>
 <?php     
+          if(isset($_FILES["affiche"])){
                     require("php/param.inc.php");
                     //$_SERVEUR
                     //$_GET
@@ -56,11 +57,9 @@
                     $description=$_POST["description"];
                     $droits=$_POST["droit"];
                     $bdd =new PDO("mysql:host=".MYHOST.";dbname=".MYDB, MYUSER, MYPASS) ;
-                    echo $titre;
-                    echo $chemin;
-                    echo $description;
-                    echo $droits;
-                                     
+                    $insertmbr = $bdd->prepare("INSERT INTO PHOTO(IdPhoto,TitrePhoto,DatePublication,AccordsDroits,AccesPhoto,DescriptionPhoto) VALUES(null,:titre,NOW(),:accords,:acces,:desc)");
+                    $insertmbr->execute(array(":titre"=>$titre,":accords"=>$description,":acces"=>$chemin,":desc"=>$description));
+          }
         }else if($_GET['type']=="son"){
 ?>
     <div id="son">
