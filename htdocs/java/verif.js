@@ -27,17 +27,18 @@ document.addEventListener("DOMContentLoaded", initialiser);
     function verifier2 (evt){
         var mail = document.getElementById("mailI");
         var valueM = mail.value;
+        mail.setCustomValidity("");
         if(mail.checkValidity()){
-        $('#mailI').ajax("../verif2.php",{method:"POST",data:{mail:valueM},success:verifiermail});
+            $.ajax("php/AJAX-php/verif2.php",{method:"POST",data:{mail:valueM},success:verifiermail});
         }
     }
     
-    function verifiermail (evt){
-        if(evt=="false"){
-            var mail = document.getElementById("mailI");
-            var valueM = mail.value;
+    function verifiermail (valeurphp){
+        var mail = document.getElementById("mailI");
+        if(valeurphp=="false"){
             mail.setCustomValidity("Ce mail existe déjà ...");
         }
     }
+    
 })()
 
