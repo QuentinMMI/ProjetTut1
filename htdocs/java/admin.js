@@ -72,7 +72,7 @@
                 }
                 var lesOeuvres = document.querySelectorAll(".oeuvre");
                 for (var uneOeuvre of lesOeuvres){
-                    uneOeuvre.addEventListener('click', afficherDetailOeuvre);
+                    uneOeuvre.addEventListener("click", afficherDetailOeuvre);
                 }
                 
                 userActif = null;
@@ -85,7 +85,8 @@
     }
     
 function afficherDetailOeuvre (evt){
-    var id = this.firstChild.dataset.IdOeuvre;
+    var id = this.firstChild.dataset.IdOeuvre; //fist child vérifie si ce n'est pas le 1er enfant et ne prend pas le premier ? /!\ a deboguer
+    window.alert(id);
     var zoneModif = document.getElementById("zonePecision");
     var type= this.dataset.type;
     if (userActif != null){
