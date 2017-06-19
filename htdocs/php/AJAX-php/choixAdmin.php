@@ -31,6 +31,22 @@
     
     }else if($_GET['type'] == 'son'){ //on va afficher les sons
         $codeHTML = "<h2>Les sons</h2>";
+        
+        //requet sql
+        $sql = "SELECT IdSon, TitreSon , DatePublication, AccesSon FROM VIDEO ORDER BY DatePublication";
+
+        $statement = $pdo->query($sql);
+
+        //traitement des données
+
+        $son = $statement->fetch(PDO::FETCH_ASSOC);  
+        
+        //debut de la boucle
+        while ($son != false){
+            $codeHTML = $codeHTML."<div class='boucleAdmin'><img src='travaux/".$son['AccesSon'].".png'  data-IdSon='".$son['IdSon']."'><p>Titre : ".$son['TitreSon']."</div>";
+            
+            $video = $statement->fetch(PDO::FETCH_ASSOC);
+        }
    
     
     }else if($_GET['type'] == 'video'){ //on va afficher les vidéos
@@ -46,10 +62,10 @@
         $video = $statement->fetch(PDO::FETCH_ASSOC);  
         
         //debut de la boucle
-             while ($photo != false){
+             while ($video != false){
             $codeHTML = $codeHTML."<div class='boucleAdmin'><img src='travaux/".$video['AccesVideo'].".png'  data-IdVideo='".$video['IdVideo']."'><p>Titre : ".$video['TitreVideo']."</div>";
             
-            $photo = $statement->fetch(PDO::FETCH_ASSOC);
+            $video = $statement->fetch(PDO::FETCH_ASSOC);
         }
     
     
@@ -73,20 +89,7 @@
         }
     }
     
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    //$verif = $bdd -> prepare("SELECT NomUser, PrenomUser, DateNaissance, AdresseMail FROM UTILISATEUR WHERE IdUser = :User");
-    //$verif->execute(array(":User" => $_GET['idUser']));
-    
-    //$liste= $verif->fetch(PDO::FETCH_ASSOC);
+   
     
     //fermeture de la BDD
     $pdo=null;
