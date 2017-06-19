@@ -64,34 +64,49 @@
 ?>
     <div id="son">
         <h1>Poster votre <?php echo $_GET['type'];  ?></h1>
-        <form class="formulairePoster" action="" method="post">
+        <form class="formulairePoster" enctype="multipart/form-data" action="poster.php?type=son#cBon" method="post">
             <label for="inputPost">Titre</label>
-            <input class="inputPost" type="text" name="nomEnvoyeur" placeholder="Titre de l'oeuvre" required></input>
-            <!--<label for="droit">Libre de droit</label>
-            <input id ="droit" name="droit" type="radio" value="1"></input>-->
+            <input class="inputPost" type="text" name="titreSon" placeholder="Titre de l'oeuvre" required>
+            <label for="droit">Libre de droit</label>
+            <input id ="droitSon" name="droitSon" type="radio" value="1">
             <label for="inputPost">Désposez une miniature pour votre son</label>
-            <input class="inputPost" type="file" name="icone" id="icone"></input>
+            <input class="inputPost" type="file" name="miniSon" id="miniSon">
             <label for="url">déposer le lien ici :</label>
-            <input type="url" name="url" id="url"></
+            <input type="url" name="urlSon" id="urlSon">
             <label class="inputPost" for="message">Description de votre travail</label>
             <textarea name="description" rows="10" cols="50" placeholder="Description" required></textarea>
-            <input class="inputPost" type="submit" value="Envoyer" style="cursor:pointer" ></input>
+            <input class="inputPost" type="submit" value="Envoyer" style="cursor:pointer" name="submitSon" >
         </form>
     </div>
 <?php 
+    if(isset($_POST["submitSon"])){
+        require("php/param.inc.php");
+        $titreSon=$_POST["titreSon"];
+        $droitSon=$_POST["droitSon"];
+        $urlSon=$_POST["urlSon"];
+        $description=$_POST["description"];
+        echo "Le titre est : ".$titreSon;
+        echo "L'url est : ".$urlSon;
+        echo "La description est : ".$description;
+        copy($_FILES["miniSon"]["tmp_name"],"travaux/vignette/".$_FILES["miniSon"]["name"]);
+        $chemin="travaux/vignette/".$_FILES["miniSon"]["name"];
+        $bdd =new PDO("mysql:host=".MYHOST.";dbname=".MYDB, MYUSER, MYPASS) ;
+        $insertmbr = $bdd->prepare("INSERT INTO SON(IdSon,TitreSon,DatePublication,AccordsDroits,AccesSon,DescriptionSon,AccesMiniature) VALUES(null,:titre,NOW(),:accords,:acces,:desc,:accesMini)");
+        $insertmbr->execute(array(":titre"=>$titreSon,":accords"=>$droitSon,":acces"=>$urlSon,":desc"=>$description,":accesMini"=>$chemin));
+    }
         }else if($_GET["type"]=="video"){
 ?>
 <div id="video">
         <h1>Poster votre <?php echo $_GET['type'];  ?></h1>
         <form class="formulairePoster" action="" method="post">
             <label for="inputPost">Titre</label>
-            <input class="inputPost" type="text" name="titre" placeholder="Titre de l'oeuvre" required></input>
+            <input class="inputPost" type="text" name="titre" placeholder="Titre de l'oeuvre" required>
             <!--<label for="droit">Libre de droit</label>
             <input id ="droit" name="droit" type="radio" value="1"></input>-->
             <label for="inputPost">Désposez une miniature pour votre son</label>
-            <input class="inputPost" type="file" name="affiche" id="affiche"></input>
+            <input class="inputPost" type="file" name="affiche" id="affiche">
             <label for="url">déposer le lien ici :</label>
-            <input type="url" name="url" id="url"></
+            <input type="url" name="url" id="url">
             <label class="inputPost" for="message">Description de votre travail</label>
             <textarea name="description" rows="10" cols="50" placeholder="Description" required></textarea>
             <input class="inputPost" type="submit" value="Envoyer" style="cursor:pointer">
