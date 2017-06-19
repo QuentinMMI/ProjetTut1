@@ -1215,11 +1215,11 @@ fieldset a:hover{
     width : 25%;
 }
 
-#choixAdmin>span{
+#choixAdmin>div{
     margin-top: 10vh;
 }
 
-#choixAdmin>span:hover{
+#choixAdmin>div>span:hover{
     text-decoration: underline;
 }
 
@@ -1253,6 +1253,6 @@ fieldset a:hover{
     font-size: 15px;
 }
 
-#choixAdmin>span:last-child:hover>#sousMenu{
+#choixAdmin>div:last-child>span:hover>#sousMenu{
     display: block;
 }
