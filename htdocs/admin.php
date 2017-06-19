@@ -20,15 +20,15 @@ session_start();
 <main id="Admin" class="fondJaune">
     <div id="choixAdmin">
         <div>
-            <span style="cursor:pointer">Modifier le profil d'un utilisateur</span>
+            <span style="cursor:pointer" class="typeAafficher" data-type="user">Modifier le profil d'un utilisateur</span>
         </div>
         
         <div>
             <span style="cursor:pointer">Modifier/supprimer une production</span>
             <div id="sousMenu">
-                <span>Modifier un son</span>
-                <span>Modifier une video</span>
-                <span>Modifier une affiche</span>
+                <span style="cursor:pointer" class="typeAafficher" data-type="son">Modifier un son</span>
+                <span style="cursor:pointer" class="typeAafficher" data-type="video">Modifier une video</span>
+                <span style="cursor:pointer" class="typeAafficher" data-type="affiche">Modifier une affiche</span>
             </div>
         </div>
     </div>
@@ -37,7 +37,7 @@ session_start();
     <div>
         <h1>Bonjour administrateur</h1>
         <div id="lesDonnees">
-            <div class="renduBDD">
+            <div class="renduBDD" id="divChoixAdmin">
                 <h2>Les utilisateurs</h2>
                 <?php
                 //connexion a la BDD

@@ -1426,14 +1426,24 @@ fieldset a:hover{
 
 #sousMenu{
     position: absolute;
+    top: 0;
+    left: 0;
     display: none;
     font-size: 15px;
+    background-color: #FFD73A;
+    height: 100%;
+}
+#choixAdmin>div:last-child{
+    position: relative;
 }
 
-#choixAdmin>div:last-child>span:hover>#sousMenu{
+#choixAdmin>div:last-child:hover #sousMenu{
     display: block;
 }
 
+#sousMenu>span:hover{
+    text-decoration: underline;
+}
 
 
 /*-----------Poster Affiche-----------*/
