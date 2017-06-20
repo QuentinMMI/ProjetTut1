@@ -10,14 +10,13 @@ session_start();
     <meta name="administration" content="administration des production et des utilisateurs du Défi Hawk.">
     <link type="text/css" rel="stylesheet" href="css/style.css"/>
     <script src="<?php if(isset($_SESSION['id'])){ ?>java/modale2.js<?php }else{ ?>java/modale.js<?php } ?>"></script>
-    <script src="java/admin.js" type="text/javascript"></script>
 </head>
 <body>
 <header>
       <?php require("php/header.php"); ?>
 </header>
 
-<main id="Admin" class="fondJaune">
+<main id="Admin" class="fondRouge">
     <div id="choixAdmin">
         <div>
             <span style="cursor:pointer" class="typeAafficher" data-type="user">Modifier le profil d'un utilisateur</span>
@@ -62,7 +61,7 @@ session_start();
                 ?>
                 <div class="boucleAdmin">
                     <p data-User= "<?php echo(($nom["IdUser"])) ; ?>" class="user" style="cursor:pointer"><?php echo(mb_strtoupper($nom["NomUser"]))." ". ($nom["PrenomUser"]) ; ?></p>
-                    <img src="images/imgPoubelle.png" alt="image poubelle" title="Supprimer ce profil" class="poubelle" >
+                    <img src="images/imgPoubelle.png" alt="image poubelle" title="Supprimer ce profil" class="poubelle" style="cursor:pointer" >
                 </div>
 
                 <?php
@@ -92,5 +91,7 @@ session_start();
 <footer>
     <?php require("php/footer.php"); ?>
 </footer>
+    <script src="java/jquery-3.2.1.js" type="text/javascript"></script>
+    <script src="java/admin.js" type="text/javascript"></script>
 </body>
 </html>
