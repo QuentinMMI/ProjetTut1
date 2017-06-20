@@ -1476,7 +1476,7 @@ fieldset a:hover{
 }
 .inputPost{
     margin-bottom: 20px;
-    background-color: #ff7477;
+    background-color: rgba(249, 80, 83, 0.38);
     border-color: white;
     border-right-color: #ff7477;
     border-top-color: #ff7477;

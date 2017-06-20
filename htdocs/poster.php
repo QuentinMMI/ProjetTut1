@@ -73,7 +73,7 @@ if(isset($_SESSION["id"])){
             <label for="url">déposer le lien ici :</label>
             <input class="inputPost" type="url" name="urlSon" id="urlSon">
             <label for="message">Description de votre travail</label>
-            <textarea class="inputPost" name="description" rows="10" cols="50" placeholder="Description" required></textarea>
+            <textarea id="messageP" class="inputPost" name="description" rows="10" cols="50" placeholder="Description" required></textarea>
             <input type="submit" value="Envoyer" style="cursor:pointer" name="submitSon" >
         </form>
     </div>
@@ -110,7 +110,7 @@ if(isset($_SESSION["id"])){
             <label for="url">Déposez le lien ici :</label>
             <input class="inputPost" type="url" name="urlVid" id="urlVid">
             <label for="message">Description de votre travail</label>
-            <textarea class="inputPost" name="descriptionVid" rows="10" cols="50" placeholder="Description" required></textarea>
+            <textarea id="messageP" class="inputPost" name="descriptionVid" rows="10" cols="50" placeholder="Description" required></textarea>
             <input type="submit" value="Envoyer" style="cursor:pointer" name="submitVid">
         </form>
     </div>
