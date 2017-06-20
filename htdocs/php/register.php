@@ -31,9 +31,10 @@
                                     $resultatAge= 2017 - $date;
                                     if($resultatAge >= 15)
                                     {
-                                        header('Location: ../index.php#gg');
+                                        
                                         $insertmbr = $bdd->prepare("INSERT INTO UTILISATEUR(PrenomUser,NomUser,MotDePasse,AdresseMail,DateNaissance) VALUES(?,?,?,?,?)");
                                         $insertmbr->execute(array($prenom,$nom,$mdp,$adresse,$age));
+                                        header('Location: ../index.php#gg');
                                     }else{
                                         header('Location: ../index.php#limiteDage');
                                     }
