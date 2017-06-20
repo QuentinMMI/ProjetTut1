@@ -124,7 +124,16 @@ function afficherDetailOeuvre (evt){
     
 function SupprimerProfil (evt) {
     var idUser = this.previousElementSibling.dataset.user;
-    var boiteDialogue = $("#popupConfirmation");
+    var popUp = document.getElementById("popupConfirmation");
+    popUp.style.display = 'block';
+    popUp.querySelectorAll("span").addEventListener('click', function(evt){
+        if (this.id == 'non'){
+            window.alert("non");
+            popUp.style.display = 'none' ;
+        }else{
+            window.alert('oui');
+        }
+    }
     
     
     
