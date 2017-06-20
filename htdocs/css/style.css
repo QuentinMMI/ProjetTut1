@@ -1610,6 +1610,7 @@ fieldset a:hover{
     border-style: solid;
     color: black;
 }
-.formulairePoster>input::-webkit-input-placeholder,#messageP::-webkit-input-placeholder{
-    color: white;
+.formulairePoster>input::-webkit-input-placeholder, #messageP::-webkit-input-placeholder{
+    color:white;
+    font-family: KayakSansRegular;
 }
