@@ -98,21 +98,36 @@
 ?>
 <div id="video">
         <h1>Poster votre <?php echo $_GET['type'];  ?></h1>
-        <form class="formulairePoster" action="" method="post">
+        <form class="formulairePoster" action="poster.php?type=video#cBon" method="post">
             <label for="inputPost">Titre</label>
-            <input class="inputPost" type="text" name="titre" placeholder="Titre de l'oeuvre" required>
-            <!--<label for="droit">Libre de droit</label>
-            <input id ="droit" name="droit" type="radio" value="1"></input>-->
+            <input class="inputPost" type="text" name="titreVid" placeholder="Titre de l'oeuvre" required>
+            <label for="droitVid">Libre de droit</label>
+            <input id ="droitVid" name="droitVid" type="radio" value="1"></input>
             <label for="inputPost">Désposez une miniature pour votre son</label>
-            <input class="inputPost" type="file" name="affiche" id="affiche">
+            <input class="inputPost" type="file" name="miniVid" id="miniVid">
             <label for="url">déposer le lien ici :</label>
-            <input type="url" name="url" id="url">
+            <input type="url" name="urlVid" id="urlVid">
             <label class="inputPost" for="message">Description de votre travail</label>
-            <textarea name="description" rows="10" cols="50" placeholder="Description" required></textarea>
-            <input class="inputPost" type="submit" value="Envoyer" style="cursor:pointer">
+            <textarea name="descriptionVid" rows="10" cols="50" placeholder="Description" required></textarea>
+            <input class="inputPost" type="submit" value="Envoyer" style="cursor:pointer" name="submitVid">
         </form>
     </div>
 <?php
+        if(isset($_POST["submitVid"])){
+            require("php/param.inc.php");
+            $titreVid=$_POST["titreVid"];
+            $droitVid=$_POST["droitVid"];
+            $urlVid=$_POST["urlVid"];
+            $descriptionVid=$_POST["descriptionVid"];
+            echo "Le titre est : ".$titreVid;
+            echo "L'url est : ".$urlVid;
+            echo "La description est : ".$descriptionVid;
+            copy($_FILES["miniVid"]["tmp_name"],"travaux/vignette/".$_FILES["miniVid"]["name"]);
+            $chemin="travaux/vignette/".$_FILES["miniVid"]["name"];
+            $bdd =new PDO("mysql:host=".MYHOST.";dbname=".MYDB, MYUSER, MYPASS) ;
+            $insertmbr = $bdd->prepare("INSERT INTO VIDEO (IdVideo,TitreVideo,DatePublication,AccesVideo,AccordsDroits,DescriptionVideo,AccesMiniature) VALUES(null,:titre,NOW(),:acces,:accords,:desc,:accesMini)");
+            $insertmbr->execute(array(":titre"=>$titreVid,":accords"=>$droitVid,":acces"=>$urlVid,":desc"=>$descriptionVid,":accesMini"=>$chemin));
+        }                              
     };
 ?>
 </main>
