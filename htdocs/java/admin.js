@@ -126,16 +126,18 @@ function SupprimerProfil (evt) {
     var idUser = this.previousElementSibling.dataset.user;
     var popUp = document.getElementById("popupConfirmation");
     popUp.style.display = 'block';
-    popUp.querySelectorAll("span").addEventListener('click', function(evt){
-        if (this.id == 'non'){
-            window.alert("non");
-            popUp.style.display = 'none' ;
-        }else{
-            window.alert('oui');
-        }
+    var ouiNon = popUp.querySelectorAll("span");
+    for (var spanIsh of ouiNon){
+        spanIsh.addEventListener('click', function(evt){
+            if (this.id == 'non'){
+                window.alert("non");
+                popUp.style.display = 'none' ;
+            }else{
+                window.alert('oui');
+            }
+        });
+    
     }
-    
-    
     
     /* //evoie de la requète ajax
     var xhr = new XMLHttpRequest();
