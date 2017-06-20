@@ -32,14 +32,14 @@ session_start();
                   $pdo = new PDO("mysql:host=".MYHOST.";dbname=".MYDB, MYUSER, MYPASS);
 		          $pdo->query("SET NAMES utf8");
 		          $pdo->query("SET CHARACTER SET 'utf8'");
-                  $sql="SELECT TitrePhoto, AccesPhoto, DescriptionPhoto, IdPhoto, DatePublication FROM PHOTO ";
+                  $sql="SELECT TitrePhoto, AccesMiniature, IdPhoto, DatePublication FROM PHOTO ";
                   $statement = $pdo->prepare($sql);
 		          $statement->execute();
                   $ligne = $statement->fetch(PDO::FETCH_ASSOC);
 		          while($ligne != false){
                 ?>
                 <div>
-                    <a href="afficher.php?id=<?php echo $ligne['IdPhoto'] ?>&type=photo"><img src="<?php echo $ligne['AccesPhoto'] ?>"></a>
+                    <a href="afficher.php?id=<?php echo $ligne['IdPhoto'] ?>&type=photo"><img src="<?php echo $ligne['AccesMiniature'] ?>"></a>
                 </div>
                 <?php
                       	$ligne = $statement->fetch(PDO::FETCH_ASSOC);
@@ -59,14 +59,14 @@ session_start();
                   $pdo = new PDO("mysql:host=".MYHOST.";dbname=".MYDB, MYUSER, MYPASS);
 		          $pdo->query("SET NAMES utf8");
 		          $pdo->query("SET CHARACTER SET 'utf8'");
-                  $sql="SELECT TitreSon, AccesSon, DescriptionSon, IdSon, DatePublication FROM SON ";
+                  $sql="SELECT TitreSon, AccesMiniature, IdSon, DatePublication FROM SON ";
                   $statement = $pdo->prepare($sql);
 		          $statement->execute();
                   $ligne = $statement->fetch(PDO::FETCH_ASSOC);
 		          while($ligne != false){
                 ?>
                 <div>
-                    <a href="afficher.php?id=<?php echo $ligne['IdSon'] ?>&type=son"><img src="<?php echo $ligne['AccesSon'] ?>"></a>
+                    <a href="afficher.php?id=<?php echo $ligne['IdSon'] ?>&type=son"><img src="<?php echo $ligne['AccesMiniature'] ?>"></a>
                 </div>
                 <?php
                       	$ligne = $statement->fetch(PDO::FETCH_ASSOC);
@@ -86,14 +86,14 @@ session_start();
                   $pdo = new PDO("mysql:host=".MYHOST.";dbname=".MYDB, MYUSER, MYPASS);
 		          $pdo->query("SET NAMES utf8");
 		          $pdo->query("SET CHARACTER SET 'utf8'");
-                  $sql="SELECT TitreVideo, AccesVideo, DescriptionVideo, IdVideo, DatePublication FROM VIDEO ";
+                  $sql="SELECT TitreVideo, AccesMiniature, IdVideo, DatePublication FROM VIDEO ";
                   $statement = $pdo->prepare($sql);
 		          $statement->execute();
                   $ligne = $statement->fetch(PDO::FETCH_ASSOC);
 		          while($ligne != false){
                 ?>
                 <div>
-                    <a href="afficher.php?id=<?php echo $ligne['IdVideo'] ?>&type=video"><img src="<?php echo $ligne['AccesVideo'] ?>"></a>
+                    <a href="afficher.php?id=<?php echo $ligne['IdVideo'] ?>&type=video"><img src="<?php echo $ligne['AccesMiniatue'] ?>"></a>
                 </div>
                 <?php
                       	$ligne = $statement->fetch(PDO::FETCH_ASSOC);
