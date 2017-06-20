@@ -82,7 +82,9 @@ session_start();
             </div>
         </div>
         <div id="popupConfirmation">
-            <p>Voulez-vous vraiment supprimer ce profil <span id="suppressionUser"></span>?</p>
+            <p>Voulez-vous vraiment supprimer ce profil?</p>
+            <span>Oui</span>
+            <span>Non</span>
         </div>
     </div>
     
