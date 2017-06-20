@@ -1,4 +1,3 @@
-
 /*------Fonts------*/
 
 @font-face {
@@ -412,9 +411,10 @@ td {
     width: 50%;
 }
 
-td img{
-    width:70%;
+td img {
+    width: 70%;
 }
+
 
 /*--------------Bulgarie---------------*/
 
@@ -425,8 +425,8 @@ td img{
     transform: skewX(7deg) translateX(-49%) translateY(222%) rotateZ(-83deg);
 }
 
-#texteGeo{
-    color:white;
+#texteGeo {
+    color: white;
     border: solid 3px white;
     text-align: justify;
     width: 50%;
@@ -436,18 +436,21 @@ td img{
     left: 33vw;
     padding: 7px;
 }
-#geographie{
+
+#geographie {
     position: absolute;
-    top:-28vh;
+    top: -28vh;
     left: 33vw;
 }
-#tourisme{
+
+#tourisme {
     position: absolute;
     top: -6vh;
     left: 33vw;
 }
-#texteTourisme{
-    color:white;
+
+#texteTourisme {
+    color: white;
     border: solid white 3px;
     text-align: justify;
     width: 30%;
@@ -457,25 +460,29 @@ td img{
     left: 33vw;
     padding: 7px;
 }
-#imgBulg1{
+
+#imgBulg1 {
     width: 25%;
     position: absolute;
     top: -30vh;
     left: 5vw;
 }
-#bateau{
+
+#bateau {
     width: 20%;
     position: absolute;
     right: 10vw;
     bottom: -57vh;
     z-index: -10;
 }
-#imgBulg2{
+
+#imgBulg2 {
     width: 40%;
     position: absolute;
     left: 33vw;
     bottom: -57vh;
 }
+
 
 /*----------Reglement------------*/
 
@@ -489,7 +496,6 @@ td img{
     transform-origin: top left;
     color: white;
 }
-
 
 #texteLibreDroit {
     text-align: center;
@@ -505,12 +511,11 @@ td img{
     background-color: #f95053;
 }
 
-
 #afficheRegle {
     background-image: url(../images/imgFondJaune.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    width: 274px ;
+    width: 274px;
     height: 200px;
     position: absolute;
     display: flex;
@@ -548,14 +553,16 @@ td img{
     height: 60vh;
 }
 
-#videoRegle>h2, #afficheRegle>h2 {
+#videoRegle>h2,
+#afficheRegle>h2 {
     text-align: center;
 }
-#videoRegle>:last-child{
-    width : 70%;
+
+#videoRegle>:last-child {
+    width: 70%;
 }
 
-#videoRegle::before{
+#videoRegle::before {
     content: "";
     background-image: url(../images/imgPasseport.png);
     background-repeat: no-repeat;
@@ -566,26 +573,25 @@ td img{
     right: -25vw;
 }
 
-#ilNeVousReste::after{
+#ilNeVousReste::after {
     content: "";
     position: absolute;
     background-image: url(../images/imgLivre.png);
     background-repeat: no-repeat;
     background-size: contain;
-    width : 200%;
+    width: 200%;
     height: 100%;
     bottom: -100%;
     right: 0;
 }
 
-
 #ilNeVousReste {
     font-family: "WalterTurnCoat";
     text-transform: capitalize;
-    position : absolute;
+    position: absolute;
     right: 5%;
     top: calc(25vh + 200px);
-    width : 200px;
+    width: 200px;
 }
 
 
@@ -641,8 +647,6 @@ td img{
     transform-origin: top-left;
     transform: rotateZ(-90deg);
 }
-
-
 
 
 /*Permet de tourner le titre de la page*/
@@ -775,14 +779,13 @@ td img{
     align-items: center;
 }
 
-.contenuP div{
+.contenuP div {
     height: 33%;
 }
 
-
-.contenuP img{
+.contenuP img {
     height: 100%;
-    width:100%;
+    width: 100%;
 }
 
 #cont2 {
@@ -821,6 +824,68 @@ footer>a {
 
 
 /*-------A propos-------*/
+
+#Lequipe {
+    display: flex;
+    transform: skewX(-7deg);
+    border-style: solid;
+    border-color: white;
+    border-width: 4px;
+    width: 70vw;
+    justify-content: space-around;
+    height: 70%;
+    margin-left: 10%;
+    margin-top: 5%;
+    overflow: hidden;
+    position: relative;
+}
+
+#Lequipe>div {
+    border-style: solid;
+    border-color: white;
+    border-width: 2px;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    padding-top: 4%;
+    float: left;
+    width: 17%;
+    height: 100%;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    -webkit-transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.current {
+    width: 36%;
+    -webkit-transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    -moz-transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    -o-transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.notCurrent {
+    width: 16%;
+    -webkit-transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    -moz-transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    -o-transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+#Lequipe:last-child {
+    float: left;
+}
+
+#Lequipe>div:hover {
+    filter: grayscale(1);
+}
+
+#Lequipe>div>img {
+    transform: skewX(7deg);
+}
 
 .textEntreprise {
     margin: 0%;
@@ -898,49 +963,41 @@ footer>a {
     bottom: 10%;
 }
 
-#aPropos {
-    color: white;
-    font-size: 5vw;
-    transform-origin: top-left;
-    transform: skewX(7deg) translateX(-53%) translateY(220%) rotateZ(-83deg);
-}
-
-
 #contact {
     color: white;
     font-size: 5vw;
     transform-origin: top-left;
     transform: skewX(7deg) translateX(-49%) translateY(280%) rotateZ(-83deg);
-    position:absolute;
+    position: absolute;
 }
 
-#divAPropos{
-    width:50vw;
-    margin : auto;
-    color:white;
-    border : solid 3px white;
-    text-align:justify;
-    padding : 5px;
+#divAPropos {
+    width: 50vw;
+    margin: auto;
+    color: white;
+    border: solid 3px white;
+    text-align: justify;
+    padding: 5px;
     position: absolute;
-    position : relative;
-}
-#divAPropos::after{
-    content : url(../images/imgFlecheAccueil.png);
-    transform : rotateY(180deg) rotate(45deg);
-    position: absolute;
-    bottom :-58px;
-    right : -70px;
+    position: relative;
 }
 
-.photoEquipe:nth-child(odd){
-    width : 5vw;
-    height : 20vw;
+#divAPropos::after {
+    content: url(../images/imgFlecheAccueil.png);
+    transform: rotateY(180deg) rotate(45deg);
+    position: absolute;
+    bottom: -58px;
+    right: -70px;
 }
-.photoEquipe:nth-child(even){
-    width : 15vw;
-    height : 20vw;
-    
+
+.photoEquipe:nth-child(odd) {
+    height: 20vw;
 }
+
+.photoEquipe:nth-child(even) {
+    height: 20vw;
+}
+
 
 /*----Mentions LÃ©gales----*/
 
@@ -1043,122 +1100,131 @@ footer>a {
     border-left: 3px solid #FFD73A;
 }
 
+
 /*----------------Les Modifs de Thomas le gÃ©nie--------------------------*/
-#slogan{
-    color:white;
+
+#slogan {
+    color: white;
     border: solid white 3px;
-    font-size:50px;
-    width:50vw;
+    font-size: 50px;
+    width: 50vw;
 }
-#texteIndex1{
-    color:white;
+
+#texteIndex1 {
+    color: white;
     font-size: 3vh;
     width: 25vw;
-    border:solid 3px white;
+    border: solid 3px white;
 }
-#avion{
-    width:20%;
+
+#avion {
+    width: 20%;
     position: absolute;
-    top:20%;
+    top: 20%;
     left: 35%;
     z-index: -2;
 }
-#texteIndex2{
-    color:white;
+
+#texteIndex2 {
+    color: white;
     font-size: 3vh;
     width: 30vw;
     position: absolute;
-    left:20%;
+    left: 20%;
     border: 3px white solid;
 }
-#gopro{
+
+#gopro {
     width: 10%;
     position: absolute;
     left: 6%;
 }
-#texteBilgre{
-    color:white;
+
+#texteBilgre {
+    color: white;
     font-size: 5vh;
     width: 50vw;
     position: absolute;
-    top:70%;
+    top: 70%;
     border: 3px white solid;
 }
 
-#imgAccueil{
+#imgAccueil {
     width: 28%;
     position: absolute;
-    top:1%;
-    right:13%;
-}
-#texteDossier{
-    width:20%;
-    font-size: 2.5vh;
-    position: absolute;
-    right:30%;
-    top:50%;
-    font-family: WalterTurnCoat;
-    
-    
+    top: 1%;
+    right: 13%;
 }
 
-#carte{
+#texteDossier {
+    width: 20%;
+    font-size: 2.5vh;
+    position: absolute;
+    right: 30%;
+    top: 50%;
+    font-family: WalterTurnCoat;
+}
+
+#carte {
     width: 20%;
     position: absolute;
-    bottom:0%;
-    right:20%;
+    bottom: 0%;
+    right: 20%;
 }
 
 
 /*----------------COntact-------------*/
-#ContenuContact{
+
+#ContenuContact {
     margin-left: 10%;
 }
 
-#FormContact{
+#FormContact {
     max-width: 50vw;
-    
 }
 
-#FormContact>label{
-    display : none;
+#FormContact>label {
+    display: none;
 }
-#FormContact>input::-webkit-input-placeholder, #message::-webkit-input-placeholder{
-    color:white;
+
+#FormContact>input::-webkit-input-placeholder,
+#message::-webkit-input-placeholder {
+    color: white;
     font-family: KayakSansRegular;
     font-size: 20px;
 }
 
-#FormContact>input, #message{
+#FormContact>input,
+#message {
     background-color: #00B3DF;
-    border : solid white 3px;
+    border: solid white 3px;
     color: white;
     display: block;
     margin-top: 2%;
-    padding : 5px;
+    padding: 5px;
 }
-#FormContact>input:last-child{
+
+#FormContact>input:last-child {
     font-family: KayakSansRegular;
     font-size: 20px;
 }
-#FormContact>input:last-child:hover{
+
+#FormContact>input:last-child:hover {
     background-color: #05657E;
     font-family: KayakSansRegular;
     font-size: 20px;
 }
 
-
-#question{
+#question {
     padding: 5px;
     width: 40vw;
-    border : solid white 4px;
+    border: solid white 4px;
     color: white;
     font-family: Leixo;
-    font-size : 25px;
-    
+    font-size: 25px;
 }
 
-#question::after{
+#question::after {
     content: url(../images/imgFlecheAccueil.png);
     position: absolute;
     transform: rotateY(180deg) rotate(-90deg);
@@ -1166,39 +1232,43 @@ footer>a {
     left: 35%;
 }
 
-#question::before{
+#question::before {
     content: "";
     background-image: url(../images/imgContact.png);
     background-repeat: no-repeat;
     background-size: contain;
-    position : absolute;
-    top : 0;
-    right : -25%;
-    width : 75%;
+    position: absolute;
+    top: 0;
+    right: -25%;
+    width: 75%;
     height: 75%;
 }
 
+
 /*---------PARTICIPER----------*/
 
-#mainParticiper{
+#mainParticiper {
     background-color: #ff7477;
 }
-#lesIcones{
+
+#lesIcones {
     justify-content: space-around;
     display: flex;
     flex-direction: row
 }
-#publications{
+
+#publications {
     color: white;
-	font-size: 3.5vh;
+    font-size: 3.5vh;
 }
-.divAffiche{
+
+.divAffiche {
     display: flex;
     flex-direction: column;
     align-items: center;
- 
 }
-.depot{
+
+.depot {
     padding-top: 25px;
     padding-bottom: 25px;
     padding-left: 10px;
@@ -1208,16 +1278,19 @@ footer>a {
     width: 18vw;
     height: 38vh;
 }
-.modifier{
-    padding:10px;
- 
+
+.modifier {
+    padding: 10px;
 }
-#textPubli{
+
+#textPubli {
     text-align: justify;
     color: white;
     padding-left: 250px;
     padding-right: 250px;
 }
+
+
 /*----interface inscription---*/
 
 .modal2 {
@@ -1236,12 +1309,12 @@ footer>a {
     display: block
 }
 
-#sortir{
-    position:absolute;
+#sortir {
+    position: absolute;
     width: 80%;
     height: 100%;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
 }
 
 .modal-content2 {
@@ -1254,56 +1327,58 @@ footer>a {
     right: 0px;
     width: 20%;
     height: 92%;
-    background-color: #ff7477 ;
+    background-color: #ff7477;
     min-width: 300px;
 }
 
-#photoIdentite{
+#photoIdentite {
     border-radius: 90px;
     height: 100%;
 }
-#principI{
+
+#principI {
     display: flex;
     justify-content: space-around;
     height: 12%;
 }
 
-#principI p{
-    font-size:100%;
+#principI p {
+    font-size: 100%;
     font-family: "KayakSansBold";
 }
 
-#contentI{
-    display:flex;
-    flex-direction:column;
+#contentI {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 
-#contentI label{
-    flex-direction:column;
-    font-family:  "Leixo";
+#contentI label {
+    flex-direction: column;
+    font-family: "Leixo";
     text-align: left;
-    margin:2%;
+    margin: 2%;
     margin-left: 10%;
     font-size: 130%;
 }
 
-#contentI input,#contentI p{
-    background-color:#ff7477;
+#contentI input,
+#contentI p {
+    background-color: #ff7477;
     font-size: 115%;
-    margin-left:10%;
+    margin-left: 10%;
     font-family: "KayakSansBold";
     border: 0px;
     border-left: 3px white solid;
     border-bottom: 3px white solid;
     text-align: center;
-    padding-bottom:1%;
-    width:75%;
+    padding-bottom: 1%;
+    width: 75%;
     margin-bottom: 1%;
     margin-top: -1%;
 }
 
-.inter1{
+.inter1 {
     font-family: "KayakSansBold";
     font-size: 15px;
     border: 4px #FFD73A solid;
@@ -1312,33 +1387,32 @@ footer>a {
     position: absolute;
 }
 
-#deconnecter{
+#deconnecter {
     width: 82px;
     height: 21px;
     top: calc(500px + 5%);
     left: 19%;
 }
 
-#modifier{
+#modifier {
     width: 52px;
     height: 17px;
     top: calc(500px + 5%);
     right: 22%;
 }
 
-.inter2{
+.inter2 {
     display: none;
-  
 }
 
-#boutonsI #valider{
+#boutonsI #valider {
     width: 60px;
     height: 25px;
     top: calc(500px + 5%);
     right: 29%;
 }
-    
-#annuler{
+
+#annuler {
     width: 50px;
     height: 20px;
     top: calc(500px + 5%);
@@ -1346,43 +1420,45 @@ footer>a {
 }
 
 
-
 /*------------------------FAQ--------------------------*/
-fieldset{
+
+fieldset {
     display: inline-block;
-    width : 75vw;
+    width: 75vw;
     border: white solid 5px;
     margin: 0 7vw 8px 0;
     text-align: left;
 }
-fieldset>legend{
+
+fieldset>legend {
     font-family: leixo;
 }
 
-fieldset>p{
+fieldset>p {
     font-size: 15px;
 }
 
-fieldset a:hover{
+fieldset a:hover {
     color: #FF7477;
 }
 
-#FAQ{
+#FAQ {
     padding-top: 3px;
     position: absolute;
-    color :white;
-    font-size:5vw;
-    transform-origin:top-left;
+    color: white;
+    font-size: 5vw;
+    transform-origin: top-left;
     transform: skewX(7deg) translateX(-49%) translateY(220%) rotateZ(-83deg);
 }
 
 
 /*-------------------------ADMINISTRATION---------------------------*/
-#Admin{
-    display: flex;  
+
+#Admin {
+    display: flex;
 }
 
-#choixAdmin{
+#choixAdmin {
     display: flex;
     flex-direction: column;
     align-content: space-between;
@@ -1390,42 +1466,41 @@ fieldset a:hover{
     font-family: leixo;
     font-size: 25px;
     height: 100%;
-    width : 25%;
+    width: 25%;
 }
 
-#choixAdmin>div{
+#choixAdmin>div {
     margin-top: 10vh;
 }
 
-#choixAdmin>div>span:hover{
+#choixAdmin>div>span:hover {
     text-decoration: underline;
 }
 
-
-#Admin p{
+#Admin p {
     text-align: left;
     padding-left: 5px;
 }
 
-.boucleAdmin p:hover{
+.boucleAdmin p:hover {
     font-family: KayakSansBold;
 }
 
-.renduBDD{
+.renduBDD {
     border: solid white 5px;
     width: 50%;
 }
 
-.boucleAdmin{
+.boucleAdmin {
     display: block;
 }
 
-#lesDonnees{
+#lesDonnees {
     display: flex;
     width: 70vw;
 }
 
-#sousMenu{
+#sousMenu {
     position: absolute;
     top: 0;
     left: 0;
@@ -1434,30 +1509,32 @@ fieldset a:hover{
     background-color: #FFD73A;
     height: 100%;
 }
-#choixAdmin>div:last-child{
+
+#choixAdmin>div:last-child {
     position: relative;
 }
 
-#choixAdmin>div:last-child:hover #sousMenu{
+#choixAdmin>div:last-child:hover #sousMenu {
     display: block;
 }
 
-#sousMenu>span:hover{
+#sousMenu>span:hover {
     text-decoration: underline;
 }
-#divChoixAdmin>div{
+
+#divChoixAdmin>div {
     display: flex;
 }
 
-#divChoixAdmin img{
+#divChoixAdmin img {
     max-height: 100px;
 }
 
+
 /*-----------Poster Affiche-----------*/
-.formulairePoster{
+
+.formulairePoster {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
-

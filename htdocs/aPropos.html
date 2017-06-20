@@ -1,0 +1,107 @@
+<?php
+   session_start();
+    header   ("Content-type: text/html; charset=UTF-8");
+?>
+    <html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>DEFI HAWK</title>
+        <meta name="description" content="Un site concours, tentez de gagner un voyage grace à une production audiovisuelle ! Defi Hawk">
+        <link type="text/css" rel="stylesheet" href="css/style.css" />
+        <script src="<?php if(isset($_SESSION['id'])){ ?>java/modale2.js<?php }else{ ?>java/modale.js<?php } ?>"></script>
+        <script type="text/javascript" src="java/photo.js"></script>
+        <script type="text/javascript" src="java/planche.js"></script>
+        <script src="java/verif.js"></script>
+        <script src="java/modif.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <?php require("php/header.php"); ?>
+        </header>
+        <main>
+            <div id="planche1" class="planche planche1">
+                <h1 class="hAffiche hPub">a Propos</h1>
+                <div id="onglets" class="ongletsPub">
+                </div>
+                <div id="Lequipe">
+                    <div id="divMascotte" class="imgWrap imgWrap1">
+                        <img id="imgMascotte" class="photoEquipe" src="images/imgMascotteTabouret.png" alt="image de mascotte">
+                    </div>
+                    <div id="divQuentin" class="imgWrap imgWrap2">
+                        <img id="imgQuentin" class="photoEquipe" src="images/imgQuentin.png" alt="image de Quentin">
+                    </div>
+                    <div id="divHugo" class="imgWrap imgWrap3">
+                        <img id="imgHugo" class="photoEquipe" src="images/imgHugo.png" alt="image de Hugo">
+                    </div>
+                    <div id="divJoanne" class="imgWrap imgWrap4">
+                        <img id="imgJoanne" class="photoEquipe" src="images/imgJoanne.png" alt="image de Joanne">
+                    </div>
+                    <div id="divFlorian" class="imgWrap imgWrap5">
+                        <img id="imgFlorian" class="photoEquipe" src="images/imgFlorian.png" alt="image de Florian">
+                    </div>
+                    <div id="divThomas" class="imgWrap imgWrap6">
+                        <img id="imgThomas" class="photoEquipe" src="images/imgThomas.png" alt="image de Thomas">
+                    </div>
+                </div>
+            </div>
+
+            <div id="planche2" class="planche planche2">
+                <h1 id="FAQ">faq</h1>
+                <fieldset>
+                    <legend>Comment participer?</legend>
+                    <p>Pour participer c'est très simple il que vous créiez un compte en cliquant sur <a href="#Modal" class="popUp">Se connecter</a>.</p>
+                    <p>Une fois que vous êtes inscrits, vous pouvez poster une réalisation par catégorie (image, son, vidéo) en cliquant sur le bouton <a href="participer.php">Participer</a> dans le menu en haut.</p>
+                    <p>De cette manière, vous pourrez upload votre document. Il sera soumis à un vote de la part d'un jury qui laissera un panel de personnes choisir quelles réalisations méritent de gagner les prix !</p>
+                </fieldset>
+                <fieldset>
+                    <legend>Quel age pour participer ?</legend>
+                    <p>Une des conditions pour participer c'est d'avoir plus de 16 ans. Et oui, si vous avec moins de 16 ans, il faudra attendre quelques années avant de pouvoir participer.</p>
+                    <p>Pour les participants mineurs il faudra fournir une autorisation parentale.</p>
+                    <p>Vous pouvez en télécharger une <a href="Doc/AutorisationPaentale.pdf" target="_blank">ici</a>.</p>
+                </fieldset>
+                <fieldset>
+                    <legend>Comment savoir si on a gagne ?</legend>
+                    <p>Pour savoir si on a gagné, c'est très simple, un email sera envoyé au gagnant, le 14 novembre. Le 15 novembre il y'aura une annonce publique sur les réseaux sociaux et sur le site pour annoncer les gagnants</p>
+                </fieldset>
+                <fieldset>
+                    <legend>Et qu'est-ce-qu'on gagne ?</legend>
+                    <p>Je vous invite à consulter la page <a href="index.php">Accueil</a> et à sélectionner l'onglet Lot.</p>
+                </fieldset>
+            </div>
+
+
+            <!-----------------------------------CONTACT-------------------------------->
+            <div id="planche3" class="planche planche3">
+                <h1 id="contact">Contact</h1>
+                <div id="ContenuContact">
+                    <p id="question">Une question ? N'hesite pas a nous contacter ...</p>
+                    <form method="post" action="php/envoiMail.php" id="FormContact">
+                        <label for="nomEnvoyeur">Nom et prénom</label>
+                        <input type="text" id="nomEnvoyeur" name="nomEnvoyeur" placeholder="Nom et prénom" required>
+                        <label for="objet">objet</label>
+                        <input id="objet" name="objet" type="text" placeholder="Objet" required>
+                        <label for="mailEnvoyeur">Adresse e-mail</label>
+                        <input id="mailEnvoyeur" name="mailEnvoyeur" type="email" placeholder="E-mail" required>
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" rows="10" cols="50" placeholder="Message" required></textarea>
+
+                        <input type="submit" value="Envoyer" style="cursor:pointer">
+
+                    </form>
+                </div>
+            </div>
+
+        </main>
+
+        <!--------------------------------------------------- FOOTER -------------------------------------------------------------->
+
+        <footer id="footer">
+            <?php require("php/footer.php"); ?>
+        </footer>
+        <script src="java/apropos.js"></script>
+    </body>
+
+    </html>
