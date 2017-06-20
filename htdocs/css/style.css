@@ -1432,14 +1432,17 @@ fieldset a:hover{
     display: none;
     font-size: 15px;
     background-color: #FFD73A;
-    height: 100%;
+    min-height: 100%;
+    width: 100%;
+
 }
 #choixAdmin>div:last-child{
     position: relative;
 }
 
 #choixAdmin>div:last-child:hover #sousMenu{
-    display: block;
+    display: flex;
+    flex-direction : column;
 }
 
 #sousMenu>span:hover{
