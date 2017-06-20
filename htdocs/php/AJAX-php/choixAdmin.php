@@ -43,7 +43,7 @@
         
         //debut de la boucle
         while ($son != false){
-            $codeHTML = $codeHTML."<div class='boucleAdmin oeuvre' style='cursor:pointer' data-type='son'><img src='travaux/".$son['AccesSon'].".png'  data-IdOeuvre='".$son['IdSon']."'><p style='cursor:pointer' >Titre : ".$son['TitreSon']."</div>";
+            $codeHTML = $codeHTML."<div class='boucleAdmin oeuvre' style='cursor:pointer' data-type='son' data-IdOeuvre='".$son['IdSon']."'><img src='".$son['AccesSon']."'  ><p style='cursor:pointer' >Titre : ".$son['TitreSon']."</div>";
             
             $son = $statement->fetch(PDO::FETCH_ASSOC);
         }
@@ -63,7 +63,7 @@
         
         //debut de la boucle
              while ($video != false){
-            $codeHTML = $codeHTML."<div class='boucleAdmin oeuvre' style='cursor:pointer' data-type='video'><img src='travaux/".$video['AccesVideo'].".png'  data-IdOeuvre='".$video['IdVideo']."'><p style='cursor:pointer' >Titre : ".$video['TitreVideo']."</div>";
+            $codeHTML = $codeHTML."<div class='boucleAdmin oeuvre' style='cursor:pointer' data-type='video'  data-IdOeuvre='".$video['IdVideo']."'><img src='".$video['AccesVideo']."' ><p style='cursor:pointer' >Titre : ".$video['TitreVideo']."</div>";
             
             $video = $statement->fetch(PDO::FETCH_ASSOC);
         }
@@ -83,7 +83,7 @@
         
         //debut de la boucle
              while ($photo != false){
-            $codeHTML = $codeHTML."<div class='boucleAdmin oeuvre' style='cursor:pointer' data-type='photo' ><img src='travaux/".$photo['AccesPhoto'].".png'  data-IdOeuvre='".$photo['IdPhoto']."'><p style='cursor:pointer'>Titre : ".$photo['TitrePhoto']."</div>";
+            $codeHTML = $codeHTML."<div class='boucleAdmin oeuvre' style='cursor:pointer' data-type='photo'  data-IdOeuvre='".$photo['IdPhoto']."'><img src='".$photo['AccesPhoto']."' ><p style='cursor:pointer'>Titre : ".$photo['TitrePhoto']."</div>";
             
             $photo = $statement->fetch(PDO::FETCH_ASSOC);
         }

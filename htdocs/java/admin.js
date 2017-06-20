@@ -85,7 +85,7 @@
     }
     
 function afficherDetailOeuvre (evt){
-    var id = this.firstChild.dataset.IdOeuvre; //fist child vérifie si ce n'est pas le 1er enfant et ne prend pas le premier ? /!\ a deboguer
+    var id = this.dataset.idoeuvre; 
     window.alert(id);
     var zoneModif = document.getElementById("zonePecision");
     var type= this.dataset.type;
