@@ -1,7 +1,7 @@
 <?php
    session_start();
     header ("Content-type: text/html");
-if(isset($_SESSION["id"])){
+//if(isset($_SESSION["id"])){
     if(isset($_GET["type"])){
 ?>
 <html>  
@@ -21,7 +21,7 @@ if(isset($_SESSION["id"])){
 <header>
       <?php require("php/header.php"); ?>
 </header>
-<main> 
+<main id="mainPoster"> 
 <?php
         if($_GET['type']=="affiche"){    
 ?>
@@ -31,12 +31,12 @@ if(isset($_SESSION["id"])){
             <label for="titreOeuvre">Titre</label>
             <input class="inputPost" type="text" name="titre" placeholder="Titre de l'oeuvre" required>
             <label for="droit">Libre de droit</label>
-            <input id ="droit" name="droit" type="radio" value="1">
-            <input type="hiden" name="MAX_FILE_SIZE" value="450000">
+            <input class="inputPost"  id ="droit" name="droit" type="radio" value="1">
+            <input type="hidden" name="MAX_FILE_SIZE" value="450000">
             <input class="inputPost" type="file" name="affiche" id="icone">
-            <label class="inputPost" for="message">Description de votre travail</label>
-            <textarea name="description" rows="10" cols="50" placeholder="Description" required></textarea>
-            <input class="inputPost" type="submit" value="Envoyer" style="cursor:pointer" name="validerAffiche">
+            <label for="message">Description de votre travail</label>
+            <textarea id="messageP" class="inputPost" name="description" rows="10" cols="50" placeholder="Description" required></textarea>
+            <input type="submit" value="Envoyer" style="cursor:pointer" name="validerAffiche">
         </form>
     </div>
 <?php     
@@ -74,11 +74,11 @@ if(isset($_SESSION["id"])){
             <label for="inputPost">Désposez une miniature pour votre son</label>
             <input type="hiden" name="MAX_FILE_SIZE" value="450000">
             <input class="inputPost" type="file" name="miniSon" id="miniSon">
-            <label for="url">déposer le lien ici :</label>
+            <label for="url">Déposez le lien ici :</label>
             <input type="url" name="urlSon" id="urlSon">
             <label class="inputPost" for="message">Description de votre travail</label>
             <textarea name="description" rows="10" cols="50" placeholder="Description" required></textarea>
-            <input class="inputPost" type="submit" value="Envoyer" style="cursor:pointer" name="submitSon" >
+            <input type="submit" value="Envoyer" style="cursor:pointer" name="submitSon" >
         </form>
     </div>
 <?php 
@@ -112,11 +112,11 @@ if(isset($_SESSION["id"])){
             <label for="inputPost">Désposez une miniature pour votre son</label>
             <input type="hiden" name="MAX_FILE_SIZE" value="450000">
             <input class="inputPost" type="file" name="miniVid" id="miniVid">
-            <label for="url">déposer le lien ici :</label>
+            <label for="url">Déposez le lien ici :</label>
             <input type="url" name="urlVid" id="urlVid">
             <label class="inputPost" for="message">Description de votre travail</label>
             <textarea name="descriptionVid" rows="10" cols="50" placeholder="Description" required></textarea>
-            <input class="inputPost" type="submit" value="Envoyer" style="cursor:pointer" name="submitVid">
+            <input type="submit" value="Envoyer" style="cursor:pointer" name="submitVid">
         </form>
     </div>
 <?php
@@ -153,7 +153,7 @@ if(isset($_SESSION["id"])){
            }else{
                header("Location: participer.php");
            }
-    }else{
-        header("Location: index.php");
-    }
+    //}else{
+       header("Location: index.php");
+    //}
 ?>
