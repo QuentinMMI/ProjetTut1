@@ -130,10 +130,11 @@ function SupprimerProfil (evt) {
     for (var spanIsh of ouiNon){
         spanIsh.addEventListener('click', function(evt){
             if (this.id == 'non'){
-                window.alert("non");
+                window.alert(idUser);
                 popUp.style.display = 'none' ;
             }else{
-                window.alert('oui');
+                window.alert('oui '+idUser);
+                popUp.style.display = 'none' ;
             }
         });
     
