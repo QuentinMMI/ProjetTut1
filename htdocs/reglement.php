@@ -22,7 +22,7 @@ session_start();
             <div class="positionRegle">
                 <div>
                     <div id="libreDroit">
-                        <p id="texteLibreDroit">Pour participer tu dois avoir 16 ans ou plus. Ta production est libres de droit commercial et respecte les regles ci-dessous, bonne chance! </p>
+                        <p id="texteLibreDroit">Pour participer tu dois avoir 16 ans ou plus. Ta production est libre de droit commercial et respecte les règles ci-dessous, bonne chance! </p>
                     </div>
                     <div id="partieGauche">
                         <div id="videoMention">
@@ -31,24 +31,24 @@ session_start();
                                 <p>1 à 3 min max</p>
                                 <p>Bande son obligatoire</p>
                                 <p>Une qualité HD 720p minimum</p>
-                                <p>Uploader sur Youtube en non répértoriée </p>
+                                <p>Upload sur Youtube en non répértoriée </p>
                             </div>
                             <div id="infoMention">
-                                <p id="lienMention"> Tu souhaites en savoir plus, consulte les <a href="mentionsLegales.php">mention légales</a> </p>
+                                <p id="lienMention"> Tu souhaites en savoir plus, consulte les <a href="mentionsLegales.php">mentions légales</a> </p>
                             </div>
                         </div>
                         <div id="afficheSon">
                             <div class="carreRegle" id="afficheRegle">
                                 <h2>Affiche</h2>
-                                <p>Un poid maximum de 750 Ko</p>
+                                <p>Un poids maximum de 750 Ko</p>
                                 <p>Format 2500 X 3000 minimum</p>
                             </div>
                             <div class="carreRegle" id="sonRegle">
                                 <h2>Musique/son</h2>
                                 <p>1 à 3 min max</p>
                                 <p>mp3</p>
-                                <p>Une qualité son optimal en stéréo</p>
-                                <p>Uploader sur SoundCloud en privé</p>
+                                <p>Une qualité son optimale en stéréo</p>
+                                <p>Upload sur SoundCloud en privé</p>
                             </div>
                         </div>
                     </div>
@@ -75,7 +75,7 @@ session_start();
                                 <p>2 Sept</p>
                             </div>
                             <div class="bodyRegle">
-                                <p>Du 2 Septembre au 30 Octobre, depose ton chef d'oeuvre sur le site du concours!</p>
+                                <p>Du 2 Septembre au 30 Octobre, dépose ton chef d'oeuvre sur le site du concours!</p>
                             </div>
                         </div>
                         <div class="entry">
@@ -88,7 +88,7 @@ session_start();
                         </div>
                         <div class="entry">
                             <div class="title titleDeux">
-                                <p>1er Decembre</p>
+                                <p>1er Décembre</p>
                             </div>
                             <div class="bodyRegle">
                                 <p>Les gagnants sont annoncés!</p>

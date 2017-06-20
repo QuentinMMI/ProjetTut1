@@ -23,7 +23,7 @@ session_start();
         <div>  
         <h1 id="publications">Mes publications</h1>  
    
-            <p id="textPubli">Pour participer, choisis au moins un type de fichier et dépose le ci-dessous. Tu peux participer une seule fois sans chaque catégorie, si tu souhaites modifier ton travail tu es libre de le faire jusqu'à la date limite du concours.</p>  
+            <p id="textPubli">Pour participer, choisi au moins une catégorie puis clique sur une des images ci-dessous. Tu peux participer une seule fois dans chaque catégorie, si tu souhaites modifier ton travail tu es libre de le faire jusqu'à la date limite du concours.</p>  
             <div id="lesIcones">  
                 <div class="divAffiche">  
                     <img class="modifier" src="images/imgModifier.png" alt="image modifier">  
