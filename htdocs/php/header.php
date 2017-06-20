@@ -8,7 +8,12 @@
             <?php
               if(isset($_SESSION['id']))
               {
+                  if($_SESSION['id'] == 1){
               ?>
+            <a class="policeNav" href="admin.php" id="connect1" style="cursor:pointer">Administration</a>
+            <?php
+                  }else{
+            ?>
             <a class="policeNav" id="connect1" style="cursor:pointer">Mon Compte</a>
             </nav>
             <div id="Modal2" class="modal2">
@@ -46,6 +51,7 @@
                 </div>
             </div>
             <?php
+                  }
               }else
               {
               ?>
