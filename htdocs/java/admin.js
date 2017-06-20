@@ -20,6 +20,13 @@
         for (var poubelle of lespoubelles){
             poubelle.addEventListener('click', SupprimerProfil);
         }
+        
+        $("#popupConfirmation").dialog({
+                      autoOpen: false, /*au lancement de la page, la boite de dialogue n'est pas visible */
+                      width: 500, /*la boite de dialogue a une largeur de 500px */
+                      modal: true, /* elle est modale, c'est à dire que l'internaute doit obligatoirement fermer la boite pour continuer ses intéractions */ 
+                      title: "Confirmer la suppression" /*on définit son titre */ 
+          });
     }
 
     function selectionUser(evt){
