@@ -123,21 +123,19 @@ function afficherDetailOeuvre (evt){
 }
     
 function SupprimerProfil (evt) {
+    var ladiv = this.parentElement;
     var idUser = this.previousElementSibling.dataset.user;
     var popUp = document.getElementById("popupConfirmation");
     popUp.style.display = 'block';
-    popUp.querySelectorAll("span").addEventListener('click', function(evt){
-        if (this.id == 'non'){
-            window.alert("non");
-            popUp.style.display = 'none' ;
-        }else{
-            window.alert('oui');
-        }
-    }
-    
-    
-    
-    /* //evoie de la requète ajax
+    var ouiNon = popUp.querySelectorAll("span");
+    for (var spanIsh of ouiNon){
+        spanIsh.addEventListener('click', function(evt){
+            if (this.id == 'non'){
+                popUp.style.display = 'none' ;
+            }else{
+                popUp.style.display = 'none' ;
+                ladiv.remove();
+                //evoie de la requète ajax
     var xhr = new XMLHttpRequest();
 
     // On souhaite juste récupérer le contenu du fichier, la méthode GET suffit amplement :
@@ -146,12 +144,17 @@ function SupprimerProfil (evt) {
     xhr.addEventListener('load', function() { // On gère ici une requête asynchrone
 
               
-            /*var chaineEnvoyer = xhr.responseText;
-            zoneModif.innerHTML = chaineEnvoyer; // Et on affiche !*/
+            var chaineEnvoyer = xhr.responseText;
+            document.getElementById("zonePecision").innerHTML = chaineEnvoyer; // Et on affiche !
 
-            /*});
+            });
 
-            xhr.send(null); // La requête est prête, on envoie tout !*/
+            xhr.send(null); // La requête est prête, on envoie tout !
+            }
+        });
+    
+    }
+    
     
 }
 
