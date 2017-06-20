@@ -18,7 +18,6 @@
         
         var lespoubelles = document.querySelectorAll(".poubelle");
         for (var poubelle of lespoubelles){
-            window.alert("mamamama");
             poubelle.addEventListener('click', SupprimerProfil);
         }
     }
@@ -124,8 +123,22 @@ function afficherDetailOeuvre (evt){
     
 function SupprimerProfil (evt) {
     var idUser = this.previousElementSibling.dataset.user;
+    var boiteDialogue = $("#popupConfirmation");
+    boiteDialogue.dialog("option", "buttons", [
+        {text: "Non",
+        click: function (evt) { boiteDialogue.dialog("close"); }
+        },
+        {text :"Oui",
+        click: function (evt) {
+            this.parentNode.remove();
+            boiteDialogue.dialog("close"); /*on ferme la boite de dialogue */
+            //$.ajax("supprimerUser.php",{method:'POST',data:{id:idUser}}) ;
+        }
+        }]);
+         boiteDialogue.dialog("open"); /* on ouvre la boite de dialogue */
     
-     //evoie de la requète ajax
+    
+    /* //evoie de la requète ajax
     var xhr = new XMLHttpRequest();
 
     // On souhaite juste récupérer le contenu du fichier, la méthode GET suffit amplement :
@@ -137,9 +150,9 @@ function SupprimerProfil (evt) {
             /*var chaineEnvoyer = xhr.responseText;
             zoneModif.innerHTML = chaineEnvoyer; // Et on affiche !*/
 
-            });
+            /*});
 
-            xhr.send(null); // La requête est prête, on envoie tout !
+            xhr.send(null); // La requête est prête, on envoie tout !*/
     
 }
 
