@@ -29,7 +29,7 @@
     
 
     $codeHTML="<h2>".$donnee['titre']."</h2>";
-    $codeHTML=$codeHTML."<img src='travaux/".$donnee['acces'].".png' alt='miniature de l'oeuvre'>";
+    $codeHTML=$codeHTML."<img src='".$donnee['acces']."' alt='miniature de l'oeuvre'>";
     $codeHTML=$codeHTML."<p>Date de publication : ".$donnee['date']."</p>";
     $codeHTML=$codeHTML."<p>Publié par : ".mb_strtoupper($profil['NomUser'])." ".($profil['PrenomUser'])."</p>"
             
