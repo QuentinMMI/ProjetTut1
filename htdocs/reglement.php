@@ -11,7 +11,6 @@ session_start();
     <link type="text/css" rel="stylesheet" href="css/style.css"/>
     <script src="java/planche.js"></script>
     <script src="<?php if(isset($_SESSION['id'])){ ?>java/modale2.js<?php }else{ ?>java/modale.js<?php } ?>"></script>
-    <script src="java/verif.js"></script>
     <script src="java/modif.js"></script>
 </head>
 <body>
@@ -51,5 +50,7 @@ session_start();
 <footer>
     <?php require("php/footer.php"); ?>
 </footer>
-
+    <script src="java/jquery-3.2.1.js"></script>
+    <script src="java/verif.js"></script>
 </body>
+</html>

@@ -103,15 +103,14 @@
                 </div> 
             </div> 
 </div>
-    <script src="java/jquery-3.2.1.js"></script>
-    <script src="java/verif.js"></script>
 </main>
  
     <!--------------------------------------------------- FOOTER -------------------------------------------------------------->
     
-   <footer>
-    <?php require("php/footer.php"); ?>
-</footer>
-
+       <footer>
+        <?php require("php/footer.php"); ?>
+        </footer>
+    <script src="java/jquery-3.2.1.js"></script>
+    <script src="java/verif.js"></script>
 </body>
 </html>

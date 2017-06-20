@@ -7,10 +7,14 @@ document.addEventListener("DOMContentLoaded", initialiser);
       var date = document.getElementById("dateI");
       var mail = document.getElementById("mailI");
       var date = document.getElementById("dateI");
+      var mailC= document.getElementById("mailC");
+      var mdpC = document.getElementById("mdpC");
       mdp1.addEventListener("change", verifier);
       mdp2.addEventListener("change", verifier);
       mail.addEventListener("change",verifier2);
       date.addEventListener("change",verifier3);
+      mailC.addEventListener("change",verifier4);
+      mdpC.addEventListener("change",verifier5);
    }
 
    function verifier(evt) {
@@ -47,6 +51,14 @@ document.addEventListener("DOMContentLoaded", initialiser);
         var verif = 2017 - value;
         if(verif<16){
             this.setCustomValidity("l'age requis est de 16 ans minimum.");
+        }
+    }
+    
+    function verifier4 (evt){
+        var value = this.value;
+        this.setCustomValidity("");
+        if(this.chekValidity()){
+            $.ajax("php/AJAX-php/verif3.php",{method:"POST",})
         }
     }
     

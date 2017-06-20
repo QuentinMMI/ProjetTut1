@@ -14,7 +14,6 @@ if(isset($_SESSION["id"])){
     <script src="<?php if(isset($_SESSION['id'])){ ?>java/modale2.js<?php }else{ ?>java/modale.js<?php } ?>"></script>
     <script type="text/javascript" src="java/photo.js"></script>
     <script type="text/javascript" src="java/planche.js"></script>
-    <script src="java/verif.js"></script>
     <script src="java/modif.js"></script>
 </head>
 
@@ -142,7 +141,8 @@ if(isset($_SESSION["id"])){
    <footer id="footer">
         <?php require("php/footer.php"); ?>
     </footer>
-
+    <script src="java/jquery-3.2.1.js"></script>
+    <script src="java/verif.js"></script>
 </body>
 </html>
 <?php
