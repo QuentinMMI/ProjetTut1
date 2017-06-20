@@ -13,6 +13,7 @@ session_start();
     <script src="java/planche.js"></script>
     <script src="<?php if(isset($_SESSION['id'])){ ?>java/modale2.js<?php }else{ ?>java/modale.js<?php } ?>"></script>
     <script src="java/modif.js"></script>
+    <script src="lecteur/audio.min.js"></script>
 </head>=
     <body>
         <header>
@@ -39,13 +40,37 @@ session_start();
             }else if($_GET["type"]=="son"){
         ?>
         <main>
-            <p>c'est un son</p>
+            <?php
+            $pdo = new PDO("mysql:host=".MYHOST.";dbname=".MYDB, MYUSER, MYPASS);
+		          $pdo->query("SET NAMES utf8");
+		          $pdo->query("SET CHARACTER SET 'utf8'");
+                  $sql="SELECT TitreSon, AccesSon, DescriptionSon, AccesMiniature FROM SON WHERE IdSon=:id ";
+                  $statement = $pdo->prepare($sql);
+		          $statement->execute(array(":id"=>$_GET["id"]));
+                  $ligne = $statement->fetch(PDO::FETCH_ASSOC);
+                ?>
+            <p id="pA">nom : <?php echo $ligne["TitreSon"]; ?></p>
+            <audio href="<?php echo $ligne["AccesSon"] ?>" preload="auto" id="sonA"/>
+            <p id="descA"><?php echo $ligne["DescriptionSon"] ?></p>
         </main>
         <?php 
             }else if($_GET["type"]=="video"){
         ?>
         <main>
-            <p>C'est une vidéo</p>
+            <?php
+            $pdo = new PDO("mysql:host=".MYHOST.";dbname=".MYDB, MYUSER, MYPASS);
+		          $pdo->query("SET NAMES utf8");
+		          $pdo->query("SET CHARACTER SET 'utf8'");
+                  $sql="SELECT TitreVideo, AccesVideo, DescriptionVideo, AccesMiniature FROM VIDEO WHERE IdVideo=:id ";
+                  $statement = $pdo->prepare($sql);
+		          $statement->execute(array(":id"=>$_GET["id"]));
+                  $ligne = $statement->fetch(PDO::FETCH_ASSOC);
+                ?>
+            <p id="pA">nom : <?php echo $ligne["TitreVideo"]; ?></p>
+            <figure>
+            <iframe src="<?php echo $ligne["AccesVideo"] ?>" width="854" height="480"></iframe>     
+            </figure>
+            <p id="descA"><?php echo $ligne["DescriptionVideo"] ?></p>
         </main>
         <?php 
             }
@@ -55,5 +80,10 @@ session_start();
         </footer>
         <script src="java/jquery-3.2.1.js"></script>
         <script src="java/verif.js"></script>
+        <script>
+          audiojs.events.ready(function() {
+            var as = audiojs.createAll();
+          });
+        </script>
     </body>
 </html>
