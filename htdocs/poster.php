@@ -52,13 +52,14 @@ if(isset($_SESSION["id"])){
                     copy($_FILES["affiche"]["tmp_name"],"travaux/".$_FILES["affiche"]["name"]);
                     //require("php/convertirImage85x85.inc.php");
                     //convertirImage85x85($_FILES["affiche"]["tmp_name"],"travaux/vignette/vignette_".$_FILES["affiche"]["name"]);
+                    $mini="travaux/vignette/img1.png";
                     $titre=$_POST["titre"];
                     $chemin="travaux/".$_FILES["affiche"]["name"];
                     $description=$_POST["description"];
                     $droits=$_POST["droit"];
                     $bdd =new PDO("mysql:host=".MYHOST.";dbname=".MYDB, MYUSER, MYPASS) ;
-                    $insertmbr = $bdd->prepare("INSERT INTO PHOTO(IdPhoto,TitrePhoto,DatePublication,AccordsDroits,AccesPhoto,DescriptionPhoto) VALUES(null,:titre,NOW(),:accords,:acces,:desc)");
-                    $insertmbr->execute(array(":titre"=>$titre,":accords"=>$description,":acces"=>$chemin,":desc"=>$description));
+                    $insertmbr = $bdd->prepare("INSERT INTO PHOTO(IdPhoto,TitrePhoto,DatePublication,AccordsDroits,AccesPhoto,DescriptionPhoto,AccesMiniature) VALUES(null,:titre,NOW(),:accords,:acces,:desc,accesMini)");
+                    $insertmbr->execute(array(":titre"=>$titre,":accords"=>$description,":acces"=>$chemin,":desc"=>$description,":accesMini"=>$mini));
           }
         }else if($_GET['type']=="son"){
 ?>
@@ -88,8 +89,8 @@ if(isset($_SESSION["id"])){
         echo "Le titre est : ".$titreSon;
         echo "L'url est : ".$urlSon;
         echo "La description est : ".$description;
-        $chemin=null;
-        if(isset($_FILES['miniSon'])){
+        $chemin="travaux/vignette/son1.png";
+        if($_FILES['miniSon']['name']!=""){
             copy($_FILES["miniSon"]["tmp_name"],"travaux/vignette/".$_FILES["miniSon"]["name"]);
             $chemin="travaux/vignette/".$_FILES["miniSon"]["name"];
         }
@@ -125,8 +126,8 @@ if(isset($_SESSION["id"])){
             echo "Le titre est : ".$titreVid;
             echo "L'url est : ".$urlVid;
             echo "La description est : ".$descriptionVid;
-            $chemin=null;
-            if(isset($_FILES['miniVid'])){
+            $chemin="travaux/vignette/vid1.png";
+            if($_FILES['miniVid']['name']!=""){
                 copy($_FILES["miniVid"]["tmp_name"],"travaux/vignette/".$_FILES["miniVid"]["name"]);
                 $chemin="travaux/vignette/".$_FILES["miniVid"]["name"];
                 }

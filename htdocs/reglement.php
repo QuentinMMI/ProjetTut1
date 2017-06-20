@@ -13,7 +13,7 @@ session_start();
     <script src="<?php if(isset($_SESSION['id'])){ ?>java/modale2.js<?php }else{ ?>java/modale.js<?php } ?>"></script>
     <script src="java/modif.js"></script>
 </head>
-<body>
+<body id="bodyreglement">
 <header>
       <?php require("php/header.php"); ?>
 </header>

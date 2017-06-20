@@ -55,12 +55,37 @@ document.addEventListener("DOMContentLoaded", initialiser);
     }
     
     function verifier4 (evt){
-        var value = this.value;
-        this.setCustomValidity("");
-        if(this.chekValidity()){
-            $.ajax("php/AJAX-php/verif3.php",{method:"POST",})
+        var mail = document.getElementById("mailC");
+        var valueC = mail.value;
+        mail.setCustomValidity("");
+        if(mail.checkValidity()){
+            $.ajax("php/AJAX-php/verif3.php",{method:"POST",data:{mail:valueC},success:verifiermail2})
         }
     }
     
+    function verifiermail2 (infoPhp){
+        var mail=document.getElementById("mailC");
+        if(infoPhp=="false"){
+            mail.setCustomValidity("mail inexistant");
+        }
+    }
+    
+    function verifier5 (evt){
+        var mdp = document.getElementById("mdpC");
+        var valueC = mdp.value;
+        var mail = document.getElementById("mailC");
+        var valueM = mail.value;
+        mdp.setCustomValidity("");
+        if(mdp.checkValidity()){
+            $.ajax("php/AJAX-php/verif4.php",{method:"POST",data:{mdp:valueC,mail:valueM},success:verifiermdp})
+        }
+    }
+    
+    function verifiermdp (infoPhp){
+        var mdp=document.getElementById("mdpC");
+        if(infoPhp=="false"){
+            mdp.setCustomValidity("mot de passe incorrecte");
+        }
+    }
 })()
 

@@ -491,7 +491,7 @@ td img{
 }
 
 .fondRouge {
-    background-color: #FB5053;
+    background-color: #FF7477;
 }
 
 #libreDroit {
@@ -616,7 +616,7 @@ td img{
     color: #fff;
 }
 
-body:before {
+#bodyreglement:before {
     content: '';
     position: absolute;
     top: 25%;
