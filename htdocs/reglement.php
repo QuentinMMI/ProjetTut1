@@ -34,7 +34,7 @@ session_start();
                                 <p>Uploader sur Youtube en non répértoriée </p>
                             </div>
                             <div id="infoMention">
-                                <p id="lienMention"> Tu souhaites en savoir plus, consulte les <a href="https://www.defi.hawk">mention légales</a> </p>
+                                <p id="lienMention"> Tu souhaites en savoir plus, consulte les <a href="mentionsLegales.php">mention légales</a> </p>
                             </div>
                         </div>
                         <div id="afficheSon">
