@@ -14,6 +14,7 @@ session_start();
     <script src="<?php if(isset($_SESSION['id'])){ ?>java/modale2.js<?php }else{ ?>java/modale.js<?php } ?>"></script>
     <script src="java/verif.js"></script>
     <script src="java/modif.js"></script>
+    <script src="java/vignettes.js"></script>
 </head>
 
 <body>
@@ -39,7 +40,8 @@ session_start();
 		          while($ligne != false){
                 ?>
                 <div>
-                    <a href="afficher.php?id=<?php echo $ligne['IdPhoto'] ?>&type=photo"><img src="<?php echo $ligne['AccesMiniature'] ?>"></a>
+                    <a href="afficher.php?id=<?php echo $ligne['IdPhoto'] ?>&type=photo"><img src="<?php echo $ligne['AccesMiniature'] ?>" alt="<?php echo $ligne['TitrePhoto'] ?>"></a>
+                    <p class="titre"><?php echo $ligne['TitrePhoto'] ?></p>
                 </div>
                 <?php
                       	$ligne = $statement->fetch(PDO::FETCH_ASSOC);
@@ -66,7 +68,8 @@ session_start();
 		          while($ligne != false){
                 ?>
                 <div>
-                    <a href="afficher.php?id=<?php echo $ligne['IdSon'] ?>&type=son"><img src="<?php echo $ligne['AccesMiniature'] ?>"></a>
+                    <a href="afficher.php?id=<?php echo $ligne['IdSon'] ?>&type=son"><img src="<?php echo $ligne['AccesMiniature'] ?>" alt="<?php echo $ligne['TitreSon'] ?>"></a>
+                    <p class="titre"><?php echo $ligne['TitreSon'] ?></p>
                 </div>
                 <?php
                       	$ligne = $statement->fetch(PDO::FETCH_ASSOC);
@@ -93,7 +96,8 @@ session_start();
 		          while($ligne != false){
                 ?>
                 <div>
-                    <a href="afficher.php?id=<?php echo $ligne['IdVideo'] ?>&type=video"><img src="<?php echo $ligne['AccesMiniatue'] ?>"></a>
+                    <a href="afficher.php?id=<?php echo $ligne['IdVideo'] ?>&type=video"><img src="<?php echo $ligne['AccesMiniatue'] ?>" alt="<?php echo $ligne['TitreVideo'] ?>"></a>
+                    <p class="titre"><?php echo $ligne['TitreVideo'] ?></p>
                 </div>
                 <?php
                       	$ligne = $statement->fetch(PDO::FETCH_ASSOC);
