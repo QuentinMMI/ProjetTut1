@@ -21,7 +21,7 @@ if(isset($_SESSION["id"])){
 <header>
       <?php require("php/header.php"); ?>
 </header>
-<main> 
+<main id="mainPoster"> 
 <?php
         if($_GET['type']=="affiche"){    
 ?>
@@ -31,19 +31,17 @@ if(isset($_SESSION["id"])){
             <label for="titreOeuvre">Titre</label>
             <input class="inputPost" type="text" name="titre" placeholder="Titre de l'oeuvre" required>
             <label for="droit">Libre de droit</label>
-            <input id ="droit" name="droit" type="radio" value="1">
-            <input class="inputPost" type="file" name="affiche" id="icone">
-            <label class="inputPost" for="message">Description de votre travail</label>
-            <textarea name="description" rows="10" cols="50" placeholder="Description" required></textarea>
-            <input class="inputPost" type="submit" value="Envoyer" style="cursor:pointer" name="validerAffiche">
+            <input class="inputPost" id ="droit" name="droit" type="radio" value="1">
+            <label for="inputPost">Déposez votre affiche</label>
+            <input class="inputPost" class="inputPost" type="file" name="affiche" id="icone">
+            <label for="message">Description de votre travail</label>
+            <textarea class="inputPost" id="messageP" name="description" rows="10" cols="50" placeholder="Description" required></textarea>
+            <input type="submit" value="Envoyer" style="cursor:pointer" name="validerAffiche">
         </form>
     </div>
 <?php     
           if(isset($_FILES["affiche"])){
                     require("php/param.inc.php");
-                    //$_SERVEUR
-                    //$_GET
-                    //$_POST
                     echo("Nom du fichier : ".$_FILES["affiche"]["name"]."<br />"); 
                     echo("Nom du fichier temporaire : ".$_FILES["affiche"]["tmp_name"]."<br />"); 
                     echo("Type du fichier : ".$_FILES["affiche"]["type"]."<br />");  
@@ -69,14 +67,14 @@ if(isset($_SESSION["id"])){
             <label for="inputPost">Titre</label>
             <input class="inputPost" type="text" name="titreSon" placeholder="Titre de l'oeuvre" required>
             <label for="droit">Libre de droit</label>
-            <input id ="droitSon" name="droitSon" type="radio" value="1">
+            <input class="inputPost" id ="droitSon" name="droitSon" type="radio" value="1">
             <label for="inputPost">Désposez une miniature pour votre son</label>
             <input class="inputPost" type="file" name="miniSon" id="miniSon">
             <label for="url">déposer le lien ici :</label>
-            <input type="url" name="urlSon" id="urlSon">
-            <label class="inputPost" for="message">Description de votre travail</label>
-            <textarea name="description" rows="10" cols="50" placeholder="Description" required></textarea>
-            <input class="inputPost" type="submit" value="Envoyer" style="cursor:pointer" name="submitSon" >
+            <input class="inputPost" type="url" name="urlSon" id="urlSon">
+            <label for="message">Description de votre travail</label>
+            <textarea id="messageP" class="inputPost" name="description" rows="10" cols="50" placeholder="Description" required></textarea>
+            <input type="submit" value="Envoyer" style="cursor:pointer" name="submitSon" >
         </form>
     </div>
 <?php 
@@ -106,14 +104,14 @@ if(isset($_SESSION["id"])){
             <label for="inputPost">Titre</label>
             <input class="inputPost" type="text" name="titreVid" placeholder="Titre de l'oeuvre" required>
             <label for="droitVid">Libre de droit</label>
-            <input id ="droitVid" name="droitVid" type="radio" value="1">
+            <input class="inputPost" id ="droitVid" name="droitVid" type="radio" value="1">
             <label for="inputPost">Désposez une miniature pour votre son</label>
             <input class="inputPost" type="file" name="miniVid" id="miniVid">
-            <label for="url">déposer le lien ici :</label>
-            <input type="url" name="urlVid" id="urlVid">
-            <label class="inputPost" for="message">Description de votre travail</label>
-            <textarea name="descriptionVid" rows="10" cols="50" placeholder="Description" required></textarea>
-            <input class="inputPost" type="submit" value="Envoyer" style="cursor:pointer" name="submitVid">
+            <label for="url">Déposez le lien ici :</label>
+            <input class="inputPost" type="url" name="urlVid" id="urlVid">
+            <label for="message">Description de votre travail</label>
+            <textarea id="messageP" class="inputPost" name="descriptionVid" rows="10" cols="50" placeholder="Description" required></textarea>
+            <input type="submit" value="Envoyer" style="cursor:pointer" name="submitVid">
         </form>
     </div>
 <?php

@@ -1594,9 +1594,24 @@ fieldset a:hover{
 }
 
 /*-----------Poster Affiche-----------*/
+#mainPoster{
+    background-color: #ff7477;
+    font-family: "KayakSansLight";
+}
 .formulairePoster{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
+.inputPost{
+    margin-bottom: 20px;
+    background-color: rgba(249, 80, 83, 0.38);
+    border-color: white;
+    border-right-color: #ff7477;
+    border-top-color: #ff7477;
+    border-style: solid;
+    color: black;
+}
+.formulairePoster>input::-webkit-input-placeholder,#messageP::-webkit-input-placeholder{
+    color: white;
+}
