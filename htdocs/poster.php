@@ -1,6 +1,7 @@
 <?php
    session_start();
     header ("Content-type: text/html");
+if(isset($_SESSION["id"])){
     if(isset($_GET["type"])){
 ?>
 <html>  
@@ -88,8 +89,11 @@
         echo "Le titre est : ".$titreSon;
         echo "L'url est : ".$urlSon;
         echo "La description est : ".$description;
-        copy($_FILES["miniSon"]["tmp_name"],"travaux/vignette/".$_FILES["miniSon"]["name"]);
-        $chemin="travaux/vignette/".$_FILES["miniSon"]["name"];
+        $chemin=null;
+        if(isset($_FILES['miniSon'])){
+            copy($_FILES["miniSon"]["tmp_name"],"travaux/vignette/".$_FILES["miniSon"]["name"]);
+            $chemin="travaux/vignette/".$_FILES["miniSon"]["name"];
+        }
         $bdd =new PDO("mysql:host=".MYHOST.";dbname=".MYDB, MYUSER, MYPASS) ;
         $insertmbr = $bdd->prepare("INSERT INTO SON(IdSon,TitreSon,DatePublication,AccordsDroits,AccesSon,DescriptionSon,AccesMiniature) VALUES(null,:titre,NOW(),:accords,:acces,:desc,:accesMini)");
         $insertmbr->execute(array(":titre"=>$titreSon,":accords"=>$droitSon,":acces"=>$urlSon,":desc"=>$description,":accesMini"=>$chemin));
@@ -102,7 +106,7 @@
             <label for="inputPost">Titre</label>
             <input class="inputPost" type="text" name="titreVid" placeholder="Titre de l'oeuvre" required>
             <label for="droitVid">Libre de droit</label>
-            <input id ="droitVid" name="droitVid" type="radio" value="1"></input>
+            <input id ="droitVid" name="droitVid" type="radio" value="1">
             <label for="inputPost">Désposez une miniature pour votre son</label>
             <input class="inputPost" type="file" name="miniVid" id="miniVid">
             <label for="url">déposer le lien ici :</label>
@@ -122,8 +126,11 @@
             echo "Le titre est : ".$titreVid;
             echo "L'url est : ".$urlVid;
             echo "La description est : ".$descriptionVid;
-            copy($_FILES["miniVid"]["tmp_name"],"travaux/vignette/".$_FILES["miniVid"]["name"]);
-            $chemin="travaux/vignette/".$_FILES["miniVid"]["name"];
+            $chemin=null;
+            if(isset($_FILES['miniVid'])){
+                copy($_FILES["miniVid"]["tmp_name"],"travaux/vignette/".$_FILES["miniVid"]["name"]);
+                $chemin="travaux/vignette/".$_FILES["miniVid"]["name"];
+                }
             $bdd =new PDO("mysql:host=".MYHOST.";dbname=".MYDB, MYUSER, MYPASS) ;
             $insertmbr = $bdd->prepare("INSERT INTO VIDEO (IdVideo,TitreVideo,DatePublication,AccesVideo,AccordsDroits,DescriptionVideo,AccesMiniature) VALUES(null,:titre,NOW(),:acces,:accords,:desc,:accesMini)");
             $insertmbr->execute(array(":titre"=>$titreVid,":accords"=>$droitVid,":acces"=>$urlVid,":desc"=>$descriptionVid,":accesMini"=>$chemin));
@@ -139,7 +146,10 @@
 </body>
 </html>
 <?php
-       }else{
-           header("Location: participer.php");
-       }
+           }else{
+               header("Location: participer.php");
+           }
+    }else{
+        header("Location: index.php");
+    }
 ?>
