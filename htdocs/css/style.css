@@ -1586,7 +1586,14 @@ fieldset a:hover{
     max-height: 100px;
 }
 
-
+#popupConfirmation{
+    display: none;
+    position: fixed;
+    left : 25%;
+    top : 25%;
+    background-color: #FF7477;
+    border : 3px white solid;
+}
 
 .fondRouge{
     background-color: #FF7477;

@@ -21,12 +21,6 @@
             poubelle.addEventListener('click', SupprimerProfil);
         }
         
-        $("#popupConfirmation").dialog({
-                      autoOpen: false, /*au lancement de la page, la boite de dialogue n'est pas visible */
-                      width: 500, /*la boite de dialogue a une largeur de 500px */
-                      modal: true, /* elle est modale, c'est à dire que l'internaute doit obligatoirement fermer la boite pour continuer ses intéractions */ 
-                      title: "Confirmer la suppression" /*on définit son titre */ 
-          });
     }
 
     function selectionUser(evt){
@@ -130,19 +124,17 @@ function afficherDetailOeuvre (evt){
     
 function SupprimerProfil (evt) {
     var idUser = this.previousElementSibling.dataset.user;
-    var boiteDialogue = $("#popupConfirmation");
-    boiteDialogue.dialog("option", "buttons", [
-        {text: "Non",
-        click: function (evt) { boiteDialogue.dialog("close"); }
-        },
-        {text :"Oui",
-        click: function (evt) {
-            this.parentNode.remove();
-            boiteDialogue.dialog("close"); /*on ferme la boite de dialogue */
-            //$.ajax("supprimerUser.php",{method:'POST',data:{id:idUser}}) ;
+    var popUp = document.getElementById("popupConfirmation");
+    popUp.style.display = 'block';
+    popUp.querySelectorAll("span").addEventListener('click', function(evt){
+        if (this.id == 'non'){
+            window.alert("non");
+            popUp.style.display = 'none' ;
+        }else{
+            window.alert('oui');
         }
-        }]);
-         boiteDialogue.dialog("open"); /* on ouvre la boite de dialogue */
+    }
+    
     
     
     /* //evoie de la requète ajax
