@@ -9,7 +9,7 @@
     if ($_GET['type'] == 'photo'){
         
         //requet sql
-        $sql = "SELECT PHOTO.TitrePhoto, PHOTO.DatePublication, PHOTO.AccesPhoto, PHOTO.IdPhoto, UTILISATEUR.NomUser, UTILISATEUR.NomUser FROM PHOTO INNER JOIN A_Publie ON PHOTO.IdPhoto = A_Publie.IdPhoto INNER JOIN UTILISATEUR ON UTILISATEUR.IdUser = A_Publie.IdUser WHERE PHOTO.IdPhoto=".$_GET['idOeuvre'];
+        $sql = "SELECT PHOTO.TitrePhoto, PHOTO.DatePublication, PHOTO.AccesPhoto, PHOTO.IdPhoto, UTILISATEUR.NomUser, UTILISATEUR.NomUser FROM PHOTO INNER JOIN A_Publie ON PHOTO.IdPhoto = A_Publie.IdPhoto INNER JOIN UTILISATEUR ON UTILISATEUR.IdUser = A_Publie.IdUser WHERE PHOTO.IdPhoto=".$_GET['idOeuvre'].";";
 
         $statement = $pdo->query($sql);
 
@@ -17,7 +17,14 @@
 
         $oeuvre = $statement->fetch(PDO::FETCH_ASSOC); 
         
-        $donnee = array('titre'=>$oeuvre['TitrePhoto'], 'datePubli'=>$oeuvre['TitrePhoto'], 'acces'=>$oeuvre['AccesPhoto'], 'nom'=>$oeuvre['NomUser'], 'prenom'=>$oeuvre['PrenomUser']);
+        /*$donnee = array('titre'=>$oeuvre['PHOTO.TitrePhoto'], 'datePubli'=>$oeuvre['PHOTO.DatePublication'], 'acces'=>$oeuvre['PHOTO.AccesPhoto'], 'nom'=>$oeuvre['UTILISATEUR.NomUser'], 'prenom'=>$oeuvre['UTILISATEUR.PrenomUser']);*/
+        
+        $codeHTML="<h2>".$oeuvre['TitrePhoto']."</h2>";
+        $codeHTML=$codeHTML."<img src='".$oeuvre['AccesPhoto']."' alt='miniature de la production'>";
+        $codeHTML=$codeHTML."<p>Date de publication : ".$oeuvre['DatePublication']."</p>";
+        $codeHTML=$codeHTML."<p>Publié par : ".mb_strtoupper($oeuvre['NomUser'])." ".($oeuvre['PrenomUser'])."</p>";
+        $codeHTML = $codeHTML."<p>Requete : ".$sql."</p>";
+         $codeHTML = $codeHTML."<p>rendu : ".$oeuvre."</p>";
         
     }else if ($_GET['type'] == 'son'){
         
@@ -28,10 +35,10 @@
         
     
 
-    $codeHTML="<h2>".$donnee['titre']."</h2>";
+    /*$codeHTML="<h2>".$donnee['titre']."</h2>";
     $codeHTML=$codeHTML."<img src='".$donnee['acces']."' alt='miniature de l'oeuvre'>";
     $codeHTML=$codeHTML."<p>Date de publication : ".$donnee['date']."</p>";
-    $codeHTML=$codeHTML."<p>Publié par : ".mb_strtoupper($profil['NomUser'])." ".($profil['PrenomUser'])."</p>"
+    $codeHTML=$codeHTML."<p>Publié par : ".mb_strtoupper($profil['NomUser'])." ".($profil['PrenomUser'])."</p>";*/
             
     
    
