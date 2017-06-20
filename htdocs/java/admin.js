@@ -127,7 +127,7 @@ function SupprimerProfil (evt) {
     boiteDialogue.dialog("option", "buttons", [
         {text: "Non",
         click: function (evt) { boiteDialogue.dialog("close"); }
-        }
+        },
         {text :"Oui",
         click: function (evt) {
             this.parentNode.remove();
