@@ -62,7 +62,7 @@ session_start();
                 ?>
                 <div class="boucleAdmin">
                     <p data-User= "<?php echo(($nom["IdUser"])) ; ?>" class="user" style="cursor:pointer"><?php echo(mb_strtoupper($nom["NomUser"]))." ". ($nom["PrenomUser"]) ; ?></p>
-                    <img src="images/imgPoubelle.png" alt="image poubelle" title="Supprimer ce profil" >
+                    <img src="images/imgPoubelle.png" alt="image poubelle" title="Supprimer ce profil" class="poubelle" >
                 </div>
 
                 <?php
@@ -81,6 +81,9 @@ session_start();
                 <p>Selectionnez un utilisateur.</p>
 
             </div>
+        </div>
+        <div id="popupConfirmation">
+            <p>Voulez-vous vraiment supprimer ce profil <span id="suppressionUser"></span>?</p>
         </div>
     </div>
     
