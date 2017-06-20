@@ -123,6 +123,7 @@ function afficherDetailOeuvre (evt){
 }
     
 function SupprimerProfil (evt) {
+    var ladiv = this.parentElement;
     var idUser = this.previousElementSibling.dataset.user;
     var popUp = document.getElementById("popupConfirmation");
     popUp.style.display = 'block';
@@ -130,17 +131,11 @@ function SupprimerProfil (evt) {
     for (var spanIsh of ouiNon){
         spanIsh.addEventListener('click', function(evt){
             if (this.id == 'non'){
-                window.alert(idUser);
                 popUp.style.display = 'none' ;
             }else{
-                window.alert('oui '+idUser);
                 popUp.style.display = 'none' ;
-            }
-        });
-    
-    }
-    
-    /* //evoie de la requète ajax
+                ladiv.remove();
+                //evoie de la requète ajax
     var xhr = new XMLHttpRequest();
 
     // On souhaite juste récupérer le contenu du fichier, la méthode GET suffit amplement :
@@ -149,12 +144,17 @@ function SupprimerProfil (evt) {
     xhr.addEventListener('load', function() { // On gère ici une requête asynchrone
 
               
-            /*var chaineEnvoyer = xhr.responseText;
-            zoneModif.innerHTML = chaineEnvoyer; // Et on affiche !*/
+            var chaineEnvoyer = xhr.responseText;
+            document.getElementById("zonePecision").innerHTML = chaineEnvoyer; // Et on affiche !
 
-            /*});
+            });
 
-            xhr.send(null); // La requête est prête, on envoie tout !*/
+            xhr.send(null); // La requête est prête, on envoie tout !
+            }
+        });
+    
+    }
+    
     
 }
 
