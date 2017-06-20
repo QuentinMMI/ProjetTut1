@@ -15,6 +15,12 @@
         for(var unChoix of choix){
             unChoix.addEventListener("click", choisirMenu);
         }
+        
+        var lespoubelles = document.querySelectorAll(".poubelle");
+        for (var poubelle of lespoubelles){
+            window.alert("mamamama");
+            poubelle.addEventListener('click', SupprimerProfil);
+        }
     }
 
     function selectionUser(evt){
@@ -75,6 +81,11 @@
                     uneOeuvre.addEventListener("click", afficherDetailOeuvre);
                 }
                 
+                var lespoubelles = document.querySelectorAll(".poubelle");
+                for (var poubelle of lespoubelles){
+                    poubelle.addEventListener('click', SupprimerProfil);
+                }
+                
                 userActif = null;
               
             });
@@ -109,6 +120,27 @@ function afficherDetailOeuvre (evt){
             });
 
             xhr.send(null); // La requête est prête, on envoie tout !
+}
+    
+function SupprimerProfil (evt) {
+    var idUser = this.previousElementSibling.dataset.user;
+    
+     //evoie de la requète ajax
+    var xhr = new XMLHttpRequest();
+
+    // On souhaite juste récupérer le contenu du fichier, la méthode GET suffit amplement :
+    xhr.open('GET', 'https://projets.iut-laval.univ-lemans.fr/16mmi1pj03/php/AJAX-php/supprimeUser.php?id=' + idUser  +'');
+
+    xhr.addEventListener('load', function() { // On gère ici une requête asynchrone
+
+              
+            /*var chaineEnvoyer = xhr.responseText;
+            zoneModif.innerHTML = chaineEnvoyer; // Et on affiche !*/
+
+            });
+
+            xhr.send(null); // La requête est prête, on envoie tout !
+    
 }
 
 }());

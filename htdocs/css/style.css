@@ -1456,6 +1456,13 @@ fieldset a:hover{
     max-height: 100px;
 }
 
+#popupConfirmation{
+    display: none;
+    position: fixed;
+    left : 50%;
+    top : 50%;
+}
+
 /*-----------Poster Affiche-----------*/
 .formulairePoster{
     display: flex;
