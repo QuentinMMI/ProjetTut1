@@ -26,12 +26,14 @@ session_start();
             $pdo = new PDO("mysql:host=".MYHOST.";dbname=".MYDB, MYUSER, MYPASS);
 		          $pdo->query("SET NAMES utf8");
 		          $pdo->query("SET CHARACTER SET 'utf8'");
-                  $sql="SELECT TitrePhoto, AccesPhoto, DescriptionPhoto, DatePublication FROM PHOTO WHERE IdUser=:id ";
+                  $sql="SELECT TitrePhoto, AccesPhoto, DescriptionPhoto FROM PHOTO WHERE IdPhoto=:id ";
                   $statement = $pdo->prepare($sql);
 		          $statement->execute(array(":id"=>$_GET["id"]));
                   $ligne = $statement->fetch(PDO::FETCH_ASSOC);
                 ?>
-            <p>nom : <?php echo $ligne["TitrePhoto"]; ?></p>
+            <p id="pA">nom : <?php echo $ligne["TitrePhoto"]; ?></p>
+            <img src="<?php echo $ligne["AccesPhoto"] ?>" alt="<?php echo $ligne['TitrePhoto'] ?>" id="imageA">
+            <p id="descA"><?php echo $ligne['DescriptionPhoto'] ?></p>
         </main>
         <?php 
             }else if($_GET["type"]=="son"){
