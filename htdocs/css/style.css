@@ -488,8 +488,8 @@ td img {
 
 .titreReglement {
     position: absolute;
-    bottom: 4%;
-    width: 70vh;
+    bottom: 10%;
+    width: 50vh;
     left: 1%;
     margin: 0;
     transform: rotate(-90deg);
@@ -507,8 +507,9 @@ td img {
     margin-right: 5%;
 }
 
-.fondJaune {
-    background-color: #f95053;
+#libreDroit::before {
+    position: relative;
+    content: url(../images/imgCocheGrande.png);
 }
 
 #afficheRegle {
@@ -519,38 +520,115 @@ td img {
     height: 200px;
     position: absolute;
     display: flex;
-    flex-direction: column;
-    padding: 0 5px 0 10px;
-    text-align: right;
-    top: 25vh;
-    right: 5%;
+    position: relative;
+    margin-left: 6%;
+    margin-top: 1%;
+    margin-bottom: 0%;
+}
+
+#afficheSon {
+    display: inline-block;
+    margin-right: 0;
+    width: 50%;
+    /*height: 100%;*/
 }
 
 #sonRegle {
-    background-image: url(../images/imgFondBleu.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    position: absolute;
-    padding: 0 20px 0 5px;
-    width: 420px;
-    height: 260px;
-    bottom: 8vh;
-    left: 35vw;
+    margin-top: 6%;
 }
 
-#videoRegle {
-    background-image: url(../images/imgFondRouge.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+#videoMention {
+    display: inline-block;
+    margin-right: 0;
+    width: 40%;
+}
+
+.carreRegle {
+    background-color: #fff;
+    box-shadow: 3px 4px 11px 0px rgba(0, 0, 0, 0.61);
+    /*width: 22%;*/
+    padding: 5px;
+    margin-left: 6%;
+    margin-right: 0;
+}
+
+.carreRegle h2 {
+    margin-bottom: 0;
+    margin-top: 1%;
+    font-size: 170%;
+    color: #21B3DF;
+}
+
+.carreRegle p::before {
+    position: relative;
+    content: url(../images/imgCoche.png);
+    margin-right: 3%;
+}
+
+.carreRegle p {
     text-align: left;
+    font-size: 120%;
+    margin-left: 5%;
+    margin-top: 0;
+    padding-right: 20%;
+}
+
+#afficheRegle h2 {
+    color: #FFD73A;
+}
+
+#sonRegle h2 {
+    color: #FB5053;
+}
+
+#infoMention {
+    display: block;
+    width: 80%;
+    padding: 5px;
+    margin-top: 6%;
+    margin-left: 6%;
+}
+
+#infoMention p {
+    position: relative;
+    text-align: left;
+    font-size: 120%;
+    margin-left: 5%;
+    margin-top: 0;
+    padding: 3%;
+    font-family: WalterTurnCoat;
+}
+
+.positionRegle {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    position: relative;
+    margin-left: 5%;
+}
+
+#partieDroite {
+    position: relative;
+    margin: 0;
+}
+
+#titreDeroulement {
+    display: flex;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-bottom: 0;
+    color: #fff;
+}
+
+#bodyreglement:before {
+    content: '';
     position: absolute;
-    padding: 0 10px;
     top: 25%;
-    left: 10%;
-    height: 60vh;
+    right: 4%;
+    bottom: 0px;
+    transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 4px;
+    height: 51%;
+    background-color: #fff;
 }
 
 #videoRegle>h2,
@@ -594,6 +672,16 @@ td img {
     width: 200px;
 }
 
+
+body .entries .entry:nth-child(2n) .title:before {
+    left: 313px;
+    /* left:345 */
+}
+
+body .entries .entry:nth-child(2n) .title.big:before {
+    transform: translate(-8px, -50%);
+    transform: translate(-8px, -50%);
+}
 
 /*------Publication-------*/
 
@@ -781,11 +869,21 @@ td img {
 
 .contenuP div {
     height: 33%;
+    border-radius: 90px;
 }
 
-.contenuP img {
+.titre{
+    margin-bottom: 10%;
+}
+
+.contenuP img{
     height: 100%;
     width: 100%;
+}
+
+.titre{
+    transform: translateY(-100px);
+    background-color: white;
 }
 
 #cont2 {
@@ -797,7 +895,6 @@ td img {
     background-color: #005DB3;
     margin-left: -5%;
 }
-
 
 /*----------------FOOTER---------------------------*/
 
@@ -1412,6 +1509,11 @@ fieldset a:hover {
     display: flex;
 }
 
+#decoAdmin{
+    top : calc(20px + 10vh);
+    right: 20px;
+}
+
 #choixAdmin {
     display: flex;
     flex-direction: column;
@@ -1461,15 +1563,18 @@ fieldset a:hover {
     display: none;
     font-size: 15px;
     background-color: #FFD73A;
-    height: 100%;
+    min-height: 100%;
+    width: 100%;
+
 }
 
 #choixAdmin>div:last-child {
     position: relative;
 }
 
-#choixAdmin>div:last-child:hover #sousMenu {
-    display: block;
+#choixAdmin>div:last-child:hover #sousMenu{
+    display: flex;
+    flex-direction : column;
 }
 
 #sousMenu>span:hover {
@@ -1480,15 +1585,102 @@ fieldset a:hover {
     display: flex;
 }
 
+#divChoixAdmin{
+    overflow: auto;
+    max-height: 65vh;
+    position: relative;
+}
+
+
+
 #divChoixAdmin img {
     max-height: 100px;
 }
 
+#popupConfirmation{
+    display: none;
+    position: fixed;
+    left : 25%;
+    top : 25%;
+    background-color: #FF7477;
+    border : 3px white solid;
+}
 
+#popupConfirmation>span:hover{
+    text-decoration: underline;
+}
+
+#zonePecision img, #zonePecision iframe{
+    max-width: 100%;
+}
+
+.fondRouge{
+    background-color: #FF7477;
+}
 /*-----------Poster Affiche-----------*/
-
-.formulairePoster {
+#mainPoster{
+    background-color: #ff7477;
+    font-family: "KayakSansLight";
+}
+.formulairePoster{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+.inputPost{
+    margin-bottom: 20px;
+    background-color: rgba(249, 80, 83, 0.38);
+    border-color: white;
+    border-right-color: #ff7477;
+    border-top-color: #ff7477;
+    border-style: solid;
+    color: black;
+}
+.formulairePoster>input::-webkit-input-placeholder, #messageP::-webkit-input-placeholder{
+    color:white;
+    font-family: KayakSansRegular;
+}
+
+/*----------------Afficher--------------*/
+#mainPub{
+    background-color: #ff7477;
+}
+#h1A{
+    color: white;
+}
+#imageA{
+    min-width: 30vw;
+    max-width: 40vw;
+    min-height: 30vh;
+    max-height: 55vh;
+    margin: 30px;
+}
+
+#divPenchee{
+    position: absolute;
+    left: -5%;
+    width: 50vw;
+    height: auto;
+    transform-origin: top-left;
+    transform: skewX(-10deg);
+    border: solid 1px white;
+    background-color: white;
+    box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.52);
+}
+#divPenchee>*,#divPenchee2>*{
+    transform: skewX(10deg);
+}
+#descA{
+    width: 35vw;
+    height: auto;
+    margin: 30px;
+    color: white;
+}
+#divPenchee2{
+    position: fixed;
+    right: -2%;
+    top: 30%;
+    transform-origin: top-left;
+    transform: skewX(-10deg);
+    border: solid 3px white; 
+}

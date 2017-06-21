@@ -25,17 +25,28 @@
             
         
     }else if ($_GET['type'] == 'son'){
+        //requet sql
+        $sql = "SELECT SON.TitreSon, Son.DescriptionSon, SON.AccesSon, SON.DatePublication, SON.AccesMiniature, UTILISATEUR.NomUser, UTILISATEUR.PrenomUser FROM SON INNER JOIN A_Publie ON SON.IdSon = A_Publie.IdSon INNER JOIN UTILISATEUR ON UTILISATEUR.IdUser = A_Publie.IdUser WHERE SON.IdSon=".$_GET['idOeuvre'].";";
+
+        $statement = $pdo->query($sql);
+
+        //traitement des données
+
+        $oeuvre = $statement->fetch(PDO::FETCH_ASSOC); 
         
+        $codeHTML="<h2 id='precision' >".$oeuvre['TitreSon']."</h2>";
+        $codeHTML=$codeHTML."<iframe width='560' height='315' src='https://www.youtube.com/embed/mII0NXGM6uE' allowfullscreen></iframe>";
+        $codeHTML=$codeHTML."<p>Date de publication : ".$oeuvre['DatePublication']."</p>";
+        $codeHTML=$codeHTML."<p>Publié par : ".mb_strtoupper($oeuvre['NomUser'])." ".($oeuvre['PrenomUser'])."</p>";
+        $codeHTML=$codeHTML."<p>Decription du trvail : ".$oeuvre['DescriptionSon']."</p>";
+        $codeHTML=$codeHTML."<img src='images/imgPoubelle.png' alt='image poubelle' title='Supprimer cette oeuvre' id='poubelle' style='cursor:pointer' data-idOeuvre ='".$_GET['idOeuvre']."' data-type='photo' >";
     }else{
         
     }
     
     
 
-    /*$codeHTML="<h2>".$donnee['titre']."</h2>";
-    $codeHTML=$codeHTML."<img src='".$donnee['acces']."' alt='miniature de l'oeuvre'>";
-    $codeHTML=$codeHTML."<p>Date de publication : ".$donnee['date']."</p>";
-    $codeHTML=$codeHTML."<p>Publié par : ".mb_strtoupper($profil['NomUser'])." ".($profil['PrenomUser'])."</p>";*/
+    
             
     
    
