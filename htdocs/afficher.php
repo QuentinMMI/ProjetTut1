@@ -67,7 +67,7 @@
                   $ligne = $statement->fetch(PDO::FETCH_ASSOC);
                 ?>
             <p id="pA">nom : <?php echo $ligne["TitreSon"]; ?></p>
-            <audio href="<?php echo $ligne["AccesSon"] ?>" preload="auto" id="sonA"/>
+            <audio src="<?php echo $ligne["AccesSon"] ?>" preload="auto" id="sonA"/>
             <p id="descA"><?php echo $ligne["DescriptionSon"] ?></p>
         </main>
         <?php 

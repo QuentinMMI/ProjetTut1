@@ -64,7 +64,7 @@ session_start();
                   $statement = $pdo->prepare($sql);
 		          $statement->execute();
                   $ligne = $statement->fetch(PDO::FETCH_ASSOC);
-                  $1=0;
+                  $i=0;
 		          while($ligne != false || $i==10){
                 ?>
                 <div>
