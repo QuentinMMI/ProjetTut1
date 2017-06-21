@@ -39,6 +39,8 @@ if($_SESSION['id'] != 1){
     
     <div>
         <h1>Bonjour administrateur</h1>
+        <a id="decoAdmin" class="inter1" href="php/deconnexion.php">Déconnexion</a>
+
         <div id="lesDonnees">
             <div class="renduBDD" id="divChoixAdmin">
                 <h2>Les utilisateurs</h2>

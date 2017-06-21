@@ -1509,6 +1509,11 @@ fieldset a:hover {
     display: flex;
 }
 
+#decoAdmin{
+    top : calc(20px + 10vh);
+    right: 20px;
+}
+
 #choixAdmin {
     display: flex;
     flex-direction: column;
@@ -1580,9 +1585,13 @@ fieldset a:hover {
     display: flex;
 }
 
-#divChoixAdmin>div:first-child{
-    overflow: scroll;
+#divChoixAdmin{
+    overflow: auto;
+    max-height: 65vh;
+    position: relative;
 }
+
+
 
 #divChoixAdmin img {
     max-height: 100px;
@@ -1595,6 +1604,14 @@ fieldset a:hover {
     top : 25%;
     background-color: #FF7477;
     border : 3px white solid;
+}
+
+#popupConfirmation>span:hover{
+    text-decoration: underline;
+}
+
+#zonePecision img{
+    max-width: 100%;
 }
 
 .fondRouge{

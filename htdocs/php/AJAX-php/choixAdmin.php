@@ -33,7 +33,7 @@
         $codeHTML = "<h2>Les sons</h2>";
         
         //requet sql
-        $sql = "SELECT IdSon, TitreSon , DatePublication, AccesSon FROM SON ORDER BY DatePublication";
+        $sql = "SELECT IdSon, TitreSon , DatePublication, AccesMiniature FROM SON ORDER BY DatePublication";
 
         $statement = $pdo->query($sql);
 
@@ -43,7 +43,7 @@
         
         //debut de la boucle
         while ($son != false){
-            $codeHTML = $codeHTML."<div class='boucleAdmin oeuvre' style='cursor:pointer' data-type='son' data-IdOeuvre='".$son['IdSon']."'><img src='".$son['AccesSon']."'  ><p style='cursor:pointer' >Titre : ".$son['TitreSon']."</div>";
+            $codeHTML = $codeHTML."<div class='boucleAdmin oeuvre' style='cursor:pointer' data-type='son' data-IdOeuvre='".$son['IdSon']."'><img src='".$son['AccesMiniature']."'  ><p style='cursor:pointer' >Titre : ".$son['TitreSon']."</div>";
             
             $son = $statement->fetch(PDO::FETCH_ASSOC);
         }
@@ -53,7 +53,7 @@
         $codeHTML = "<h2> Les videos</h2>";
         
             //requet sql
-        $sql = "SELECT IdVideo, TitreVideo, DatePublication, AccesVideo FROM VIDEO ORDER BY DatePublication";
+        $sql = "SELECT IdVideo, TitreVideo, DatePublication, AccesMiniature FROM VIDEO ORDER BY DatePublication";
 
         $statement = $pdo->query($sql);
 
@@ -63,7 +63,7 @@
         
         //debut de la boucle
              while ($video != false){
-            $codeHTML = $codeHTML."<div class='boucleAdmin oeuvre' style='cursor:pointer' data-type='video'  data-IdOeuvre='".$video['IdVideo']."'><img src='".$video['AccesVideo']."' ><p style='cursor:pointer' >Titre : ".$video['TitreVideo']."</div>";
+            $codeHTML = $codeHTML."<div class='boucleAdmin oeuvre' style='cursor:pointer' data-type='video'  data-IdOeuvre='".$video['IdVideo']."'><img src='".$video['AccesMiniature']."' ><p style='cursor:pointer' >Titre : ".$video['TitreVideo']."</div>";
             
             $video = $statement->fetch(PDO::FETCH_ASSOC);
         }
@@ -73,7 +73,7 @@
          $codeHTML = "<h2> Les affiches</h2>";
        
             //requet sql
-        $sql = "SELECT IdPhoto, TitrePhoto, DatePublication, AccesPhoto FROM PHOTO ORDER BY DatePublication";
+        $sql = "SELECT IdPhoto, TitrePhoto, DatePublication, AccesMiniature FROM PHOTO ORDER BY DatePublication";
 
         $statement = $pdo->query($sql);
 
@@ -83,7 +83,7 @@
         
         //debut de la boucle
              while ($photo != false){
-            $codeHTML = $codeHTML."<div class='boucleAdmin oeuvre' style='cursor:pointer' data-type='photo'  data-IdOeuvre='".$photo['IdPhoto']."'><img src='".$photo['AccesPhoto']."' ><p style='cursor:pointer'>Titre : ".$photo['TitrePhoto']."</div>";
+            $codeHTML = $codeHTML."<div class='boucleAdmin oeuvre' style='cursor:pointer' data-type='photo'  data-IdOeuvre='".$photo['IdPhoto']."'><img src='".$photo['AccesMiniature']."' ><p style='cursor:pointer'>Titre : ".$photo['TitrePhoto']."</div>";
             
             $photo = $statement->fetch(PDO::FETCH_ASSOC);
         }

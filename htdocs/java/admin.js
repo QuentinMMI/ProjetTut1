@@ -35,7 +35,7 @@
         var xhr = new XMLHttpRequest();
 
             // On souhaite juste récupérer le contenu du fichier, la méthode GET suffit amplement :
-            xhr.open('GET', 'https://projets.iut-laval.univ-lemans.fr/16mmi1pj03/php/AJAX-php/afficherUser.php?idUser=' + idUser + '');
+            xhr.open('GET', 'php/AJAX-php/afficherUser.php?idUser=' + idUser + '');
 
             xhr.addEventListener('load', function() { // On gère ici une requête asynchrone
 
@@ -55,8 +55,10 @@
         
         if (type == 'user'){
             zonePecision.innerHTML = "<h2>Profil</h2><p>Selectionnez un utilisateur.</p>";
+            document.getElementById("popupConfirmation").innerHTML ="<p>Voulez-vous vraiment supprimer ce profil?</p><span id='oui' style='cursor:pointer'>Oui </span><span id='non' style='cursor:pointer'> Non</span>";
         } else {
             zonePecision.innerHTML = "<h2>Precision sur l'oeuvre</h2><p>Selectionnez une oeuvre.</p>";
+            document.getElementById("popupConfirmation").innerHTML ="<p>Voulez-vous vraiment supprimer cette production ?</p><span id='oui' style='cursor:pointer'>Oui </span><span id='non' style='cursor:pointer'> Non</span>";
             
         }
         
@@ -64,7 +66,7 @@
          var xhr = new XMLHttpRequest();
 
             // On souhaite juste récupérer le contenu du fichier, la méthode GET suffit amplement :
-            xhr.open('GET', 'https://projets.iut-laval.univ-lemans.fr/16mmi1pj03/php/AJAX-php/choixAdmin.php?type=' + type + '');
+            xhr.open('GET', 'php/AJAX-php/choixAdmin.php?type=' + type + '');
 
             xhr.addEventListener('load', function() { // On gère ici une requête asynchrone
 
@@ -81,10 +83,7 @@
                     uneOeuvre.addEventListener("click", afficherDetailOeuvre);
                 }
                 
-                var lespoubelles = document.querySelectorAll(".poubelle");
-                for (var poubelle of lespoubelles){
-                    poubelle.addEventListener('click', SupprimerProfil);
-                }
+                                
                 
                 userActif = null;
               
@@ -109,13 +108,16 @@ function afficherDetailOeuvre (evt){
     var xhr = new XMLHttpRequest();
 
     // On souhaite juste récupérer le contenu du fichier, la méthode GET suffit amplement :
-    xhr.open('GET', 'https://projets.iut-laval.univ-lemans.fr/16mmi1pj03/php/AJAX-php/afficherOeuvre.php?type=' + type + '&idOeuvre=' + id +'');
+    xhr.open('GET', 'php/AJAX-php/afficherOeuvre.php?type=' + type + '&idOeuvre=' + id +'');
 
     xhr.addEventListener('load', function() { // On gère ici une requête asynchrone
 
               
             var chaineEnvoyer = xhr.responseText;
             zoneModif.innerHTML = chaineEnvoyer; // Et on affiche !
+            var poubelle = document.getElementById("poubelle");
+            poubelle.addEventListener('click', SupprimerOeuvre);
+            
 
             });
 
@@ -141,7 +143,7 @@ function SupprimerProfil (evt) {
     var xhr = new XMLHttpRequest();
 
     // On souhaite juste récupérer le contenu du fichier, la méthode GET suffit amplement :
-    xhr.open('GET', 'https://projets.iut-laval.univ-lemans.fr/16mmi1pj03/php/AJAX-php/supprimeUser.php?id=' + idUser  +'');
+    xhr.open('GET', 'php/AJAX-php/supprimeUser.php?id=' + idUser  +'');
 
     xhr.addEventListener('load', function() { // On gère ici une requête asynchrone
 
@@ -152,12 +154,52 @@ function SupprimerProfil (evt) {
             });
 
             xhr.send(null); // La requête est prête, on envoie tout !
-            }
+            
+        }
         });
     
+    
     }
-    
-    
 }
 
+    
+function SupprimerOeuvre (evt){
+    var id = this.dataset.idoeuvre;
+    var type = this.dataset.type ;
+    var iconeListe = document.querySelector(".boucleAdmin[data-idoeuvre='"+id+"']");
+    
+    
+    var popUp = document.getElementById("popupConfirmation");
+    popUp.style.display = 'block';
+    var ouiNon = popUp.querySelectorAll("span");
+    for (var spanIsh of ouiNon){
+        spanIsh.addEventListener('click', function(evt){
+            if (this.id == 'non'){
+                popUp.style.display = 'none' ;
+            }else{
+                iconeListe.remove();
+                
+                popUp.style.display = 'none' ;
+                //evoie de la requète ajax
+            var xhr = new XMLHttpRequest();
+
+            // On souhaite juste récupérer le contenu du fichier, la méthode GET suffit amplement :
+            xhr.open('GET', 'php/AJAX-php/supprimerOeuvre.php?id=' + id  +'&type='+type+' ');
+
+            xhr.addEventListener('load', function() { // On gère ici une requête asynchrone
+
+
+                    var chaineEnvoyer = xhr.responseText;
+                    document.getElementById("zonePecision").innerHTML = chaineEnvoyer; // Et on affiche !
+
+                    });
+
+                    xhr.send(null); // La requête est prête, on envoie tout !
+
+                }
+                });
+                
+                
+    }
+}
 }());
