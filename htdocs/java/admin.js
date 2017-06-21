@@ -154,18 +154,52 @@ function SupprimerProfil (evt) {
             });
 
             xhr.send(null); // La requête est prête, on envoie tout !
-            }
+            
+        }
         });
     
+    
     }
-    
-    
 }
 
     
 function SupprimerOeuvre (evt){
-    var id = 
+    var id = this.dataset.idoeuvre;
+    var type = this.dataset.type ;
+    var iconeListe = document.querySelector(".boucleAdmin[data-idoeuvre='"+id+"']");
     
     
+    var popUp = document.getElementById("popupConfirmation");
+    popUp.style.display = 'block';
+    var ouiNon = popUp.querySelectorAll("span");
+    for (var spanIsh of ouiNon){
+        spanIsh.addEventListener('click', function(evt){
+            if (this.id == 'non'){
+                popUp.style.display = 'none' ;
+            }else{
+                iconeListe.remove();
+                
+                popUp.style.display = 'none' ;
+                //evoie de la requète ajax
+            var xhr = new XMLHttpRequest();
+
+            // On souhaite juste récupérer le contenu du fichier, la méthode GET suffit amplement :
+            xhr.open('GET', 'php/AJAX-php/supprimerOeuvre.php?id=' + id  +'&type='+type+' ');
+
+            xhr.addEventListener('load', function() { // On gère ici une requête asynchrone
+
+
+                    var chaineEnvoyer = xhr.responseText;
+                    document.getElementById("zonePecision").innerHTML = chaineEnvoyer; // Et on affiche !
+
+                    });
+
+                    xhr.send(null); // La requête est prête, on envoie tout !
+
+                }
+                });
+                
+                
+    }
 }
 }());

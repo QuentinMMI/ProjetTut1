@@ -1555,6 +1555,11 @@ fieldset a:hover {
     display: flex;
 }
 
+#decoAdmin{
+    top : calc(20px + 10vh);
+    right: 20px;
+}
+
 #choixAdmin {
     display: flex;
     flex-direction: column;
@@ -1649,6 +1654,10 @@ fieldset a:hover {
 
 #popupConfirmation>span:hover{
     text-decoration: underline;
+}
+
+#zonePecision img{
+    max-width: 100%;
 }
 
 .fondRouge{
