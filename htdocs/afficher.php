@@ -32,6 +32,16 @@
                   $statement = $pdo->prepare($sql);
 		          $statement->execute(array(":id"=>$_GET["id"]));
                   $ligne = $statement->fetch(PDO::FETCH_ASSOC);
+                
+                  $sql="SELECT IdUser FROM A_Publie WHERE IdPhoto=:id";
+                  $statement = $pdo->prepare($sql);
+		          $statement->execute(array(":id"=>$_GET["id"]));
+                  $ligne2 = $statement->fetch(PDO::FETCH_ASSOC);
+                
+                  $sql="SELECT NomUser, PrenomUser FROM UTILISATEUR WHERE IdUser=:id";
+                  $statement = $pdo->prepare($sql);
+		          $statement->execute(array(":id"=>$ligne2["IdUser"]));
+                  $ligne3 = $statement->fetch(PDO::FETCH_ASSOC);
                 ?>
             <h1 id="h1A">Titre : <?php echo $ligne["TitrePhoto"]; ?></h1>
             <div id="divPenchee">
@@ -39,6 +49,7 @@
             </div>
             <div id="divPenchee2">
                 <p id="descA">Description : <?php echo $ligne['DescriptionPhoto'] ?></p>
+                <p id="descA">De : <?php echo $ligne3["NomUser"]." ".$ligne3["PrenomUser"] ?></p>
             </div>
         </main>
         <?php 
