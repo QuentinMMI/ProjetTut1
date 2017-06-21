@@ -1595,7 +1595,6 @@ fieldset a:hover {
 #lesDonnees {
     display: flex;
     width: 70vw;
-    max-height: 100%;
 }
 
 #sousMenu {
@@ -1629,7 +1628,21 @@ fieldset a:hover {
 
 #divChoixAdmin{
     overflow: auto;
-    height: 100%;
+    max-height: 65vh;
+    position: relative;
+}
+
+#divChoixAdmin>h2{
+    position: absolute;
+    left:0;
+    top : 0;
+    text-align: center;
+    width: 100%;
+    background-color: #FF7477;
+}
+
+#divChoixAdmin>div:first-of-type{
+    margin-top: 60px;
 }
 
 #divChoixAdmin img {
