@@ -20,11 +20,13 @@
         /*$donnee = array('titre'=>$oeuvre['PHOTO.TitrePhoto'], 'datePubli'=>$oeuvre['PHOTO.DatePublication'], 'acces'=>$oeuvre['PHOTO.AccesPhoto'], 'nom'=>$oeuvre['UTILISATEUR.NomUser'], 'prenom'=>$oeuvre['UTILISATEUR.PrenomUser']);*/
         
         $codeHTML="<h2>".$oeuvre['TitrePhoto']."</h2>";
-        $codeHTML=$codeHTML."<img src='".$oeuvre['AccesPhoto']."' alt='miniature de la production'>";
+        $codeHTML=$codeHTML."<img src='".$oeuvre['AccesPhoto']."' alt='oeuvre'>";
         $codeHTML=$codeHTML."<p>Date de publication : ".$oeuvre['DatePublication']."</p>";
         $codeHTML=$codeHTML."<p>Publié par : ".mb_strtoupper($oeuvre['NomUser'])." ".($oeuvre['PrenomUser'])."</p>";
+        
         $codeHTML = $codeHTML."<p>Requete : ".$sql."</p>";
          $codeHTML = $codeHTML."<p>rendu : ".$oeuvre."</p>";
+        
         
     }else if ($_GET['type'] == 'son'){
         
@@ -32,7 +34,7 @@
         
     }
     
-        
+        $codeHTML=$codeHTML."<img src='images/imgPoubelle.png' alt='image poubelle' title='Supprimer cette oeuvre' id='poubelle' style='cursor:pointer'>";
     
 
     /*$codeHTML="<h2>".$donnee['titre']."</h2>";

@@ -1632,18 +1632,7 @@ fieldset a:hover {
     position: relative;
 }
 
-#divChoixAdmin>h2{
-    position: absolute;
-    left:0;
-    top : 0;
-    text-align: center;
-    width: 100%;
-    background-color: #FF7477;
-}
 
-#divChoixAdmin>div:first-of-type{
-    margin-top: 60px;
-}
 
 #divChoixAdmin img {
     max-height: 100px;
@@ -1656,6 +1645,10 @@ fieldset a:hover {
     top : 25%;
     background-color: #FF7477;
     border : 3px white solid;
+}
+
+#popupConfirmation>span:hover{
+    text-decoration: underline;
 }
 
 .fondRouge{

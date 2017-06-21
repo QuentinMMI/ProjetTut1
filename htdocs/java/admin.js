@@ -35,7 +35,7 @@
         var xhr = new XMLHttpRequest();
 
             // On souhaite juste récupérer le contenu du fichier, la méthode GET suffit amplement :
-            xhr.open('GET', 'https://projets.iut-laval.univ-lemans.fr/16mmi1pj03/php/AJAX-php/afficherUser.php?idUser=' + idUser + '');
+            xhr.open('GET', 'php/AJAX-php/afficherUser.php?idUser=' + idUser + '');
 
             xhr.addEventListener('load', function() { // On gère ici une requête asynchrone
 
@@ -55,8 +55,10 @@
         
         if (type == 'user'){
             zonePecision.innerHTML = "<h2>Profil</h2><p>Selectionnez un utilisateur.</p>";
+            document.getElementById("popupConfirmation").innerHTML ="<p>Voulez-vous vraiment supprimer ce profil?</p><span id='oui' style='cursor:pointer'>Oui </span><span id='non' style='cursor:pointer'> Non</span>";
         } else {
             zonePecision.innerHTML = "<h2>Precision sur l'oeuvre</h2><p>Selectionnez une oeuvre.</p>";
+            document.getElementById("popupConfirmation").innerHTML ="<p>Voulez-vous vraiment supprimer cette production ?</p><span id='oui' style='cursor:pointer'>Oui </span><span id='non' style='cursor:pointer'> Non</span>";
             
         }
         
@@ -81,10 +83,7 @@
                     uneOeuvre.addEventListener("click", afficherDetailOeuvre);
                 }
                 
-                var lespoubelles = document.querySelectorAll(".poubelle");
-                for (var poubelle of lespoubelles){
-                    poubelle.addEventListener('click', SupprimerProfil);
-                }
+                                
                 
                 userActif = null;
               
@@ -116,6 +115,9 @@ function afficherDetailOeuvre (evt){
               
             var chaineEnvoyer = xhr.responseText;
             zoneModif.innerHTML = chaineEnvoyer; // Et on affiche !
+            var poubelle = document.getElementById("poubelle");
+            poubelle.addEventListener('click', SupprimerOeuvre);
+            
 
             });
 
@@ -160,4 +162,10 @@ function SupprimerProfil (evt) {
     
 }
 
+    
+function SupprimerOeuvre (evt){
+    var id = 
+    
+    
+}
 }());
