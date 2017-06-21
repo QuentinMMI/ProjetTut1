@@ -1,6 +1,7 @@
 <?php
-session_start();
+    session_start();
     header   ("Content-type: text/html; charset=UTF-8");
+    if(isset($_SESSION["id"])){
     require("php/param.inc.php");
 ?>
 <html>  
@@ -22,7 +23,7 @@ session_start();
         <?php 
             if($_GET["type"]=="photo"){
         ?>
-        <main>
+        <main id="mainPub">
             <?php
             $pdo = new PDO("mysql:host=".MYHOST.";dbname=".MYDB, MYUSER, MYPASS);
 		          $pdo->query("SET NAMES utf8");
@@ -32,9 +33,13 @@ session_start();
 		          $statement->execute(array(":id"=>$_GET["id"]));
                   $ligne = $statement->fetch(PDO::FETCH_ASSOC);
                 ?>
-            <p id="pA">nom : <?php echo $ligne["TitrePhoto"]; ?></p>
-            <img src="<?php echo $ligne["AccesPhoto"] ?>" alt="<?php echo $ligne['TitrePhoto'] ?>" id="imageA">
-            <p id="descA"><?php echo $ligne['DescriptionPhoto'] ?></p>
+            <h1 id="h1A">Titre : <?php echo $ligne["TitrePhoto"]; ?></h1>
+            <div id="divPenchee">
+                <img src="<?php echo $ligne["AccesPhoto"] ?>" alt="<?php echo $ligne['TitrePhoto'] ?>" id="imageA">
+            </div>
+            <div id="divPenchee2">
+                <p id="descA">Description : <?php echo $ligne['DescriptionPhoto'] ?></p>
+            </div>
         </main>
         <?php 
             }else if($_GET["type"]=="son"){
@@ -87,3 +92,8 @@ session_start();
         </script>
     </body>
 </html>
+<?php
+}else{
+               header("Location: publication.php");
+           }
+?>
