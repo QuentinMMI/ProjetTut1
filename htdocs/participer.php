@@ -48,7 +48,7 @@ session_start();
             <div id="lesIcones">  
                 <div class="divAffiche">  
                     <img class="modifier" src="images/imgModifier.png" alt="image modifier">  
-                    <a href="<?php if($data["IdPhoto"]==0){ ?>poster.php?type=affiche<?php }else{ ?>afficher.php?type=affiche&id=<?php echo $data["IdPhoto"]; }; ?>" >
+                    <a href="<?php if($data["IdPhoto"]==0){ ?>poster.php?type=affiche<?php }else{ ?>afficher.php?type=photo&id=<?php echo $data["IdPhoto"]; }; ?>" >
                         <img class="depot" src="<?php if($data["IdPhoto"]==0){ ?>travaux/vignette/img1.png<?php }else{echo $dataA["AccesMiniature"];}; ?>" alt="image de l'affiche">
                     </a>
                     <img class="modifier" src="images/imgPoubelle.png" alt="image poubelle">  
