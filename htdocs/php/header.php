@@ -40,7 +40,7 @@
                         <input type="hidden" id="adresseF" name="adresseF" value="<?php echo($_SESSION['Mail']) ?>" required="required"/>
                         <label for="mdpF">Mot de passe</label>
                         <p>••••••••</p>
-                        <input type="hidden" id="mdpF" name="mdpF" value=""/>
+                        <input type="hidden" id="mdpF" name="mdpF" value="" required="required"/>
                         <div id="boutonsI">
                             <a id="deconnecter" class="inter1" href="php/deconnexion.php">Déconnexion</a>
                             <span style="cursor:pointer" class="inter1" id="modifier">Modifier</span>
