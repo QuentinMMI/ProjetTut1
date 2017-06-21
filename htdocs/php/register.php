@@ -34,6 +34,13 @@
                                         
                                         $insertmbr = $bdd->prepare("INSERT INTO UTILISATEUR(PrenomUser,NomUser,MotDePasse,AdresseMail,DateNaissance) VALUES(?,?,?,?,?)");
                                         $insertmbr->execute(array($prenom,$nom,$mdp,$adresse,$age));
+                                        
+                                        $insertid = $bdd->prepare("SELECT LAST_INSERT_ID() FROM UTILISATEUR");
+                                        $insertid->execute();
+                                        $data = $insertid->fetch();
+                                        $requete="INSERT INTO A_Publie(IdUser) VALUE(:id)";
+                                        $inserta = $bdd->prepare($requete);
+                                        $inserta->execute(array(":id"=>$data["LAST_INSERT_ID()"]));
                                         header('Location: ../index.php#gg');
                                     }else{
                                         header('Location: ../index.php#limiteDage');

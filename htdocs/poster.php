@@ -1,7 +1,7 @@
 <?php
    session_start();
     header ("Content-type: text/html");
-//if(isset($_SESSION["id"])){
+if(isset($_SESSION["id"])){
     if(isset($_GET["type"])){
 ?>
 <html>  
@@ -59,8 +59,23 @@
                     $description=$_POST["description"];
                     $droits=$_POST["droit"];
                     $bdd =new PDO("mysql:host=".MYHOST.";dbname=".MYDB, MYUSER, MYPASS) ;
-                    $insertmbr = $bdd->prepare("INSERT INTO PHOTO(IdPhoto,TitrePhoto,DatePublication,AccordsDroits,AccesPhoto,DescriptionPhoto,AccesMiniature) VALUES(null,:titre,NOW(),:accords,:acces,:desc,accesMini)");
+                    $insertmbr = $bdd->prepare("INSERT INTO PHOTO(IdPhoto,TitrePhoto,DatePublication,AccordsDroits,AccesPhoto,DescriptionPhoto,AccesMiniature) VALUES(null,:titre,NOW(),:accords,:acces,:desc,:accesMini)");
                     $insertmbr->execute(array(":titre"=>$titre,":accords"=>$description,":acces"=>$chemin,":desc"=>$description,":accesMini"=>$mini));
+                    
+                    $insertA = $bdd->prepare("SELECT LAST_INSERT_ID() FROM PHOTO");
+                    $insertA->execute();
+                    $dataA = $insertA->fetch();
+                    $dernierId = $dataA["LAST_INSERT_ID()"];
+              
+                    $id=$_SESSION['id'];
+                    $insertid = $bdd->prepare("SELECT * FROM A_Publie WHERE IdUser=:id");
+                    $insertid->execute(array(":id"=>$id));
+                    $data = $insertid->fetch();
+                    
+                    
+                    $requette2 = "UPDATE A_Publie SET IdUser=:id, IdPhoto=:idPhoto, IdSon=:idSon, IdVideo=:idVideo WHERE IdUser=:id2 ";
+                    $inserta = $bdd->prepare($requette2);
+                    $inserta->execute(array(":id"=>$id,":idPhoto"=>$dernierId,":idSon"=>$data["IdSon"],":idVideo"=>$data["IdVideo"],":id2"=>$id));
           }
         }else if($_GET['type']=="son"){
 ?>
@@ -72,7 +87,7 @@
             <label for="droit">Libre de droit</label>
             <input id ="droitSon" name="droitSon" type="radio" value="1">
             <label for="inputPost">Désposez une miniature pour votre son</label>
-            <input type="hiden" name="MAX_FILE_SIZE" value="450000">
+            <input type="hidden" name="MAX_FILE_SIZE" value="450000">
             <input class="inputPost" type="file" name="miniSon" id="miniSon">
             <label for="url">Déposez le lien ici :</label>
             <input type="url" name="urlSon" id="urlSon">
@@ -92,13 +107,28 @@
         echo "L'url est : ".$urlSon;
         echo "La description est : ".$description;
         $chemin="travaux/vignette/son1.png";
-        if($_FILES['miniSon']['name']!=""){
-            copy($_FILES["miniSon"]["tmp_name"],"travaux/vignette/".$_FILES["miniSon"]["name"]);
-            $chemin="travaux/vignette/".$_FILES["miniSon"]["name"];
-        }
+        //if($_FILES['miniSon']['name']!=""){
+           // copy($_FILES["miniSon"]["tmp_name"],"travaux/vignette/".$_FILES["miniSon"]["name"]);
+           // $chemin="travaux/vignette/".$_FILES["miniSon"]["name"];
+        //}
         $bdd =new PDO("mysql:host=".MYHOST.";dbname=".MYDB, MYUSER, MYPASS) ;
         $insertmbr = $bdd->prepare("INSERT INTO SON(IdSon,TitreSon,DatePublication,AccordsDroits,AccesSon,DescriptionSon,AccesMiniature) VALUES(null,:titre,NOW(),:accords,:acces,:desc,:accesMini)");
         $insertmbr->execute(array(":titre"=>$titreSon,":accords"=>$droitSon,":acces"=>$urlSon,":desc"=>$description,":accesMini"=>$chemin));
+        
+        $insertA = $bdd->prepare("SELECT LAST_INSERT_ID() FROM SON");
+        $insertA->execute();
+        $dataA = $insertA->fetch();
+        $dernierId = $dataA["LAST_INSERT_ID()"];
+              
+        $id=$_SESSION['id'];
+        $insertid = $bdd->prepare("SELECT * FROM A_Publie WHERE IdUser=:id");
+        $insertid->execute(array(":id"=>$id));
+        $data = $insertid->fetch();
+                    
+                    
+        $requette2 = "UPDATE A_Publie SET IdUser=:id, IdPhoto=:idPhoto, IdSon=:idSon, IdVideo=:idVideo WHERE IdUser=:id2 ";
+        $inserta = $bdd->prepare($requette2);
+        $inserta->execute(array(":id"=>$id,":idPhoto"=>$data["IdPhoto"],":idSon"=>$dernierId,":idVideo"=>$data["IdVideo"],":id2"=>$id));
     }
         }else if($_GET["type"]=="video"){
 ?>
@@ -110,7 +140,7 @@
             <label for="droitVid">Libre de droit</label>
             <input id ="droitVid" name="droitVid" type="radio" value="1">
             <label for="inputPost">Désposez une miniature pour votre son</label>
-            <input type="hiden" name="MAX_FILE_SIZE" value="450000">
+            <input type="hidden" name="MAX_FILE_SIZE" value="450000">
             <input class="inputPost" type="file" name="miniVid" id="miniVid">
             <label for="url">Déposez le lien ici :</label>
             <input type="url" name="urlVid" id="urlVid">
@@ -130,13 +160,28 @@
             echo "L'url est : ".$urlVid;
             echo "La description est : ".$descriptionVid;
             $chemin="travaux/vignette/vid1.png";
-            if($_FILES['miniVid']['name']!=""){
-                copy($_FILES["miniVid"]["tmp_name"],"travaux/vignette/".$_FILES["miniVid"]["name"]);
-                $chemin="travaux/vignette/".$_FILES["miniVid"]["name"];
-                }
+            //if($_FILES['miniVid']['name']!=""){
+               // copy($_FILES["miniVid"]["tmp_name"],"travaux/vignette/".$_FILES["miniVid"]["name"]);
+                //$chemin="travaux/vignette/".$_FILES["miniVid"]["name"];
+              //  }
             $bdd =new PDO("mysql:host=".MYHOST.";dbname=".MYDB, MYUSER, MYPASS) ;
             $insertmbr = $bdd->prepare("INSERT INTO VIDEO (IdVideo,TitreVideo,DatePublication,AccesVideo,AccordsDroits,DescriptionVideo,AccesMiniature) VALUES(null,:titre,NOW(),:acces,:accords,:desc,:accesMini)");
             $insertmbr->execute(array(":titre"=>$titreVid,":accords"=>$droitVid,":acces"=>$urlVid,":desc"=>$descriptionVid,":accesMini"=>$chemin));
+        
+            $insertA = $bdd->prepare("SELECT LAST_INSERT_ID() FROM VIDEO");
+            $insertA->execute();
+            $dataA = $insertA->fetch();
+            $dernierId = $dataA["LAST_INSERT_ID()"];
+              
+            $id=$_SESSION['id'];
+            $insertid = $bdd->prepare("SELECT * FROM A_Publie WHERE IdUser=:id");
+            $insertid->execute(array(":id"=>$id));
+            $data = $insertid->fetch();
+                    
+                    
+            $requette2 = "UPDATE A_Publie SET IdUser=:id, IdPhoto=:idPhoto, IdSon=:idSon, IdVideo=:idVideo WHERE IdUser=:id2 ";
+            $inserta = $bdd->prepare($requette2);
+            $inserta->execute(array(":id"=>$id,":idPhoto"=>$data["IdPhoto"],":idSon"=>$data["IdSon"],":idVideo"=>$dernierId,":id2"=>$id));
         }                              
     };
 ?>
@@ -153,7 +198,7 @@
            }else{
                header("Location: participer.php");
            }
-    //}else{
+    }else{
        header("Location: index.php");
-    //}
+    }
 ?>
