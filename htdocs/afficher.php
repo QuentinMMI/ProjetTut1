@@ -40,6 +40,8 @@
             <div id="divPenchee2">
                 <p id="descA">Description : <?php echo $ligne['DescriptionPhoto'] ?></p>
             </div>
+            <img id="pouceBleu" src="images/imgpocerouj.png" alt="image d'un pouce bleu">
+            <img id="pouceRouge" src="images/imgpoceblo.png" alt="image d'un pouce rouge">
         </main>
         <?php 
             }else if($_GET["type"]=="son"){

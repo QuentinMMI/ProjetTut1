@@ -1,1686 +1,1696 @@
-/*------Fonts------*/
-
-@font-face {
-    font-family: "Leixo";
-    src: url('../fonts/LEIXO-DEMO.ttf')
-}
-
-@font-face {
-    font-family: "KayakSansBoldItalic";
-    src: url('../fonts/KayakSansBoldItalic.otf')
-}
-
-@font-face {
-    font-family: "KayakSansBold";
-    src: url('../fonts/KayakSansBold.otf')
-}
-
-@font-face {
-    font-family: "KayakSansLight";
-    src: url('../fonts/KayakSansLight.otf')
-}
-
-@font-face {
-    font-family: "KayakSansLightItalic";
-    src: url('../fonts/KayakSansLightItalic.otf')
-}
-
-@font-face {
-    font-family: "KayakSansLight";
-    src: url('../fonts/KayakSansLight.otf')
-}
-
-@font-face {
-    font-family: "KayakSansRegularItalic";
-    src: url('../fonts/KayakSansRegularItalic.otf')
-}
-
-@font-face {
-    font-family: "KayakSansRegular";
-    src: url('../fonts/KayakSansRegular.otf')
-}
-
-@font-face {
-    font-family: "WalterTurnCoat";
-    src: url('../fonts/WalterTurncoat.ttf')
-}
-
-
-/*------Nav------*/
-
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #00B3DF;
-    height: 10vh;
-    display: flex;
-    z-index: 2;
-}
-
-#logoAile {
-    max-height: 16vh;
-}
-
-.modal {
-    display: none;
-}
-
-nav {
-    height: 100%;
-    width: 70vw;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.policeNav:hover {
-    border-bottom: solid #FFD73A 4px;
-}
-
-.ongletSelect {
-    border-bottom: solid white 4px;
-}
-
-.policeNav {
-    display: flex;
-    align-items: center;
-    color: white;
-    font-family: "Leixo";
-    text-decoration: none;
-    font-size: 20px;
-}
-
-#participer {
-    background-color: #05657E;
-}
-
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 4;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-.modal.affiche {
-    display: block
-}
-
-.modal-content {
-    border: 4px #FFD73A solid;
-    display: inline-flex;
-    position: absolute;
-    background: linear-gradient(100deg, #ff7477 0%, #ff7477 49.6%, #ffd73a 49.6%, #ffd73a 50%, #ffd73a 50.3%, #00b3df 50.3%, #00b3df 100%);
-    margin: auto;
-    top: calc(50% - 260px);
-    left: calc(50% - 380px);
-    width: 760px;
-    height: 520px;
-}
-
-#connexion {
-    width: 50%;
-    color: white;
-    justify-content: center;
-}
-
-#inscrip {
-    min-width: 50%;
-    color: #FFD73A;
-    justify-content: center;
-}
-
-#connexion form {
-    position: relative;
-    top: 40px;
-    left: 100px;
-    font-family: "KayakSansBold";
-    font-size: 23px;
-    display: inline-flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-}
-
-#connexion h1 {
-    font-size: 48px;
-    position: relative;
-    bottom: 0px;
-    left: 50px;
-}
-
-#inscrip form {
-    position: relative;
-    top: 30px;
-    left: 25%;
-    font-family: "KayakSansBold";
-    font-size: 20px;
-    display: inline-flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-}
-
-#inscrip form>*:not(:last-child) {
-    text-align: center;
-    margin-bottom: 4px;
-}
-
-#connexion form>*:not(:last-child) {
-    text-align: center;
-    margin-bottom: 6px;
-}
-
-#inscrip a {
-    color: #ff7477;
-}
-
-#inscrip h1 {
-    font-size: 50px;
-    position: relative;
-    bottom: 0px;
-    left: 50px;
-}
-
-#submit {
-    font-family: "KayakSansBold";
-    font-size: 15px;
-    border: 4px #FFD73A solid;
-    border-radius: 5px;
-    width: 85px;
-    height: 35px;
-    color: #00b3df;
-}
-
-#submitC {
-    font-family: "KayakSansBold";
-    font-size: 15px;
-    border: 4px white solid;
-    background-color: #FFD73A;
-    border-radius: 5px;
-    width: 85px;
-    height: 35px;
-    color: #00b3df;
-}
-
-#divClose {
-    position: absolute;
-    top: 22px;
-    left: 0px;
-    background-color: #ff7477;
-    z-index: -1;
-    border: 4px #FFD73A solid;
-    width: 121px;
-    height: 70px;
-    transform-origin: bottom-right;
-    transform: rotateZ(-90deg);
-    transition: left 1s cubic-bezier(.43, .57, .35, 1.04);
-}
-
-#close {
-    padding-top: 4px;
-    padding-left: 7px;
-    position: absolute;
-    transform-origin: bottom-right;
-    font-family: "Leixo";
-    font-size: 27px;
-    color: black;
-}
-
-#close:hover {
-    color: #00b3df;
-}
-
-
-/*---------GENERAL--------------*/
-
-body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    z-index: -1;
-}
-
-main {
-    text-align: center;
-    display: inline-block;
-    flex-grow: 1;
-    padding-top: 10vh;
-}
-
-h1,
-h2,
-h3 {
-    font-family: "Leixo";
-}
-
-.fondJaune {
-    background-color: #FFD73A;
-}
-
-p {
-    font-family: "KayakSansLight";
-    font-size: 22px;
-}
-
-a {
-    color: #1781A1;
-}
-
-a:hover {
-    color: #FFD73A;
-}
-
-
-/*----------Lots------------*/
-
-#hLots {
-    color: white;
-    font-size: 4.5vw;
-    transform-origin: top-left;
-    transform: skewX(7deg) translateX(-49.5%) translateY(280%) rotateZ(-83deg);
-    margin-bottom: 0;
-}
-
-.titrePage {
-    padding-top: 0;
-    margin: 0;
-    background-color: white;
-    width: 25%;
-    font-family: WalterTurnCoat;
-    font-size: 30px;
-}
-
-.divHaut {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 200px;
-    padding-top: 0;
-    margin-top: 0px;
-    position: relative;
-    top: -15%;
-}
-
-.divBas {
-    display: flex;
-    align-items: flex-start;
-    padding: 200px;
-    padding-top: 0;
-    margin-top: 0px;
-    position: relative;
-    top: -60%;
-    left: -6.5%;
-}
-
-.divImgLots>img {
-    width: 90%;
-    height: auto;
-}
-
-.divImgLots {
-    max-width: 500px;
-    max-height: auto;
-}
-
-.divImgLots2 {
-    max-width: 500px;
-    max-height: auto;
-}
-
-.divImgLots2>img {
-    width: 50%;
-    height: auto;
-}
-
-.divHaut>h2 {
-    margin-left: 20px;
-}
-
-.divImgLots {
-    max-width: 500px;
-    max-height: auto;
-}
-
-td {
-    height: 300px;
-    vertical-align: bottom;
-    padding: 5px;
-}
-
-.divHaut>h2 {
-    margin-left: 20px;
-}
-
-#podium {
-    display: flex;
-    padding: 0;
-    margin: 0px;
-    position: fixed;
-    top: 50px;
-    left: 0%;
-}
-
-#podium0,
-#podium1,
-#podium2 {
-    width: 150px;
-    z-index: -10;
-}
-
-#podium0 {
-    /* or */
-    height: 220px;
-    background: #00B3DF;
-}
-
-#podium1 {
-    /* argent */
-    height: 180px;
-    background: #FFFFFF;
-}
-
-#podium2 {
-    /* bronze */
-    height: 150px;
-    background: #F95053;
-}
-
-#podium1>p {
-    font-family: "WalterTurnCoat";
-    font-size: 17px;
-}
-
-#podium0>p {
-    font-family: "WalterTurnCoat";
-    font-size: 18px;
-}
-
-#podium2>p {
-    font-family: "WalterTurnCoat";
-    font-size: 17px;
-}
-
-.imgDivBas img {
-    width: 50%;
-}
-
-td img {
-    width: 70%;
-}
-
-
-/*--------------Bulgarie---------------*/
-
-#bulgarie {
-    color: white;
-    font-size: 5vw;
-    transform-origin: top-left;
-    transform: skewX(7deg) translateX(-49%) translateY(222%) rotateZ(-83deg);
-}
-
-#texteGeo {
-    color: white;
-    border: solid 3px white;
-    text-align: justify;
-    width: 50%;
-    font-size: 2.5vh;
-    position: absolute;
-    top: -24vh;
-    left: 33vw;
-    padding: 7px;
-}
-
-#geographie {
-    position: absolute;
-    top: -28vh;
-    left: 33vw;
-}
-
-#tourisme {
-    position: absolute;
-    top: -6vh;
-    left: 33vw;
-}
-
-#texteTourisme {
-    color: white;
-    border: solid white 3px;
-    text-align: justify;
-    width: 30%;
-    font-size: 2.5vh;
-    position: absolute;
-    top: -2vh;
-    left: 33vw;
-    padding: 7px;
-}
-
-#imgBulg1 {
-    width: 25%;
-    position: absolute;
-    top: -30vh;
-    left: 5vw;
-}
-
-#bateau {
-    width: 20%;
-    position: absolute;
-    right: 10vw;
-    bottom: -57vh;
-    z-index: -10;
-}
-
-#imgBulg2 {
-    width: 40%;
-    position: absolute;
-    left: 33vw;
-    bottom: -57vh;
-}
-
-
-/*----------Reglement------------*/
-
-.titreReglement {
-    position: absolute;
-    bottom: 10%;
-    width: 50vh;
-    left: 1%;
-    margin: 0;
-    transform: rotate(-90deg);
-    transform-origin: top left;
-    color: white;
-}
-
-#texteLibreDroit {
-    text-align: center;
-    color: white;
-    border: 3px solid white;
-    font-size: 1.5vw;
-    padding: 1vw;
-    margin-left: 10%;
-    margin-right: 5%;
-}
-
-#libreDroit::before {
-    position: relative;
-    content: url(../images/imgCocheGrande.png);
-}
-
-#afficheRegle {
-    background-image: url(../images/imgFondJaune.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    width: 274px;
-    height: 200px;
-    position: absolute;
-    display: flex;
-    position: relative;
-    margin-left: 6%;
-    margin-top: 1%;
-    margin-bottom: 0%;
-}
-
-#afficheSon {
-    display: inline-block;
-    margin-right: 0;
-    width: 50%;
-    /*height: 100%;*/
-}
-
-#sonRegle {
-    margin-top: 6%;
-}
-
-#videoMention {
-    display: inline-block;
-    margin-right: 0;
-    width: 40%;
-}
-
-.carreRegle {
-    background-color: #fff;
-    box-shadow: 3px 4px 11px 0px rgba(0, 0, 0, 0.61);
-    /*width: 22%;*/
-    padding: 5px;
-    margin-left: 6%;
-    margin-right: 0;
-}
-
-.carreRegle h2 {
-    margin-bottom: 0;
-    margin-top: 1%;
-    font-size: 170%;
-    color: #21B3DF;
-}
-
-.carreRegle p::before {
-    position: relative;
-    content: url(../images/imgCoche.png);
-    margin-right: 3%;
-}
-
-.carreRegle p {
-    text-align: left;
-    font-size: 120%;
-    margin-left: 5%;
-    margin-top: 0;
-    padding-right: 20%;
-}
-
-#afficheRegle h2 {
-    color: #FFD73A;
-}
-
-#sonRegle h2 {
-    color: #FB5053;
-}
-
-#infoMention {
-    display: block;
-    width: 80%;
-    padding: 5px;
-    margin-top: 6%;
-    margin-left: 6%;
-}
-
-#infoMention p {
-    position: relative;
-    text-align: left;
-    font-size: 120%;
-    margin-left: 5%;
-    margin-top: 0;
-    padding: 3%;
-    font-family: WalterTurnCoat;
-}
-
-.positionRegle {
-    display: flex;
-    position: relative;
-    margin-left: 5%;
-}
-
-#partieDroite {
-    position: relative;
-    margin: 0;
-}
-
-#titreDeroulement {
-    display: flex;
-    padding-left: 10%;
-    padding-right: 10%;
-    margin-bottom: 0;
-    color: #fff;
-}
-
-#bodyreglement:before {
-    content: '';
-    position: absolute;
-    top: 25%;
-    right: 4%;
-    bottom: 0px;
-    transform: translateX(-50%);
-    transform: translateX(-50%);
-    width: 4px;
-    height: 51%;
-    background-color: #fff;
-}
-
-#videoRegle>h2,
-#afficheRegle>h2 {
-    text-align: center;
-}
-
-#videoRegle>:last-child {
-    width: 70%;
-}
-
-#videoRegle::before {
-    content: "";
-    background-image: url(../images/imgPasseport.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    position: absolute;
-    height: calc(80vh - 260px);
-    width: calc(29vw - 260px);
-    right: -25vw;
-}
-
-#ilNeVousReste::after {
-    content: "";
-    position: absolute;
-    background-image: url(../images/imgLivre.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 200%;
-    height: 100%;
-    bottom: -100%;
-    right: 0;
-}
-
-#ilNeVousReste {
-    font-family: "WalterTurnCoat";
-    text-transform: capitalize;
-    position: absolute;
-    right: 5%;
-    top: calc(25vh + 200px);
-    width: 200px;
-}
-
-
-body .entries .entry:nth-child(2n) .title:before {
-    left: 313px;
-    /* left:345 */
-}
-
-body .entries .entry:nth-child(2n) .title.big:before {
-    transform: translate(-8px, -50%);
-    transform: translate(-8px, -50%);
-}
-
-/*------Publication-------*/
-
-.planche {
-    width: 100%;
-    position: fixed;
-    height: 82vh;
-    min-height: 500px;
-    top: 10%;
-    border: 3px white solid;
-    box-shadow: -17px 0px 30px -15px rgba(0, 0, 0, 0.6);
-}
-
-.planche1 {
-    left: 0px;
-    background-color: #FF7477;
-    transition: left 1s cubic-bezier(.43, .57, .35, 1.04);
-    padding-left: 6vw;
-}
-
-.planche2 {
-    transform-origin: top-left;
-    transform: skewX(-7deg);
-    left: 90%;
-    background-color: #FFD73A;
-    transition: left 1s cubic-bezier(.43, .57, .35, 1.04);
-}
-
-.planche3 {
-    transform: skewX(-7deg);
-    left: 95%;
-    background-color: #00B3DF;
-    transition: left 1s cubic-bezier(.43, .57, .35, 1.04);
-}
-
-.planche2>*,
-.planche3>* {
-    transform-origin: top-left;
-    transform: skewX(7deg);
-}
-
-.hPub {
-    color: white;
-    font-size: 5vw;
-}
-
-.hAffiche {
-    position: absolute;
-    top: 30%;
-    left: -9%;
-    transform-origin: top-left;
-    transform: rotateZ(-90deg);
-}
-
-
-/*Permet de tourner le titre de la page*/
-
-.accueilTitre {
-    position: absolute;
-    top: 30%;
-    left: -8%;
-    transform-origin: top-left;
-    transform: rotateZ(-90deg);
-}
-
-.hSon {
-    position: absolute;
-    top: 30%;
-    left: -4%;
-    transform-origin: top-left;
-    transform: skewX(7deg) rotateZ(-84deg);
-}
-
-.hVideo {
-    position: absolute;
-    top: 30%;
-    left: -6%;
-    transform-origin: top-left;
-    transform: skewX(7deg) rotateZ(-84deg);
-}
-
-.ongletsPub {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-    transform-origin: top-left;
-}
-
-#onglets {
-    position: absolute;
-    top: 45%;
-    left: -42%;
-    transform: rotateZ(-90deg);
-}
-
-#onglets2 {
-    position: absolute;
-    top: 45%;
-    left: -42%;
-    transform: skewX(7deg) rotateZ(-90deg);
-}
-
-#onglets3 {
-    position: absolute;
-    top: 45%;
-    left: -42%;
-    transform: skewX(7deg) rotateZ(-90deg);
-}
-
-#onglets>button {
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    border: 2px solid #00B3DF;
-    outline: none;
-    box-sizing: border-box;
-}
-
-#onglets>button:not(:last-child) {
-    margin-right: 7px;
-}
-
-#onglets>button:hover {
-    background-color: #00B3DF;
-}
-
-#onglets>button.selected {
-    background-color: #00B3DF;
-}
-
-#onglets2>button {
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    border: 2px solid #FF7477;
-    outline: none;
-    box-sizing: border-box;
-}
-
-#onglets2>button:not(:last-child) {
-    margin-right: 7px;
-}
-
-#onglets2>button:hover {
-    background-color: #FF7477;
-}
-
-#onglets2>button.selected {
-    background-color: #FF7477;
-}
-
-#onglets3>button {
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    border: 2px solid #FFD73A;
-    outline: none;
-    box-sizing: border-box;
-}
-
-#onglets3>button:not(:last-child) {
-    margin-right: 7px;
-}
-
-#onglets3>button:hover {
-    background-color: #FFD73A;
-}
-
-#onglets3>button.selected {
-    background-color: #FFD73A;
-}
-
-.contenuP {
-    background: #AF3D41;
-    height: 90%;
-    width: 75%;
-    margin-left: -15%;
-    margin-top: 2%;
-    display: inline-flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.contenuP div {
-    height: 33%;
-    border-radius: 90px;
-}
-
-.titre{
-    margin-bottom: 10%;
-}
-
-.contenuP img{
-    height: 100%;
-    width: 100%;
-}
-
-.titre{
-    transform: translateY(-100px);
-    background-color: white;
-}
-
-#cont2 {
-    background-color: #DDB56F;
-    margin-left: -5%;
-}
-
-#contenu3 {
-    background-color: #005DB3;
-    margin-left: -5%;
-}
-
-/*----------------FOOTER---------------------------*/
-
-footer {
-    height: 7vh;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    background-color: #05657E;
-    font-family: "Leixo";
-    z-index: 1;
-}
-
-footer>a>img {
-    width: 3vw;
-}
-
-footer>a {
-    color: white;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-}
-
-
-/*-------A propos-------*/
-
-#Lequipe {
-    display: flex;
-    transform: skewX(-7deg);
-    border-style: solid;
-    border-color: white;
-    border-width: 4px;
-    width: 70vw;
-    justify-content: space-around;
-    height: 70%;
-    margin-left: 10%;
-    margin-top: 5%;
-    overflow: hidden;
-    position: relative;
-}
-
-#Lequipe>div {
-    border-style: solid;
-    border-color: white;
-    border-width: 2px;
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
-    padding-top: 4%;
-    float: left;
-    width: 17%;
-    height: 100%;
-    position: relative;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    -webkit-transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-#Lequipe>div:hover {
-    background-color: #1781A1;
-}
-
-#Lequipe>div:hover img {
-    height: 125%;
-    filter: opacity(0.2);
-}
-
-.titreAPropos {
-    color: white;
-    font-family: "KayakSansLight";
-    font-size: 1.5em;
-    left: 25%;
-}
-
-#Lequipe>div:hover .text-center {
-    visibility: visible;
-    color: white;
-    font-size: 1em;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: 10px;
-    transition: all .3s ease-in;
-}
-
-#Lequipe>div:hover .textepresentation {
-    visibility: visible;
-    color: white;
-    font-size: 1em;
-    position: absolute;
-    top: 10%;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: 10px;
-    transition: all .3s ease-in;
-}
-
-.text-center {
-    visibility: hidden;
-}
-
-.imgWrap {
-    position: relative;
-    text-align: center;
-    max-width: 600px;
-    width: 100%;
-    margin: 0 auto;
-}
-
-#Lequipe>div>img {
-    transform: skewX(7deg);
-}
-
-#contact {
-    color: white;
-    font-size: 5vw;
-    transform-origin: top-left;
-    transform: skewX(7deg) translateX(-49%) translateY(280%) rotateZ(-83deg);
-    position: absolute;
-}
-
-#divAPropos {
-    width: 50vw;
-    margin: auto;
-    color: white;
-    border: solid 3px white;
-    text-align: justify;
-    padding: 5px;
-    position: absolute;
-    position: relative;
-}
-
-#divAPropos::after {
-    content: url(../images/imgFlecheAccueil.png);
-    transform: rotateY(180deg) rotate(45deg);
-    position: absolute;
-    bottom: -58px;
-    right: -70px;
-}
-
-.photoEquipe:nth-child(odd) {
-    height: 20vw;
-}
-
-.photoEquipe:nth-child(even) {
-    height: 20vw;
-}
-
-
-/*----Mentions LÃ©gales----*/
-
-#mentionsLegales {
-    margin-top: 5%;
-    text-align: justify;
-    padding: 0 100px;
-}
-
-.infoLegal {
-    text-align: center;
-}
-
-#patateOsel {
-    position: fixed;
-    width: 100%;
-    margin-left: 50%;
-    margin-right: 50%;
-    margin-bottom: 0;
-}
-
-#patateOfruit {
-    position: fixed;
-    width: 100%;
-    margin-left: 36.5%;
-    margin-right: 63.5%;
-    margin-bottom: 0;
-}
-
-.menu {
-    margin-left: 38%;
-    padding: 0;
-    margin-top: 0;
-    font-family: "KayakSansLight";
-}
-
-.menu .title {
-    display: inline-block;
-    float: left;
-    position: relative;
-    padding: 1%;
-    transition: 0.5s;
-    background-color: #05657E;
-    text-align: left;
-}
-
-.menu .title a {
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 100%;
-}
-
-.menu .title a:hover {
-    color: #FFD73A;
-}
-
-.menu .sousMenu {
-    display: block;
-    position: absolute;
-    visibility: hidden;
-    height: 0;
-    top: 100%;
-    left: 0;
-    transform: scaleY(0);
-    transform-origin: 50% 0;
-    transition: transform 1s ease;
-    background-color: #05657E;
-    border: 1px solid #05657E;
-    border-radius: 0 0 5px 5px;
-}
-
-.menu .title:hover .sousMenu {
-    visibility: visible;
-    height: auto;
-    transform: scaleY(1);
-}
-
-.menu .sousMenu li {
-    padding: 0;
-    display: inline-block;
-    color: black;
-    float: left;
-    width: 150px;
-    margin-left: -35px;
-    padding: 2%;
-    transition: 0.0s;
-}
-
-.menu .sousMenu li a {
-    text-transform: none;
-    color: #fff;
-    /*padding: 0 0 0 5px;*/
-    font-weight: normal;
-    font-size: 14px;
-}
-
-.menu .sousMenu li:hover {
-    background-color: #00B3DF;
-    border-left: 3px solid #FFD73A;
-}
-
-
-/*----------------Les Modifs de Thomas le gÃ©nie--------------------------*/
-
-#slogan {
-    color: white;
-    border: solid white 3px;
-    font-size: 50px;
-    width: 50vw;
-}
-
-#texteIndex1 {
-    color: white;
-    font-size: 3vh;
-    width: 25vw;
-    border: solid 3px white;
-}
-
-#avion {
-    width: 20%;
-    position: absolute;
-    top: 20%;
-    left: 35%;
-    z-index: -2;
-}
-
-#texteIndex2 {
-    color: white;
-    font-size: 3vh;
-    width: 30vw;
-    position: absolute;
-    left: 20%;
-    border: 3px white solid;
-}
-
-#gopro {
-    width: 10%;
-    position: absolute;
-    left: 6%;
-}
-
-#texteBilgre {
-    color: white;
-    font-size: 5vh;
-    width: 50vw;
-    position: absolute;
-    top: 70%;
-    border: 3px white solid;
-}
-
-#imgAccueil {
-    width: 28%;
-    position: absolute;
-    top: 1%;
-    right: 13%;
-}
-
-#texteDossier {
-    width: 20%;
-    font-size: 2.5vh;
-    position: absolute;
-    right: 30%;
-    top: 50%;
-    font-family: WalterTurnCoat;
-}
-
-#carte {
-    width: 20%;
-    position: absolute;
-    bottom: 0%;
-    right: 20%;
-}
-
-
-/*----------------COntact-------------*/
-
-#ContenuContact {
-    margin-left: 10%;
-}
-
-#FormContact {
-    max-width: 50vw;
-}
-
-#FormContact>label {
-    display: none;
-}
-
-#FormContact>input::-webkit-input-placeholder,
-#message::-webkit-input-placeholder {
-    color: white;
-    font-family: KayakSansRegular;
-    font-size: 20px;
-}
-
-#FormContact>input,
-#message {
-    background-color: #00B3DF;
-    border: solid white 3px;
-    color: white;
-    display: block;
-    margin-top: 2%;
-    padding: 5px;
-}
-
-#FormContact>input:last-child {
-    font-family: KayakSansRegular;
-    font-size: 20px;
-}
-
-#FormContact>input:last-child:hover {
-    background-color: #05657E;
-    font-family: KayakSansRegular;
-    font-size: 20px;
-}
-
-#question {
-    padding: 5px;
-    width: 40vw;
-    border: solid white 4px;
-    color: white;
-    font-family: Leixo;
-    font-size: 25px;
-}
-
-#question::after {
-    content: url(../images/imgFlecheAccueil.png);
-    position: absolute;
-    transform: rotateY(180deg) rotate(-90deg);
-    top: 18%;
-    left: 35%;
-}
-
-#question::before {
-    content: "";
-    background-image: url(../images/imgContact.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    position: absolute;
-    top: 0;
-    right: -25%;
-    width: 75%;
-    height: 75%;
-}
-
-
-/*---------PARTICIPER----------*/
-
-#mainParticiper {
-    background-color: #ff7477;
-}
-
-#lesIcones {
-    justify-content: space-around;
-    display: flex;
-    flex-direction: row
-}
-
-#publications {
-    color: white;
-    font-size: 3.5vh;
-}
-
-.divAffiche {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.depot {
-    padding-top: 25px;
-    padding-bottom: 25px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border: dashed 4px white;
-    background-color: rgba(123, 58, 60, 0.58);
-    width: 18vw;
-    height: 38vh;
-}
-
-.modifier {
-    padding: 10px;
-}
-
-#textPubli {
-    text-align: justify;
-    color: white;
-    padding-left: 250px;
-    padding-right: 250px;
-}
-
-
-/*----interface inscription---*/
-
-.modal2 {
-    display: none;
-    position: fixed;
-    z-index: 4;
-    left: 0;
-    top: -100%;
-    width: 100vw;
-    height: 90vh;
-    overflow: auto;
-    transition: top 0.5s cubic-bezier(.43, .57, .35, 1.04);
-}
-
-.modal2.affiche {
-    display: block
-}
-
-#sortir {
-    position: absolute;
-    width: 80%;
-    height: 100%;
-    top: 0;
-    left: 0;
-}
-
-.modal-content2 {
-    border-left: 3px white solid;
-    display: inline;
-    text-align: center;
-    position: absolute;
-    margin: auto;
-    top: 0px;
-    right: 0px;
-    width: 20%;
-    height: 92%;
-    background-color: #ff7477;
-    min-width: 300px;
-}
-
-#photoIdentite {
-    border-radius: 90px;
-    height: 100%;
-}
-
-#principI {
-    display: flex;
-    justify-content: space-around;
-    height: 12%;
-}
-
-#principI p {
-    font-size: 100%;
-    font-family: "KayakSansBold";
-}
-
-#contentI {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-#contentI label {
-    flex-direction: column;
-    font-family: "Leixo";
-    text-align: left;
-    margin: 2%;
-    margin-left: 10%;
-    font-size: 130%;
-}
-
-#contentI input,
-#contentI p {
-    background-color: #ff7477;
-    font-size: 115%;
-    margin-left: 10%;
-    font-family: "KayakSansBold";
-    border: 0px;
-    border-left: 3px white solid;
-    border-bottom: 3px white solid;
-    text-align: center;
-    padding-bottom: 1%;
-    width: 75%;
-    margin-bottom: 1%;
-    margin-top: -1%;
-}
-
-.inter1 {
-    font-family: "KayakSansBold";
-    font-size: 15px;
-    border: 4px #FFD73A solid;
-    border-radius: 5px;
-    color: black;
-    position: absolute;
-}
-
-#deconnecter {
-    width: 82px;
-    height: 21px;
-    top: calc(500px + 5%);
-    left: 19%;
-}
-
-#modifier {
-    width: 52px;
-    height: 17px;
-    top: calc(500px + 5%);
-    right: 22%;
-}
-
-.inter2 {
-    display: none;
-}
-
-#boutonsI #valider {
-    width: 60px;
-    height: 25px;
-    top: calc(500px + 5%);
-    right: 29%;
-}
-
-#annuler {
-    width: 50px;
-    height: 20px;
-    top: calc(500px + 5%);
-    left: 20%;
-}
-
-
-/*------------------------FAQ--------------------------*/
-
-fieldset {
-    display: inline-block;
-    width: 75vw;
-    border: white solid 5px;
-    margin: 0 7vw 8px 0;
-    text-align: left;
-}
-
-fieldset>legend {
-    font-family: leixo;
-}
-
-fieldset>p {
-    font-size: 15px;
-}
-
-fieldset a:hover {
-    color: #FF7477;
-}
-
-#FAQ {
-    padding-top: 3px;
-    position: absolute;
-    color: white;
-    font-size: 5vw;
-    transform-origin: top-left;
-    transform: skewX(7deg) translateX(-49%) translateY(220%) rotateZ(-83deg);
-}
-
-
-/*-------------------------ADMINISTRATION---------------------------*/
-
-#Admin {
-    display: flex;
-}
-
-#decoAdmin{
-    top : calc(20px + 10vh);
-    right: 20px;
-}
-
-#choixAdmin {
-    display: flex;
-    flex-direction: column;
-    align-content: space-between;
-    background-color: #FFD73A;
-    font-family: leixo;
-    font-size: 25px;
-    height: 100%;
-    width: 25%;
-}
-
-#choixAdmin>div {
-    margin-top: 10vh;
-}
-
-#choixAdmin>div>span:hover {
-    text-decoration: underline;
-}
-
-#Admin p {
-    text-align: left;
-    padding-left: 5px;
-}
-
-.boucleAdmin p:hover {
-    font-family: KayakSansBold;
-}
-
-.renduBDD {
-    border: solid white 5px;
-    width: 50%;
-}
-
-.boucleAdmin {
-    display: block;
-}
-
-#lesDonnees {
-    display: flex;
-    width: 70vw;
-}
-
-#sousMenu {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: none;
-    font-size: 15px;
-    background-color: #FFD73A;
-    min-height: 100%;
-    width: 100%;
-
-}
-
-#choixAdmin>div:last-child {
-    position: relative;
-}
-
-#choixAdmin>div:last-child:hover #sousMenu{
-    display: flex;
-    flex-direction : column;
-}
-
-#sousMenu>span:hover {
-    text-decoration: underline;
-}
-
-#divChoixAdmin>div {
-    display: flex;
-}
-
-#divChoixAdmin{
-    overflow: auto;
-    max-height: 65vh;
-    position: relative;
-}
-
-
-
-#divChoixAdmin img {
-    max-height: 100px;
-}
-
-#popupConfirmation{
-    display: none;
-    position: fixed;
-    left : 25%;
-    top : 25%;
-    background-color: #FF7477;
-    border : 3px white solid;
-}
-
-#popupConfirmation>span:hover{
-    text-decoration: underline;
-}
-
-#zonePecision img{
-    max-width: 100%;
-}
-
-.fondRouge{
-    background-color: #FF7477;
-}
-/*-----------Poster Affiche-----------*/
-#mainPoster{
-    background-color: #ff7477;
-    font-family: "KayakSansLight";
-}
-.formulairePoster{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.inputPost{
-    margin-bottom: 20px;
-    background-color: rgba(249, 80, 83, 0.38);
-    border-color: white;
-    border-right-color: #ff7477;
-    border-top-color: #ff7477;
-    border-style: solid;
-    color: black;
-}
-.formulairePoster>input::-webkit-input-placeholder, #messageP::-webkit-input-placeholder{
-    color:white;
-    font-family: KayakSansRegular;
-}
-
-/*----------------Afficher--------------*/
-#mainPub{
-    background-color: #ff7477;
-}
-#h1A{
-    color: white;
-}
-#imageA{
-    min-width: 30vw;
-    max-width: 40vw;
-    min-height: 30vh;
-    max-height: 55vh;
-    margin: 30px;
-}
-
-#divPenchee{
-    position: absolute;
-    left: -5%;
-    width: 50vw;
-    height: auto;
-    transform-origin: top-left;
-    transform: skewX(-10deg);
-    border: solid 1px white;
-    background-color: white;
-    box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.52);
-}
-#divPenchee>*,#divPenchee2>*{
-    transform: skewX(10deg);
-}
-#descA{
-    width: 35vw;
-    height: auto;
-    margin: 30px;
-    color: white;
-}
-#divPenchee2{
-    position: fixed;
-    right: -2%;
-    top: 30%;
-    transform-origin: top-left;
-    transform: skewX(-10deg);
-    border: solid 3px white; 
+/*------Fonts------*/
+
+@font-face {
+    font-family: "Leixo";
+    src: url('../fonts/LEIXO-DEMO.ttf')
+}
+
+@font-face {
+    font-family: "KayakSansBoldItalic";
+    src: url('../fonts/KayakSansBoldItalic.otf')
+}
+
+@font-face {
+    font-family: "KayakSansBold";
+    src: url('../fonts/KayakSansBold.otf')
+}
+
+@font-face {
+    font-family: "KayakSansLight";
+    src: url('../fonts/KayakSansLight.otf')
+}
+
+@font-face {
+    font-family: "KayakSansLightItalic";
+    src: url('../fonts/KayakSansLightItalic.otf')
+}
+
+@font-face {
+    font-family: "KayakSansLight";
+    src: url('../fonts/KayakSansLight.otf')
+}
+
+@font-face {
+    font-family: "KayakSansRegularItalic";
+    src: url('../fonts/KayakSansRegularItalic.otf')
+}
+
+@font-face {
+    font-family: "KayakSansRegular";
+    src: url('../fonts/KayakSansRegular.otf')
+}
+
+@font-face {
+    font-family: "WalterTurnCoat";
+    src: url('../fonts/WalterTurncoat.ttf')
+}
+
+
+/*------Nav------*/
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #00B3DF;
+    height: 10vh;
+    display: flex;
+    z-index: 2;
+}
+
+#logoAile {
+    max-height: 16vh;
+}
+
+.modal {
+    display: none;
+}
+
+nav {
+    height: 100%;
+    width: 70vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.policeNav:hover {
+    border-bottom: solid #FFD73A 4px;
+}
+
+.ongletSelect {
+    border-bottom: solid white 4px;
+}
+
+.policeNav {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-family: "Leixo";
+    text-decoration: none;
+    font-size: 20px;
+}
+
+#participer {
+    background-color: #05657E;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 4;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal.affiche {
+    display: block
+}
+
+.modal-content {
+    border: 4px #FFD73A solid;
+    display: inline-flex;
+    position: absolute;
+    background: linear-gradient(100deg, #ff7477 0%, #ff7477 49.6%, #ffd73a 49.6%, #ffd73a 50%, #ffd73a 50.3%, #00b3df 50.3%, #00b3df 100%);
+    margin: auto;
+    top: calc(50% - 260px);
+    left: calc(50% - 380px);
+    width: 760px;
+    height: 520px;
+}
+
+#connexion {
+    width: 50%;
+    color: white;
+    justify-content: center;
+}
+
+#inscrip {
+    min-width: 50%;
+    color: #FFD73A;
+    justify-content: center;
+}
+
+#connexion form {
+    position: relative;
+    top: 40px;
+    left: 100px;
+    font-family: "KayakSansBold";
+    font-size: 23px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+#connexion h1 {
+    font-size: 48px;
+    position: relative;
+    bottom: 0px;
+    left: 50px;
+}
+
+#inscrip form {
+    position: relative;
+    top: 30px;
+    left: 25%;
+    font-family: "KayakSansBold";
+    font-size: 20px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+#inscrip form>*:not(:last-child) {
+    text-align: center;
+    margin-bottom: 4px;
+}
+
+#connexion form>*:not(:last-child) {
+    text-align: center;
+    margin-bottom: 6px;
+}
+
+#inscrip a {
+    color: #ff7477;
+}
+
+#inscrip h1 {
+    font-size: 50px;
+    position: relative;
+    bottom: 0px;
+    left: 50px;
+}
+
+#submit {
+    font-family: "KayakSansBold";
+    font-size: 15px;
+    border: 4px #FFD73A solid;
+    border-radius: 5px;
+    width: 85px;
+    height: 35px;
+    color: #00b3df;
+}
+
+#submitC {
+    font-family: "KayakSansBold";
+    font-size: 15px;
+    border: 4px white solid;
+    background-color: #FFD73A;
+    border-radius: 5px;
+    width: 85px;
+    height: 35px;
+    color: #00b3df;
+}
+
+#divClose {
+    position: absolute;
+    top: 22px;
+    left: 0px;
+    background-color: #ff7477;
+    z-index: -1;
+    border: 4px #FFD73A solid;
+    width: 121px;
+    height: 70px;
+    transform-origin: bottom-right;
+    transform: rotateZ(-90deg);
+    transition: left 1s cubic-bezier(.43, .57, .35, 1.04);
+}
+
+#close {
+    padding-top: 4px;
+    padding-left: 7px;
+    position: absolute;
+    transform-origin: bottom-right;
+    font-family: "Leixo";
+    font-size: 27px;
+    color: black;
+}
+
+#close:hover {
+    color: #00b3df;
+}
+
+
+/*---------GENERAL--------------*/
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    z-index: -1;
+}
+
+main {
+    text-align: center;
+    display: inline-block;
+    flex-grow: 1;
+    padding-top: 10vh;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Leixo";
+}
+
+.fondJaune {
+    background-color: #FFD73A;
+}
+
+p {
+    font-family: "KayakSansLight";
+    font-size: 22px;
+}
+
+a {
+    color: #1781A1;
+}
+
+a:hover {
+    color: #FFD73A;
+}
+
+
+/*----------Lots------------*/
+
+#hLots {
+    color: white;
+    font-size: 4.5vw;
+    transform-origin: top-left;
+    transform: skewX(7deg) translateX(-49.5%) translateY(280%) rotateZ(-83deg);
+    margin-bottom: 0;
+}
+
+.titrePage {
+    padding-top: 0;
+    margin: 0;
+    background-color: white;
+    width: 25%;
+    font-family: WalterTurnCoat;
+    font-size: 30px;
+}
+
+.divHaut {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 200px;
+    padding-top: 0;
+    margin-top: 0px;
+    position: relative;
+    top: -15%;
+}
+
+.divBas {
+    display: flex;
+    align-items: flex-start;
+    padding: 200px;
+    padding-top: 0;
+    margin-top: 0px;
+    position: relative;
+    top: -60%;
+    left: -6.5%;
+}
+
+.divImgLots>img {
+    width: 90%;
+    height: auto;
+}
+
+.divImgLots {
+    max-width: 500px;
+    max-height: auto;
+}
+
+.divImgLots2 {
+    max-width: 500px;
+    max-height: auto;
+}
+
+.divImgLots2>img {
+    width: 50%;
+    height: auto;
+}
+
+.divHaut>h2 {
+    margin-left: 20px;
+}
+
+.divImgLots {
+    max-width: 500px;
+    max-height: auto;
+}
+
+td {
+    height: 300px;
+    vertical-align: bottom;
+    padding: 5px;
+}
+
+.divHaut>h2 {
+    margin-left: 20px;
+}
+
+#podium {
+    display: flex;
+    padding: 0;
+    margin: 0px;
+    position: fixed;
+    top: 50px;
+    left: 0%;
+}
+
+#podium0,
+#podium1,
+#podium2 {
+    width: 150px;
+    z-index: -10;
+}
+
+#podium0 {
+    /* or */
+    height: 220px;
+    background: #00B3DF;
+}
+
+#podium1 {
+    /* argent */
+    height: 180px;
+    background: #FFFFFF;
+}
+
+#podium2 {
+    /* bronze */
+    height: 150px;
+    background: #F95053;
+}
+
+#podium1>p {
+    font-family: "WalterTurnCoat";
+    font-size: 17px;
+}
+
+#podium0>p {
+    font-family: "WalterTurnCoat";
+    font-size: 18px;
+}
+
+#podium2>p {
+    font-family: "WalterTurnCoat";
+    font-size: 17px;
+}
+
+.imgDivBas img {
+    width: 50%;
+}
+
+td img {
+    width: 70%;
+}
+
+
+/*--------------Bulgarie---------------*/
+
+#bulgarie {
+    color: white;
+    font-size: 5vw;
+    transform-origin: top-left;
+    transform: skewX(7deg) translateX(-49%) translateY(222%) rotateZ(-83deg);
+}
+
+#texteGeo {
+    color: white;
+    border: solid 3px white;
+    text-align: justify;
+    width: 50%;
+    font-size: 2.5vh;
+    position: absolute;
+    top: -24vh;
+    left: 33vw;
+    padding: 7px;
+}
+
+#geographie {
+    position: absolute;
+    top: -28vh;
+    left: 33vw;
+}
+
+#tourisme {
+    position: absolute;
+    top: -6vh;
+    left: 33vw;
+}
+
+#texteTourisme {
+    color: white;
+    border: solid white 3px;
+    text-align: justify;
+    width: 30%;
+    font-size: 2.5vh;
+    position: absolute;
+    top: -2vh;
+    left: 33vw;
+    padding: 7px;
+}
+
+#imgBulg1 {
+    width: 25%;
+    position: absolute;
+    top: -30vh;
+    left: 5vw;
+}
+
+#bateau {
+    width: 20%;
+    position: absolute;
+    right: 10vw;
+    bottom: -57vh;
+    z-index: -10;
+}
+
+#imgBulg2 {
+    width: 40%;
+    position: absolute;
+    left: 33vw;
+    bottom: -57vh;
+}
+
+
+/*----------Reglement------------*/
+
+.titreReglement {
+    position: absolute;
+    bottom: 10%;
+    width: 50vh;
+    left: 1%;
+    margin: 0;
+    transform: rotate(-90deg);
+    transform-origin: top left;
+    color: white;
+}
+
+#texteLibreDroit {
+    text-align: center;
+    color: white;
+    border: 3px solid white;
+    font-size: 1.5vw;
+    padding: 1vw;
+    margin-left: 10%;
+    margin-right: 5%;
+}
+
+#libreDroit::before {
+    position: relative;
+    content: url(../images/imgCocheGrande.png);
+}
+
+#afficheRegle {
+    background-image: url(../images/imgFondJaune.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 274px;
+    height: 200px;
+    position: absolute;
+    display: flex;
+    position: relative;
+    margin-left: 6%;
+    margin-top: 1%;
+    margin-bottom: 0%;
+}
+
+#afficheSon {
+    display: inline-block;
+    margin-right: 0;
+    width: 50%;
+    /*height: 100%;*/
+}
+
+#sonRegle {
+    margin-top: 6%;
+}
+
+#videoMention {
+    display: inline-block;
+    margin-right: 0;
+    width: 40%;
+}
+
+.carreRegle {
+    background-color: #fff;
+    box-shadow: 3px 4px 11px 0px rgba(0, 0, 0, 0.61);
+    /*width: 22%;*/
+    padding: 5px;
+    margin-left: 6%;
+    margin-right: 0;
+}
+
+.carreRegle h2 {
+    margin-bottom: 0;
+    margin-top: 1%;
+    font-size: 170%;
+    color: #21B3DF;
+}
+
+.carreRegle p::before {
+    position: relative;
+    content: url(../images/imgCoche.png);
+    margin-right: 3%;
+}
+
+.carreRegle p {
+    text-align: left;
+    font-size: 120%;
+    margin-left: 5%;
+    margin-top: 0;
+    padding-right: 20%;
+}
+
+#afficheRegle h2 {
+    color: #FFD73A;
+}
+
+#sonRegle h2 {
+    color: #FB5053;
+}
+
+#infoMention {
+    display: block;
+    width: 80%;
+    padding: 5px;
+    margin-top: 6%;
+    margin-left: 6%;
+}
+
+#infoMention p {
+    position: relative;
+    text-align: left;
+    font-size: 120%;
+    margin-left: 5%;
+    margin-top: 0;
+    padding: 3%;
+    font-family: WalterTurnCoat;
+}
+
+.positionRegle {
+    display: flex;
+    position: relative;
+    margin-left: 5%;
+}
+
+#partieDroite {
+    position: relative;
+    margin: 0;
+}
+
+#titreDeroulement {
+    display: flex;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-bottom: 0;
+    color: #fff;
+}
+
+#bodyreglement:before {
+    content: '';
+    position: absolute;
+    top: 25%;
+    right: 4%;
+    bottom: 0px;
+    transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 4px;
+    height: 51%;
+    background-color: #fff;
+}
+
+#videoRegle>h2,
+#afficheRegle>h2 {
+    text-align: center;
+}
+
+#videoRegle>:last-child {
+    width: 70%;
+}
+
+#videoRegle::before {
+    content: "";
+    background-image: url(../images/imgPasseport.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    height: calc(80vh - 260px);
+    width: calc(29vw - 260px);
+    right: -25vw;
+}
+
+#ilNeVousReste::after {
+    content: "";
+    position: absolute;
+    background-image: url(../images/imgLivre.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 200%;
+    height: 100%;
+    bottom: -100%;
+    right: 0;
+}
+
+#ilNeVousReste {
+    font-family: "WalterTurnCoat";
+    text-transform: capitalize;
+    position: absolute;
+    right: 5%;
+    top: calc(25vh + 200px);
+    width: 200px;
+}
+
+
+body .entries .entry:nth-child(2n) .title:before {
+    left: 313px;
+    /* left:345 */
+}
+
+body .entries .entry:nth-child(2n) .title.big:before {
+    transform: translate(-8px, -50%);
+    transform: translate(-8px, -50%);
+}
+
+/*------Publication-------*/
+
+.planche {
+    width: 100%;
+    position: fixed;
+    height: 82vh;
+    min-height: 500px;
+    top: 10%;
+    border: 3px white solid;
+    box-shadow: -17px 0px 30px -15px rgba(0, 0, 0, 0.6);
+}
+
+.planche1 {
+    left: 0px;
+    background-color: #FF7477;
+    transition: left 1s cubic-bezier(.43, .57, .35, 1.04);
+    padding-left: 6vw;
+}
+
+.planche2 {
+    transform-origin: top-left;
+    transform: skewX(-7deg);
+    left: 90%;
+    background-color: #FFD73A;
+    transition: left 1s cubic-bezier(.43, .57, .35, 1.04);
+}
+
+.planche3 {
+    transform: skewX(-7deg);
+    left: 95%;
+    background-color: #00B3DF;
+    transition: left 1s cubic-bezier(.43, .57, .35, 1.04);
+}
+
+.planche2>*,
+.planche3>* {
+    transform-origin: top-left;
+    transform: skewX(7deg);
+}
+
+.hPub {
+    color: white;
+    font-size: 5vw;
+}
+
+.hAffiche {
+    position: absolute;
+    top: 30%;
+    left: -9%;
+    transform-origin: top-left;
+    transform: rotateZ(-90deg);
+}
+
+
+/*Permet de tourner le titre de la page*/
+
+.accueilTitre {
+    position: absolute;
+    top: 30%;
+    left: -8%;
+    transform-origin: top-left;
+    transform: rotateZ(-90deg);
+}
+
+.hSon {
+    position: absolute;
+    top: 30%;
+    left: -4%;
+    transform-origin: top-left;
+    transform: skewX(7deg) rotateZ(-84deg);
+}
+
+.hVideo {
+    position: absolute;
+    top: 30%;
+    left: -6%;
+    transform-origin: top-left;
+    transform: skewX(7deg) rotateZ(-84deg);
+}
+
+.ongletsPub {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    transform-origin: top-left;
+}
+
+#onglets {
+    position: absolute;
+    top: 45%;
+    left: -42%;
+    transform: rotateZ(-90deg);
+}
+
+#onglets2 {
+    position: absolute;
+    top: 45%;
+    left: -42%;
+    transform: skewX(7deg) rotateZ(-90deg);
+}
+
+#onglets3 {
+    position: absolute;
+    top: 45%;
+    left: -42%;
+    transform: skewX(7deg) rotateZ(-90deg);
+}
+
+#onglets>button {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid #00B3DF;
+    outline: none;
+    box-sizing: border-box;
+}
+
+#onglets>button:not(:last-child) {
+    margin-right: 7px;
+}
+
+#onglets>button:hover {
+    background-color: #00B3DF;
+}
+
+#onglets>button.selected {
+    background-color: #00B3DF;
+}
+
+#onglets2>button {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid #FF7477;
+    outline: none;
+    box-sizing: border-box;
+}
+
+#onglets2>button:not(:last-child) {
+    margin-right: 7px;
+}
+
+#onglets2>button:hover {
+    background-color: #FF7477;
+}
+
+#onglets2>button.selected {
+    background-color: #FF7477;
+}
+
+#onglets3>button {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid #FFD73A;
+    outline: none;
+    box-sizing: border-box;
+}
+
+#onglets3>button:not(:last-child) {
+    margin-right: 7px;
+}
+
+#onglets3>button:hover {
+    background-color: #FFD73A;
+}
+
+#onglets3>button.selected {
+    background-color: #FFD73A;
+}
+
+.contenuP {
+    background: #AF3D41;
+    height: 90%;
+    width: 75%;
+    margin-left: -15%;
+    margin-top: 2%;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contenuP div {
+    height: 33%;
+    border-radius: 90px;
+}
+
+.titre{
+    margin-bottom: 10%;
+}
+
+.contenuP img{
+    height: 100%;
+    width: 100%;
+}
+
+.titre{
+    transform: translateY(-100px);
+    background-color: white;
+}
+
+#cont2 {
+    background-color: #DDB56F;
+    margin-left: -5%;
+}
+
+#contenu3 {
+    background-color: #005DB3;
+    margin-left: -5%;
+}
+
+/*----------------FOOTER---------------------------*/
+
+footer {
+    height: 7vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: #05657E;
+    font-family: "Leixo";
+    z-index: 1;
+}
+
+footer>a>img {
+    width: 3vw;
+}
+
+footer>a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+
+/*-------A propos-------*/
+
+#Lequipe {
+    display: flex;
+    transform: skewX(-7deg);
+    border-style: solid;
+    border-color: white;
+    border-width: 4px;
+    width: 70vw;
+    justify-content: space-around;
+    height: 70%;
+    margin-left: 10%;
+    margin-top: 5%;
+    overflow: hidden;
+    position: relative;
+}
+
+#Lequipe>div {
+    border-style: solid;
+    border-color: white;
+    border-width: 2px;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    padding-top: 4%;
+    float: left;
+    width: 17%;
+    height: 100%;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    -webkit-transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+#Lequipe>div:hover {
+    background-color: #1781A1;
+}
+
+#Lequipe>div:hover img {
+    height: 125%;
+    filter: opacity(0.2);
+}
+
+.titreAPropos {
+    color: white;
+    font-family: "KayakSansLight";
+    font-size: 1.5em;
+    left: 25%;
+}
+
+#Lequipe>div:hover .text-center {
+    visibility: visible;
+    color: white;
+    font-size: 1em;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 10px;
+    transition: all .3s ease-in;
+}
+
+#Lequipe>div:hover .textepresentation {
+    visibility: visible;
+    color: white;
+    font-size: 1em;
+    position: absolute;
+    top: 10%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 10px;
+    transition: all .3s ease-in;
+}
+
+.text-center {
+    visibility: hidden;
+}
+
+.imgWrap {
+    position: relative;
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#Lequipe>div>img {
+    transform: skewX(7deg);
+}
+
+#contact {
+    color: white;
+    font-size: 5vw;
+    transform-origin: top-left;
+    transform: skewX(7deg) translateX(-49%) translateY(280%) rotateZ(-83deg);
+    position: absolute;
+}
+
+#divAPropos {
+    width: 50vw;
+    margin: auto;
+    color: white;
+    border: solid 3px white;
+    text-align: justify;
+    padding: 5px;
+    position: absolute;
+    position: relative;
+}
+
+#divAPropos::after {
+    content: url(../images/imgFlecheAccueil.png);
+    transform: rotateY(180deg) rotate(45deg);
+    position: absolute;
+    bottom: -58px;
+    right: -70px;
+}
+
+.photoEquipe:nth-child(odd) {
+    height: 20vw;
+}
+
+.photoEquipe:nth-child(even) {
+    height: 20vw;
+}
+
+
+/*----Mentions LÃ©gales----*/
+
+#mentionsLegales {
+    margin-top: 5%;
+    text-align: justify;
+    padding: 0 100px;
+}
+
+.infoLegal {
+    text-align: center;
+}
+
+#patateOsel {
+    position: fixed;
+    width: 100%;
+    margin-left: 50%;
+    margin-right: 50%;
+    margin-bottom: 0;
+}
+
+#patateOfruit {
+    position: fixed;
+    width: 100%;
+    margin-left: 36.5%;
+    margin-right: 63.5%;
+    margin-bottom: 0;
+}
+
+.menu {
+    margin-left: 38%;
+    padding: 0;
+    margin-top: 0;
+    font-family: "KayakSansLight";
+}
+
+.menu .title {
+    display: inline-block;
+    float: left;
+    position: relative;
+    padding: 1%;
+    transition: 0.5s;
+    background-color: #05657E;
+    text-align: left;
+}
+
+.menu .title a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 100%;
+}
+
+.menu .title a:hover {
+    color: #FFD73A;
+}
+
+.menu .sousMenu {
+    display: block;
+    position: absolute;
+    visibility: hidden;
+    height: 0;
+    top: 100%;
+    left: 0;
+    transform: scaleY(0);
+    transform-origin: 50% 0;
+    transition: transform 1s ease;
+    background-color: #05657E;
+    border: 1px solid #05657E;
+    border-radius: 0 0 5px 5px;
+}
+
+.menu .title:hover .sousMenu {
+    visibility: visible;
+    height: auto;
+    transform: scaleY(1);
+}
+
+.menu .sousMenu li {
+    padding: 0;
+    display: inline-block;
+    color: black;
+    float: left;
+    width: 150px;
+    margin-left: -35px;
+    padding: 2%;
+    transition: 0.0s;
+}
+
+.menu .sousMenu li a {
+    text-transform: none;
+    color: #fff;
+    /*padding: 0 0 0 5px;*/
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.menu .sousMenu li:hover {
+    background-color: #00B3DF;
+    border-left: 3px solid #FFD73A;
+}
+
+
+/*----------------Les Modifs de Thomas le gÃ©nie--------------------------*/
+
+#slogan {
+    color: white;
+    border: solid white 3px;
+    font-size: 50px;
+    width: 50vw;
+}
+
+#texteIndex1 {
+    color: white;
+    font-size: 3vh;
+    width: 25vw;
+    border: solid 3px white;
+}
+
+#avion {
+    width: 20%;
+    position: absolute;
+    top: 20%;
+    left: 35%;
+    z-index: -2;
+}
+
+#texteIndex2 {
+    color: white;
+    font-size: 3vh;
+    width: 30vw;
+    position: absolute;
+    left: 20%;
+    border: 3px white solid;
+}
+
+#gopro {
+    width: 10%;
+    position: absolute;
+    left: 6%;
+}
+
+#texteBilgre {
+    color: white;
+    font-size: 5vh;
+    width: 50vw;
+    position: absolute;
+    top: 70%;
+    border: 3px white solid;
+}
+
+#imgAccueil {
+    width: 28%;
+    position: absolute;
+    top: 1%;
+    right: 13%;
+}
+
+#texteDossier {
+    width: 20%;
+    font-size: 2.5vh;
+    position: absolute;
+    right: 30%;
+    top: 50%;
+    font-family: WalterTurnCoat;
+}
+
+#carte {
+    width: 20%;
+    position: absolute;
+    bottom: 0%;
+    right: 20%;
+}
+
+
+/*----------------COntact-------------*/
+
+#ContenuContact {
+    margin-left: 10%;
+}
+
+#FormContact {
+    max-width: 50vw;
+}
+
+#FormContact>label {
+    display: none;
+}
+
+#FormContact>input::-webkit-input-placeholder,
+#message::-webkit-input-placeholder {
+    color: white;
+    font-family: KayakSansRegular;
+    font-size: 20px;
+}
+
+#FormContact>input,
+#message {
+    background-color: #00B3DF;
+    border: solid white 3px;
+    color: white;
+    display: block;
+    margin-top: 2%;
+    padding: 5px;
+}
+
+#FormContact>input:last-child {
+    font-family: KayakSansRegular;
+    font-size: 20px;
+}
+
+#FormContact>input:last-child:hover {
+    background-color: #05657E;
+    font-family: KayakSansRegular;
+    font-size: 20px;
+}
+
+#question {
+    padding: 5px;
+    width: 40vw;
+    border: solid white 4px;
+    color: white;
+    font-family: Leixo;
+    font-size: 25px;
+}
+
+#question::after {
+    content: url(../images/imgFlecheAccueil.png);
+    position: absolute;
+    transform: rotateY(180deg) rotate(-90deg);
+    top: 18%;
+    left: 35%;
+}
+
+#question::before {
+    content: "";
+    background-image: url(../images/imgContact.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    right: -25%;
+    width: 75%;
+    height: 75%;
+}
+
+
+/*---------PARTICIPER----------*/
+
+#mainParticiper {
+    background-color: #ff7477;
+}
+
+#lesIcones {
+    justify-content: space-around;
+    display: flex;
+    flex-direction: row
+}
+
+#publications {
+    color: white;
+    font-size: 3.5vh;
+}
+
+.divAffiche {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.depot {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: dashed 4px white;
+    background-color: rgba(123, 58, 60, 0.58);
+    width: 18vw;
+    height: 38vh;
+}
+
+.modifier {
+    padding: 10px;
+}
+
+#textPubli {
+    text-align: justify;
+    color: white;
+    padding-left: 250px;
+    padding-right: 250px;
+}
+
+
+/*----interface inscription---*/
+
+.modal2 {
+    display: none;
+    position: fixed;
+    z-index: 4;
+    left: 0;
+    top: -100%;
+    width: 100vw;
+    height: 90vh;
+    overflow: auto;
+    transition: top 0.5s cubic-bezier(.43, .57, .35, 1.04);
+}
+
+.modal2.affiche {
+    display: block
+}
+
+#sortir {
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.modal-content2 {
+    border-left: 3px white solid;
+    display: inline;
+    text-align: center;
+    position: absolute;
+    margin: auto;
+    top: 0px;
+    right: 0px;
+    width: 20%;
+    height: 92%;
+    background-color: #ff7477;
+    min-width: 300px;
+}
+
+#photoIdentite {
+    border-radius: 90px;
+    height: 100%;
+}
+
+#principI {
+    display: flex;
+    justify-content: space-around;
+    height: 12%;
+}
+
+#principI p {
+    font-size: 100%;
+    font-family: "KayakSansBold";
+}
+
+#contentI {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#contentI label {
+    flex-direction: column;
+    font-family: "Leixo";
+    text-align: left;
+    margin: 2%;
+    margin-left: 10%;
+    font-size: 130%;
+}
+
+#contentI input,
+#contentI p {
+    background-color: #ff7477;
+    font-size: 115%;
+    margin-left: 10%;
+    font-family: "KayakSansBold";
+    border: 0px;
+    border-left: 3px white solid;
+    border-bottom: 3px white solid;
+    text-align: center;
+    padding-bottom: 1%;
+    width: 75%;
+    margin-bottom: 1%;
+    margin-top: -1%;
+}
+
+.inter1 {
+    font-family: "KayakSansBold";
+    font-size: 15px;
+    border: 4px #FFD73A solid;
+    border-radius: 5px;
+    color: black;
+    position: absolute;
+}
+
+#deconnecter {
+    width: 82px;
+    height: 21px;
+    top: calc(500px + 5%);
+    left: 19%;
+}
+
+#modifier {
+    width: 52px;
+    height: 17px;
+    top: calc(500px + 5%);
+    right: 22%;
+}
+
+.inter2 {
+    display: none;
+}
+
+#boutonsI #valider {
+    width: 60px;
+    height: 25px;
+    top: calc(500px + 5%);
+    right: 29%;
+}
+
+#annuler {
+    width: 50px;
+    height: 20px;
+    top: calc(500px + 5%);
+    left: 20%;
+}
+
+
+/*------------------------FAQ--------------------------*/
+
+fieldset {
+    display: inline-block;
+    width: 75vw;
+    border: white solid 5px;
+    margin: 0 7vw 8px 0;
+    text-align: left;
+}
+
+fieldset>legend {
+    font-family: leixo;
+}
+
+fieldset>p {
+    font-size: 15px;
+}
+
+fieldset a:hover {
+    color: #FF7477;
+}
+
+#FAQ {
+    padding-top: 3px;
+    position: absolute;
+    color: white;
+    font-size: 5vw;
+    transform-origin: top-left;
+    transform: skewX(7deg) translateX(-49%) translateY(220%) rotateZ(-83deg);
+}
+
+
+/*-------------------------ADMINISTRATION---------------------------*/
+
+#Admin {
+    display: flex;
+}
+
+#decoAdmin{
+    top : calc(20px + 10vh);
+    right: 20px;
+}
+
+#choixAdmin {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    background-color: #FFD73A;
+    font-family: leixo;
+    font-size: 25px;
+    height: 100%;
+    width: 25%;
+}
+
+#choixAdmin>div {
+    margin-top: 10vh;
+}
+
+#choixAdmin>div>span:hover {
+    text-decoration: underline;
+}
+
+#Admin p {
+    text-align: left;
+    padding-left: 5px;
+}
+
+.boucleAdmin p:hover {
+    font-family: KayakSansBold;
+}
+
+.renduBDD {
+    border: solid white 5px;
+    width: 50%;
+}
+
+.boucleAdmin {
+    display: block;
+}
+
+#lesDonnees {
+    display: flex;
+    width: 70vw;
+}
+
+#sousMenu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    font-size: 15px;
+    background-color: #FFD73A;
+    min-height: 100%;
+    width: 100%;
+
+}
+
+#choixAdmin>div:last-child {
+    position: relative;
+}
+
+#choixAdmin>div:last-child:hover #sousMenu{
+    display: flex;
+    flex-direction : column;
+}
+
+#sousMenu>span:hover {
+    text-decoration: underline;
+}
+
+#divChoixAdmin>div {
+    display: flex;
+}
+
+#divChoixAdmin{
+    overflow: auto;
+    max-height: 65vh;
+    position: relative;
+}
+
+
+
+#divChoixAdmin img {
+    max-height: 100px;
+}
+
+#popupConfirmation{
+    display: none;
+    position: fixed;
+    left : 25%;
+    top : 25%;
+    background-color: #FF7477;
+    border : 3px white solid;
+}
+
+#popupConfirmation>span:hover{
+    text-decoration: underline;
+}
+
+#zonePecision img{
+    max-width: 100%;
+}
+
+.fondRouge{
+    background-color: #FF7477;
+}
+/*-----------Poster Affiche-----------*/
+#mainPoster{
+    background-color: #ff7477;
+    font-family: "KayakSansLight";
+}
+.formulairePoster{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.inputPost{
+    margin-bottom: 20px;
+    background-color: rgba(249, 80, 83, 0.38);
+    border-color: white;
+    border-right-color: #ff7477;
+    border-top-color: #ff7477;
+    border-style: solid;
+    color: black;
+}
+.formulairePoster>input::-webkit-input-placeholder, #messageP::-webkit-input-placeholder{
+    color:white;
+    font-family: KayakSansRegular;
+}
+
+/*----------------Afficher--------------*/
+#mainPub{
+    background-color: #ff7477;
+}
+#h1A{
+    color: white;
+}
+#imageA{
+    min-width: 30vw;
+    max-width: 40vw;
+    min-height: 30vh;
+    max-height: 55vh;
+    margin: 30px;
+}
+
+#divPenchee{
+    position: absolute;
+    left: -5%;
+    width: 50vw;
+    height: auto;
+    transform-origin: top-left;
+    transform: skewX(-10deg);
+    border: solid 1px white;
+    background-color: white;
+    box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.52);
+}
+#divPenchee>*,#divPenchee2>*{
+    transform: skewX(10deg);
+}
+#descA{
+    width: 35vw;
+    height: auto;
+    margin: 30px;
+    color: white;
+}
+#divPenchee2{
+    position: fixed;
+    right: -2%;
+    top: 30%;
+    transform-origin: top-left;
+    transform: skewX(-10deg);
+    border: solid 3px white; 
+}
+#pouceBleu{
+    position: absolute;
+    bottom: 20%;
+    right: 10%;
+}
+#pouceRouge{
+    position: absolute;
+    bottom: 20%;
+    right: 30%;
 }
