@@ -1,6 +1,10 @@
 <?php
 session_start();
     header   ("Content-type: text/html; charset=UTF-8");
+
+if($_SESSION['id'] != 1){
+    header('Location: index.php');
+}else{
 ?>
 <html>  
 <head>
@@ -97,3 +101,7 @@ session_start();
     <script src="java/admin.js" type="text/javascript"></script>
 </body>
 </html>
+<?php
+      //fin de l page 
+     }
+?>
