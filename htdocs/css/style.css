@@ -859,108 +859,62 @@ footer>a {
     transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.current {
-    width: 36%;
-    -webkit-transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    -moz-transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    -o-transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.notCurrent {
-    width: 16%;
-    -webkit-transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    -moz-transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    -o-transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-#Lequipe:last-child {
-    float: left;
-}
-
 #Lequipe>div:hover {
-    filter: grayscale(1);
+    background-color: #1781A1;
+}
+
+#Lequipe>div:hover img {
+    height: 125%;
+    filter: opacity(0.2);
+}
+
+.titreAPropos {
+    color: white;
+    font-family: "KayakSansLight";
+    font-size: 1.5em;
+    left: 25%;
+}
+
+#Lequipe>div:hover .text-center {
+    visibility: visible;
+    color: white;
+    font-size: 1em;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 10px;
+    transition: all .3s ease-in;
+}
+
+#Lequipe>div:hover .textepresentation {
+    visibility: visible;
+    color: white;
+    font-size: 1em;
+    position: absolute;
+    top: 10%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 10px;
+    transition: all .3s ease-in;
+}
+
+.text-center {
+    visibility: hidden;
+}
+
+.imgWrap {
+    position: relative;
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 #Lequipe>div>img {
     transform: skewX(7deg);
-}
-
-.textEntreprise {
-    margin: 0%;
-    display: block;
-    text-align: justify;
-    font-size: 25px;
-    text-indent: 10%;
-    padding-left: 2%;
-    padding-right: 2%;
-}
-
-.imgETtext {
-    display: flex;
-    padding-top: 5%;
-    font-size: 20px;
-    max-width: 100%;
-    padding-left: 2vw;
-    padding-right: 2vw;
-}
-
-.textFlorian,
-.textHugo,
-.textQuentin,
-.textJoanne,
-.textThomas {
-    display: flex;
-    position: relative;
-    width: 70%;
-    bottom: 13%;
-    font-size: 1.5vw;
-    margin: 0%;
-    /*display: block;*/
-    text-align: justify;
-    text-indent: 10%;
-}
-
-.textFlorian,
-.textQuentin,
-.textThomas {
-    left: 13%;
-}
-
-.textHugo,
-.textJoanne {
-    left: 10%;
-}
-
-.imgAPropos {
-    margin: 0;
-    display: flex;
-    width: 25%;
-    height: 25%;
-}
-
-.titreDeux {
-    display: flex;
-    position: relative;
-    font-size: 2vw;
-    bottom: 10%;
-}
-
-.hugoTitre {
-    display: flex;
-    position: relative;
-    left: 46%;
-    font-size: 2vw;
-    bottom: 10%;
-}
-
-.joanneTitre {
-    display: flex;
-    position: relative;
-    left: 33%;
-    font-size: 2vw;
-    bottom: 10%;
 }
 
 #contact {

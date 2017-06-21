@@ -15,6 +15,8 @@
         <script type="text/javascript" src="java/planche.js"></script>
         <script src="java/verif.js"></script>
         <script src="java/modif.js"></script>
+
+
     </head>
 
     <body>
@@ -26,28 +28,40 @@
                 <h1 class="hAffiche hPub">a Propos</h1>
                 <div id="onglets" class="ongletsPub">
                 </div>
+                <h3 class="titreAPropos">Qui sommes nous ? Passe ta souris sur nos photos pour connaitre notre rôle.</h3>
                 <div id="Lequipe">
                     <div id="divMascotte" class="imgWrap imgWrap1">
                         <img id="imgMascotte" class="photoEquipe" src="images/imgMascotteTabouret.png" alt="image de mascotte">
+                        <p class="text-center">Bienvenue chez Defi Hawk. Cette page est consacrée à notre équipe qui, depuis déjà plusieurs éditions, se charge de vous fournir la meilleure expérience que vous gagniez ou non ! Vous souhaitez savoir qui vous parle sur les réseaux sociaux? Qui redesign le site? Vous êtes au bon endroit! </p>
                     </div>
                     <div id="divQuentin" class="imgWrap imgWrap2">
                         <img id="imgQuentin" class="photoEquipe" src="images/imgQuentin.png" alt="image de Quentin">
+                        <h2 class="text-center">Quentin Lecharpentier</h2>
+                        <p class="textepresentation">À mon tour de me présenter, moi je m’occupe plus du côté design et ambiance du site (même si tout le monde s’en occupe) je gère aussi l’aspect codage du site, donc si il y a un problème c’est de ma faute :)... au fait moi c’est Quentin et j’ai 19 ans. Je sais faire la cuisine aussi…</p>
                     </div>
                     <div id="divHugo" class="imgWrap imgWrap3">
                         <img id="imgHugo" class="photoEquipe" src="images/imgHugo.png" alt="image de Hugo">
+                        <h2 class="text-center">Hugo Fesselier</h2>
+                        <p class="textepresentation">Moi c’est Hugo et j’ai 18 ans. Je suis développeur back-end. C’est moi qui gère l’arrière du site avec la base de donnée et l'interaction entre les pages.</p>
                     </div>
                     <div id="divJoanne" class="imgWrap imgWrap4">
                         <img id="imgJoanne" class="photoEquipe" src="images/imgJoanne.png" alt="image de Joanne">
+                        <h2 class="text-center">Joanne Guillou</h2>
+                        <p class="textepresentation">Hello ! Je suis Joanne, la plus jeune de l’équipe ! Je suis chargée de la communication autour de l’évènement Défi Hawk, mais aussi du développement front end et du design !:)</p>
                     </div>
                     <div id="divFlorian" class="imgWrap imgWrap5">
                         <img id="imgFlorian" class="photoEquipe" src="images/imgFlorian.png" alt="image de Florian">
+                        <h2 class="text-center">Florian Uguen</h2>
+                        <p class="textepresentation">Salut toi, je m’appelle Florian et je dirige le projet Défi Hawk, enfin dans les faits, c’est plutôt parce qu’il fallait quelqu'un, à côté de l’aspect administratif je suis infographiste et je travaille en étroite collaboration avec Quentin et Joanne.</p>
                     </div>
                     <div id="divThomas" class="imgWrap imgWrap6">
                         <img id="imgThomas" class="photoEquipe" src="images/imgThomas.png" alt="image de Thomas">
+                        <h2 class="text-center">Thomas Furiet</h2>
+                        <p class="textepresentation">Bonjour, je me présente je m’appelle Thomas Furiet j’ai 19 ans et je suis scripte et chargé de communication sur le site. Je vais me charger de toute la rédaction possible et inimaginable, vérifier l’orthographe de mes collègues. Ensuite je vais faire vivre Défi Hawk via les réseaux sociaux.</p>
                     </div>
                 </div>
-            </div>
 
+            </div>
             <div id="planche2" class="planche planche2">
                 <h1 id="FAQ">faq</h1>
                 <fieldset>
@@ -101,7 +115,6 @@
         <footer id="footer">
             <?php require("php/footer.php"); ?>
         </footer>
-        <script src="java/apropos.js"></script>
     </body>
 
     </html>
