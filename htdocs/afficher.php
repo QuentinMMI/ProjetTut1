@@ -51,6 +51,7 @@
                 <p id="descA">Description : <?php echo $ligne['DescriptionPhoto'] ?></p>
                 <p id="descA">De : <?php echo $ligne3["NomUser"]." ".$ligne3["PrenomUser"] ?></p>
             </div>
+            <p id="vote">J'aime cette publication</p>
         </main>
         <?php 
             }else if($_GET["type"]=="son"){
