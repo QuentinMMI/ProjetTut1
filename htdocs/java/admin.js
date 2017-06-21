@@ -64,7 +64,7 @@
          var xhr = new XMLHttpRequest();
 
             // On souhaite juste récupérer le contenu du fichier, la méthode GET suffit amplement :
-            xhr.open('GET', 'https://projets.iut-laval.univ-lemans.fr/16mmi1pj03/php/AJAX-php/choixAdmin.php?type=' + type + '');
+            xhr.open('GET', 'php/AJAX-php/choixAdmin.php?type=' + type + '');
 
             xhr.addEventListener('load', function() { // On gère ici une requête asynchrone
 
@@ -109,7 +109,7 @@ function afficherDetailOeuvre (evt){
     var xhr = new XMLHttpRequest();
 
     // On souhaite juste récupérer le contenu du fichier, la méthode GET suffit amplement :
-    xhr.open('GET', 'https://projets.iut-laval.univ-lemans.fr/16mmi1pj03/php/AJAX-php/afficherOeuvre.php?type=' + type + '&idOeuvre=' + id +'');
+    xhr.open('GET', 'php/AJAX-php/afficherOeuvre.php?type=' + type + '&idOeuvre=' + id +'');
 
     xhr.addEventListener('load', function() { // On gère ici une requête asynchrone
 
@@ -141,7 +141,7 @@ function SupprimerProfil (evt) {
     var xhr = new XMLHttpRequest();
 
     // On souhaite juste récupérer le contenu du fichier, la méthode GET suffit amplement :
-    xhr.open('GET', 'https://projets.iut-laval.univ-lemans.fr/16mmi1pj03/php/AJAX-php/supprimeUser.php?id=' + idUser  +'');
+    xhr.open('GET', 'php/AJAX-php/supprimeUser.php?id=' + idUser  +'');
 
     xhr.addEventListener('load', function() { // On gère ici une requête asynchrone
 
