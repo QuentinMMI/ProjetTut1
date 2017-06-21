@@ -1694,3 +1694,18 @@ fieldset a:hover {
     bottom: 20%;
     right: 30%;
 }
+#vote{
+    position: absolute;
+    bottom: 20%;
+    right: 10%;
+    font-size: 3.5vh;
+    color: white;
+    padding: 10px;
+    border: solid 3px white;
+    border-radius: 5px;
+    text-decoration: underline;
+}
+#vote:hover{
+    border: solid 3px #FFD73A;
+    color: #FFD73A;
+}
