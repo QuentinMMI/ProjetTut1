@@ -1,7 +1,7 @@
 <?php
    session_start();
     header ("Content-type: text/html");
-//if(isset($_SESSION["id"])){
+if(isset($_SESSION["id"])){
     if(isset($_GET["type"])){
 ?>
 <html>  
@@ -29,13 +29,13 @@
         <h1>Poster votre <?php echo $_GET['type'];  ?></h1>
         <form class="formulairePoster" enctype="multipart/form-data" action="poster.php?type=affiche#cBon" method="post">
             <label for="titreOeuvre">Titre</label>
-            <input class="inputPost" type="text" name="titre" placeholder="Titre de l'oeuvre" required>
+            <input class="inputPost titreP" type="text" name="titre" placeholder="Titre de l'oeuvre" required>
             <label for="droit">Libre de droit</label>
             <input class="inputPost"  id ="droit" name="droit" type="radio" value="1">
             <input type="hidden" name="MAX_FILE_SIZE" value="450000">
             <input class="inputPost" type="file" name="affiche" id="icone">
             <label for="message">Description de votre travail</label>
-            <textarea id="messageP" class="inputPost" name="description" rows="10" cols="50" placeholder="Description" required></textarea>
+            <textarea class="inputPost messageP" name="description" rows="10" cols="50" placeholder="Description" required></textarea>
             <input type="submit" value="Envoyer" style="cursor:pointer" name="validerAffiche">
         </form>
     </div>
@@ -68,16 +68,16 @@
         <h1>Poster votre <?php echo $_GET['type'];  ?></h1>
         <form class="formulairePoster" enctype="multipart/form-data" action="poster.php?type=son#cBon" method="post">
             <label for="inputPost">Titre</label>
-            <input class="inputPost" type="text" name="titreSon" placeholder="Titre de l'oeuvre" required>
+            <input class="inputPost titreP" type="text" name="titreSon" placeholder="Titre de l'oeuvre" required>
             <label for="droit">Libre de droit</label>
-            <input id ="droitSon" name="droitSon" type="radio" value="1">
+            <input class="inputPost" id ="droitSon" name="droitSon" type="radio" value="1">
             <label for="inputPost">Désposez une miniature pour votre son</label>
-            <input type="hiden" name="MAX_FILE_SIZE" value="450000">
+            <input type="hidden" name="MAX_FILE_SIZE" value="450000">
             <input class="inputPost" type="file" name="miniSon" id="miniSon">
             <label for="url">Déposez le lien ici :</label>
-            <input type="url" name="urlSon" id="urlSon">
-            <label class="inputPost" for="message">Description de votre travail</label>
-            <textarea name="description" rows="10" cols="50" placeholder="Description" required></textarea>
+            <input class="inputPost" type="url" name="urlSon" id="urlSon">
+            <label for="message">Description de votre travail</label>
+            <textarea class="inputPost messageP" name="description" rows="10" cols="50" placeholder="Description" required></textarea>
             <input type="submit" value="Envoyer" style="cursor:pointer" name="submitSon" >
         </form>
     </div>
@@ -106,16 +106,16 @@
         <h1>Poster votre <?php echo $_GET['type'];  ?></h1>
         <form class="formulairePoster" action="poster.php?type=video#cBon" method="post">
             <label for="inputPost">Titre</label>
-            <input class="inputPost" type="text" name="titreVid" placeholder="Titre de l'oeuvre" required>
+            <input class="inputPost titreP" type="text" name="titreVid" placeholder="Titre de l'oeuvre" required>
             <label for="droitVid">Libre de droit</label>
-            <input id ="droitVid" name="droitVid" type="radio" value="1">
+            <input class="inputPost" id ="droitVid" name="droitVid" type="radio" value="1">
             <label for="inputPost">Désposez une miniature pour votre son</label>
-            <input type="hiden" name="MAX_FILE_SIZE" value="450000">
+            <input  type="hidden" name="MAX_FILE_SIZE" value="450000">
             <input class="inputPost" type="file" name="miniVid" id="miniVid">
             <label for="url">Déposez le lien ici :</label>
-            <input type="url" name="urlVid" id="urlVid">
-            <label class="inputPost" for="message">Description de votre travail</label>
-            <textarea name="descriptionVid" rows="10" cols="50" placeholder="Description" required></textarea>
+            <input class="inputPost" type="url" name="urlVid" id="urlVid">
+            <label for="message">Description de votre travail</label>
+            <textarea class="inputPost messageP" name="descriptionVid" rows="10" cols="50" placeholder="Description" required></textarea>
             <input type="submit" value="Envoyer" style="cursor:pointer" name="submitVid">
         </form>
     </div>
@@ -153,7 +153,7 @@
            }else{
                header("Location: participer.php");
            }
-    //}else{
+    }else{
        header("Location: index.php");
-    //}
+    }
 ?>
