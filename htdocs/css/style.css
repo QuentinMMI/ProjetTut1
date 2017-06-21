@@ -624,7 +624,7 @@ td img {
     color: #fff;
 }
 
-body:before {
+#bodyRegle:before {
     content: '';
     position: absolute;
     top: 25%;

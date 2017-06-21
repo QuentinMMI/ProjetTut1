@@ -14,7 +14,7 @@ session_start();
     <script src="java/verif.js"></script>
     <script src="java/modif.js"></script>
 </head>
-<body>
+<body id="bodyRegle">
 <header>
       <?php require("php/header.php"); ?>
 </header>
