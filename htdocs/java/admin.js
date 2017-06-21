@@ -134,7 +134,9 @@ function SupprimerProfil (evt) {
                 popUp.style.display = 'none' ;
             }else{
                 popUp.style.display = 'none' ;
-                ladiv.remove();
+                if(idUser != 1){
+                   ladiv.remove();
+                }
                 //evoie de la requète ajax
     var xhr = new XMLHttpRequest();
 
