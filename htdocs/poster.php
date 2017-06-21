@@ -65,10 +65,10 @@ if(isset($_SESSION["id"])){
             <label for="droit">Libre de droit</label>
 
             <input class="inputPost"  id ="droit" name="droit" type="radio" value="1">
+            
+            <label for="affiche">Déposer votre travail :</label>
 
-            <input type="hidden" name="MAX_FILE_SIZE" value="450000">
-
-            <input class="inputPost" type="file" name="affiche" id="icone">
+            <input class="inputPost" type="file" class="file" name="affiche" id="icone" accept=".png,.jpg">
 
             <label for="message">Description de votre travail</label>
 
@@ -175,15 +175,13 @@ if(isset($_SESSION["id"])){
 
             <input class="inputPost" id ="droitSon" name="droitSon" type="radio" value="1">
 
+            <label for="url">Déposez le Son ici :</label>
+
+            <input class="inputPost" type="file" class="file" name="Son" id="Son" accept=".mp3">
+            
             <label for="inputPost">Désposez une miniature pour votre son</label>
 
-            <input type="hidden" name="MAX_FILE_SIZE" value="450000">
-
-            <input class="inputPost" type="file" name="miniSon" id="miniSon">
-
-            <label for="url">Déposez le lien ici :</label>
-
-            <input class="inputPost" type="url" name="urlSon" id="urlSon">
+            <input class="inputPost" type="file" name="miniSon" id="miniSon" accept=".png,.jpg">
 
             <label for="message">Description de votre travail</label>
 
@@ -205,15 +203,20 @@ if(isset($_SESSION["id"])){
 
         $droitSon=$_POST["droitSon"];
 
-        $urlSon=$_POST["urlSon"];
+        if($_FILES["Son"]["name"]){
+            copy($_FILES["Son"]["tmp_name"],"travaux/son/".$_FILES["Son"]["name"]);
+            $Son="travaux/son/".$_FILES["Son"]["name"];
+        }
 
         $description=$_POST["description"];
 
         echo "Le titre est : ".$titreSon;
 
-        echo "L'url est : ".$urlSon;
+        echo "L'url est : ".$Son;
 
         echo "La description est : ".$description;
+        
+        echo "son chemin est :".$Son;
 
         $chemin="travaux/vignette/son1.png";
 
@@ -226,41 +229,41 @@ if(isset($_SESSION["id"])){
         //}
 
         $bdd =new PDO("mysql:host=".MYHOST.";dbname=".MYDB, MYUSER, MYPASS) ;
-        $bdd->query("SET NAMES utf8");
-        $bdd->query("SET CHARACTER SET 'utf8'");
-        $insertmbr = $bdd->prepare("INSERT INTO SON(IdSon,TitreSon,DatePublication,AccordsDroits,AccesSon,DescriptionSon,AccesMiniature) VALUES(null,:titre,NOW(),:accords,:acces,:desc,:accesMini)");
+        //$bdd->query("SET NAMES utf8");
+        //$bdd->query("SET CHARACTER SET 'utf8'");
+        //$insertmbr = $bdd->prepare("INSERT INTO SON(IdSon,TitreSon,DatePublication,AccordsDroits,AccesSon,DescriptionSon,AccesMiniature) VALUES(null,:titre,NOW(),:accords,:acces,:desc,:accesMini)");
 
-        $insertmbr->execute(array(":titre"=>$titreSon,":accords"=>$droitSon,":acces"=>$urlSon,":desc"=>$description,":accesMini"=>$chemin));
+        //$insertmbr->execute(array(":titre"=>$titreSon,":accords"=>$droitSon,":acces"=>$Son,":desc"=>$description,":accesMini"=>$chemin));
 
         
 
-        $insertA = $bdd->prepare("SELECT LAST_INSERT_ID() FROM SON");
+        //$insertA = $bdd->prepare("SELECT LAST_INSERT_ID() FROM SON");
 
-        $insertA->execute();
+        //$insertA->execute();
 
-        $dataA = $insertA->fetch();
+        //$dataA = $insertA->fetch();
 
-        $dernierId = $dataA["LAST_INSERT_ID()"];
+        //$dernierId = $dataA["LAST_INSERT_ID()"];
 
               
 
-        $id=$_SESSION['id'];
+       // $id=$_SESSION['id'];
 
-        $insertid = $bdd->prepare("SELECT * FROM A_Publie WHERE IdUser=:id");
+        //$insertid = $bdd->prepare("SELECT * FROM A_Publie WHERE IdUser=:id");
 
-        $insertid->execute(array(":id"=>$id));
+        //$insertid->execute(array(":id"=>$id));
 
-        $data = $insertid->fetch();
-
-                    
+        //$data = $insertid->fetch();
 
                     
 
-        $requette2 = "UPDATE A_Publie SET IdUser=:id, IdPhoto=:idPhoto, IdSon=:idSon, IdVideo=:idVideo WHERE IdUser=:id2 ";
+                    
 
-        $inserta = $bdd->prepare($requette2);
+       // $requette2 = "UPDATE A_Publie SET IdUser=:id, IdPhoto=:idPhoto, IdSon=:idSon, IdVideo=:idVideo WHERE IdUser=:id2 ";
 
-        $inserta->execute(array(":id"=>$id,":idPhoto"=>$data["IdPhoto"],":idSon"=>$dernierId,":idVideo"=>$data["IdVideo"],":id2"=>$id));
+        //$inserta = $bdd->prepare($requette2);
+
+        //$inserta->execute(array(":id"=>$id,":idPhoto"=>$data["IdPhoto"],":idSon"=>$dernierId,":idVideo"=>$data["IdVideo"],":id2"=>$id));
 
     }
 
@@ -282,15 +285,13 @@ if(isset($_SESSION["id"])){
 
             <input class="inputPost" id ="droitVid" name="droitVid" type="radio" value="1">
 
+            <label for="url">Déposez le Vidéo ici :</label>
+
+            <input class="inputPost" type="file" class="file" name="video" id="video" accept=".mp4,.wav">
+            
             <label for="inputPost">Désposez une miniature pour votre son</label>
 
-            <input  type="hidden" name="MAX_FILE_SIZE" value="450000">
-
-            <input class="inputPost" type="file" name="miniVid" id="miniVid">
-
-            <label for="url">Déposez le lien ici :</label>
-
-            <input class="inputPost" type="url" name="urlVid" id="urlVid">
+            <input class="inputPost" type="file" name="miniVid" id="miniVid" accept=".png,.jpg">
 
             <label for="message">Description de votre travail</label>
 

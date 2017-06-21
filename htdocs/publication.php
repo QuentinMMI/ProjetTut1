@@ -64,7 +64,8 @@ session_start();
                   $statement = $pdo->prepare($sql);
 		          $statement->execute();
                   $ligne = $statement->fetch(PDO::FETCH_ASSOC);
-		          while($ligne != false){
+                  $1=0;
+		          while($ligne != false || $i==10){
                 ?>
                 <div>
                     <a href="afficher.php?id=<?php echo $ligne['IdSon'] ?>&type=son"><img src="<?php echo $ligne['AccesMiniature'] ?>" alt="<?php echo $ligne['TitreSon'] ?>"></a>
