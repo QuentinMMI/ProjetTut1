@@ -55,9 +55,9 @@ if(isset($_SESSION["id"])){
                     copy($_FILES["affiche"]["tmp_name"],"travaux/".$_FILES["affiche"]["name"]);
 
                     $mini="travaux/vignette/img1.png";
-                    $titre=$_POST["titre"];
-                    $chemin="travaux/".$_FILES["affiche"]["name"];
-                    $description=$_POST["description"];
+                    $titre=htmlspecialchars($_POST["titre"]);
+                    $chemin=htmlspecialchars("travaux/".$_FILES["affiche"]["name"]);
+                    $description=htmlspecialchars($_POST["description"]);
                     $droits=$_POST["droit"];
 
                     $bdd =new PDO("mysql:host=".MYHOST.";dbname=".MYDB, MYUSER, MYPASS) ;
@@ -101,14 +101,14 @@ if(isset($_SESSION["id"])){
     if(isset($_POST["submitSon"]) && $_FILES["Son"]["name"]!=".htaccess"){
 
         require("php/param.inc.php");
-        $titreSon=$_POST["titreSon"];
+        $titreSon=htmlspecialchars($_POST["titreSon"]);
         $droitSon=$_POST["droitSon"];
         if($_FILES["Son"]["name"]){
             copy($_FILES["Son"]["tmp_name"],"travaux/son/".$_FILES["Son"]["name"]);
-            $Son="travaux/son/".$_FILES["Son"]["name"];
+            $Son=htmlspecialchars("travaux/son/".$_FILES["Son"]["name"]);
         }
 
-        $description=$_POST["description"];
+        $description=htmlspecialchars($_POST["description"]);
 
         echo "Le titre est : ".$titreSon;
 
@@ -159,17 +159,17 @@ if(isset($_SESSION["id"])){
         if(isset($_POST["submitVid"]) && $_FILES["video"]["name"]!=".htaccess"){
 
         require("php/param.inc.php");
-        $titreVid=$_POST["titreVid"];
+        $titreVid=htmlspecialchars($_POST["titreVid"]);
         $droitVid=0;
         if(isset($_POST["droitVid"])){
             $droitVid=$_POST["droitVid"];
         }
         if($_FILES["video"]["name"]){
             copy($_FILES["video"]["tmp_name"],"travaux/video/".$_FILES["video"]["name"]);
-            $Vid="travaux/video/".$_FILES["video"]["name"];
+            $Vid=htmlspecialchars("travaux/video/".$_FILES["video"]["name"]);
         }
 
-        $description=$_POST["descriptionVid"];
+        $description=htmlspecialchars($_POST["descriptionVid"]);
 
         echo "Le titre est : ".$titreVid;
 
