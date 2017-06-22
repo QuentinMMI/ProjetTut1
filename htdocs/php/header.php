@@ -4,8 +4,11 @@
             <a class="policeNav <?php if($_SERVER["SCRIPT_NAME"]=="/reglement.php"){?>ongletSelect<?php } ?>"  href="reglement.php">REGLEMENT</a>
             <a class="policeNav <?php if($_SERVER["SCRIPT_NAME"]=="/publication.php"){?>ongletSelect<?php } ?>" href="publication.php">PUBLICATIONS</a>
             <a class="policeNav <?php if($_SERVER["SCRIPT_NAME"]=="/aPropos.php"){?>ongletSelect<?php } ?>" href="aPropos.php">A PROPOS</a>
+            <?php if($_SESSION['type'] == 'participant' || !isset($_SESSION)){ //le jury ne peu pas publier?>
             <a class="policeNav <?php if($_SERVER["SCRIPT_NAME"]=="/participer.php"){?>ongletSelect<?php } ?>" id="participer" href="participer.php">PARTICIPER</a>
-            <?php
+            <?php 
+                                                                             } //fin publier 
+            
               if(isset($_SESSION['id']))
               {
                   if($_SESSION['id'] == 1){
@@ -32,9 +35,13 @@
                         <label for="prenomF">Prenom</label>
                         <p><?php echo($_SESSION['Prenom']) ?></p>
                         <input type="hidden" id="prenomF" name="prenomF" value="<?php echo($_SESSION['Prenom']) ?>" required="required"/>
+                        <?php 
+                if($_SESSION['type']=='participant'){//Date de naissance seulement disponnible pour les particiapnts
+                    ?>
                         <label for="ageF">Age</label>
                         <p><?php echo($_SESSION['Date']) ?></p>
                         <input type="hidden" id="ageF" name="ageF" value="<?php echo($_SESSION['Date']) ?>" required="required"/>
+                        <?php } //fin de l'age ?>
                         <label for="adresseF">Adresse</label>
                         <p><?php echo($_SESSION['Mail']) ?></p>
                         <input type="hidden" id="adresseF" name="adresseF" value="<?php echo($_SESSION['Mail']) ?>" required="required"/>

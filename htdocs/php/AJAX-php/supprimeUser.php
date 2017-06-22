@@ -21,12 +21,24 @@
         
         //SUPPRESSION DES TABLE SON VIDEO ET PHOTO
         if($oeuvre['IdSon'] != 0){
+            $sql = "SELECT AccesSon FROM SON WHERE IdSon =".$oeuvre['IdSon'];
+            $statement = $pdo->query($sql);
+
+            $dossier = $statement->fetch(PDO::FETCH_ASSOC); 
+            unlink ("../../".$dossier['AccesSon']);
+            
             //requet sql
             $sql = $pdo -> prepare ("DELETE FROM SON WHERE IdSon = :Id;");
             $sql->execute(array(":Id" => $oeuvre['IdSon']));
         }
         
         if ($oeuvre['IdVideo'] != 0){
+            $sql = "SELECT AccesVideo FROM VIDEO WHERE IdVideo =".$oeuvre['IdVideo'];
+            $statement = $pdo->query($sql);
+
+            $dossier = $statement->fetch(PDO::FETCH_ASSOC); 
+            unlink ("../../".$dossier['AccesVideo']);
+            
             //requet sql
             $sql = $pdo -> prepare ("DELETE FROM VIDEO WHERE IdVideo = :Id ;");
             $sql->execute(array(":Id" => $oeuvre['IdVideo']));
@@ -34,6 +46,12 @@
         
         
         if ($oeuvre['IdPhoto'] != 0){
+            $sql = "SELECT AccesPhoto FROM PHOTO WHERE IdPhoto =".$oeuvre['IdPhoto'];
+            $statement = $pdo->query($sql);
+
+            $dossier = $statement->fetch(PDO::FETCH_ASSOC); 
+            unlink ("../../".$dossier['AccesPhoto']);
+            
             //requet sql
             $sql = $pdo -> prepare ("DELETE FROM PHOTO WHERE IdPhoto = :Id ;");
             $sql->execute(array(":Id" => $oeuvre['IdPhoto']));

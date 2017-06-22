@@ -28,7 +28,7 @@
         $sql = $pdo -> prepare ("DELETE FROM SON WHERE IdSon = :Id ; UPDATE A_Publie SET IdSon = 0 WHERE IdSon= :Id");
         $sql->execute(array(":Id" => $_GET['id']));
     }else{
-        $sql = "SELECT AccesVide FROM VIDEO WHERE IdVideo =".$_GET['id'];
+        $sql = "SELECT AccesVideo FROM VIDEO WHERE IdVideo =".$_GET['id'];
         $statement = $pdo->query($sql);
         
         $oeuvre = $statement->fetch(PDO::FETCH_ASSOC); 
@@ -38,7 +38,7 @@
         $sql = $pdo -> prepare ("DELETE FROM VIDEO WHERE IdVideo = :Id ; UPDATE A_Publie SET IdVideo = 0 WHERE IdVideo= :Id");
         $sql->execute(array(":Id" => $_GET['id']));
     }
-        $codeHTML='oeuvre supprimé';
+        $codeHTML='oeuvre supprimée';
     
 
 $pdo=null;
