@@ -1,4 +1,3 @@
-
 /*------Fonts------*/
 
 @font-face {
@@ -44,6 +43,11 @@
 @font-face {
     font-family: "WalterTurnCoat";
     src: url('../fonts/WalterTurncoat.ttf')
+}
+
+@font-face {
+    font-family: "Aldrich-Regular";
+    src: url('../fonts/Aldrich-Regular.ttf')
 }
 
 
@@ -289,132 +293,311 @@ a:hover {
     margin-bottom: 0;
 }
 
-.titrePage {
-    padding-top: 0;
+#planche2Bis {
+    display: flex;
+}
+
+#lesPrix {
+    color: #fff;
+    display: block;
+    text-align: left;
+    padding-left: 7%;
+    position: relative;
+    top: -17vh;
+    width: 22%;
+}
+
+#planche2 h2 {
+    font-family: "leixo";
+    font-size: 300%;
+    padding-right: 2%;
+    padding-left: 3%;
     margin: 0;
+    margin-bottom: 2%;
+}
+
+#lesPrix div {
+    margin-bottom: 5%;
+}
+
+#lesPrix h3 {
+    font-family: "leixo";
+    font-size: 175%;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 2%;
+    padding: 1%;
+    border: 1px solid #fff;
+}
+
+#lesPrix p {
+    font-weight: bold;
+    font-family: "KayakSansLight";
+    font-size: 125%;
+    margin: 0;
+}
+
+#lesPrix p::first-letter {
+    font-family: "Aldrich-Regular";
+    font-size: 100%;
+}
+
+#lesPrix h3::first-letter {
+    font-family: "Aldrich-Regular";
+    font-size: 150%;
+}
+
+#lesCaracDesPrix {
+    position: relative;
+    width: 62%;
+    background-image: url(../images/imgFondBlancLot.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: -17vh;
+    margin-left: 2%;
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+
+#lesCaracDesPrix p {
+    margin: 0;
+}
+
+.lesPrixHover:hover {
     background-color: white;
+    color: black;
+}
+
+.bronze #caracHaut div:last-child {
+    padding-top: 1%;
+    display: flex;
+    height: 20%;
+}
+
+.bronze #carac div:last-child {
+    margin-left: 1%;
+    display: flex;
+    width: 80%;
+    bottom: 20%;
+}
+
+.bronze #carac div:last-child h3 {
+    font-size: 150%;
+    font-family: "Aldrich-Regular";
+}
+
+.bronze #caracHaut {
+    display: flex;
+    text-align: left;
+    margin-left: 2%;
+    padding-left: 3%;
+    margin: 0;
+}
+
+.bronze #carac {
+    width: 115%;
+}
+
+.bronze #caracHaut {
+    display: flex;
+    text-align: left;
+    margin-left: 2%;
+    padding-left: 1%;
+    margin: 0;
+}
+
+.bronze #caracHaut div {
+    width: 60%;
+    padding-right: 2%;
+}
+
+.bronze #caracHaut img {
+    margin-top: 3%;
+}
+
+.bronze #carac div:last-child {
+    display: flex;
+    width: 80%;
+    bottom: 20%;
+}
+
+.bronze #carac div:last-child h3 {
+    font-size: 150%;
+    font-family: "Aldrich-Regular";
+    padding-top: 0%;
+}
+
+.bronze #goPro5Prix3 {
+    margin-top: 3%;
+    display: flex;
+    padding: 2%;
+}
+
+.bronze #goPro5Prix3 h3 {
+    font-family: "Aldrich-Regular";
+    font-size: 150%;
+    width: 70%;
+    margin: 0;
+    padding-left: 10%;
+    padding-bottom: 10%;
+}
+
+.bronze #goPro5Prix3 img {
+    width: 57%;
+    padding-right: 10%;
+}
+
+.bronze #texteGopro {
+    margin: 4%;
+    width: 60%;
+}
+
+.bronze #texteGopro p {
+    padding-bottom: 1%;
+}
+
+.argent #caracHaut {
+    width: 105%;
+    height: 50%;
+    padding-top: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
+    display: inline-flex;
+}
+
+.argent #caracHaut div:first-child p {
+    text-align: left;
+}
+
+.argent #caracHaut:first-child div:first-child div {
+    position: relative;
+    display: flex;
+}
+
+.argent #caracHaut:first-child div:first-child div h3 {
+    font-family: "leixo";
+    width: 70%;
+}
+
+.argent #caracHaut:first-child div:first-child div img {
     width: 25%;
-    font-family: WalterTurnCoat;
-    font-size: 30px;
 }
 
-.divHaut {
+.argent #caracHaut:first-child div:first-child div span {
+    font-family: "Aldrich-Regular";
+}
+
+.argent #caracHaut:first-child div:first-child p {
+    padding-bottom: 2%;
+}
+
+.argent #caracHaut div:last-child {
+    padding-top: 1%;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 200px;
+    height:
+}
+
+.argent #caracWonderbox {
+    display: flex;
+    flex-direction: column;
+}
+
+.argent #textWonderbox {
+    flex-wrap: wrap;
+    text-align: left;
+    padding-left: 2%;
+}
+
+.argent #caracWonderbox img {
+    width: 25%;
+    height: 55%;
+}
+
+.argent #caracWonderbox h3 {
+    text-align: left;
+    margin: 0;
+    padding-bottom: 5%;
+    font-family: "leixo";
+    text-transform: capitalize;
     padding-top: 0;
-    margin-top: 0px;
-    position: relative;
-    top: -15%;
 }
 
-.divBas {
+.argent #caracWonderbox h3:first-letter {
+    font-family: "Aldrich-Regular";
+}
+
+.argent #carac div:last-child {
+    margin-left: 1%;
     display: flex;
-    align-items: flex-start;
-    padding: 200px;
-    padding-top: 0;
-    margin-top: 0px;
-    position: relative;
-    top: -60%;
-    left: -6.5%;
+    width: 80%;
+    bottom: 20%;
 }
 
-.divImgLots>img {
-    width: 90%;
-    height: auto;
+.argent #carac div:last-child h3 {
+    font-size: 150%;
+    font-family: "Aldrich-Regular";
 }
 
-.divImgLots {
-    max-width: 500px;
-    max-height: auto;
-}
-
-.divImgLots2 {
-    max-width: 500px;
-    max-height: auto;
-}
-
-.divImgLots2>img {
-    width: 50%;
-    height: auto;
-}
-
-.divHaut>h2 {
-    margin-left: 20px;
-}
-
-.divImgLots {
-    max-width: 500px;
-    max-height: auto;
-}
-
-td {
-    height: 300px;
-    vertical-align: bottom;
-    padding: 5px;
-}
-
-.divHaut>h2 {
-    margin-left: 20px;
-}
-
-#podium {
+.or #caracHaut {
     display: flex;
-    padding: 0;
-    margin: 0px;
-    position: fixed;
-    top: 50px;
-    left: 0%;
+    text-align: left;
+    margin-left: 2%;
+    width: 150%;
 }
 
-#podium0,
-#podium1,
-#podium2 {
-    width: 150px;
-    z-index: -10;
+.or #dixNuit {
+    font-size: 120%;
+    padding-bottom: 2%;
+    font-family: "leixo";
+    padding-right: 2%;
+    margin-left: 2%;
 }
 
-#podium0 {
-    /* or */
-    height: 220px;
-    background: #00B3DF;
+.or #dixNuit span {
+    font-family: "Aldrich-Regular";
+    font-size: 180%;
 }
 
-#podium1 {
-    /* argent */
-    height: 180px;
-    background: #FFFFFF;
-}
-
-#podium2 {
-    /* bronze */
-    height: 150px;
-    background: #F95053;
-}
-
-#podium1>p {
-    font-family: "WalterTurnCoat";
-    font-size: 17px;
-}
-
-#podium0>p {
-    font-family: "WalterTurnCoat";
-    font-size: 18px;
-}
-
-#podium2>p {
-    font-family: "WalterTurnCoat";
-    font-size: 17px;
-}
-
-.imgDivBas img {
+.or #caracHaut div:last-child {
+    padding-top: 1%;
+    display: flex;
     width: 50%;
 }
 
-td img{
-    width:70%;
+.or .textLotVoyage {
+    padding-bottom: 3px;
+    padding-right: 2%;
 }
+
+.or #carac div:last-child {
+    display: flex;
+    width: 80%;
+    bottom: 20%;
+}
+
+.or #carac div:last-child h3 {
+    font-size: 150%;
+    font-family: "Aldrich-Regular";
+    padding-top: 4%;
+}
+
+#goproLot {
+    width: 70%;
+}
+
+#texteGopro {
+    width: 40%;
+    display: inline-block;
+    flex-wrap: wrap;
+    text-align: left;
+    font-size: 120%;
+    margin: 0;
+    height: 25%;
+    padding-bottom: 3px;
+    margin-top: 10%;
+    padding-left: 5%;
+}
+
 
 /*--------------Bulgarie---------------*/
 
@@ -425,8 +608,8 @@ td img{
     transform: skewX(7deg) translateX(-49%) translateY(222%) rotateZ(-83deg);
 }
 
-#texteGeo{
-    color:white;
+#texteGeo {
+    color: white;
     border: solid 3px white;
     text-align: justify;
     width: 50%;
@@ -436,18 +619,21 @@ td img{
     left: 33vw;
     padding: 7px;
 }
-#geographie{
+
+#geographie {
     position: absolute;
-    top:-28vh;
+    top: -28vh;
     left: 33vw;
 }
-#tourisme{
+
+#tourisme {
     position: absolute;
     top: -6vh;
     left: 33vw;
 }
-#texteTourisme{
-    color:white;
+
+#texteTourisme {
+    color: white;
     border: solid white 3px;
     text-align: justify;
     width: 30%;
@@ -457,32 +643,36 @@ td img{
     left: 33vw;
     padding: 7px;
 }
-#imgBulg1{
+
+#imgBulg1 {
     width: 25%;
     position: absolute;
     top: -30vh;
     left: 5vw;
 }
-#bateau{
+
+#bateau {
     width: 20%;
     position: absolute;
     right: 10vw;
     bottom: -57vh;
     z-index: -10;
 }
-#imgBulg2{
+
+#imgBulg2 {
     width: 40%;
     position: absolute;
     left: 33vw;
     bottom: -57vh;
 }
 
+
 /*----------Reglement------------*/
 
 .titreReglement {
     position: absolute;
-    bottom: 4%;
-    width: 70vh;
+    bottom: 10%;
+    width: 50vh;
     left: 1%;
     margin: 0;
     transform: rotate(-90deg);
@@ -490,102 +680,229 @@ td img{
     color: white;
 }
 
-
-#texteLibreDroit {
-    text-align: center;
-    color: white;
-    border: 3px solid white;
-    font-size: 1.5vw;
-    padding: 1vw;
-    margin-left: 10%;
-    margin-right: 5%;
+.fondRouge {
+    background-color: #FB5053;
 }
 
-.fondJaune {
-    background-color: #f95053;
-}
-
-
-#afficheRegle {
-    background-image: url(../images/imgFondJaune.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    width: 274px ;
-    height: 200px;
-    position: absolute;
+#libreDroit {
     display: flex;
-    flex-direction: column;
-    padding: 0 5px 0 10px;
-    text-align: right;
-    top: 25vh;
-    right: 5%;
+    position: relative;
+    margin-left: 7.3%;
+    margin-top: 2%;
+    width: 86%;
+    margin-bottom: 2%;
+}
+
+#libreDroit::before {
+    position: relative;
+    content: url(../images/imgCocheGrande.png);
+}
+
+#libreDroit p {
+    text-align: left;
+    padding-left: 2%;
+    font-size: 135%;
+    margin: 0;
+}
+
+#partieGauche {
+    /*width: 80%;*/
+    display: flex;
+    position: relative;
+    margin-left: 6%;
+    margin-top: 1%;
+    margin-bottom: 0%;
+}
+
+#afficheSon {
+    display: inline-block;
+    margin-right: 0;
+    width: 50%;
 }
 
 #sonRegle {
-    background-image: url(../images/imgFondBleu.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    position: absolute;
-    padding: 0 20px 0 5px;
-    width: 420px;
-    height: 260px;
-    bottom: 8vh;
-    left: 35vw;
+    margin-top: 6%;
 }
 
-#videoRegle {
-    background-image: url(../images/imgFondRouge.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+#videoMention {
+    display: inline-block;
+    margin-right: 0;
+    width: 40%;
+}
+
+.carreRegle {
+    background-color: #fff;
+    box-shadow: 3px 4px 11px 0px rgba(0, 0, 0, 0.61);
+    /*width: 22%;*/
+    padding: 5px;
+    margin-left: 6%;
+    margin-right: 0;
+}
+
+.carreRegle h2 {
+    margin-bottom: 0;
+    margin-top: 1%;
+    font-size: 170%;
+    color: #21B3DF;
+}
+
+.carreRegle p::before {
+    position: relative;
+    content: url(../images/imgCoche.png);
+    margin-right: 3%;
+}
+
+.carreRegle p {
     text-align: left;
+    font-size: 120%;
+    margin-left: 5%;
+    margin-top: 0;
+    padding-right: 20%;
+}
+
+#afficheRegle h2 {
+    color: #FFD73A;
+}
+
+#sonRegle h2 {
+    color: #FB5053;
+}
+
+#infoMention {
+    display: block;
+    width: 80%;
+    padding: 5px;
+    margin-top: 6%;
+    margin-left: 6%;
+}
+
+#infoMention p {
+    position: relative;
+    text-align: left;
+    font-size: 120%;
+    margin-left: 5%;
+    margin-top: 0;
+    padding: 3%;
+    font-family: WalterTurnCoat;
+}
+
+.positionRegle {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    position: relative;
+    margin-left: 5%;
+}
+
+#partieDroite {
+    position: relative;
+    margin: 0;
+}
+
+#titreDeroulement {
+    display: flex;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-bottom: 0;
+    color: #fff;
+}
+
+body:before {
+    content: '';
     position: absolute;
-    padding: 0 10px;
     top: 25%;
-    left: 10%;
-    height: 60vh;
+    right: 4%;
+    bottom: 0px;
+    transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 4px;
+    height: 51%;
+    background-color: #fff;
 }
 
-#videoRegle>h2, #afficheRegle>h2 {
-    text-align: center;
-}
-#videoRegle>:last-child{
-    width : 70%;
-}
-
-#videoRegle::before{
-    content: "";
-    background-image: url(../images/imgPasseport.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    position: absolute;
-    height: calc(80vh - 260px);
-    width: calc(29vw - 260px);
-    right: -25vw;
-}
-
-#ilNeVousReste::after{
-    content: "";
-    position: absolute;
-    background-image: url(../images/imgLivre.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    width : 200%;
-    height: 100%;
-    bottom: -100%;
+body .entries {
+    width: 400px;
+    max-width: 800px;
+    position: relative;
     right: 0;
 }
 
+body .entries .entry {
+    width: 70%;
+    float: left;
+    padding: 20px;
+    clear: both;
+    text-align: right;
+    margin-top: 0;
+}
 
-#ilNeVousReste {
-    font-family: "WalterTurnCoat";
-    text-transform: capitalize;
-    position : absolute;
-    right: 5%;
-    top: calc(25vh + 200px);
-    width : 200px;
+#premierSept {
+    font-size: 130%;
+    position: relative;
+    color: #1D1D1D;
+    font-family: "KayakSansLight";
+    margin-top: 0;
+}
+
+.titleDeux {
+    position: relative;
+    color: #1D1D1D;
+    font-family: "KayakSansLight";
+    font-size: 130%;
+    margin-bottom: 6px;
+    margin-top: 10%;
+}
+
+body .entries .entry:not(:first-child) {
+    margin-top: -60px;
+}
+
+body .entries .entry .title {
+    position: relative;
+    color: #1D1D1D;
+    font-family: "KayakSansLight";
+}
+
+body .entries .entry p {
+    font-size: 130%;
+    padding-bottom: 4px;
+    margin: 0;
+}
+
+body .entries .entry .title:before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border: 4px solid #ffffff;
+    background-color: #fff;
+    border-radius: 100%;
+    transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: -49px;
+    z-index: 1000;
+}
+
+body .entries .entry .bodyRegle {
+    color: #fff;
+}
+
+body .entries .entry .bodyRegle p {
+    line-height: 1.4em;
+}
+
+
+/*body .entries .entry:nth-child(2n) {
+    text-align: left;
+    float: right;
+}*/
+
+body .entries .entry:nth-child(2n) .title:before {
+    left: 313px;
+    /* left:345 */
+}
+
+body .entries .entry:nth-child(2n) .title.big:before {
+    transform: translate(-8px, -50%);
+    transform: translate(-8px, -50%);
 }
 
 
@@ -641,8 +958,6 @@ td img{
     transform-origin: top-left;
     transform: rotateZ(-90deg);
 }
-
-
 
 
 /*Permet de tourner le titre de la page*/
@@ -773,14 +1088,14 @@ td img{
     flex-wrap: wrap;
 }
 
-.contenuP div{
-    height:50%;
-    width:100%;
+.contenuP div {
+    height: 50%;
+    width: 100%;
 }
 
-.contenuP img{
+.contenuP img {
     height: 100%;
-    width:100%;
+    width: 100%;
 }
 
 #cont2 {
@@ -901,42 +1216,43 @@ footer>a {
     transform: skewX(7deg) translateX(-53%) translateY(220%) rotateZ(-83deg);
 }
 
-
 #contact {
     color: white;
     font-size: 5vw;
     transform-origin: top-left;
     transform: skewX(7deg) translateX(-49%) translateY(280%) rotateZ(-83deg);
-    position:absolute;
+    position: absolute;
 }
 
-#divAPropos{
-    width:50vw;
-    margin : auto;
-    color:white;
-    border : solid 3px white;
-    text-align:justify;
-    padding : 5px;
+#divAPropos {
+    width: 50vw;
+    margin: auto;
+    color: white;
+    border: solid 3px white;
+    text-align: justify;
+    padding: 5px;
     position: absolute;
-    position : relative;
-}
-#divAPropos::after{
-    content : url(../images/imgFlecheAccueil.png);
-    transform : rotateY(180deg) rotate(45deg);
-    position: absolute;
-    bottom :-58px;
-    right : -70px;
+    position: relative;
 }
 
-.photoEquipe:nth-child(odd){
-    width : 5vw;
-    height : 20vw;
+#divAPropos::after {
+    content: url(../images/imgFlecheAccueil.png);
+    transform: rotateY(180deg) rotate(45deg);
+    position: absolute;
+    bottom: -58px;
+    right: -70px;
 }
-.photoEquipe:nth-child(even){
-    width : 15vw;
-    height : 20vw;
-    
+
+.photoEquipe:nth-child(odd) {
+    width: 5vw;
+    height: 20vw;
 }
+
+.photoEquipe:nth-child(even) {
+    width: 15vw;
+    height: 20vw;
+}
+
 
 /*----Mentions Légales----*/
 
@@ -1039,122 +1355,131 @@ footer>a {
     border-left: 3px solid #FFD73A;
 }
 
+
 /*----------------Les Modifs de Thomas le génie--------------------------*/
-#slogan{
-    color:white;
+
+#slogan {
+    color: white;
     border: solid white 3px;
-    font-size:50px;
-    width:50vw;
+    font-size: 50px;
+    width: 50vw;
 }
-#texteIndex1{
-    color:white;
+
+#texteIndex1 {
+    color: white;
     font-size: 3vh;
     width: 25vw;
-    border:solid 3px white;
+    border: solid 3px white;
 }
-#avion{
-    width:20%;
+
+#avion {
+    width: 20%;
     position: absolute;
-    top:20%;
+    top: 20%;
     left: 35%;
     z-index: -2;
 }
-#texteIndex2{
-    color:white;
+
+#texteIndex2 {
+    color: white;
     font-size: 3vh;
     width: 30vw;
     position: absolute;
-    left:20%;
+    left: 20%;
     border: 3px white solid;
 }
-#gopro{
+
+#gopro {
     width: 10%;
     position: absolute;
     left: 6%;
 }
-#texteBilgre{
-    color:white;
+
+#texteBilgre {
+    color: white;
     font-size: 5vh;
     width: 50vw;
     position: absolute;
-    top:70%;
+    top: 70%;
     border: 3px white solid;
 }
 
-#imgAccueil{
+#imgAccueil {
     width: 28%;
     position: absolute;
-    top:1%;
-    right:13%;
-}
-#texteDossier{
-    width:20%;
-    font-size: 2.5vh;
-    position: absolute;
-    right:30%;
-    top:50%;
-    font-family: WalterTurnCoat;
-    
-    
+    top: 1%;
+    right: 13%;
 }
 
-#carte{
+#texteDossier {
+    width: 20%;
+    font-size: 2.5vh;
+    position: absolute;
+    right: 30%;
+    top: 50%;
+    font-family: WalterTurnCoat;
+}
+
+#carte {
     width: 20%;
     position: absolute;
-    bottom:0%;
-    right:20%;
+    bottom: 0%;
+    right: 20%;
 }
 
 
 /*----------------COntact-------------*/
-#ContenuContact{
+
+#ContenuContact {
     margin-left: 10%;
 }
 
-#FormContact{
+#FormContact {
     max-width: 50vw;
-    
 }
 
-#FormContact>label{
-    display : none;
+#FormContact>label {
+    display: none;
 }
-#FormContact>input::-webkit-input-placeholder, #message::-webkit-input-placeholder{
-    color:white;
+
+#FormContact>input::-webkit-input-placeholder,
+#message::-webkit-input-placeholder {
+    color: white;
     font-family: KayakSansRegular;
     font-size: 20px;
 }
 
-#FormContact>input, #message{
+#FormContact>input,
+#message {
     background-color: #00B3DF;
-    border : solid white 3px;
+    border: solid white 3px;
     color: white;
     display: block;
     margin-top: 2%;
-    padding : 5px;
+    padding: 5px;
 }
-#FormContact>input:last-child{
+
+#FormContact>input:last-child {
     font-family: KayakSansRegular;
     font-size: 20px;
 }
-#FormContact>input:last-child:hover{
+
+#FormContact>input:last-child:hover {
     background-color: #05657E;
     font-family: KayakSansRegular;
     font-size: 20px;
 }
 
-
-#question{
+#question {
     padding: 5px;
     width: 40vw;
-    border : solid white 4px;
+    border: solid white 4px;
     color: white;
     font-family: Leixo;
-    font-size : 25px;
-    
+    font-size: 25px;
 }
 
-#question::after{
+#question::after {
     content: url(../images/imgFlecheAccueil.png);
     position: absolute;
     transform: rotateY(180deg) rotate(-90deg);
@@ -1162,39 +1487,43 @@ footer>a {
     left: 35%;
 }
 
-#question::before{
+#question::before {
     content: "";
     background-image: url(../images/imgContact.png);
     background-repeat: no-repeat;
     background-size: contain;
-    position : absolute;
-    top : 0;
-    right : -25%;
-    width : 75%;
+    position: absolute;
+    top: 0;
+    right: -25%;
+    width: 75%;
     height: 75%;
 }
 
+
 /*---------PARTICIPER----------*/
 
-#mainParticiper{
+#mainParticiper {
     background-color: #ff7477;
 }
-#lesIcones{
+
+#lesIcones {
     justify-content: space-around;
     display: flex;
     flex-direction: row
 }
-#publications{
+
+#publications {
     color: white;
-	font-size: 3.5vh;
+    font-size: 3.5vh;
 }
-.divAffiche{
+
+.divAffiche {
     display: flex;
     flex-direction: column;
     align-items: center;
- 
 }
-.depot{
+
+.depot {
     padding-top: 25px;
     padding-bottom: 25px;
     padding-left: 10px;
@@ -1203,16 +1532,19 @@ footer>a {
     background-color: rgba(123, 58, 60, 0.58);
     width: 130%;
 }
-.modifier{
-    padding:10px;
- 
+
+.modifier {
+    padding: 10px;
 }
-#textPubli{
+
+#textPubli {
     text-align: justify;
     color: white;
     padding-left: 250px;
     padding-right: 250px;
 }
+
+
 /*----interface inscription---*/
 
 .modal2 {
@@ -1231,12 +1563,12 @@ footer>a {
     display: block
 }
 
-#sortir{
-    position:absolute;
+#sortir {
+    position: absolute;
     width: 80%;
     height: 100%;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
 }
 
 .modal-content2 {
@@ -1249,56 +1581,58 @@ footer>a {
     right: 0px;
     width: 20%;
     height: 92%;
-    background-color: #ff7477 ;
+    background-color: #ff7477;
     min-width: 300px;
 }
 
-#photoIdentite{
+#photoIdentite {
     border-radius: 90px;
     height: 100%;
 }
-#principI{
+
+#principI {
     display: flex;
     justify-content: space-around;
     height: 12%;
 }
 
-#principI p{
-    font-size:100%;
+#principI p {
+    font-size: 100%;
     font-family: "KayakSansBold";
 }
 
-#contentI{
-    display:flex;
-    flex-direction:column;
+#contentI {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 
-#contentI label{
-    flex-direction:column;
-    font-family:  "Leixo";
+#contentI label {
+    flex-direction: column;
+    font-family: "Leixo";
     text-align: left;
-    margin:2%;
+    margin: 2%;
     margin-left: 10%;
     font-size: 130%;
 }
 
-#contentI input,#contentI p{
-    background-color:#ff7477;
+#contentI input,
+#contentI p {
+    background-color: #ff7477;
     font-size: 115%;
-    margin-left:10%;
+    margin-left: 10%;
     font-family: "KayakSansBold";
     border: 0px;
     border-left: 3px white solid;
     border-bottom: 3px white solid;
     text-align: center;
-    padding-bottom:1%;
-    width:75%;
+    padding-bottom: 1%;
+    width: 75%;
     margin-bottom: 1%;
     margin-top: -1%;
 }
 
-.inter1{
+.inter1 {
     font-family: "KayakSansBold";
     font-size: 15px;
     border: 4px #FFD73A solid;
@@ -1307,33 +1641,32 @@ footer>a {
     position: absolute;
 }
 
-#deconnecter{
+#deconnecter {
     width: 82px;
     height: 21px;
     top: calc(500px + 5%);
     left: 19%;
 }
 
-#modifier{
+#modifier {
     width: 52px;
     height: 17px;
     top: calc(500px + 5%);
     right: 22%;
 }
 
-.inter2{
+.inter2 {
     display: none;
-  
 }
 
-#boutonsI #valider{
+#boutonsI #valider {
     width: 60px;
     height: 25px;
     top: calc(500px + 5%);
     right: 29%;
 }
-    
-#annuler{
+
+#annuler {
     width: 50px;
     height: 20px;
     top: calc(500px + 5%);
@@ -1341,43 +1674,45 @@ footer>a {
 }
 
 
-
 /*------------------------FAQ--------------------------*/
-fieldset{
+
+fieldset {
     display: inline-block;
-    width : 75vw;
+    width: 75vw;
     border: white solid 5px;
     margin: 0 7vw 8px 0;
     text-align: left;
 }
-fieldset>legend{
+
+fieldset>legend {
     font-family: leixo;
 }
 
-fieldset>p{
+fieldset>p {
     font-size: 15px;
 }
 
-fieldset a:hover{
+fieldset a:hover {
     color: #FF7477;
 }
 
-#FAQ{
+#FAQ {
     padding-top: 3px;
     position: absolute;
-    color :white;
-    font-size:5vw;
-    transform-origin:top-left;
+    color: white;
+    font-size: 5vw;
+    transform-origin: top-left;
     transform: skewX(7deg) translateX(-49%) translateY(220%) rotateZ(-83deg);
 }
 
 
 /*-------------------------ADMINISTRATION---------------------------*/
-#Admin{
-    display: flex;  
+
+#Admin {
+    display: flex;
 }
 
-#choixAdmin{
+#choixAdmin {
     display: flex;
     flex-direction: column;
     align-content: space-between;
@@ -1385,50 +1720,49 @@ fieldset a:hover{
     font-family: leixo;
     font-size: 25px;
     height: 100%;
-    width : 25%;
+    width: 25%;
 }
 
-#choixAdmin>span{
+#choixAdmin>span {
     margin-top: 10vh;
 }
 
-#choixAdmin>span:hover{
+#choixAdmin>span:hover {
     text-decoration: underline;
 }
 
-
-#Admin p{
+#Admin p {
     text-align: left;
     padding-left: 5px;
 }
 
-.boucleAdmin p:hover{
+.boucleAdmin p:hover {
     font-family: KayakSansBold;
 }
 
-.renduBDD{
+.renduBDD {
     border: solid white 5px;
     width: 50%;
 }
 
-#boucleAdmin{
+#boucleAdmin {
     display: flex;
 }
-.boucleAdmin{
+
+.boucleAdmin {
     display: block;
 }
 
-#lesDonnees{
+#lesDonnees {
     display: flex;
     width: 70vw;
 }
 
 
 /*-----------Poster Affiche-----------*/
-#formulairePoster{
+
+#formulairePoster {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
-
