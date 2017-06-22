@@ -54,10 +54,6 @@ if(isset($_SESSION["id"])){
 
                     copy($_FILES["affiche"]["tmp_name"],"travaux/".$_FILES["affiche"]["name"]);
 
-                    //require("php/convertirImage85x85.inc.php");
-
-                    //convertirImage85x85($_FILES["affiche"]["tmp_name"],"travaux/vignette/vignette_".$_FILES["affiche"]["name"]);
-
                     $mini="travaux/vignette/img1.png";
                     $titre=$_POST["titre"];
                     $chemin="travaux/".$_FILES["affiche"]["name"];
@@ -124,14 +120,6 @@ if(isset($_SESSION["id"])){
 
         $chemin="travaux/vignette/son1.png";
 
-        //if($_FILES['miniSon']['name']!=""){
-
-           // copy($_FILES["miniSon"]["tmp_name"],"travaux/vignette/".$_FILES["miniSon"]["name"]);
-
-           // $chemin="travaux/vignette/".$_FILES["miniSon"]["name"];
-
-        //}
-
         $bdd =new PDO("mysql:host=".MYHOST.";dbname=".MYDB, MYUSER, MYPASS) ;
         
         $bdd->query("SET NAMES utf8");
@@ -164,8 +152,6 @@ if(isset($_SESSION["id"])){
             <input class="inputPost" id ="droitVid" name="droitVid" type="radio" value="1">
             <label for="video">Déposez le Vidéo ici :</label>
             <input class="inputPost file" type="file" name="Video" id="Video" accept=".mp4,.wav">
-            <label for="inputPost">Désposez une miniature pour votre son</label>
-            <input class="inputPost" type="file" name="miniVid" id="miniVid" accept=".png,.jpg">
             <label for="message">Description de votre travail</label>
             <textarea class="inputPost messageP" name="descriptionVid" rows="10" cols="50" placeholder="Description" required></textarea>
             <input type="submit" value="Envoyer" style="cursor:pointer" name="submitVid">
@@ -178,8 +164,8 @@ if(isset($_SESSION["id"])){
             $titreVid=$_POST["titreVid"];
             $droitVid=$_POST["droitVid"];
             if($_FILES["Video"]["name"]){
-            copy($_FILES["Video"]["tmp_name"],"travaux/video/".$_FILES["Video"]["name"]);
-            $Vid="travaux/video/".$_FILES["Video"]["name"];
+                copy($_FILES["Video"]["tmp_name"],"travaux/video/".$_FILES["Video"]["name"]);
+                $Vid="travaux/video/".$_FILES["Video"]["name"];
             }
 
             $descriptionVid=$_POST["descriptionVid"];
@@ -187,15 +173,7 @@ if(isset($_SESSION["id"])){
             echo "Le chemin est : ".$Vid;
             echo "La description est : ".$descriptionVid;
             $chemin="travaux/vignette/vid1.png";
-
-            //if($_FILES['miniVid']['name']!=""){
-
-               // copy($_FILES["miniVid"]["tmp_name"],"travaux/vignette/".$_FILES["miniVid"]["name"]);
-
-                //$chemin="travaux/vignette/".$_FILES["miniVid"]["name"];
-
-              //  }
-
+            
             $bdd =new PDO("mysql:host=".MYHOST.";dbname=".MYDB, MYUSER, MYPASS) ;
             $bdd->query("SET NAMES utf8");
             $bdd->query("SET CHARACTER SET 'utf8'");
