@@ -48,8 +48,32 @@
         
         //ENVOIE DU MAIL
         mail($mail,$sujet,$message,$header);
-        echo("mail evoyé");
         
+        session_start();
+    header   ("Content-type: text/html; charset=UTF-8");
+?>
+        <html>  
+        <head>
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <title>DEFI HAWK</title>
+            <meta name="description" content="Un site concours, tentez de gagner un voyage grace à une production audiovisuelle ! Defi Hawk">
+            <link type="text/css" rel="stylesheet" href="../css/style.css"/>
+            
+        </head>
+        <body class="fondBleu">
+            
+            <main>
+                <p>Votre message a bien été envoyé.</p>
+                <p>Retour au site <a href="../index.php">ici</a>.</p>
+            </main>
+            
+           
+
+        </body>
+</html>
+            
+<?php  
     }else{
 
         header('Location: ../aPropos.php') ;
