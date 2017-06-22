@@ -7,7 +7,23 @@
     $reqmail->execute(array($mail));
     $mailexist = $reqmail->rowCount();
     if($mailexist==0){
-        echo("false");
+        $reqmail = $bdd->prepare("SELECT * FROM JURY WHERE AdresseMail = ?");
+        $reqmail->execute(array($mail));
+        $mailexist = $reqmail->rowCount();
+        
+        if($mailexist==0){
+            echo("false");            
+        }else{
+            $mdp=sha1($_POST["mdp"]);
+            $reqmdp = $bdd->prepare("SELECT MotDePasse FROM JURY WHERE AdresseMail = ?");
+            $reqmdp->execute(array($mail));
+            $data = $reqmdp->fetch();
+            if($data['MotDePasse']!=$mdp){
+              echo"false";
+            }else{
+                echo"true";
+            }
+        }
     }else{
         $mdp=sha1($_POST["mdp"]);
         $reqmdp = $bdd->prepare("SELECT MotDePasse FROM UTILISATEUR WHERE AdresseMail = ?");

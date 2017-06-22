@@ -7,7 +7,16 @@
     $reqmail->execute(array($mail));
     $mailexist = $reqmail->rowCount();
     if($mailexist==0){
-        echo("false");
+        $reqmail = $bdd->prepare("SELECT * FROM JURY WHERE AdresseMail = ?");
+        $reqmail->execute(array($mail));
+        $mailexist = $reqmail->rowCount();
+        if($mailexist==0){
+            echo("false");            
+        }else{
+            echo("true");
+        }
+        
+        
     }else{
         echo("true");
     }
