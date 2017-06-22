@@ -55,9 +55,9 @@
 		          $statement->execute(array(":id"=>$_GET["id"]));
                   $ligne = $statement->fetch(PDO::FETCH_ASSOC);
                 ?>
-            <p id="pA">nom : <?php echo $ligne["TitreSon"]; ?></p>
+            <p id="pA">Titre : <?php echo $ligne["TitreSon"]; ?></p>
             <audio href="<?php echo $ligne["AccesSon"] ?>" preload="auto" id="sonA"/>
-            <p id="descA"><?php echo $ligne["DescriptionSon"] ?></p>
+            <p id="descA">Description :<?php echo $ligne["DescriptionSon"] ?></p>
         </main>
         <?php 
             }else if($_GET["type"]=="video"){
