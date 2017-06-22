@@ -76,7 +76,7 @@
 		          $statement->execute(array(":id"=>$ligne2["IdUser"]));
                   $ligne3 = $statement->fetch(PDO::FETCH_ASSOC);
                 ?>
-            <h1 class="h1A">Titre : <?php echo $ligne["TitreSon"]; ?></h1>
+            <h1>Titre : <?php echo $ligne["TitreSon"]; ?></h1>
             <div class="divPenchee">
                 <audio src="<?php echo $ligne["AccesSon"] ?>" preload="auto" id="audio"/>
             </div>
@@ -118,9 +118,9 @@
                 ?>
             <h1 class="h1A">Titre : <?php echo $ligne["TitreVideo"]; ?></h1>
             <div class=divPenchee>
-            <video id="video" width="550" height="430" autoplay='0' controls='controls' preload='auto' loop='loop' src="<?php echo $ligne["AccesVideo"]?>">
+            <video id="video" width="550" height="430"  controls='controls' preload='auto' src="<?php echo $ligne["AccesVideo"]?>">
                 <source src="<?php echo $ligne["AccesVideo"] ?>" type="video/mp4">
-            </video>
+            </video>    
             </div>
             <div class="divPenchee2">
                 <p class="descA">Description : <?php echo $ligne["DescriptionVideo"] ?></p>

@@ -1693,6 +1693,7 @@ fieldset a:hover {
 
 .divPenchee{
     position: absolute;
+    top: 28%;
     left: -5%;
     width: 50vw;
     min-height: 30vh;
@@ -1738,11 +1739,11 @@ fieldset a:hover {
 
 /*----------------Afficher | Son--------------*/
 #mainSon{
-    background-color: #FFD73A;
+    background-color: #FFD73A;    
 }
 .audiojs{
     position: absolute;
-    left: 10%;
+    left: 15%;
     top: 40%;
 }
 #vote{
@@ -1787,7 +1788,7 @@ fieldset a:hover {
 }
 #voteVid{
     position: absolute;
-    bottom: 0%;
+    bottom: -200%;
     right: 10%;
     font-size: 3.5vh;
     color: white;
