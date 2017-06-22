@@ -33,7 +33,7 @@
         $codeHTML = "<h2>Les sons</h2>";
         
         //requet sql
-        $sql = "SELECT IdSon, TitreSon , DatePublication, AccesMiniature FROM SON ORDER BY DatePublication";
+        $sql = "SELECT IdSon, TitreSon , DatePublication, AccesMiniature FROM SON ORDER BY DatePublication DESC ";
 
         $statement = $pdo->query($sql);
 
@@ -53,7 +53,7 @@
         $codeHTML = "<h2> Les videos</h2>";
         
             //requet sql
-        $sql = "SELECT IdVideo, TitreVideo, DatePublication, AccesMiniature FROM VIDEO ORDER BY DatePublication";
+        $sql = "SELECT IdVideo, TitreVideo, DatePublication, AccesMiniature FROM VIDEO ORDER BY DatePublication DESC ";
 
         $statement = $pdo->query($sql);
 
@@ -73,7 +73,7 @@
          $codeHTML = "<h2> Les affiches</h2>";
        
             //requet sql
-        $sql = "SELECT IdPhoto, TitrePhoto, DatePublication, AccesMiniature FROM PHOTO ORDER BY DatePublication";
+        $sql = "SELECT IdPhoto, TitrePhoto, DatePublication, AccesMiniature FROM PHOTO ORDER BY DatePublication DESC ";
 
         $statement = $pdo->query($sql);
 

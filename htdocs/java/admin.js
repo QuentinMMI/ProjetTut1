@@ -82,6 +82,10 @@
                 for (var uneOeuvre of lesOeuvres){
                     uneOeuvre.addEventListener("click", afficherDetailOeuvre);
                 }
+                    var lespoubelles = document.querySelectorAll(".poubelle");
+            for (var poubelle of lespoubelles){
+                poubelle.addEventListener('click', SupprimerProfil);
+            }
                 
                                 
                 
