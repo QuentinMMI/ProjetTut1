@@ -2,7 +2,7 @@
 session_start();
     header   ("Content-type: text/html; charset=UTF-8");
 
-if($_SESSION['id'] != 1){
+if($_SESSION['id'] != 1 || $_SESSION['type']=='jury'){
     header('Location: index.php');
 }else{
 ?>

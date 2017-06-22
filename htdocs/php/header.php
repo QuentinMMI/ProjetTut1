@@ -11,7 +11,7 @@
             
               if(isset($_SESSION['id']))
               {
-                  if($_SESSION['id'] == 1){
+                  if($_SESSION['id'] == 1 && $_SESSION['type'] !='jury'){
               ?>
             <a class="policeNav" href="admin.php" id="connect1" style="cursor:pointer">Administration</a>
             <?php
