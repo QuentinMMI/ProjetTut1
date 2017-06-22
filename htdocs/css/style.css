@@ -1652,8 +1652,9 @@ fieldset a:hover {
     text-decoration: underline;
 }
 
-#zonePecision img, #zonePecision iframe{
+#zonePecision img, #zonePecision video{
     max-width: 100%;
+    max-height: 50vh;
 }
 
 .fondRouge{
