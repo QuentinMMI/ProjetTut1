@@ -17,7 +17,7 @@
 
         
         //Declaration des messager format txt
-        $message_txt = "Message envoyé part : ".$_POST['nomEnvoyeur'].$passage_ligne."Adresse de réponse : ".$_POST['mailEnvoyeur'].$passage_ligne.$passage_ligne.$_POST['message'];
+        $message_txt = "Message envoyé par : ".$_POST['nomEnvoyeur'].$passage_ligne."Adresse de réponse : ".$_POST['mailEnvoyeur'].$passage_ligne.$passage_ligne.$_POST['message'];
         
         //=====Création de la boundary
         $boundary = "-----=".md5(rand());
