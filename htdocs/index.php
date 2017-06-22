@@ -1,89 +1,101 @@
-
 <?php
     session_start();
     header   ("Content-type: text/html; charset=UTF-8");
 ?>
-<html>  
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>DEFI HAWK</title>
-    <meta name="description" content="Un site concours, tentez de gagner un voyage grace à une production audiovisuelle ! Defi Hawk">
-    <link type="text/css" rel="stylesheet" href="css/style.css"/>
-    <link rel="shortcut icon" href="images/favicon.ico">
-    <script src="java/planche.js"></script>
-    <script src="<?php if(isset($_SESSION['id'])){ ?>java/modale2.js<?php }else{ ?>java/modale.js<?php } ?>"></script>
-    <script src="java/modif.js"></script>
-</head>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>DEFI HAWK</title>
+        <meta name="description" content="Un site concours, tentez de gagner un voyage grace à une production audiovisuelle ! Defi Hawk">
+        <link type="text/css" rel="stylesheet" href="css/style.css" />
+        <link rel="shortcut icon" href="images/favicon.ico">
+        <script src="java/planche.js"></script>
+        <script src="<?php if(isset($_SESSION['id'])){ ?>java/modale2.js<?php }else{ ?>java/modale.js<?php } ?>"></script>
+        <script src="java/modif.js"></script>
+        <script src="java/lot.js"></script>
+    </head>
+    <body>
+        <header>
+            <?php require("php/header.php"); ?>
+        </header>
+        <!------------------------------------------------------------ ACCUEIL ----------------------------------------->
+        <main id="pageAccueil">
+            <div id="planche1" class="planche planche1">
+                <h1 class="accueilTitre hPub">aCCUEIL</h1>
+                <div>
+                    <div>
+                        <h2 id="slogan">Concourez, Voyagez, Revez</h2>
+                        <div class="lesTextes">
+                            <p id="texteIndex1">Gagne un voyage en Bulgarie et une GoPro Hero 5 pour filmer tes plus beaux moments !</p>
+                            <img id="avion" src="images/imgAvion.png" alt="image d'un avion en dessin">
+                            <p id="texteIndex2">En realisant une musique, une vidéo ou une affiche avant le 23 Juin 2017</p>
+                            <img id="gopro" src="images/imgGoproDessin.png" alt="dessin d'une go pro">
+                        </div>
+                        <p id="texteBilgre">Ta production doit présenter <strong>la Bulgarie</strong>. Pour en savoir plus, c'est par ici : <a href="reglement.php">Règlement</a></p>
+                    </div>
+                    <div>
+                        <img id="imgAccueil" src="images/imgAccueil.png" alt="images de la Bugarie">
+                        <p id="texteDossier"> <strong>CONSULTEZ NOTRE DOSSIER<br> LA BULGARIE <br>POUR EN SAVOIR PLUS</strong></p>
 
-<body>
-<header>
-      <?php require("php/header.php"); ?>
-</header>
-<!------------------------------------------------------------ ACCUEIL ----------------------------------------->
-<main id="pageAccueil">
-        <div id="planche1" class="planche planche1">
-            <h1 class="accueilTitre hPub">aCCUEIL</h1>
-            <div>
-                <div>
-                    <h2 id="slogan">Concourez, Voyagez, Revez</h2>
-                    <div class="lesTextes">
-                        <p id="texteIndex1">Gagne un voyage en Bulgarie et une GoPro Hero 5 pour filmer tes plus beaux moments !</p>
-                        <img id="avion" src="images/imgAvion.png" alt="image d'un avion en dessin">
-                        <p id="texteIndex2">En realisant une musique, une vidéo ou une affiche avant le 23 Juin 2017</p>
-                        <img id="gopro" src="images/imgGoproDessin.png" alt="dessin d'une go pro">
+                        <img id="carte" src="images/imgMap.png" alt="Carte plaçant la Bulgarie par rapport à la France">
                     </div>
-                    <p id="texteBilgre">Ta production doit présenter <strong>la Bulgarie</strong>. Pour en savoir plus, c'est par ici : <a href="reglement.php">Règlement</a></p>
-                </div>
-                <div>
-                    <img id="imgAccueil" src="images/imgAccueil.png" alt="images de la Bugarie">
-                    <p id="texteDossier"> <strong>CONSULTEZ NOTRE DOSSIER<br> LA BULGARIE <br>POUR EN SAVOIR PLUS</strong></p>
-                    
-                    <img id="carte" src="images/imgMap.png" alt="Carte plaçant la Bulgarie par rapport à la France">
                 </div>
             </div>
-        </div>
-<!----------------------------------------------------------- LOTS ------------------------------->
-            <div id="planche2" class="planche planche2 parentTitrePage">
+            <!----------------------------------------------------------- LOTS ------------------------------->
+           <div id="planche2" class="planche planche2 parentTitrePage">
                 <h1 id="hLots">LoTS</h1>
-                <div class="divHaut">
-                    <div class="divImgLots"> <img src="images/imgBulgarie3.png"></div>
-                    <h2 class="titrePage">Tentez de gagner :</h2>
-                    <div class="divImgLots"> <img src="images/imgBulgarie5.png"></div>
-                </div>
-                <div class="divBas">
-                    <div class="imgDivBas">
-                        <img src="images/imgBulgarie4.png">
+                <div id="planche2Bis">
+                    <div id="lesPrix">
+                        <h2>A gagner</h2>
+                        <div>
+                            <h3 id="1erPrix" class="lesPrix lesPrixHover" style="cursor:pointer">1 er Prix</h3>
+                            <p>> Un voyage en Bulgarie d'une valeur de 5000</p>
+                            <p>> Une Gorpro Hero 5 dernière generation</p>
+                        </div>
+                        <div>
+                            <h3 id="prix2" class="lesPrix lesPrixHover" style="cursor:pointer">2 eme Prix</h3>
+                            <p>> Une Gopro Hero 5</p>
+                            <p>> Un appareil Photo</p>
+                            <p>> Une Wonderbox</p>
+                        </div>
+                        <div>
+                            <h3 id="prix3" class="lesPrix lesPrixHover" style="cursor:pointer">3 eme Prix</h3>
+                            <p>> Une Gopro Hero 5</p>
+                            <p>> Une Wonderbox</p>
+                        </div>
                     </div>
-                    <div class="podium">
-                        <table id="ladder">
-                            <tr>
-                                <td>
-                                    <img src="images/imgLots2.png" alt="Un appareil photo Canon EoS 80D + une GoPro Hero5 et une wonderbox">
-                                    <div id="podium1">
-                                        <p>2</p>
-                                        <p>Un appareil photo Canon EoS 80D + une GoPro Hero5 et une wonderbox</p>
-                                    </div>
-                                </td>
-                                <td>
-                                    <img src="images/imgLots1.png" alt="une GoPro Hero5 et un voyage en bulgarie">
-                                    <div id="podium0">
-                                        <p>1</p>
-                                        <p>une GoPro Hero5 et un voyage en bulgarie</p>
-                                    </div>
-                                </td>
-                                <td>
-                                    <img src="images/imgLots3.png" alt="Une GoPro Hero5 et une wonderbox">
-                                    <div id="podium2">
-                                        <p>3</p>
-                                        <p>Une GoPro Hero5 et une wonderbox</p>
-                                    </div>
-                                </td>
-                            </tr>
-                        </table>
+
+                    <div id="lesCaracDesPrix" class="or">
+                        <div id="carac">
+                            <div id="caracHaut">
+                                <div>
+                                    <p id="dixNuit"> <span>10</span> Nuits dans un hotel cinq etoiles de Sofia, capitale historique de la Bulgarie</p>
+                                    <p class="textLotVoyage">- Petit déjeuner et formule repas déjeuner/repas</p>
+                                    <p class="textLotVoyage">- Un guide à disposition pour visiter la ville</p>
+                                    <p class="textLotVoyage">- Une voiture personnel</p>
+                                    <p class="textLotVoyage">- Un ensemble de réduction pour découvrir les musées et le patrimoine de la Bulgarie </p>
+                                    <p class="textLotVoyage">- Une journée "activité à sensation"! </p>
+                                </div>
+                                <div><img src="images/imgPlage.png" alt="image d'une plage de Bulgarie "></div>
+                            </div>
+                            <div>
+                                <div #goPro5Prix3>
+                                    <h3>Une Gopro Hero <span>5</span></h3><img src="images/imgGoproLot.png " id="goproLot" alt="image de Gorpro Hero 5 "></div>
+                                <div id="texteGopro">
+                                    <p>- Qualité photo, haute résolution 12mpx</p>
+                                    <p>- Vidéo 4k</p>
+                                    <p> - GPS intégré</p>
+                                    <p> - Wifi/Bluetooth</p>
+                                    <p>- Résistante à l'eau et aux choques</p>
+                                    <p>- Un stabilisateur GoPro KARMA Grip</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+
 <!----------------------------------------------------------- LA BULGARIE ------------------------->
         <div id="planche3" class="planche planche3">
             <h1 id="bulgarie">La bulGaRIE</h1>
@@ -114,3 +126,6 @@
     <script src="java/verif.js"></script>
 </body>
 </html>
+
+
+
