@@ -41,6 +41,9 @@
                                         $requete="INSERT INTO A_Publie(IdUser) VALUE(:id)";
                                         $inserta = $bdd->prepare($requete);
                                         $inserta->execute(array(":id"=>$data["LAST_INSERT_ID()"]));
+                                        $requete="INSERT INTO A_Vote(IdUser) VALUE(:id)";
+                                        $inserta = $bdd->prepare($requete);
+                                        $inserta->execute(array(":id"=>$data["LAST_INSERT_ID()"]));
                                         header('Location: ../index.php#gg');
                                     }else{
                                         header('Location: ../index.php#limiteDage');
