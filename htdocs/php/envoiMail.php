@@ -1,5 +1,5 @@
 <?php
-    if(isset($_POST["Envoyer"])){
+    if(isset($_POST['objet'])){
      
         //Mail de destination
         $mail="defi.hawk@gmail.com";
@@ -17,7 +17,7 @@
 
         
         //Declaration des messager format txt
-        $message_txt = "'".$_POST['message']."'";
+        $message_txt = "Message envoyé part : ".$_POST['nomEnvoyeur'].$passage_ligne."Adresse de réponse : ".$_POST['mailEnvoyeur'].$passage_ligne.$passage_ligne.$_POST['message'];
         
         //=====Création de la boundary
         $boundary = "-----=".md5(rand());
@@ -27,9 +27,9 @@
         
         //création de l'entête
             //Declaration de l'expéditeur
-        $header = "From: \" ".$_Post['nomEnvoyeur']." \"<".$_POST['mailEnvoyeur'].">".$passage_ligne;
+        $header = "From: \" ".$_POST['nomEnvoyeur']." \"<".$_POST['mailEnvoyeur'].">".$passage_ligne;
             //Declaration de l'addresse retour
-        $header=$header. "Reply-to: \"".$_Post['nomEnvoyeur']." \"<".$_POST['mailEnvoyeur'].">".$passage_ligne;
+        $header=$header. "Reply-to: \"".$_POST['nomEnvoyeur']." \"<".$_POST['mailEnvoyeur'].">".$passage_ligne;
             //déclaration de la version MIME
         $header.= "Reply-to: \"RETOUR\" <ADRESSE_RETOUR>".$passage_ligne; 
             //déclaration du content-type
@@ -48,9 +48,34 @@
         
         //ENVOIE DU MAIL
         mail($mail,$sujet,$message,$header);
-        echo("mail evoyé");
         
-    }
+        session_start();
+    header   ("Content-type: text/html; charset=UTF-8");
+?>
+        <html>  
+        <head>
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <title>DEFI HAWK</title>
+            <meta name="description" content="Un site concours, tentez de gagner un voyage grace à une production audiovisuelle ! Defi Hawk">
+            <link type="text/css" rel="stylesheet" href="../css/style.css"/>
+            
+        </head>
+        <body class="fondBleu">
+            
+            <main>
+                <p>Votre message a bien été envoyé.</p>
+                <p>Retour au site <a href="../index.php">ici</a>.</p>
+            </main>
+            
+           
 
-header('Location: ../aPropos.php') ;
+        </body>
+</html>
+            
+<?php  
+    }else{
+
+        header('Location: ../aPropos.php') ;
+    }
 ?>
