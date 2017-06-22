@@ -26,7 +26,7 @@
         
     }else if ($_GET['type'] == 'son'){
         //requet sql
-        $sql = "SELECT SON.TitreSon, Son.DescriptionSon, SON.AccesSon, SON.DatePublication, SON.AccesMiniature, UTILISATEUR.NomUser, UTILISATEUR.PrenomUser FROM SON INNER JOIN A_Publie ON SON.IdSon = A_Publie.IdSon INNER JOIN UTILISATEUR ON UTILISATEUR.IdUser = A_Publie.IdUser WHERE SON.IdSon=".$_GET['idOeuvre'].";";
+        $sql = "SELECT SON.TitreSon, SON.DescriptionSon, SON.AccesSon, SON.DatePublication, SON.AccesMiniature, UTILISATEUR.NomUser, UTILISATEUR.PrenomUser FROM SON INNER JOIN A_Publie ON SON.IdSon = A_Publie.IdSon INNER JOIN UTILISATEUR ON UTILISATEUR.IdUser = A_Publie.IdUser WHERE SON.IdSon=".$_GET['idOeuvre'].";";
 
         $statement = $pdo->query($sql);
 
