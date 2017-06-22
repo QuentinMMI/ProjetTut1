@@ -96,7 +96,7 @@ session_start();
 		          while($ligne != false){
                 ?>
                 <div>
-                    <a href="afficher.php?id=<?php echo $ligne['IdVideo'] ?>&type=video"><img src="<?php echo $ligne['AccesMiniatue'] ?>" alt="<?php echo $ligne['TitreVideo'] ?>"></a>
+                    <a href="afficher.php?id=<?php echo $ligne['IdVideo'] ?>&type=video"><img src="<?php echo $ligne['AccesMiniature'] ?>" alt="<?php echo $ligne['TitreVideo'] ?>"></a>
                     <p class="titre"><?php echo $ligne['TitreVideo'] ?></p>
                 </div>
                 <?php
