@@ -117,6 +117,7 @@ function afficherDetailOeuvre (evt){
             zoneModif.innerHTML = chaineEnvoyer; // Et on affiche !
             var poubelle = document.getElementById("poubelle");
             poubelle.addEventListener('click', SupprimerOeuvre);
+            audiojs.events.ready(function() {var as = audiojs.createAll();});
             
 
             });

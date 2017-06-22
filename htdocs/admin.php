@@ -101,6 +101,7 @@ if($_SESSION['id'] != 1){
 </footer>
     <script src="java/jquery-3.2.1.js" type="text/javascript"></script>
     <script src="java/admin.js" type="text/javascript"></script>
+    <script src="lecteur/audio.min.js"></script>
 </body>
 </html>
 <?php

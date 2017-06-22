@@ -35,13 +35,27 @@
         $oeuvre = $statement->fetch(PDO::FETCH_ASSOC); 
         
         $codeHTML="<h2 id='precision' >".$oeuvre['TitreSon']."</h2>";
-        $codeHTML=$codeHTML."<iframe width='560' height='315' src='https://www.youtube.com/embed/mII0NXGM6uE' allowfullscreen></iframe>";
+        $codeHTML=$codeHTML."<audio id='sonA' src='".$oeuvre['AccesSon']."' preload='auto'></audio>";
         $codeHTML=$codeHTML."<p>Date de publication : ".$oeuvre['DatePublication']."</p>";
         $codeHTML=$codeHTML."<p>Publié par : ".mb_strtoupper($oeuvre['NomUser'])." ".($oeuvre['PrenomUser'])."</p>";
         $codeHTML=$codeHTML."<p>Decription du trvail : ".$oeuvre['DescriptionSon']."</p>";
-        $codeHTML=$codeHTML."<img src='images/imgPoubelle.png' alt='image poubelle' title='Supprimer cette oeuvre' id='poubelle' style='cursor:pointer' data-idOeuvre ='".$_GET['idOeuvre']."' data-type='photo' >";
+        $codeHTML=$codeHTML."<img src='images/imgPoubelle.png' alt='image poubelle' title='Supprimer cette oeuvre' id='poubelle' style='cursor:pointer' data-idOeuvre ='".$_GET['idOeuvre']."' data-type='son' >";
     }else{
+        //requet sql
+        $sql = "SELECT VIDEO.TitreVideo, VIDEO.DatePublication, VIDEO.AccesVideo, VIDEO.DescriptionVideo , VIDEO.AccesMiniature , UTILISATEUR.NomUser, UTILISATEUR.PrenomUser FROM VIDEO INNER JOIN A_Publie ON VIDEO.IdVideo = A_Publie.IdVideo INNER JOIN UTILISATEUR ON UTILISATEUR.IdUser = A_Publie.IdUser WHERE VIDEO.IdVideo=".$_GET['idOeuvre'].";";
+
+        $statement = $pdo->query($sql);
+
+        //traitement des données
+
+        $oeuvre = $statement->fetch(PDO::FETCH_ASSOC); 
         
+        $codeHTML="<h2 id='precision' >".$oeuvre['TitreVideo']."</h2>";
+        $codeHTML=$codeHTML."<video autoplay='0' controls='controls' preload='auto' loop='loop' src='".$oeuvre['AccesVideo']."' ><source src='".$oeuvre['AccesVideo']."' type='video/mp4'><source src='".$oeuvre['AccesVideo']."' type='video/wav'></video>";
+        $codeHTML=$codeHTML."<p>Date de publication : ".$oeuvre['DatePublication']."</p>";
+        $codeHTML=$codeHTML."<p>Publié par : ".mb_strtoupper($oeuvre['NomUser'])." ".($oeuvre['PrenomUser'])."</p>";
+        $codeHTML=$codeHTML."<p>Decription du trvail : ".$oeuvre['DescriptionVideo']."</p>";
+        $codeHTML=$codeHTML."<img src='images/imgPoubelle.png' alt='image poubelle' title='Supprimer cette oeuvre' id='poubelle' style='cursor:pointer' data-idOeuvre ='".$_GET['idOeuvre']."' data-type='video' >";
     }
     
     
