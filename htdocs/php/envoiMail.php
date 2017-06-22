@@ -1,5 +1,5 @@
 <?php
-    if(isset($_POST["Envoyer"])){
+    if(isset($_POST['objet'])){
      
         //Mail de destination
         $mail="defi.hawk@gmail.com";
@@ -17,7 +17,7 @@
 
         
         //Declaration des messager format txt
-        $message_txt = "'".$_POST['message']."'";
+        $message_txt = "Message envoyé part : ".$_POST['nomEnvoyeur'].$passage_ligne."Adresse de réponse : ".$_POST['mailEnvoyeur'].$passage_ligne.$passage_ligne.$_POST['message'];
         
         //=====Création de la boundary
         $boundary = "-----=".md5(rand());
@@ -27,9 +27,9 @@
         
         //création de l'entête
             //Declaration de l'expéditeur
-        $header = "From: \" ".$_Post['nomEnvoyeur']." \"<".$_POST['mailEnvoyeur'].">".$passage_ligne;
+        $header = "From: \" ".$_POST['nomEnvoyeur']." \"<".$_POST['mailEnvoyeur'].">".$passage_ligne;
             //Declaration de l'addresse retour
-        $header=$header. "Reply-to: \"".$_Post['nomEnvoyeur']." \"<".$_POST['mailEnvoyeur'].">".$passage_ligne;
+        $header=$header. "Reply-to: \"".$_POST['nomEnvoyeur']." \"<".$_POST['mailEnvoyeur'].">".$passage_ligne;
             //déclaration de la version MIME
         $header.= "Reply-to: \"RETOUR\" <ADRESSE_RETOUR>".$passage_ligne; 
             //déclaration du content-type
@@ -50,7 +50,8 @@
         mail($mail,$sujet,$message,$header);
         echo("mail evoyé");
         
-    }
+    }else{
 
-header('Location: ../aPropos.php') ;
+        header('Location: ../aPropos.php') ;
+    }
 ?>
