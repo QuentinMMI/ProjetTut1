@@ -39,7 +39,7 @@ session_start();
 <header>
       <?php require("php/header.php"); ?>
 </header>
-<body>
+
  <main id="mainParticiper">  
         <div>  
         <h1 id="publications">Mes publications</h1>  
@@ -50,22 +50,27 @@ session_start();
                     <a href="<?php if($data["IdPhoto"]==0){ ?>poster.php?type=affiche<?php }else{ ?>afficher.php?type=photo&id=<?php echo $data["IdPhoto"]; }; ?>" >
                         <img class="depot" src="<?php if($data["IdPhoto"]==0){ ?>travaux/vignette/img1.png<?php }else{echo $dataA["AccesMiniature"];}; ?>" alt="image de l'affiche">
                     </a>
-                    <img class="modifier" src="images/imgPoubelle.png" alt="image poubelle">  
+                    <img class="modifier" src="images/imgPoubelle.png" alt="image poubelle" data-type="photo" data-idoeuvre="<?php echo($data["IdPhoto"]) ; ?>" title='supprimer ma production'>  
                 </div>  
                 <div class="divAffiche">    
                     <a href="<?php if($data["IdSon"]==0){ ?>poster.php?type=son<?php }else{ ?>afficher.php?type=son&id=<?php echo $data["IdSon"]; }; ?>" >
                         <img class="depot" src="<?php if($data["IdSon"]==0){ ?>travaux/vignette/son1.png<?php }else{echo $dataS["AccesMiniature"];}; ?>" alt="image de l'affiche">
                     </a>  
-                    <img class="modifier" src="images/imgPoubelle.png" alt="image poubelle">  
+                    <img class="modifier" src="images/imgPoubelle.png" alt="image poubelle" data-type="son" data-idoeuvre="<?php echo($data["IdSon"]) ; ?> " title='supprimer ma production'>  
                 </div>  
                 <div class="divAffiche">   
                     <a href="<?php if($data["IdVideo"]==0){ ?>poster.php?type=video<?php }else{ ?>afficher.php?type=video&id=<?php echo $data["IdVideo"]; }; ?>" >
                         <img class="depot" src="<?php if($data["IdVideo"]==0){ ?>travaux/vignette/vid1.png<?php }else{echo $dataV["AccesMiniature"];}; ?>" alt="image de l'affiche">
                     </a>
-                    <img class="modifier" src="images/imgPoubelle.png" alt="image poubelle">  
+                    <img class="modifier" src="images/imgPoubelle.png" alt="image poubelle" data-type="video" data-idoeuvre="<?php echo($data["IdVideo"]) ; ?>" title='supprimer ma production'>  
                 </div>  
             </div> 
         </div> 
+     <div id="popupConfirmation">
+            <p>Voulez-vous vraiment supprimer ce profil?</p>
+            <span id="oui" style="cursor:pointer">Oui </span>
+            <span id="non" style="cursor:pointer"> Non</span>
+        </div>
   
     </main>
     <footer>
@@ -73,7 +78,9 @@ session_start();
     </footer>
     <script src="java/jquery-3.2.1.js"></script>
     <script src="java/verif.js"></script>
+    <script src="java/participer.js"></script>
 </body>
+
 </html>
 <?php
     }else{
