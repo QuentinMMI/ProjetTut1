@@ -9,12 +9,18 @@ document.addEventListener("DOMContentLoaded", initialiser);
       var date = document.getElementById("dateI");
       var mailC= document.getElementById("mailC");
       var mdpC = document.getElementById("mdpC");
+      var participer = document.getElementById("participer");
+      var lesDivs = document.querySelectorAll(".contenuP div");
       mdp1.addEventListener("change", verifier);
       mdp2.addEventListener("change", verifier);
       mail.addEventListener("change",verifier2);
       date.addEventListener("change",verifier3);
       mailC.addEventListener("change",verifier4);
       mdpC.addEventListener("change",verifier5);
+      participer.addEventListener("click",verifier6);
+      for(var uneDiv of lesDivs){
+          uneDiv.addEventListener("click",verifier7);
+      }
    }
 
    function verifier(evt) {
@@ -85,6 +91,20 @@ document.addEventListener("DOMContentLoaded", initialiser);
         var mdp=document.getElementById("mdpC");
         if(infoPhp=="false"){
             mdp.setCustomValidity("mot de passe incorrecte");
+        }
+    }
+    
+    function verifier6 (evt){
+        $.ajax("participer.php",{success:verifierConnexion});
+    }
+    
+    function verifier7 (evt){
+        $.ajax("afficher.php",{success:verifierConnexion});
+    }
+    
+    function verifierConnexion (phpinfo){
+        if(phpinfo="connexion"){
+            window.alert("Vous devez être connecté pour participer !")
         }
     }
 })()

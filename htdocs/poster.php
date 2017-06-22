@@ -32,7 +32,7 @@ if(isset($_SESSION["id"])){
             <label for="droit">Libre de droit</label>
             <input class="inputPost"  id ="droit" name="droit" type="radio" value="1">
             <label for="affiche">Déposer votre travail :</label>
-            <input class="inputPost file" type="file" name="affiche" id="icone" accept=".png,.jpg">
+            <input class="inputPost file" type="file" name="affiche" id="icone" accept=".png,.jpg" required>
             <label for="message">Description de votre travail</label>
             <textarea class="inputPost messageP" name="description" rows="10" cols="50" placeholder="Description" required></textarea>
             <input type="submit" value="Envoyer" style="cursor:pointer" name="validerAffiche">
@@ -90,9 +90,7 @@ if(isset($_SESSION["id"])){
             <label for="droit">Libre de droit</label>
             <input class="inputPost" id ="droitSon" name="droitSon" type="radio" value="1">
             <label for="url">Déposez le Son ici :</label>
-            <input class="inputPost file" type="file" name="Son" id="Son" accept=".mp3">
-            <label for="inputPost">Désposez une miniature pour votre son</label>
-            <input class="inputPost" type="file" name="miniSon" id="miniSon" accept=".png,.jpg">
+            <input class="inputPost file" type="file" name="Son" id="Son" accept=".mp3" required>
             <label for="message">Description de votre travail</label>
             <textarea class="inputPost messageP" name="description" rows="10" cols="50" placeholder="Description" required></textarea>
             <input type="submit" value="Envoyer" style="cursor:pointer" name="submitSon" >
@@ -145,55 +143,63 @@ if(isset($_SESSION["id"])){
 ?>
 <div id="video">
         <h1>Poster votre <?php echo $_GET['type'];  ?></h1>
-        <form class="formulairePoster" action="poster.php?type=video#cBon" method="post">
+        <form class="formulairePoster" enctype="multipart/form-data" action="poster.php?type=video#cBon" method="post">
             <label for="inputPost">Titre</label>
             <input class="inputPost titreP" type="text" name="titreVid" placeholder="Titre de l'oeuvre" required>
             <label for="droitVid">Libre de droit</label>
-            <input class="inputPost" id ="droitVid" name="droitVid" type="radio" value="1">
+            <input class="inputPost" id ="droitVid" name="droitVid" type="radio" value=1>
             <label for="video">Déposez le Vidéo ici :</label>
-            <input class="inputPost file" type="file" name="Video" id="Video" accept=".mp4,.wav">
+            <input class="inputPost file" type="file" name="video" id="Video" accept=".mp4,.wav" required>
             <label for="message">Description de votre travail</label>
             <textarea class="inputPost messageP" name="descriptionVid" rows="10" cols="50" placeholder="Description" required></textarea>
             <input type="submit" value="Envoyer" style="cursor:pointer" name="submitVid">
         </form>
     </div>
 <?php
-        if(isset($_POST["submitVid"]) && $_FILES["Video"]["name"]!=".htaccess"){
+        if(isset($_POST["submitVid"]) && $_FILES["video"]["name"]!=".htaccess"){
 
-            require("php/param.inc.php");
-            $titreVid=$_POST["titreVid"];
+        require("php/param.inc.php");
+        $titreVid=$_POST["titreVid"];
+        $droitVid=0;
+        if(isset($_POST["droitVid"])){
             $droitVid=$_POST["droitVid"];
-            if($_FILES["Video"]["name"]){
-                copy($_FILES["Video"]["tmp_name"],"travaux/video/".$_FILES["Video"]["name"]);
-                $Vid="travaux/video/".$_FILES["Video"]["name"];
-            }
+        }
+        if($_FILES["video"]["name"]){
+            copy($_FILES["video"]["tmp_name"],"travaux/video/".$_FILES["video"]["name"]);
+            $Vid="travaux/video/".$_FILES["video"]["name"];
+        }
 
-            $descriptionVid=$_POST["descriptionVid"];
-            echo "Le titre est : ".$titreVid;
-            echo "Le chemin est : ".$Vid;
-            echo "La description est : ".$descriptionVid;
-            $chemin="travaux/vignette/vid1.png";
-            
-            $bdd =new PDO("mysql:host=".MYHOST.";dbname=".MYDB, MYUSER, MYPASS) ;
-            $bdd->query("SET NAMES utf8");
-            $bdd->query("SET CHARACTER SET 'utf8'");
-            $insertmbr = $bdd->prepare("INSERT INTO VIDEO (IdVideo,TitreVideo,DatePublication,AccesVideo,AccordsDroits,DescriptionVideo,AccesMiniature) VALUES(null,:titre,NOW(),:acces,:accords,:desc,:accesMini)");
-            $insertmbr->execute(array(":titre"=>$titreVid,":accords"=>$droitVid,":acces"=>$Vid,":desc"=>$descriptionVid,":accesMini"=>$chemin));
+        $description=$_POST["descriptionVid"];
 
-            $insertA = $bdd->prepare("SELECT LAST_INSERT_ID() FROM VIDEO");
-            $insertA->execute();
-            $dataA = $insertA->fetch();
-            $dernierId = $dataA["LAST_INSERT_ID()"];             
+        echo "Le titre est : ".$titreVid;
 
-            $id=$_SESSION['id'];
-            $insertid = $bdd->prepare("SELECT * FROM A_Publie WHERE IdUser=:id");
-            $insertid->execute(array(":id"=>$id));
-            $data = $insertid->fetch();
-                                    
-            $requette2 = "UPDATE A_Publie SET IdUser=:id, IdPhoto=:idPhoto, IdSon=:idSon, IdVideo=:idVideo WHERE IdUser=:id2 ";
-            $inserta = $bdd->prepare($requette2);
-            $inserta->execute(array(":id"=>$id,":idPhoto"=>$data["IdPhoto"],":idSon"=>$data["IdSon"],":idVideo"=>$dernierId,":id2"=>$id));
-        }                              
+        echo "Le chemin est : ".$Vid;
+
+        echo "La description est : ".$description;
+
+        $chemin="travaux/vignette/vid1.png";
+
+        $bdd =new PDO("mysql:host=".MYHOST.";dbname=".MYDB, MYUSER, MYPASS) ;
+        
+        $bdd->query("SET NAMES utf8");
+        $bdd->query("SET CHARACTER SET 'utf8'");
+        $insertmbr = $bdd->prepare("INSERT INTO VIDEO(IdVideo,TitreVideo,DatePublication,AccordsDroits,AccesVideo,DescriptionVideo,AccesMiniature) VALUES(null,:titre,NOW(),:accords,:acces,:desc,:accesMini)");
+        $insertmbr->execute(array(":titre"=>$titreVid,":accords"=>$droitVid,":acces"=>$Vid,":desc"=>$description,":accesMini"=>$chemin));
+
+        $insertA = $bdd->prepare("SELECT LAST_INSERT_ID() FROM VIDEO");
+        $insertA->execute();
+        $dataA = $insertA->fetch();
+        $dernierId = $dataA["LAST_INSERT_ID()"];
+
+        $id=$_SESSION['id'];
+        $insertid = $bdd->prepare("SELECT * FROM A_Publie WHERE IdUser=:id");
+        $insertid->execute(array(":id"=>$id));
+        $data = $insertid->fetch();
+
+        $requette2 = "UPDATE A_Publie SET IdUser=:id, IdPhoto=:idPhoto, IdSon=:idSon, IdVideo=:idVideo WHERE IdUser=:id2 ";
+        $inserta = $bdd->prepare($requette2);
+        $inserta->execute(array(":id"=>$id,":idPhoto"=>$data["IdPhoto"],":idSon"=>$data["IdSon"],":idVideo"=>$dernierId,":id2"=>$id));
+    }                              
     };
 ?>
 </main>

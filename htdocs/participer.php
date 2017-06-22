@@ -44,24 +44,21 @@ session_start();
         <div>  
         <h1 id="publications">Mes publications</h1>  
    
-            <p id="textPubli">Pour participer, choisi au moins une catégorie puis clique sur une des images ci-dessous. Tu peux participer une seule fois dans chaque catégorie, si tu souhaites modifier ton travail tu es libre de le faire jusqu'à la date limite du concours.</p>  
+            <p id="textPubli">Pour participer, choisi au moins une catégorie puis clique sur une des images ci-dessous. Tu peux participer une seule fois dans chaque catégorie</p>  
             <div id="lesIcones">  
-                <div class="divAffiche">  
-                    <img class="modifier" src="images/imgModifier.png" alt="image modifier">  
+                <div class="divAffiche">    
                     <a href="<?php if($data["IdPhoto"]==0){ ?>poster.php?type=affiche<?php }else{ ?>afficher.php?type=photo&id=<?php echo $data["IdPhoto"]; }; ?>" >
                         <img class="depot" src="<?php if($data["IdPhoto"]==0){ ?>travaux/vignette/img1.png<?php }else{echo $dataA["AccesMiniature"];}; ?>" alt="image de l'affiche">
                     </a>
                     <img class="modifier" src="images/imgPoubelle.png" alt="image poubelle">  
                 </div>  
-                <div class="divAffiche">  
-                    <img class="modifier" src="images/imgModifier.png" alt="image modifier">  
+                <div class="divAffiche">    
                     <a href="<?php if($data["IdSon"]==0){ ?>poster.php?type=son<?php }else{ ?>afficher.php?type=son&id=<?php echo $data["IdSon"]; }; ?>" >
                         <img class="depot" src="<?php if($data["IdSon"]==0){ ?>travaux/vignette/son1.png<?php }else{echo $dataS["AccesMiniature"];}; ?>" alt="image de l'affiche">
                     </a>  
                     <img class="modifier" src="images/imgPoubelle.png" alt="image poubelle">  
                 </div>  
-                <div class="divAffiche">  
-                    <img class="modifier" src="images/imgModifier.png" alt="image modifier">  
+                <div class="divAffiche">   
                     <a href="<?php if($data["IdVideo"]==0){ ?>poster.php?type=video<?php }else{ ?>afficher.php?type=video&id=<?php echo $data["IdVideo"]; }; ?>" >
                         <img class="depot" src="<?php if($data["IdVideo"]==0){ ?>travaux/vignette/vid1.png<?php }else{echo $dataV["AccesMiniature"];}; ?>" alt="image de l'affiche">
                     </a>
@@ -80,6 +77,7 @@ session_start();
 </html>
 <?php
     }else{
+        echo"connexion";
         header("Location: index.php");
     }
     ?>
