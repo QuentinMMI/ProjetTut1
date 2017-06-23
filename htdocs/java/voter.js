@@ -24,7 +24,7 @@
     
     function confirmerVoter (infoPhp){
         if(infoPhp!="Oeuvre"){
-            window.alert("Vous avez voté pour "+infoPhp+", votre vote à été pris en compte. RAPPEL (Vous pouvez voter en tout pour une photo, un son et une vidéo !)");   
+            window.alert("Vous avez voté pour '"+infoPhp+"', votre vote à été pris en compte. RAPPEL (Vous pouvez voter en tout pour une photo, un son et une vidéo !)");   
         }else{
             window.alert("Vous ne pouvez pas voter pour votre propre Oeuvre ...");
         }

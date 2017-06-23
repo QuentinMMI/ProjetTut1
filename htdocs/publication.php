@@ -79,7 +79,7 @@ session_start();
                   $i=0;
 		          while($ligne != false || $i==10){
                 ?>
-                <div>
+                <div <?php if(!empty($idVote['IdSon'])&& $idVote['IdSon']==$ligne['IdSon']){ ; ?> class='etoile'<?php }?>>
                     <a href="afficher.php?id=<?php echo $ligne['IdSon'] ?>&type=son"><img src="<?php echo $ligne['AccesMiniature'] ?>" alt="<?php echo $ligne['TitreSon'] ?>"></a>
                     <p class="titre"><?php echo $ligne['TitreSon'] ?></p>
                 </div>
@@ -107,7 +107,7 @@ session_start();
                   $ligne = $statement->fetch(PDO::FETCH_ASSOC);
 		          while($ligne != false){
                 ?>
-                <div>
+                <div <?php if(!empty($idVote['IdVideo'])&& $idVote['IdVideo']==$ligne['IdVideo']){ ; ?> class='etoile'<?php }?>>
                     <a href="afficher.php?id=<?php echo $ligne['IdVideo'] ?>&type=video"><img src="<?php echo $ligne['AccesMiniature'] ?>" alt="<?php echo $ligne['TitreVideo'] ?>"></a>
                     <p class="titre"><?php echo $ligne['TitreVideo'] ?></p>
                 </div>
