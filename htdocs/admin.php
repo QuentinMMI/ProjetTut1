@@ -69,12 +69,13 @@ if($_SESSION['id'] != 1 || $_SESSION['type']=='jury'){
 
                 while ($nom != false){
                 ?>
-                            <div class="boucleAdmin">
-                                <p data-User="<?php echo(($nom[" IdUser "])) ; ?>" class="user" style="cursor:pointer">
+                            <div class='boucleAdmin'>
+                                <p data-user="<?php echo($nom['IdUser']) ; ?>" class="user" style="cursor:pointer">
                                     <?php echo(mb_strtoupper($nom["NomUser"]))." ". ($nom["PrenomUser"]) ; ?>
                                 </p>
-                                <img src="images/imgPoubelle.png" alt="image poubelle" title="Supprimer ce profil" class="poubelle" style="cursor:pointer">
-                            </div>
+                                <img src='images/imgPoubelle.png' alt='image poubelle' title='Supprimer ce profil' class='poubelle' style='cursor:pointer'/>
+                        </div>
+    
 
                             <?php
                 $nom = $statement->fetch(PDO::FETCH_ASSOC);
