@@ -6,14 +6,11 @@
 
         var SelectPrix = document.getElementsByClassName("lesPrix");
         for (var unPrix of SelectPrix) {
-            //unPrix.addEventListener("click", reinitialiserMiseEnForme);
             unPrix.addEventListener("click", changerMiseEnForme);
         }
     }
 
-    function reinitialiserMiseEnForme(evt) {
-        document.getElementById("lesCaracDesPrix").innerHTML = "<div id='carac'><div id='caracHaut'><div><p id='dixNuit'> <span>10</span> Nuits dans un hotel cinq etoiles de Sofia, capitale historique de la Bulgarie</p><p class='textLotVoyage'>- Petit déjeuner et formule repas déjeuner/repas</p><p class='textLotVoyage'>- Un guide à disposition pour visiter la ville</p><p class='textLotVoyage'>- Une voiture personnel</p><p class='textLotVoyage'>- Un ensemble de réduction pour découvrir les musées et le patrimoine de la Bulgarie </p><p class='textLotVoyage'>- Une journée 'activité à sensation'! </p></div><div><img src='images/imgPlage.png' alt='plage de Bulgarie'></div></div><div><div><h3>Une Gopro Hero <span>5</span></h3><img src='images/imgGoproLot.png' id='goproLot' alt='image de Gorpro Hero 5'></div><div id='texteGopro'><p>- Qualité photo, haute résolution 12mpx</p><p>- Vidéo 4k</p><p> - GPS intégré</p><p> - Wifi/Bluetooth</p><p>- Résistante à l\'27 eau et aux choques</p><p</div></div>";
-    }
+    
 
     function changerMiseEnForme(evt) {
         if (onglet != null) {
@@ -39,11 +36,6 @@
             lesCaracDesPrix.classList.add('bronze');
             document.getElementById("lesCaracDesPrix").innerHTML = "<div id='carac'><div id='caracHaut'><div><h3>Une wonderbox : trois jours exeptionnel en europe !</h3><p>- 2 nuits avec petits déjeuners</p><p>- Pour 2 personnes</p><p>- 190 hôtels 4 à 5 dans les plus belles villes d\'Europe : Londres, Venise, Oslo, Dublin, Amsterdam…</p></div><img src='images/imgWonderboxVille.png' alt='Wonderbox et image de la bulgarie'></div></div><div id='goPro5Prix3'><div><h3>Une Gopro Hero <span>5</span></h3><img src='images/imgGoproLot.png' id='goproLot' alt='image de Gorpro Hero 5'></div><div id='texteGopro'><p>- Qualité photo, haute résolution 12mpx</p><p>- Vidéo 4k</p><p> - GPS intégré</p><p> - Wifi/Bluetooth</p><p>- Résistante à l\'27 eau et aux choques</p></div></div>";
 
-        } else {
-
-            lesCaracDesPrix.classList.value = '';
-            lesCaracDesPrix.classList.add('or');
-            document.getElementById("lesCaracDesPrix").innerHTML = "<div id='carac'><div id='caracHaut'><div><p id='dixNuit'> <span>10</span> Nuits dans un hotel cinq etoiles de Sofia, capitale historique de la Bulgarie</p><p class='textLotVoyage'>- Petit déjeuner et formule repas déjeuner/repas</p><p class='textLotVoyage'>- Un guide à disposition pour visiter la ville</p><p class='textLotVoyage'>- Une voiture personnel</p><p class='textLotVoyage'>- Un ensemble de réduction pour découvrir les musées et le patrimoine de la Bulgarie </p><p class='textLotVoyage'>- Une journée 'activité à sensation'! </p></div><div><img src='images/imgPlage.png' alt='plage de Bulgarie'></div></div><div><div><h3>Une Gopro Hero <span>5</span></h3><img src='images/imgGoproLot.png' id='goproLot' alt='image de Gorpro Hero 5'></div><div id='texteGopro'><p>- Qualité photo, haute résolution 12mpx</p><p>- Vidéo 4k</p><p> - GPS intégré</p><p> - Wifi/Bluetooth</p><p>- Résistante à l\'27 eau et aux choques</p><p</div></div>";
         }
     }
 }());

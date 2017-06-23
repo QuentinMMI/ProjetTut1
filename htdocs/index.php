@@ -68,29 +68,33 @@
                     </div>
 
                     <div id="lesCaracDesPrix" class="or">
-                        <div id="carac">
-                            <div id="caracHaut">
+                        <div id='carac'>
+                            <div id='caracHaut'>
                                 <div>
-                                    <p id="dixNuit"> <span>10</span> Nuits dans un hotel cinq etoiles de Sofia, capitale historique de la Bulgarie</p>
-                                    <p class="textLotVoyage">- Petit déjeuner et formule repas déjeuner/repas</p>
-                                    <p class="textLotVoyage">- Un guide à disposition pour visiter la ville</p>
-                                    <p class="textLotVoyage">- Une voiture personnel</p>
-                                    <p class="textLotVoyage">- Un ensemble de réduction pour découvrir les musées et le patrimoine de la Bulgarie </p>
-                                    <p class="textLotVoyage">- Une journée "activité à sensation"! </p>
+                                    <p id='dixNuit'> <span>10</span> Nuits dans un hotel cinq etoiles de Sofia, capitale historique de la Bulgarie</p>
+                                    <p class='textLotVoyage'>- Petit déjeuner et formule repas déjeuner/repas</p>
+                                    <p class='textLotVoyage'>- Un guide à disposition pour visiter la ville</p>
+                                    <p class='textLotVoyage'>- Une voiture personnel</p>
+                                    <p class='textLotVoyage'>- Un ensemble de réduction pour découvrir les musées et le patrimoine de la Bulgarie </p>
+                                    <p class='textLotVoyage'>- Une journée \'activité à sensation\'! </p>
                                 </div>
-                                <div><img src="images/imgPlage.png" alt="image d'une plage de Bulgarie "></div>
+                                
+                                <div>
+                                    <img src='images/imgPlage.png' alt='une plage de Bulgarie'>
+                                </div>
                             </div>
                             <div>
-                                <div id="goPro5Prix3">
-                                    <h3>Une Gopro Hero <span>5</span></h3><img src="images/imgGoproLot.png " id="goproLot" alt="image de Gorpro Hero 5 ">
-                                <div id="texteGopro">
+                                <div #goPro5Prix3>
+                                    <h3>Une Gopro Hero <span>5</span></h3>
+                                    <img src='images/imgGoproLot.png' id='goproLot' alt='image de Gorpro Hero 5'>
+                                </div>
+                                <div id='texteGopro'>
                                     <p>- Qualité photo, haute résolution 12mpx</p>
                                     <p>- Vidéo 4k</p>
                                     <p> - GPS intégré</p>
                                     <p> - Wifi/Bluetooth</p>
                                     <p>- Résistante à l'eau et aux choques</p>
                                     <p>- Un stabilisateur GoPro KARMA Grip</p>
-                                </div>
                                 </div>
                             </div>
                         </div>
