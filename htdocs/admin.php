@@ -15,6 +15,7 @@ if($_SESSION['id'] != 1 || $_SESSION['type']=='jury'){
         <title>DEFI HAWK</title>
         <meta name="administration" content="administration des production et des utilisateurs du Défi Hawk.">
         <link type="text/css" rel="stylesheet" href="css/style.css" />
+        <link rel="shortcut icon" href="images/favicon.ico">
         <script src="<?php if(isset($_SESSION['id'])){ ?>java/modale2.js<?php }else{ ?>java/modale.js<?php } ?>"></script>
     </head>
 

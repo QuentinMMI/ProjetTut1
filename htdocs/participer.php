@@ -31,6 +31,7 @@ session_start();
         <title>DEFI HAWK</title>
         <meta name="description" content="Un site concours, tentez de gagner un voyage grace à une production audiovisuelle ! Defi Hawk">
         <link type="text/css" rel="stylesheet" href="css/style.css" />
+        <link rel="shortcut icon" href="images/favicon.ico">
         <script src="java/planche.js"></script>
         <script src="<?php if(isset($_SESSION['id'])){ ?>java/modale2.js<?php }else{ ?>java/modale.js<?php } ?>"></script>
         <script src="java/modif.js"></script>
