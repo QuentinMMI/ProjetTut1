@@ -277,7 +277,7 @@
 
             <div class=divPenchee>
 
-            <video id="video" autoplay='0' controls='controls' preload='auto' loop='loop' src="<?php echo $ligne["AccesVideo"]?>">
+            <video id="videoP" autoplay='0' controls='controls' preload='auto' loop='loop' src="<?php echo $ligne["AccesVideo"]?>">
 
                 <source src="<?php echo $ligne["AccesVideo"] ?>" type="video/mp4">
 
