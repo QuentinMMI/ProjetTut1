@@ -48,6 +48,12 @@
             <div class="divPenchee2">
                 <p class="descA">Description : <?php echo $ligne['DescriptionPhoto'] ?></p>
                 <p class="descA">De : <?php echo $ligne3["NomUser"]." ".$ligne3["PrenomUser"] ?></p>
+                <?php
+                    $vote = $pdo->prepare("SELECT IdPhoto FROM A_Vote WHERE IdPhoto = ?");
+                    $vote->execute(array($_GET['id']));
+                    $nbVote = $vote->rowCount();
+                ?>
+                <p class="descA">Nombre de vote reçu : <?php echo($nbVote) ; ?></p>
             </div>
             <p id="vote" class="vote" style="cursor:pointer">J'aime cette publication</p>
         </main>
@@ -78,6 +84,12 @@
             <div id="divPenchee2">
                 <p class="descAudio">Description : <?php echo $ligne["DescriptionSon"] ?></p>
                 <p class="descAudio">De : <?php echo $ligne3["NomUser"]." ".$ligne3["PrenomUser"] ?></p>
+                <?php
+                    $vote = $pdo->prepare("SELECT IdSon FROM A_Vote WHERE IdSon = ?");
+                    $vote->execute(array($_GET['id']));
+                    $nbVote = $vote->rowCount();
+                ?>
+                <p class="descAudio">Nombre de vote reçu : <?php echo($nbVote) ; ?></p>
             </div>
             <p id="vote" class="voteSon" style="cursor:pointer">J'aime cette publication</p>
         </main>
@@ -110,6 +122,12 @@
             <div class="divPenchee2">
                 <p class="descA">Description : <?php echo $ligne["DescriptionVideo"] ?></p>
                 <p class="descA">De : <?php echo $ligne3["NomUser"]." ".$ligne3["PrenomUser"] ?></p>
+                <?php
+                    $vote = $pdo->prepare("SELECT IdVideo FROM A_Vote WHERE IdVideo = ?");
+                    $vote->execute(array($_GET['id']));
+                    $nbVote = $vote->rowCount();
+                ?>
+                <p class="descA">Nombre de vote reçu : <?php echo($nbVote) ; ?></p>
                 <p id="vote" class="voteVid" style="cursor:pointer">J'aime cette publication</p>
             </div>
         </main>
