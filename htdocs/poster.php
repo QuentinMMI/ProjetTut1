@@ -58,7 +58,11 @@ if(isset($_SESSION["id"])){
                     $titre=htmlspecialchars($_POST["titre"]);
                     $chemin=htmlspecialchars("travaux/".$_FILES["affiche"]["name"]);
                     $description=htmlspecialchars($_POST["description"]);
-                    $droits=$_POST["droit"];
+                    if(isset($_POST['droit'])){
+                        $droits=$_POST["droit"];
+                    }else{
+                        $droits=0;
+                    }
 
                     $bdd =new PDO("mysql:host=".MYHOST.";dbname=".MYDB, MYUSER, MYPASS) ;
                     $bdd->query("SET NAMES utf8");
