@@ -127,7 +127,7 @@
                     $vote->execute(array($_GET['id']));
                     $nbVote = $vote->rowCount();
                 ?>
-                <p class="descA">Nombre de vote reçu : <?php echo($nbVote) ; ?></p>
+                <p class="descA">Nombre de votes reçus : <?php echo($nbVote) ; ?></p>
                 <p id="vote" class="voteVid" style="cursor:pointer">J'aime cette publication</p>
             </div>
         </main>
