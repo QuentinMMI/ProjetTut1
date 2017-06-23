@@ -2,7 +2,9 @@
     session_start();
     header   ("Content-type: text/html; charset=UTF-8");
 ?>
-<html>
+<!DOCTYPE html>
+<html lang="fr">
+
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -79,8 +81,8 @@
                                 <div><img src="images/imgPlage.png" alt="image d'une plage de Bulgarie "></div>
                             </div>
                             <div>
-                                <div #goPro5Prix3>
-                                    <h3>Une Gopro Hero <span>5</span></h3><img src="images/imgGoproLot.png " id="goproLot" alt="image de Gorpro Hero 5 "></div>
+                                <div id="goPro5Prix3">
+                                    <h3>Une Gopro Hero <span>5</span></h3><img src="images/imgGoproLot.png " id="goproLot" alt="image de Gorpro Hero 5 ">
                                 <div id="texteGopro">
                                     <p>- Qualité photo, haute résolution 12mpx</p>
                                     <p>- Vidéo 4k</p>
@@ -88,6 +90,7 @@
                                     <p> - Wifi/Bluetooth</p>
                                     <p>- Résistante à l'eau et aux choques</p>
                                     <p>- Un stabilisateur GoPro KARMA Grip</p>
+                                </div>
                                 </div>
                             </div>
                         </div>

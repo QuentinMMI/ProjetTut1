@@ -2227,7 +2227,15 @@ body .entries .entry:nth-child(2n) .title.big:before {
     margin-left: -5%;
 
 }
-
+.etoile{
+    position: relative
+}
+.etoile::after{
+    content: url(images/imgEtoile.png);
+    position: absolute;
+    top: 0;
+    right: 0;
+}
 
 
 /*----------------FOOTER---------------------------*/
