@@ -2399,6 +2399,9 @@ footer>a {
 
 }
 
+.textepresentation{
+    visibility: hidden;
+}
 
 
 #Lequipe>div:hover .textepresentation {
@@ -2474,42 +2477,6 @@ footer>a {
 }
 
 
-
-#divAPropos {
-
-    width: 50vw;
-
-    margin: auto;
-
-    color: white;
-
-    border: solid 3px white;
-
-    text-align: justify;
-
-    padding: 5px;
-
-    position: absolute;
-
-    position: relative;
-
-}
-
-
-
-#divAPropos::after {
-
-    content: url(../images/imgFlecheAccueil.png);
-
-    transform: rotateY(180deg) rotate(45deg);
-
-    position: absolute;
-
-    bottom: -58px;
-
-    right: -70px;
-
-}
 
 
 
