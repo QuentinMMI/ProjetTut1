@@ -8,7 +8,7 @@ function initialiser (evt){
         unediv.addEventListener("mouseenter",animation);
         unediv.addEventListener("mouseleave",animation2);
     }
-    
+    $("#planche1").trigger("click");
 }
 
 function changer (evt){

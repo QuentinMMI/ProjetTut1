@@ -91,7 +91,7 @@
         $statement=$bdd->prepare("SELECT IdVideo,IdSon,IdPhoto FROM A_Vote WHERE IdUser=:id");
         $statement->execute(array(":id"=>$idUser));
         $ligne=$statement->fetch(PDO::FETCH_ASSOC);
-        $statement=$bdd->prepare("SELECT IdSon FROM A_Publie WHERE IdUser=:id");
+        $statement=$bdd->prepare("SELECT IdVideo FROM A_Publie WHERE IdUser=:id");
         $statement->execute(array(":id"=>$idUser));
         $verif=$statement->fetch(PDO::FETCH_ASSOC);
         if($verif["IdVideo"]!=$id){

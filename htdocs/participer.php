@@ -47,19 +47,19 @@ session_start();
             <p id="textPubli">Pour participer, choisi au moins une catégorie puis clique sur une des images ci-dessous. Tu peux participer une seule fois dans chaque catégorie</p>  
             <div id="lesIcones">  
                 <div class="divAffiche">    
-                    <a href="<?php if($data["IdPhoto"]==0){ ?>poster.php?type=affiche<?php }else{ ?>afficher.php?id=<?php echo $data["IdPhoto"]; }; ?>&type=photo" >
+                    <a href="<?php if($data["IdPhoto"]==0){ ?>poster.php?type=affiche<?php }else{ ?>afficher.php?id=<?php echo $data["IdPhoto"]."&type=photo"; }; ?>" >
                         <img class="depot" src="<?php if($data["IdPhoto"]==0){ ?>travaux/vignette/img1.png<?php }else{echo $dataA["AccesMiniature"];}; ?>" alt="image de l'affiche">
                     </a>
                     <img class="modifier" src="images/imgPoubelle.png" alt="image poubelle" data-type="photo" data-idoeuvre="<?php echo($data["IdPhoto"]) ; ?>" title='supprimer ma production'>  
                 </div>  
                 <div class="divAffiche">    
-                    <a href="<?php if($data["IdSon"]==0){ ?>poster.php?type=son<?php }else{ ?>afficher.php?id=<?php echo $data["IdSon"]; }; ?>&type=son" >
+                    <a href="<?php if($data["IdSon"]==0){ ?>poster.php?type=son<?php }else{ ?>afficher.php?id=<?php echo $data["IdSon"]."&type=son"; }; ?>" >
                         <img class="depot" src="<?php if($data["IdSon"]==0){ ?>travaux/vignette/son1.png<?php }else{echo $dataS["AccesMiniature"];}; ?>" alt="image de l'affiche">
                     </a>  
                     <img class="modifier" src="images/imgPoubelle.png" alt="image poubelle" data-type="son" data-idoeuvre="<?php echo($data["IdSon"]) ; ?> " title='supprimer ma production'>  
                 </div>  
                 <div class="divAffiche">   
-                    <a href="<?php if($data["IdVideo"]==0){ ?>poster.php?type=video<?php }else{ ?>afficher.php?id=<?php echo $data["IdVideo"]; }; ?>&type=video" >
+                    <a href="<?php if($data["IdVideo"]==0){ ?>poster.php?type=video<?php }else{ ?>afficher.php?id=<?php echo $data["IdVideo"]."&type=video"; }; ?>" >
                         <img class="depot" src="<?php if($data["IdVideo"]==0){ ?>travaux/vignette/vid1.png<?php }else{echo $dataV["AccesMiniature"];}; ?>" alt="image de l'affiche">
                     </a>
                     <img class="modifier" src="images/imgPoubelle.png" alt="image poubelle" data-type="video" data-idoeuvre="<?php echo($data["IdVideo"]) ; ?>" title='supprimer ma production'>  

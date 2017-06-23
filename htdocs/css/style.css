@@ -294,6 +294,8 @@ a:hover {
 }
 
 #planche2Bis {
+    padding-top: 4%;
+    padding-left: 3%;
     display: flex;
 }
 
@@ -1887,7 +1889,7 @@ fieldset a:hover {
 
 .divPenchee{
     position: absolute;
-    top: 28%;
+    top: 21%;
     left: -5%;
     width: 50vw;
     min-height: 30vh;
@@ -1982,7 +1984,7 @@ fieldset a:hover {
 }
 .voteVid{
     position: absolute;
-    bottom: -200%;
+    bottom: -170%;
     right: 10%;
     font-size: 3.5vh;
     color: white;
