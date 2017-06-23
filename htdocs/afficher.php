@@ -104,7 +104,7 @@
 
                 ?>
 
-                <p class="descA">Nombre de vote reçu : <?php echo($nbVote["NotePart"]) ; ?></p>
+                <p class="descA">Nombre de votes reçus : <?php echo($nbVote["NotePart"]) ; ?></p>
 
             </div>
 
@@ -200,7 +200,7 @@
 
                 ?>
 
-                <p class="descAudio">Nombre de vote reçu : <?php echo($nbVote["NotePart"]) ; ?></p>
+                <p class="descAudio">Nombre de votes reçus : <?php echo($nbVote["NotePart"]) ; ?></p>
 
             </div>
 
@@ -300,7 +300,7 @@
 
                 ?>
 
-                <p class="descA">Nombre de vote reçu : <?php echo($nbVote["NotePart"]) ; ?></p>
+                <p class="descA">Nombre de votes reçus : <?php echo($nbVote["NotePart"]) ; ?></p>
 
                 <?php
 
