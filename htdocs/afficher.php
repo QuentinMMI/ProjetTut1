@@ -49,7 +49,7 @@
                 <p class="descA">Description : <?php echo $ligne['DescriptionPhoto'] ?></p>
                 <p class="descA">De : <?php echo $ligne3["NomUser"]." ".$ligne3["PrenomUser"] ?></p>
             </div>
-            <p id="vote" class="vote" >J'aime cette publication</p>
+            <p id="vote" class="vote" style="cursor:pointer">J'aime cette publication</p>
         </main>
         <?php 
             }else if($_GET["type"]=="son"){
@@ -79,7 +79,7 @@
                 <p class="descAudio">Description : <?php echo $ligne["DescriptionSon"] ?></p>
                 <p class="descAudio">De : <?php echo $ligne3["NomUser"]." ".$ligne3["PrenomUser"] ?></p>
             </div>
-            <p id="vote" class="voteSon">J'aime cette publication</p>
+            <p id="vote" class="voteSon" style="cursor:pointer">J'aime cette publication</p>
         </main>
         <?php 
             }else if($_GET["type"]=="video"){
@@ -110,7 +110,7 @@
             <div class="divPenchee2">
                 <p class="descA">Description : <?php echo $ligne["DescriptionVideo"] ?></p>
                 <p class="descA">De : <?php echo $ligne3["NomUser"]." ".$ligne3["PrenomUser"] ?></p>
-                <p id="vote" class="voteVid">J'aime cette publication</p>
+                <p id="vote" class="voteVid" style="cursor:pointer">J'aime cette publication</p>
             </div>
         </main>
         <?php 
