@@ -14,7 +14,7 @@ session_start();
     <script src="<?php if(isset($_SESSION['id'])){ ?>java/modale2.js<?php }else{ ?>java/modale.js<?php } ?>"></script>
     <script src="java/modif.js"></script>
     <script src="java/vignettes.js"></script>
-    <script src="java/slider.js"></script>
+    
 </head>
 
 <body>
@@ -24,6 +24,7 @@ session_start();
     <main>
         <div id="planche1" class="planche planche1">
             <h1 class="hAffiche hPub">affiCHES</h1>
+            
             <div id="onglets" class="ongletsPub">
                 <button type="button" data-numero="0"></button>
             </div>
@@ -69,7 +70,7 @@ session_start();
             <div id="onglets2" class="ongletsPub">
                 <button type="button" data-numero="0"></button>
             </div>
-            <div class="contenuP" id="cont2">
+            <div id="globale2">
                 <?php
                     
                   $pdo = new PDO("mysql:host=".MYHOST.";dbname=".MYDB, MYUSER, MYPASS);
@@ -79,8 +80,15 @@ session_start();
                   $statement = $pdo->prepare($sql);
 		          $statement->execute();
                   $ligne = $statement->fetch(PDO::FETCH_ASSOC);
-                  $i=0;
-		          while($ligne != false || $i==10){
+                  $compteur = 0;
+                  $nbDivVideo = 0;
+		          while($ligne != false){
+                      $compteur = $compteur + 1;
+                      $nbDivVideo = $nbDivVideo + 1;
+                  ?>
+            <div class="contenuP contenu2" >
+                <?php
+		          while($ligne != false && ($compteur != 0 && $compteur != 11 && $compteur != 22 && $compteur != 33)){
                 ?>
                 <div>
                     <a href="afficher.php?id=<?php echo $ligne['IdSon'] ?>&type=son"><img src="<?php echo $ligne['AccesMiniature'] ?>" alt="<?php echo $ligne['TitreSon'] ?>"></a>
@@ -88,17 +96,28 @@ session_start();
                 </div>
                 <?php
                       	$ligne = $statement->fetch(PDO::FETCH_ASSOC);
-		              }
+                        $compteur = $compteur + 1;
+                  }
+		              
+                ?>
+                </div>
+                <?php
+                    }
                     $pdo=null;
                 ?>    
+            
             </div>
         </div>
+        
+        
+        
+        
         <div id="planche3" class="planche planche3">
             <h1 class="hVideo hPub">Video</h1>
             <div id="onglets3" class="ongletsPub">
                 <button type="button" data-numero="0"></button>
             </div>
-            <div class="contenuP" id="contenu3">
+            <div id="globale3">
                     <?php
                     
                   $pdo = new PDO("mysql:host=".MYHOST.";dbname=".MYDB, MYUSER, MYPASS);
@@ -109,8 +128,16 @@ session_start();
 		          $statement->execute();
                   $ligne = $statement->fetch(PDO::FETCH_ASSOC);
                   $compteurVid = 0;
-                  $nbVideo = 0;
+                  $compteur = 0;
+                  $nbDivVideo = 0;
 		          while($ligne != false){
+                      $compteur = $compteur + 1;
+                      $nbDivVideo = $nbDivVideo + 1;
+		          
+                ?>
+                <div class="contenuP contenu3">
+                <?php
+                      while($ligne != false && ($compteur != 0 && $compteur != 11 && $compteur != 22 && $compteur != 33)){
                 ?>
                 <div>
                     <a href="afficher.php?id=<?php echo $ligne['IdVideo'] ?>&type=video"><img src="<?php echo $ligne['AccesMiniature'] ?>" alt="<?php echo $ligne['TitreVideo'] ?>"></a>
@@ -118,6 +145,11 @@ session_start();
                 </div>
                 <?php
                       	$ligne = $statement->fetch(PDO::FETCH_ASSOC);
+                        $compteur = $compteur + 1;
+                      }
+                ?>
+                    </div>
+                <?php
 		              }
                     $pdo=null;
                 ?>
@@ -130,5 +162,6 @@ session_start();
 </footer>
     <script src="java/jquery-3.2.1.js"></script>
     <script src="java/verif.js"></script>
+    <script src="java/slider.js"></script>
 </body>
 </html>
