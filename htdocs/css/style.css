@@ -1236,7 +1236,7 @@ a:hover {
 
     position: absolute;
 
-    top: -24vh;
+    top: -18vh;
 
     left: 33vw;
 
@@ -1250,7 +1250,7 @@ a:hover {
 
     position: absolute;
 
-    top: -28vh;
+    top: -22vh;
 
     left: 33vw;
 
@@ -1262,7 +1262,7 @@ a:hover {
 
     position: absolute;
 
-    top: -6vh;
+    top: 2vh;
 
     left: 33vw;
 
@@ -1271,23 +1271,14 @@ a:hover {
 
 
 #texteTourisme {
-
     color: white;
-
     border: solid white 3px;
-
     text-align: justify;
-
     width: 30%;
-
     font-size: 2.5vh;
-
     position: absolute;
-
-    top: -2vh;
-
+    top: 7vh;
     left: 33vw;
-
     padding: 7px;
 
 }
@@ -1296,14 +1287,11 @@ a:hover {
 
 #imgBulg1 {
 
-    width: 25%;
-
+      width: 25%;
     position: absolute;
-
-    top: -30vh;
-
+    top: -29vh;
     left: 5vw;
-
+    height: 100vh;
 }
 
 
@@ -1325,14 +1313,11 @@ a:hover {
 
 
 #imgBulg2 {
-
     width: 40%;
-
     position: absolute;
-
     left: 33vw;
-
-    bottom: -57vh;
+    bottom: -61vh;
+    height: 43vh;
 
 }
 
@@ -1783,6 +1768,9 @@ body .entries .entry .bodyRegle p {
 }
 
 
+
+
+
 body .entries .entry:nth-child(2n) .title:before {
 
     left: 313px;
@@ -1798,6 +1786,8 @@ body .entries .entry:nth-child(2n) .title.big:before {
     transform: translate(-8px, -50%);
 
 }
+
+
 
 /*------Publication-------*/
 
@@ -2175,19 +2165,28 @@ body .entries .entry:nth-child(2n) .title.big:before {
 
 }
 
+
+
 .titre{
+
     margin-bottom: 10%;
 
 }
 
+
+
 .contenuP img{
+
     height: 100%;
 
     width: 100%;
 
 }
 
+
+
 .titre{
+
     transform: translateY(-100px);
 
     background-color: white;
@@ -2213,6 +2212,16 @@ body .entries .entry:nth-child(2n) .title.big:before {
     margin-left: -5%;
 
 }
+.etoile{
+    position: relative
+}
+.etoile::after{
+    content: url(images/imgEtoile.png);
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
 
 /*----------------FOOTER---------------------------*/
 
@@ -2517,13 +2526,19 @@ footer>a {
     height: 20vw;
 
 }
+
 /*--Mail envoyé--*/
+
 .fondBleu{
+
     background-color: #1781A1;
 
 }
+
 .fondBleu a{
+
     color : #ff7477;
+
 }
 
 
@@ -3446,8 +3461,12 @@ fieldset a:hover {
 
 }
 
+
+
 #decoAdmin{
+
     top : calc(20px + 10vh);
+
     right: 20px;
 
 }
@@ -3556,6 +3575,8 @@ fieldset a:hover {
 
     width: 100%;
 
+
+
 }
 
 
@@ -3566,9 +3587,14 @@ fieldset a:hover {
 
 }
 
+
+
 #choixAdmin>div:last-child:hover #sousMenu{
+
     display: flex;
+
     flex-direction : column;
+
 }
 
 
@@ -3587,7 +3613,10 @@ fieldset a:hover {
 
 }
 
+
+
 #divChoixAdmin{
+
     overflow: auto;
 
     max-height: 65vh;
@@ -3598,52 +3627,82 @@ fieldset a:hover {
 
 
 
+
+
+
+
 #divChoixAdmin img {
 
     max-height: 100px;
 
 }
 
+
+
 #popupConfirmation{
+
     display: none;
 
     position: fixed;
+
     left : 25%;
+
     top : 25%;
+
     background-color: #FF7477;
+
     border : 3px white solid;
+
 }
 
+
+
 #popupConfirmation>span:hover{
+
     text-decoration: underline;
 
 }
 
+
+
 #zonePecision img, #zonePecision video{
+
     max-width: 100%;
 
     max-height: 50vh;
 
 }
+
 #zonePecision>.audiojs{
+
     position: relative;
+
     top : 0;
+
     left: 0;
 
 }
 
+
+
 .fondRouge{
+
     background-color: #FF7477;
 
 }
+
 /*-----------Poster Affiche-----------*/
+
 #mainPoster{
+
     background-color: #ff7477;
 
     font-family: "KayakSansLight";
 
 }
+
 .formulairePoster{
+
     display: flex;
 
     flex-direction: column;
@@ -3651,7 +3710,9 @@ fieldset a:hover {
     align-items: center;
 
 }
+
 .inputPost{
+
     margin-bottom: 20px;
 
     background-color: rgba(249, 80, 83, 0.38);
@@ -3667,22 +3728,33 @@ fieldset a:hover {
     color: black;
 
 }
+
 .formulairePoster>input::-webkit-input-placeholder, #messageP::-webkit-input-placeholder{
+
     color:white;
+
     font-family: KayakSansRegular;
 
 }
 
+
+
 /*----------------Afficher--------------*/
+
 #mainPub{
+
     background-color: #ff7477;
 
 }
+
 .h1A{
+
     color: white;
 
 }
+
 .imageA{
+
     min-width: 30vw;
 
     max-width: 40vw;
@@ -3695,7 +3767,10 @@ fieldset a:hover {
 
 }
 
+
+
 .divPenchee{
+
     position: absolute;
 
     top: 21%;
@@ -3715,13 +3790,19 @@ fieldset a:hover {
     border: solid 1px white;
 
     background-color: white;
+
     box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.52);
+
 }
+
 .divPenchee>*,.divPenchee2>*{
+
     transform: skewX(10deg);
 
 }
+
 .descA{
+
     width: 35vw;
 
     height: auto;
@@ -3731,7 +3812,9 @@ fieldset a:hover {
     color: white;
 
 }
+
 .divPenchee2{
+
     position: fixed;
 
     right: -2%;
@@ -3741,9 +3824,13 @@ fieldset a:hover {
     transform-origin: top-left;
 
     transform: skewX(-10deg);
+
     border: solid 3px white; 
+
 }
+
 .vote{
+
     position: absolute;
 
     bottom: 20%;
@@ -3763,18 +3850,27 @@ fieldset a:hover {
     text-decoration: underline;
 
 }
+
 .vote:hover{
+
     border: solid 3px #FFD73A;
 
     color: #FFD73A;
 
 }
 
+
+
 /*----------------Afficher | Son--------------*/
+
 #mainSon{
+
     background-color: #FFD73A;    
+
 }
+
 .audiojs{
+
     position: absolute;
 
     left: 15%;
@@ -3782,7 +3878,9 @@ fieldset a:hover {
     top: 40%;
 
 }
+
 .voteSon{
+
     position: absolute;
 
     bottom: 20%;
@@ -3800,13 +3898,17 @@ fieldset a:hover {
     text-decoration: underline;
 
 }
+
 .voteSon:hover{
+
     border: solid 3px #FF7477;
 
     color: #FF7477;
 
 }
+
 .descAudio{
+
     width: 35vw;
 
     height: auto;
@@ -3814,7 +3916,9 @@ fieldset a:hover {
     margin: 30px;
 
 }
+
 #divPenchee2{
+
     position: fixed;
 
     right: -2%;
@@ -3824,15 +3928,23 @@ fieldset a:hover {
     transform-origin: top-left;
 
     transform: skewX(-10deg);
+
     border: solid 3px black; 
+
 }
+
 #divPenchee2>*{
+
     transform: skewX(10deg);
 
 }
 
+
+
 /*----------------Afficher | Video--------------*/
+
 #mainVideo{
+
     background-color: #00B3DF;
 
     padding: 0;
@@ -3840,7 +3952,9 @@ fieldset a:hover {
     border-top: solid 50px white;
 
 }
+
 #video{
+
     margin: 30px;
 
     min-width: 30vw;
@@ -3852,7 +3966,9 @@ fieldset a:hover {
     max-height: 55vh;
 
 }
+
 .voteVid{
+
     position: absolute;
 
     bottom: -100%;
@@ -3872,13 +3988,14 @@ fieldset a:hover {
     text-decoration: underline;
 
 }
+
 #voteVid:hover{
+
     border: solid 3px #FFD73A;
 
     color: #FFD73A;
 
 }
-
 
 /*-------------------------404---------------------------*/
 
@@ -3956,3 +4073,5 @@ fieldset a:hover {
     left: 65%;
     top: 25%
 }
+
+

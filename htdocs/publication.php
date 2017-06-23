@@ -3,7 +3,8 @@ session_start();
     header   ("Content-type: text/html; charset=UTF-8");
     require("php/param.inc.php");
 ?>
-<html>  
+<!DOCTYPE html>
+<html lang="fr">  
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,9 +37,20 @@ session_start();
                   $statement = $pdo->prepare($sql);
 		          $statement->execute();
                   $ligne = $statement->fetch(PDO::FETCH_ASSOC);
+                    if(!empty($_SESSION['type'])&& ($_SESSION["type"]=='participant')){
+                        $vote = $pdo->prepare("SELECT IdPhoto, IdSon, IdVideo FROM A_Vote WHERE IdUser = ?");
+                        $vote->execute(array($_SESSION['id']));
+                        $idVote = $vote->fetch(PDO::FETCH_ASSOC);
+                    }
+                    if(!empty($_SESSION['type'])&& ($_SESSION["type"]=='jury')){
+                        $vote = $pdo->prepare("SELECT IdPhoto, IdSon, IdVideo FROM A_Note WHERE IdJury = ?");
+                        $vote->execute(array($_SESSION['id']));
+                        $idVote = $vote->fetch(PDO::FETCH_ASSOC);
+                    }
+                
 		          while($ligne != false){
                 ?>
-                <div>
+                <div <?php if(!empty($idVote['IdPhoto'])&& $idVote['IdPhoto']==$ligne['IdPhoto']){ ; ?> class='etoile'<?php }?> >
                     <a href="afficher.php?id=<?php echo $ligne['IdPhoto'] ?>&type=photo"><img src="<?php echo $ligne['AccesMiniature'] ?>" alt="<?php echo $ligne['TitrePhoto'] ?>"></a>
                     <p class="titre"><?php echo $ligne['TitrePhoto'] ?></p>
                 </div>

@@ -6,7 +6,8 @@ if($_SESSION['id'] != 1 || $_SESSION['type']=='jury'){
     header('Location: index.php');
 }else{
 ?>
-    <html>
+<!DOCTYPE html>
+<html lang="fr">
 
     <head>
         <meta charset="utf-8">
