@@ -4004,3 +4004,81 @@ fieldset a:hover {
 
 }
 
+/*-------------------------404---------------------------*/
+
+#main404 {
+    background-image: url(../css/images/imgFond404.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#logo404 {
+    display: flex;
+    position: absolute;
+    top: 1%;
+}
+
+#retourPageAccueil404 {
+    display: flex;
+    position: absolute;
+    left: 68%;
+    width: 30vw;
+}
+
+#retourPageAccueil404>img {
+    height: 30%;
+}
+
+#retourPageAccueil404>a {
+    font-family: "WalterTurnCoat";
+    font-size: 25px;
+    color: white;
+    margin-left: 15px;
+}
+
+#retourPageAccueil404>a:hover {
+    color: #FFD73A;
+}
+
+#h1404 {
+    font-family: "WalterTurnCoat";
+    color: #00B3DF;
+}
+
+#p404 {
+    font-family: "WalterTurnCoat";
+    color: #FF7477;
+}
+
+#divTexte404 {
+    background-color: white;
+    width: 30vw;
+    padding: 10px;
+    border-color: #00B3DF;
+    border-style: solid;
+    border-width: 2px;
+    display: flex;
+    position: absolute;
+    top: 25vh;
+    left: 10vw;
+}
+
+#mascotte404 {
+    height: 60vh;
+    display: flex;
+    position: absolute;
+    top: 40%;
+    left: 35%;
+}
+
+#h2404 {
+    color: white;
+    font-family: "Leixo";
+    font-size: 60px;
+    display: flex;
+    position: absolute;
+    left: 65%;
+    top: 25%
+}
+
+
