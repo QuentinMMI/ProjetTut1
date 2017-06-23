@@ -13,7 +13,7 @@
               {
                   if($_SESSION['id'] == 1 && $_SESSION['type'] !='jury'){
               ?>
-            <a class="policeNav" href="admin.php" id="connect1" style="cursor:pointer">Administration</a>
+            <a class="policeNav" href="admin.php" id="connect1" style="cursor:pointer">Administration</a></nav>
             <?php
                   }else{
             ?>
