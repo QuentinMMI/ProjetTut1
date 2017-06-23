@@ -30,7 +30,7 @@
                         <div class="lesTextes">
                             <p id="texteIndex1">Gagne un voyage en Bulgarie et une GoPro Hero 5 pour filmer tes plus beaux moments !</p>
                             <img id="avion" src="images/imgAvion.png" alt="image d'un avion en dessin">
-                            <p id="texteIndex2">En realisant une musique, une vidéo ou une affiche avant le 23 Juin 2017</p>
+                            <p id="texteIndex2">En realisant une musique, une vidéo ou une affiche avant le 30 Octobre 2017. Puis Vote pour tes oeuvres préférées dans <a href="publication.php">publication</a></p>
                             <img id="gopro" src="images/imgGoproDessin.png" alt="dessin d'une go pro">
                         </div>
                         <p id="texteBilgre">Ta production doit présenter <strong>la Bulgarie</strong>. Pour en savoir plus, c'est par ici : <a href="reglement.php">Règlement</a></p>
