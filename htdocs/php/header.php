@@ -4,7 +4,7 @@
             <a class="policeNav <?php if($_SERVER["SCRIPT_NAME"]=="/reglement.php"){?>ongletSelect<?php } ?>"  href="reglement.php">REGLEMENT</a>
             <a class="policeNav <?php if($_SERVER["SCRIPT_NAME"]=="/publication.php"){?>ongletSelect<?php } ?>" href="publication.php">PUBLICATIONS</a>
             <a class="policeNav <?php if($_SERVER["SCRIPT_NAME"]=="/aPropos.php"){?>ongletSelect<?php } ?>" href="aPropos.php">A PROPOS</a>
-            <?php if(!empty($_SESSION["type"])=='participant' || !isset($_SESSION["id"])){ //le jury ne peu pas publier?>
+            <?php if((!isset($_SESSION["id"])) || !empty($_SESSION['type'])&& ($_SESSION["type"]=='participant')){ //le jury ne peu pas publier?>
             <a class="policeNav <?php if($_SERVER["SCRIPT_NAME"]=="/participer.php"){?>ongletSelect<?php } ?>" id="participer" href="participer.php">PARTICIPER</a>
             <?php 
                                                                              } //fin publier 
