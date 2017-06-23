@@ -23,6 +23,6 @@
     }
     
     function confirmerVoter (infoPhp){
-        window.alert(infoPhp);
+        window.alert("Vous avez voté pour "+infoPhp+", votre vote à été pris en compte. RAPPEL (Vous pouvez voter en tout pour une photo, un son et une vidéo !)");
     }
 })()
